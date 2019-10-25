@@ -1,0 +1,190 @@
+body {
+    font-size: 12px;
+    overflow-x:hidden;
+    width:100%;
+    height:100%;
+}
+*{margin:0;padding:0;}
+ul{list-style: none;}
+a{text-decoration: none;}
+a:hover{text-decoration: none;}
+.container{
+	width:100%;
+	height:100%;
+}
+.container-left{
+	width:25%;
+	height:100%;
+	float:left;
+}
+.left-content{
+	width:56%;
+	height:626px;
+	margin:0 auto;
+	position: relative;
+}
+.left-top{
+	width:100%;
+	position:absolute;
+	top:16%;
+	left:0;
+}
+.left-top>h3{
+	font-size: 24px;
+	padding-top: 80px;
+	padding-bottom: 20px;
+}
+.form input{
+	width:100%;
+	height:40px;
+	margin-top: 23px;
+	border:none;  /*去掉边框*/
+	outline:medium;  /*去掉点击有蓝框的效果*/
+	background: #efefef;
+	color:#b4b3b3;
+	text-indent:20px;
+}
+.forget{
+	display:block;
+	color:#FF4B4B;
+	margin-top: 10px;
+	clear:both;
+}
+.left-top .register{
+	display:block;
+	width:100%;
+	height:40px;
+	background: #FF4B4B;
+	color:white;
+	text-align: center;
+	line-height: 40px;
+	border-radius:20px;
+	margin-top: 27px;
+	overflow: hidden;
+    border: none;
+}
+/*左边二级菜单*/
+.left-bottom{
+	width: 100%;
+    height: 90px;
+   /* margin-top:170px;*/
+  margin-top:40px;
+    padding-bottom: 38px;
+    position:absolute;
+	top:0;
+	left:0;
+}
+.bottomnav{
+	width:100%;
+	background: rgb(239,239,239);
+}
+
+/*下拉菜单*/
+.select{
+	width:80%;
+	border:none;
+	outline:medium;
+	
+}
+#menu{
+	width:100%;
+	height:40px;
+	background: ;
+	border:none;
+	outline:medium;
+	position:relative;
+	border-width:0px;
+	border-top-style: none;
+	border-right-style: none;
+	border-left-style: none;
+	border-bottom-style: none;
+    padding-left: 8%;
+    float:left;z-index:1;
+    background: url(../img/registersanjiao.png) 90% 16px no-repeat  rgb(239,239,239); 
+	appearance:none;
+  -moz-appearance:none;
+  -webkit-appearance:none;
+   margin-right: 30px;
+   border-radius:0;
+}
+#siou{
+	border:none;
+	outline:medium;
+}
+option{
+	border:none !important;
+	outline:medium !important;
+	border-width:0px;
+	border-top-style: none !important;
+	border-right-style: none !important;
+	border-left-style: none !important;
+	border-bottom-style: none !important;
+}
+#menutwo{
+	width:80%;
+	height:40px;
+	border:none;
+	outline:medium;
+	line-height: 30px;
+}
+
+.registerleft{
+	/*width:10px;*/
+	width:20%;
+	height:40px;
+	float:left;
+    background: green;
+    position:absolute;
+	right:0px;
+	top:0;
+}
+.left-bottom>p{
+  font-size: 12px;
+  color:#9c9c9c;
+  padding-top: 10px;	
+}
+/*验证码*/
+.verification{
+	width:100%;
+	height:40px;
+}
+.verification>input{
+	width:64%;
+	height:40px;
+	border:none;  /*去掉边框*/
+	outline:medium;  /*去掉点击有蓝框的效果*/
+	background: #efefef;
+	color:#b4b3b3;
+	text-indent:20px;
+	float:left;
+}
+.verification-right{
+	display:inline-block;
+	width:33%;
+	height:40px;
+	background: pink;
+	margin-left: 3%;
+	float:left;
+	margin-top: 23px;
+}
+/*右侧图片*/
+.container-right{
+	width:75%;
+	height:100%;
+	float:right;
+}
+.right-content{
+	width:100%;
+}
+.right-content>img{
+	width: 100%;
+	height:100%;
+	background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+
+}
+
+.none{
+	clear:both;
+}

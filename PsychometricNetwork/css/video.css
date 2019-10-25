@@ -1,0 +1,448 @@
+/*一级导航*/
+.sidebar>ul>li:nth-of-type(5){
+	background:#1d7aee;
+	box-shadow: 0px 0px 13px 0px rgba(147,178,224,0.5);
+}
+.sidebar>ul>li:nth-of-type(5)>a{
+	color:white;
+}
+.sidebar>ul>li:nth-of-type(5)>a:hover{
+	color:white;
+}
+
+/*精选视频*/
+.video{
+	width:100%;
+	height:432px;
+}
+.video-content{
+	width:80%;
+	height:432px;
+	margin:0 auto;
+}
+.video-content>h3{
+	font-size: 24px;
+	color:#201e1e;
+	text-align: center;
+	padding:30px 0;
+}
+.video-left{
+	width:62%;
+	height:341px;
+	float:left;
+}
+.video-right{
+	width:38%;
+	/*margin-left: 4%;*/
+	height:341px;
+	float:right;
+	overflow:hidden;
+}
+/*播放器样式*/
+.video_player{width:100%;height:;float:left;}
+.video_list_area{width: 100%;height:341px;overflow:hidden;float:right;}
+.video_list{height:341px;overflow: hidden; list-style:none;width:100%;}
+.video_list li{font-size: 14px;font-weight: bold;line-height: 24px;width: 100%;text-align: left;}
+.video_list li a{display:inline-block;width:100%;height:49px;text-indent:13%;line-height:50px;color:white;background-color: rgb(66,66,66);cursor: pointer;}
+.video_list .on a{background-color:#1d7aee}
+.video_list li.last a{margin-right:0;float:right}
+.video_list li a:hover,ul.video_list li a.on{color:white;}
+#ascrail2000-hr div{margin-left:0;}
+.center{width: 100%;margin: 20px auto;}
+.dec_10{
+	width:100%;
+	height:341px;
+    float:right;
+}
+/*视频右边切换*/
+.v_out{width:100%;margin:0px auto;overflow:hidde;}
+.v_show{width:100%;overflow:hidden;position:relative;height:341px;}
+.v_cont{ width:100%;position:absolute;left:0px;top:0px;}
+.v_cont ul{float:left;text-align:center;line-height:50px;}
+.v_cont ul li{width:100%;height:50px;background:#f8f8f8;}
+
+/*---圆圈---*/
+.v_out_p{position:relative;overflow:visible}
+.circle{position:absolute;left: 40px;top: 290px;}
+.circle li{width:120px;height:60px;float:left;margin-right:10px;background:lightgray}
+.circle .circle-cur{background:#f00}
+
+.scrollBar{width: 100%;height:340px;border:1px solid lightgray;}
+.content{
+	width:97.5% !important;
+}
+.on{
+	position:relative;
+	background: none;
+}
+.on span{
+	position:absolute;
+	top:0;
+	left:0;
+	display:inline-block;
+	/*width:10px;*/
+	height:50px;
+	background: #009FB6;
+}
+.video_player div video{
+	margin:0 auto;
+	background: black;
+	background: url(../img/videobanner.png) no-repeat center;
+}
+
+/*分割线*/
+.line{
+	width:100%;
+	height:10px;
+	clear:both;
+	margin:40px 0 20px 0;
+}
+.line-content{
+	width:70%;
+	height:1px;
+	margin:0 auto !important;
+	border-bottom: 1px solid lightgray;
+}
+.line:last-child{
+	margin-bottom: 90px;
+}
+
+/*全部课程*/
+.content1{
+	width:80%;
+	margin:0 auto;
+}
+/*tab li*/
+.tab-wrapper {
+  margin: 60px auto;
+  width: 100%;
+}
+.tab-menu{
+	background:rgba(240,240,240);
+}
+.tab-menu li {
+	position:relative;
+  color:gray;
+  display: inline-block;
+  padding:8px 20px;
+  margin-right: 30px;
+  opacity: 0.8;
+  cursor:pointer;
+  z-index:0;
+  font-size: 14px;
+  font-weight:bold;
+}
+.tab-menu div{
+	float:right;
+	margin-right: 16px;
+	height:20px;
+	margin-top: 7.5px;
+}
+.tab-menu div input{
+	width:134px;
+	border:none;
+	outline: none;
+	font-size: 12px;
+	padding:1px 15px;
+	border:1px solid #1d7aee;;
+	background: white;
+	float:left;
+}
+.tab-menu div>img{
+	float: left;
+    background: #1d7aee;;
+    padding: 3px 4px;
+    height: 14px;
+}
+.tab-menu li.active {
+	font-size: 14px;
+  font-weight:bold;
+   padding:8px 20px;
+  color:white;
+  background: #1d7aee;;
+  opacity: 1;
+}
+.tab-content{
+	margin-top: 60px;
+}
+.line {
+  position:absolute;
+  width: 0;
+  height:0px;
+  background-color: none;
+  top: 0;
+  left: 0;
+}
+
+
+/*量表介绍区*/
+.tab-content1{
+  box-sizing:border-box;
+  width: 100%; 
+  min-height:200px;
+}
+.curriculum{
+	width:100%;
+	clear:both;
+	margin-top: 50px;
+}
+.curriculum-content{
+	width:70%;
+	height:20px;
+	margin:0 auto;
+	overflow: hidden;
+}
+.curriculum-nav{
+	width:100%;
+}
+.curriculum-nav>li{
+	float:left;
+	padding:0 15px;
+}
+.curriculum-nav li:nth-of-type(1){
+	padding:0;
+}
+.curriculum-nav li:nth-of-type(1)>span:nth-of-type(1){
+	font-size: 14px;
+	font-weight: bold;
+	display:inline-block;
+    /*width:70px;*/
+}
+.curriculum-nav li:nth-of-type(2)>span:nth-of-type(1){
+	font-size: 14px;
+	color:#1d7aee;
+	display:inline-block;
+	font-weight: bold;
+}
+.curriculum-nav li{
+	text-align: center;
+}
+.curriculum-nav li a{
+	font-size: 14px;
+	color:#545454;
+}
+.curriculum-nav li:last-of-type a{
+	padding-right:0px;
+}
+.curriculum-nav li a:hover{
+	color:#1d7aee;
+}
+.curriculum-nav li:nth-of-type(1) a:hover{
+	color:#383838;
+}
+.curriculum-nav .curriculumtext1{
+	color:#383838;
+	font-weight: bold;
+}
+.curriculum-nav .curriculumtext2{
+	color:#009FB6;
+	font-weight: bold;
+}
+/*家庭学校教育*/
+.family:last-of-type>.family-content{
+	margin-bottom:120px;
+}
+.family{
+	width:100%;
+	clear:both;
+	margin-top: 50px;
+}
+.family-content{
+	width:100%;
+	height:320px;
+	margin:0 auto;
+}
+.family-nav{
+	width:100%;
+	height:20px;
+}
+.family-nav>h3{
+	display:inline-block;
+	font-size: 18px;
+	color:#201e1e;
+	text-align: center;
+	line-height: 20px;
+	float:left;
+}
+.family-nav>h3>span{
+	display:inline-block;
+	width:7px;
+	height:20px;
+	background:#1d7aee;
+	margin-right: 6px;
+	float:left;
+}
+.family-nav>li{
+	float:left;
+}
+.family-nav li a{
+	font-size: 14px;
+	padding-right:30px;
+	color:#545454;
+}
+.family-nav li a:hover{
+	color:#1d7aee;
+}
+.family-nav li:nth-of-type(1) a:hover{
+	color:#383838;
+}
+.family-nav .familytext1{
+	color:#383838;
+	font-weight: bold;
+}
+.family-nav .familytext2{
+	color:#1d7aee;
+	font-weight: bold;
+}
+.family-nav .familytext0{
+	float:right;
+}
+.family-nav .familytext0 a{
+	padding-right: 0;
+}
+.family-nav .familytext0 a>span{
+	color:#1d7aee;
+	font-weight: bold;
+	padding-left: 6px;
+}
+.family-box{
+	width:100%;
+    clear:both;
+    margin-top:38px;
+}
+.family-box1{
+	width:23.1%;
+	height:100%;
+	float:left;
+}
+.family-box1:nth-of-type(2),.family-box1:nth-of-type(3){
+	float:left;
+	margin-left: 2.5%;
+}
+.family-box1:nth-of-type(4){
+	float:right;
+	margin-left: 2.5%;
+}
+.family-box1>img{
+	width: 100%;z-index:0;
+}
+.family-box1>video{
+	width: 100%;
+	z-index:0;
+	height: 152px;
+	background: black;
+}
+.family-box1>p:nth-of-type(1){
+	font-size: 14px;
+	color:#383838;
+	font-weight: bold;
+	margin-top: 27px;
+	height: 38px;
+    overflow: hidden;
+}
+.family-box1>p:nth-of-type(2){
+	font-size: 12px;
+	color:#6d6d6d;
+	padding-top: 12px;
+	width:100%;
+	height:20px;
+}
+.family-box1>p:nth-of-type(2)>span{
+	float:right;
+	font-size: 12px;
+}
+.family-box1>p:nth-of-type(3){
+	font-size: 12px;
+    color: white;
+    width: 34px;
+    background: #ff4b4b;
+    text-align: center;
+    margin-top: 8px;
+}
+
+/*查看更多课程*/
+.courses{
+	width:100%;
+	clear:both;
+	margin-top: 90px;
+}
+.courses-content{
+	width:82%;
+	margin:0 auto;
+}
+.courses-content>a{
+	display:block;
+	width:44px;
+	background: white;
+	height:40px;
+	box-shadow: 0px 0px 7px 4px lightgrey;
+	margin:0 auto;
+	text-align: center;
+	line-height: 40px;
+	font-size: 14px;
+	font-weight: bold;
+	color:#201E1E;
+	border-radius:50%
+}
+
+/*版权*/
+.right-footer { 
+    position: relative;
+    height: 40px;
+    background: none;
+    line-height: 40px;
+    margin-top: -40px;
+    color: #a3a3a3;
+    font-size: 30px;
+    text-align: center;
+    z-index: 1;
+    width: 88%;
+    float: right;
+    clear: both;
+    border-top: 1px solid lightgray;
+}
+.right-footer-content{
+	width: 100%;
+    height: 40px;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 40px;
+    font-size: 12px;
+    color: #a3a3a3;
+}
+
+@media only screen and (min-width: 1381px) and (max-width: 1919px) {
+	.family-box1>video{
+	width: 100%;
+	z-index:0;
+	height: 128px;
+	background: black;
+    }
+}
+
+@media only screen and (min-width: 1201px) and (max-width: 1380px) {
+	.family-box1>video{
+	width: 100%;
+	z-index:0;
+	height: 110px;
+	background: black;
+    }
+}
+
+@media only screen and (min-width: 751px) and (max-width: 1200px) {
+	.family-box1>video{
+	width: 100%;
+	z-index:0;
+	height: 96px;
+	background: black;
+    }
+}
+
+@media only screen and (min-width: 0px) and (max-width: 750px) {
+	.family-box1>video{
+	width: 100%;
+	z-index:0;
+	height: 78px;
+	background: black;
+    }
+}

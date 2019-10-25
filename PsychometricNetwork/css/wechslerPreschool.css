@@ -1,0 +1,923 @@
+.sidebar>ul>li:nth-of-type(3){
+	background:#1d7aee;
+	box-shadow: 0px 0px 13px 0px rgba(147,178,224,0.5);
+}
+.sidebar>ul>li:nth-of-type(3)>a{
+	color:white;
+}
+.sidebar>ul>li:nth-of-type(3)>a:hover{
+	color:white;
+}
+
+/*banner区*/
+.banner{
+	width:100%;
+	height:100%;
+	margin-top: 28px;
+}
+.banner-content{
+	width:80%;
+	height:100%;
+	margin:0 auto;
+}
+.banner-content>img{
+	width: 100%;
+}
+
+/*培训>韦氏幼儿智力量表*/
+.headline{
+	width:100%;
+	height:24px;
+	margin-top: 24px;
+}
+.headline-content{
+	width:80%;
+	height:24px;
+	margin:0 auto;
+	font-size:14px;
+	color:#201e1e;
+	line-height:24px;
+}
+.headline-content>p>a{
+	font-size: 14px;
+	color:#898989;
+}
+.headline-content>p>span:nth-of-type(1){
+	display:inline-block;
+	width: 0;
+	height:0;
+	border-top:8px solid transparent;
+	border-bottom: 8px solid transparent;
+	border-left: 8px solid #1D7AEE;
+	margin-right: 6px;
+	float: left;
+    margin-top: 4px;
+}
+.headline-content>p>span{
+	font-weight: bold;
+	color:#545454;
+	font-size: 14px;
+}
+/*韦氏幼儿智力量表第四版中文版*/
+.introduce{
+	width:100%;
+	height:100%;
+}
+.introduce-content{
+	width:70%;
+	height:100%;
+	margin:0 auto;
+}
+.introduce-content>h3{
+	font-size: 20px;
+    font-weight: bold;
+    color: #1d7aee;
+   text-align: center;
+   padding:50px 0 20px 0;
+}
+.introduce-content>p{
+	font-size: 14px;
+ 	color:#4d4d4d;
+ 	line-height:30px;
+ 	text-indent:28px;
+}
+
+/*适用范围*/
+.scope{
+	width:100%;
+	height:100%;
+}
+.scope-content{
+	width:70%;
+	height:100%;
+	margin:0 auto;
+	padding-bottom: 50px;
+}
+.scope-content>h4{
+	padding:40px 0 20px 0;
+	font-size: 18px;
+}
+.scope-content>p{
+	font-size: 14px;
+    color:#4D4D4D;
+    padding-bottom: 20px;
+    line-height: 25px;
+    text-indent:28px;
+}  
+.scope-contentnav>li{
+	line-height: 30px;
+}
+.scope-contentnav>li>a{
+	color:#4D4D4D;
+	font-size: 14px;
+}
+.scope-contentnav>li>a>span{
+	display: inline-block;
+	width:8px;
+	height:8px;
+	background: #FF4B4B;
+	border-radius:50%;
+	margin-right: 2%;
+}
+
+/*修订者*/
+.reviser{
+	width:100%;
+	height:304px;
+}
+.reviser-content{
+	width:70%;
+	height:374px;
+	margin:0 auto;
+}
+.reviser-content>h4{
+	padding:40px 0 30px 0;
+	font-size: 18px;
+}
+.reviser-left{
+	width:13%;
+	float:left;
+}
+.reviser-left>img{
+	width:100%;
+}
+.reviser-left>p{
+	font-size: 16px;
+	color:#1d7aee;
+	text-align: center;
+	padding:10px 0;
+	font-weight:bold;
+}
+.reviser-right{
+	width:87%;
+	float:right;
+}
+.reviser-right>p{
+	font-size: 14px;
+	color:#4D4D4D;
+	line-height:32px;
+	text-indent:28px;
+	padding-left: 40px;
+}
+
+/*线*/
+.line{
+	width:100%;
+	height:1px;
+	clear:both;
+}
+.line-content{
+	width:80%;
+	height:1px;
+	margin:0 auto;
+	border-bottom: 1px solid lightgray;
+}
+
+/*课程安排*/
+.content4{
+	width:100%;
+	height:auto;
+	clear:both;
+}
+.content4-center{
+	width:58%;
+	height:auto;
+	margin:0 auto;
+}
+.content4-center>h4{
+	padding:50px 0 35px 0;
+	font-size: 18px;
+}
+.schedule{
+	width:380px;
+	float:left;
+}
+#curriculumimg{
+    width:100%;
+	height:75%;
+	margin:0 auto;
+}
+#curriculumimg .calendar-title{
+	width:94%;
+	margin:0 auto;
+	height:40px;
+}
+
+#curriculumimg .calendar-title>p{
+	text-align:center;
+	line-height:40px;
+	font-size: 14px;
+	color:white;
+	font-weight: bold;
+}
+#curriculumimg .whitearrow{
+	display:inline-block;
+	margin:0 auto;
+	text-align: center;
+	width:8px;
+	height:8px;
+	z-index:0;
+	text-align: center;
+	margin-left:8px;
+}
+
+.calendar{
+	width:48%;
+	height:467px;
+	padding-top: 8px;
+	float:right;
+	margin-left: 0.5%;
+	background: white;
+	box-shadow: -3px -4px 19px 13px rgb(243,243,243);
+}
+.calendar-content{
+	width:88%;
+	height:84%;
+	margin:0 auto;
+}
+
+@media (min-width: 0px) and (max-width: 1023px){
+	.content4{
+		width: 50% !important;
+	    height: auto !important;
+	    margin: 0 auto;
+	}
+	.content4_4{
+		width: 67% !important;
+	}
+	.content4-center {
+    width: 100% !important;
+    height: auto !important;
+    margin: 0 auto;
+    }
+    .inner-left {
+    width: 430px !important; 
+    height:410px !important;
+    margin:0 auto 40px auto !important;
+    clear:both !important;
+    }
+    .sc-calendar {
+    width: 430px !important;
+    height:410px !important;
+    margin:0 auto !important;
+    clear:both !important;
+    }
+    .schedule{
+	width:430px !important;
+	margin:0 auto !important;
+    }
+    
+    .pdf{
+    	width:100% !important;
+    }
+    .cost-content .pdf>a{
+       width:100% !important;
+       padding:0 6% !important;
+    }
+    .pdf>a>div:nth-of-type(2) {
+    display: inline-block;
+    float: left;
+    height: 58px;
+    overflow: hidden;
+    margin-top: 16px;
+    padding-left: 10% !important;
+    }
+
+} /*>=750的设备*/
+
+@media (min-width: 1024px){
+	.content4{
+		width: 100% !important;
+	    margin: 0 auto;
+	}	
+	.content4-center {
+	    width: 71% !important;
+	    margin: 0 auto;
+    }
+    .content4_4-center{
+		width: 67% !important;
+	    margin: 0 auto;
+	}
+    .schedule{
+		width:300px !important;
+		margin:0 auto !important;
+    }
+   .inner-left {
+	    width: 300px !important; 
+	    height:320px !important;
+	    float:left !important;
+    }
+    .inner-left p{
+    	font-size: 12px !important;
+    	height: 26px !important;
+        line-height: 26px !important;
+    }
+    .sc-calendar {
+	    width: 300px !important;
+	    height:320px !important;
+	    float:right !important;
+    }
+    .sc-actions {
+	    width: 32% !important;
+	    padding: 0px !important;
+    }
+    .sc-item .day {
+	    font-size: 12px !important;
+	    line-height: 38px !important;
+	    text-align: center;
+    }
+    
+} /*>=1024的设备*/
+
+@media (min-width: 1100px) {
+
+    
+} /*>=1100的设备*/
+
+@media (min-width: 1280px) {
+    .inner-left {
+    width: 380px !important; 
+    }
+    .sc-calendar {
+    width: 380px !important;
+    }
+    .content4-center {
+    width: 71% !important;
+    margin: 0 auto;
+    }
+     .content4_4-center{
+		width: 70% !important;
+	    margin: 0 auto;
+	}
+    .schedule{
+	width:380px !important;
+	margin:0 auto !important;
+    }
+   
+} /*>=1280的设备*/
+
+@media (min-width: 1366px) {
+
+}  
+
+@media (min-width: 1440px) {
+	
+} 
+
+@media (min-width: 1600px) {
+	.content4-center {
+	    width: 65% !important;
+	    margin: 0 auto;
+    }
+    .content4_4-center{
+		width: 67% !important;
+	    margin: 0 auto;
+	}
+    .inner-left{
+    	padding: 10px 16px !important;
+    }
+    .inner-left p{
+    	font-size: 14px !important;
+    	height: 28px !important;
+        line-height: 28px !important;
+    }
+    .sc-item .day {
+	    font-size: 14px !important;
+	    line-height: 40px !important;
+	    text-align: center;
+    }
+    .pdf{
+	width:94% !important;
+	border:1px solid lightgray
+    }
+} 
+
+@media (min-width: 1680px) {} 
+
+@media (min-width: 1920px) {
+	.content4-center {
+    width: 58% !important;
+    margin: 0 auto;
+    }
+    .content4_4-center{
+		width: 67% !important;
+	    margin: 0 auto;
+	}
+    .pdf{
+	width:62% !important;
+	border:1px solid lightgray;
+    }
+} 
+
+.calendar-content p{
+	position: static;
+	width:100%;
+	height:42px;
+	display:-webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+	-webkit-justify-content: space-between;
+	justify-content: space-between;
+	margin-top: 5px;
+}
+.calendar-content>p:nth-of-type(1){
+	margin-top:10px;
+}
+.calendar-content>p:nth-of-type(2){
+	margin-top:10px;
+}
+.calendar-content>p:nth-of-type(6){
+	border-bottom: 1px solid #1d7aee;
+	padding-bottom: 15px;
+}
+.calendar-content>p span{
+	display:inline-block;
+	width:36px;
+	height:36px;
+	text-align: center;
+	line-height: 40px;
+	color: #a1a0a0;
+	border-radius:50%;
+}
+.calendar-content p span:hover{
+	background: ;
+}
+.calendar-end{
+	width:100%;
+	height:119px;
+	margin-top:6px;
+}
+.calendar-left{
+	width:8%;
+    float: left;
+    background: url(../img/bell.png) no-repeat center;
+    line-height: 100%;
+    height: 114px;
+}
+.calendar-middle{
+	width: 90%;
+    float: right;
+    height: 80px;
+    margin-top: 35px;
+}
+.calendar-right{
+	width: 0%;
+    float: left;
+}
+.calendar-left img{
+	padding:51px 0 51px 0;
+	display:none
+}
+.calendar-content .calendar-middle p{
+	height:20px;
+	color: #a1a0a0;
+	font-size: 12px;
+}
+.calendar-content .calendar-middle p:nth-of-type(1){
+	padding-top:0px;
+}
+.calendar-right a{
+	display: inline-block;
+    width: 48px;
+    height: 24px;
+    padding: 1px 6px;
+    text-align: center;
+    line-height: 23px;
+    color: white;
+    background: #1d7aee;
+    border-radius: 15px;
+    margin-top: 47.5px;
+    float: right;
+}
+.calendar-content .six,.calendar-content .seven,.calendar-content .eight{
+	width:40px;
+	height:40px;
+	border:1px solid white;
+}
+.calendar-content .six{
+	background: skyblue;
+	color:white;
+}
+.calendar-content .seven{
+	background: orange;
+	color:white;
+}
+.calendar-content .eight{
+	background: purple;
+	color:white;
+}
+.order_details .checked{
+	border:1px solid red;
+}
+/*6，7，8讲课内容*/
+.lecturer{
+	width:50%;
+	height:470px;
+	float:left;
+	position:relative;
+}
+.lecturer-content{
+	width:92%;
+	height:;
+	margin:0 auto;
+}
+.tablelist{
+	width:94%;
+	height:467px;
+	position:absolute;
+	background: white;
+	box-shadow: -3px -4px 19px 11px rgb(243,243,243);
+}
+.tablelist:nth-of-type(1){
+	z-index:1;
+}
+.tablelist p{
+	position: static;
+}
+.tablist-title{
+	width:90%;
+	height:60px;
+	margin:0 auto;
+}
+.tablist-title>a>img{
+	width:60px;
+	height:60px;
+	float:left;
+	padding:8px;
+}
+.tablist-title>p{
+	float:right;
+	font-size: 14px;
+	color:#a1a0a0;
+	line-height: 60px;
+}
+.none{
+	width:94%;
+	height:1px;
+	margin:0 auto;
+	border-bottom:1px solid  lightgray;
+	margin-bottom: 10px;
+	clear:both;
+}
+.teacher{
+	width:90%;
+	margin:0 auto;
+	height:396px;clear:both;
+}
+.teacher-left{
+	width:0%;
+	float:left;
+	height:100%;
+}
+.teacher-left>img{
+	padding-top: 30px;
+	padding-right: 23px;
+	height:303px;
+}
+.teacher-middle{
+	width:100%;
+	float:left;
+}
+.speaker{
+	margin-top:8px;
+	width:100%;
+	height:50px;
+	float:right;
+}
+.speaker>div:nth-of-type(1){
+	float: left;
+    width: 70%;
+    height: 33px;
+    overflow: hidden;
+}
+.speaker>div:nth-of-type(2){
+	float:right;
+}
+.speaker>div:nth-of-type(1)>p:nth-of-type(1){
+	font-size: 14px;
+	color:black;
+	line-height: 50px;
+}
+.speaker>div:nth-of-type(1)>p:nth-of-type(1)>span{
+	display:inline-block;
+	width:8px;
+	height:8px;
+	border-radius:50%;
+	background: #FF4B4B;
+	margin-right: 2%;
+}
+.speaker>div:nth-of-type(1)>p:nth-of-type(2){
+	font-size: 12px;
+	color:#A1A0A0;
+	line-height: 10px;
+}
+.speaker>div:nth-of-type(2)>p{
+	font-size: 14px;
+	color:black;
+	line-height:50px;
+	float:right;
+}
+/*联系人*/
+.cost>.contacts p{
+	width:100%;
+	float:left;
+}
+.cost>.contacts p:nth-of-type(1)>span:nth-of-type(1){
+	float:left;
+	font-weight: bold;
+}
+.cost>.contacts p:nth-of-type(2)>span,.cost>.contacts p:nth-of-type(3)>span,.cost>.contacts p:nth-of-type(4)>span,.cost>.contacts p:nth-of-type(5)>span{
+	padding-left: 72px;
+}
+
+/*斯欧韦氏成人韦氏儿童pdfcss*/
+.pdf{
+	width:100%;
+	border:1px solid lightgray
+}
+.cost-content .pdf>a{
+	display:block;
+	width:100%;
+	height:90px;
+	margin:0 auto;
+	padding:0 8%;
+}
+.pdf>a>div{
+	display:inline-block;
+	float:left;
+	height:90px;
+	overflow: hidden;
+}
+.pdf>a>div:nth-of-type(1)>img{
+	display:block;
+	padding-top: 16px;
+}
+.pdf>a>div:nth-of-type(2){
+	display:inline-block;
+	float:left;
+	height:58px;
+	overflow: hidden;
+	margin-top:16px;
+	padding-left: 13%;
+}
+.pdf>a>div:nth-of-type(2)>p{
+	text-align: left;
+}
+.pdf>a>div:nth-of-type(2)>p{
+	font-size: 14px;
+    font-weight: bold;
+    color: #545454;
+    line-height: 58px;
+}
+
+.pdf>a>div:nth-of-type(3){
+	display:inline-block;
+	float:right;
+	height:58px;
+	overflow: hidden;
+	margin-top:16px;
+	display:none;
+}
+.pdf>a>div:nth-of-type(3)>p{
+	font-size: 14px;
+    font-weight: bold;
+    color: #545454;
+    line-height: 88px;
+}
+/*报名方式，费用及路线*/
+.costbox1{
+	width:100%;
+}
+.costbox1-content{
+	width:70%;
+	margin:0 auto;
+}
+.costbox{
+	width:100%;
+	margin:0 auto;
+}
+.cost{
+	width:50%;
+}
+.cost-content{
+	width:92%;
+	/*height:100%;*/
+	margin:0 auto;
+}
+.cost-content h4{
+	padding: 30px 0 10px 0;
+    font-size:18px;
+    color: #201e1e;
+}
+.cost-content p{
+	color: #4d4d4d;
+    font-size: 14px;
+    line-height: 30px;
+}
+.cost-content .signup{
+	display:block;
+	width:200px;
+	height:30px;
+	background: #FF4B4B;
+	border-radius:20px;
+	text-align: center;
+	line-height: 30px;
+	color:white;
+	font-size: 14px;
+	margin:31px auto 0 auto;
+}
+
+/*版权*/
+.right-footer { 
+    position: relative;
+    height: 40px;
+    background: none;
+    line-height: 40px;
+    margin-top: 80px !important;
+    color: #a3a3a3;
+    font-size: 30px;
+    text-align: center;
+    z-index: 1;
+    width: 100% !important;
+    float: right;
+    clear: both;
+    border-top: 1px solid lightgray;
+}
+.right-footer-content{
+	width: 100%;
+    height: 40px;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 40px;
+    font-size: 12px;
+    color: #a3a3a3;
+}
+
+
+#title {
+	width: 100%;
+	height: 40px;
+	background-color: #1d7aee;
+	line-height: 26px;
+}
+.selectBtn {
+	font-weight: 900;
+	font-size: 15px;
+	color: #fff;
+	cursor: pointer;
+	text-decoration: none;
+	padding: 7px 10px 6px 10px;
+}
+.selectBtn:hover {
+	/*background-color: #1d953f;*/
+}
+.selectYear {
+	float: left;
+	margin-left: 50px;
+	position: absolute;
+}
+.selectMonth {
+	float: left;
+	margin-left: 120px;
+	position: absolute;
+}
+.month {
+	float: left;
+	position: absolute;
+}
+.nextMonth {
+	float: right;
+}
+.currentDay {
+	float: right;
+}
+#context {
+	background-color: #fff;
+	width: 100%;
+	
+	/*height:274px !important;*/
+	height:229px !important;
+	background: gree;
+}
+.week {
+	width: 100%;
+	height: 30px;
+}
+.week>h3 {
+	float: left;
+	color: #808080;
+	text-align: center;
+	margin: 0;
+	padding: 0;
+	margin-top: 5px;
+	font-size: 16px;
+}
+.dayItem {
+	float: left;
+}
+.lastItem {
+	color: #d1c7b7 !important;
+}
+.item {
+	color: #333;
+	float: left;
+	text-align: center;
+	cursor: pointer;
+	margin: 0;
+	font-size: 14px;
+	padding-top: 0px;
+}
+.item:hover {
+	color: #b9121b;
+}
+.currentItem>a {
+	background-color: #1d7aee;
+	width: 25px;
+	line-height: 25px;
+	display:inline-block;
+	/*float: left;*/
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border-radius: 50%;
+	color: #fff;
+}
+.currentItem:nth-of-type(34)>a{
+	display:inline-block;
+	background: red;
+	width: 25px;
+    height: 12.5px;
+    border:1px solid black;
+    background-color: blue;
+    border-radius: 25px 25px 0 0;
+}
+#foots {
+	width: 100%;
+	height: 35px;
+	background-color: #fff;
+	border-top: 1px solid #ccc;
+	margin-top: -1px;
+}
+#footNow {
+	float: right;
+	margin: 6px 15px 0 0;
+	color: #009ad6;
+}
+#Container {
+	overflow: hidden;
+	float: left;
+}
+#center {
+	width: 100%;
+	overflow: hidden;
+	height:200px !important;
+	border-top: 1px solid #ccc;
+}
+#centerMain {
+	width: 300%;
+	margin-left: -100%;
+}
+#selectYearDiv {
+	float: left;
+	background-color: #fff;
+}
+#selectYearDiv>div {
+	float: left;
+	text-align: center;
+	font-size: 16px;
+	border: 1px solid #ccc;
+	margin-left: -1px;
+	margin-top: -1px;
+	cursor: pointer;
+	color: #909090;
+}
+.currentYearSd, .currentMontSd {
+	color: #ff4400 !important;
+}
+#selectMonthDiv {
+	float: left;
+	background-color: #fff;
+	
+	height:242px !important;
+}
+#selectMonthDiv>div {
+	color: #909090;
+	float: left;
+	text-align: center;
+	font-size: 16px;
+	border: 1px solid #ccc;
+	margin-left: -1px;
+	margin-top: -1px;
+	cursor: pointer;
+	
+	height:66px;
+	line-height: 65px;
+}
+#selectYearDiv>div:hover, #selectMonthDiv>div:hover {
+	background-color: #efefef;
+}
+#centerCalendarMain {
+	float: left;
+	height: 206px !important;
+}

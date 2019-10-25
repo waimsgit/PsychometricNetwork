@@ -1,0 +1,293 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>登录</title>
+		<link rel="stylesheet" type="text/css" href="css/register.css"/>
+		<script type="text/javascript" src="js/jquery-1.11.0.min.js" ></script>
+		<script  src="../js/md5.js"></script>
+		<script>
+			$(function(){
+				var hight = $(window).height();
+				$("#imgHight").css("height",hight);
+				$("#contentHight").css("height",hight);
+				$("#code").click(function(){
+					$("#code").attr("src","http://wppsi.king-may.com/jmic_wisc4/member/login_check/imagecode?"+Math.random() );
+				});
+				$("#e_submit").click(function(){
+					
+				var username = $('.username').val();
+				var password = $('.e_password').val();
+				var e_code=$('#e_code').val();
+				
+				var data = {"password":hex_md5(password),"phonenum":username,"remark2":e_code};
+			        
+			        $.ajax({
+			        	url:"http://jiaoyangzhixin.com/examinee/u/submit",
+			        	data:data,
+			        	type:"post",
+			        	dataType:"json",
+			        	success:function(result){
+				        	console.log(result);
+				    		if(result && result.status == 400){
+				    			
+				    			return;
+				    		}if(result && result.status == 500){
+				    			
+				    			return;
+				    		}else if(result && result.status == 200){
+				    			
+				    			setTimeout(function(){
+				    				//登录返回
+					    			window.location.href= result.back_url || "${basePath}/";
+				    			},1000)
+				    		}
+			        	},
+			        	error:function(e){
+			        		console.log(e,e.message);
+			        		
+			        	}
+			        });
+					
+				});
+				
+				//onchange 值改变事件
+				$("#menu").change(function(){
+					//alert("sd");
+					var classify = $("#menu").val();
+					if("ertong" == classify){
+						$("#verification").css("display","block");
+						$("#ertongcontent").css("display","block");
+						$("#sioucontent").css("display","none");
+						$("#youercontent").css("display","none");
+						$("#chengrencontent").css("display","none");
+						$("#beishicontent").css("display","none");
+						$("#ertongimg").css("display","block");
+						$("#youerimg").css("display","none");
+						$("#siouimg").css("display","none");
+						$("#chengrenimg").css("display","none");
+					}
+					else if("youer" == classify){
+						$("#verification").css("display","block");
+						$("#youercontent").css("display","block");
+						$("#ertongcontent").css("display","none");
+						$("#sioucontent").css("display","none");
+						$("#chengrencontent").css("display","none");
+						$("#beishicontent").css("display","none");
+						$("#ertongimg").css("display","none");
+						$("#youerimg").css("display","block");
+						$("#siouimg").css("display","none");
+						$("#chengrenimg").css("display","none");
+					}
+					else if("chengren" == classify){
+						$("#verification").css("display","block");
+						$("#youercontent").css("display","none");
+						$("#ertongcontent").css("display","none");
+						$("#sioucontent").css("display","none");
+						$("#chengrencontent").css("display","block");
+						$("#beishicontent").css("display","none");
+						$("#ertongimg").css("display","none");
+						$("#youerimg").css("display","none");
+						$("#siouimg").css("display","none");
+						$("#chengrenimg").css("display","block");
+					}
+					else if("beishi" == classify){
+						$("#verification").css("display","block");
+						$("#beishicontent").css("display","block");
+						$("#youercontent").css("display","none");
+						$("#ertongcontent").css("display","none");
+						$("#sioucontent").css("display","none");
+						$("#chengrencontent").css("display","none");
+						$("#ertongimg").css("display","none");
+						$("#youerimg").css("display","none");
+						$("#siouimg").css("display","none");
+						$("#chengrenimg").css("display","block");
+						$("#e_codeImg").attr("src", "http://jiaoyangzhixin.com/examinee/u/verify")
+					}
+					else{
+						$("#sioucontent").css("display","block");
+						$("#youercontent").css("display","none");
+						$("#ertongcontent").css("display","none");
+						$("#chengrencontent").css("display","none");
+						$("#beishicontent").css("display","none");
+						$("#ertongimg").css("display","none");
+						$("#youerimg").css("display","none");
+						$("#siouimg").css("display","block");
+						$("#chengrenimg").css("display","none");
+					}
+				})
+			})
+		</script>
+		<script>
+			
+			function login()
+				{
+					var email = document.getElementById("email").value;
+					var password = document.getElementById("password").value;
+					if(null == email || "" == email)
+					{
+						alert("请输入用户名!");
+						document.getElementById("email").focus();
+						return;
+					}
+					
+					if(null == password || "" == password)
+					{
+						alert("请输入密码!");
+						document.getElementById("password").focus();
+						return;
+					}
+					
+					document.getElementById("loginForm").submit();
+				}
+		</script>
+	</head>
+	<body>
+		<div class="container">
+			<!--左侧登录-->
+			<div class="container-left">				
+				<div class="left-content" id="contentHight">
+						<!--登录方式的选择-->
+							<div class="left-bottom">
+						<div class="bottomnav">
+							 <select name="" id="menu">
+							      	<option value="siou" id="siou" selected="selected">斯欧非言语智力测评</option>
+							      	<option value="youer" id="youer">韦氏幼儿智力量表</option>
+							      	<option value="ertong" id="ertong">韦氏儿童智力量表</option>
+							      	<option value="chengren" id="chengren">韦氏成人智力量表</option>
+							      	<option value="beishi" id="beishi">被试档案管理</option>
+							    
+							 </select>
+							 <div class="registerleft">
+							 	<img src="img/registerleft.png" alt="" />
+							 </div>
+							 
+						</div>
+						 
+						<p>选择您的登录方式，以便针对不同的账户进行操作</p>
+					</div>
+					
+					<div class="left-top">
+						<h3>登录</h3>
+						
+						<!--
+                        	作者：offline
+                        	时间：2018-09-28
+                        	描述：斯欧登录
+                        -->
+						<div class="form" id="sioucontent">
+							<form id="loginForm" action="http://www.sonrtest.com/admin/logon" method="post">
+							<div class="account">
+								<input id='email' type="text" name="email" placeholder="请输入你的电话号码">
+							</div>
+							<div class="password">							
+								<input id='password' type="password" name="password" placeholder="请输入你的登录密码">
+							</div>
+							<a href="http://www.sonrtest.com/front/find-password.jsp" class="forget">忘记密码？</a>
+							<input type="submit" value="登录" class="register"/>
+							</form>
+						</div>
+						<!--
+                        	作者：offline
+                        	时间：2018-09-28
+                        	描述：幼儿登录
+                        -->
+						<div class="form" id="youercontent" style="display: none;">
+							<form id="logintoyouer" action="http://wppsi.king-may.com/jmic_wisc4/member/login_check/login" method="post">
+								<input name="utf8" type="hidden" value="✓">
+								<input name="authenticity_token" type="hidden" value="P4HIIHKhLNg31yK/4Twey7MY0uEWBysv26JqjOtoqa8=">
+								<div class="account">
+									<input type="text" name="username" placeholder="请输入你的电话号码">
+								</div>
+								<div class="password">							
+									<input type="password" name="password" placeholder="请输入你的登录密码">
+								</div>
+								<div class="verification">
+									<input type="text"  name="type_code" placeholder="请输入您的验证码"/>
+									<img src="http://wppsi.king-may.com/jmic_wisc4/member/login_check/imagecode" alt="" class="verification-right"/>
+								</div>
+								<a href="http://www.sonrtest.com/front/find-password.jsp" class="forget">忘记密码？</a>
+								<input type="submit" value="登录" class="register"/>
+							</form>
+						</div>
+						
+						<div class="form" id="ertongcontent" style="display: none;">
+							<form id="logintoertong" action="http://wisc.king-may.com.cn/login.jhtml" method="post">
+								<input type="hidden" name="action" value="login">
+								<input type="hidden" name="tourl" value="http://wisc.king-may.com.cn/main.jhtml">
+								<div class="account">
+									<input  type="text" name="username" placeholder="请输入你的电话号码">
+								</div>
+								<div class="password">							
+									<input  type="password" name="passwd" placeholder="请输入你的登录密码">
+								</div>
+								<div class="verification">
+									<input type="text" name="authCode" placeholder="请输入您的验证码"/>
+									<img  src="http://wisc.king-may.com.cn/authimg" alt="" class="verification-right"/>
+								</div>
+								<a href="http://www.sonrtest.com/front/find-password.jsp" class="forget">忘记密码？</a>
+								<input type="submit" value="登录" class="register"/>
+							</form>
+							
+						</div>    <!--ertongcontent结尾标签-->
+						
+						<div class="form" id="chengrencontent" style="display: none;">
+							<form id="logintochengren" action="http://wisc.king-may.com.cn/login.jhtml" method="post">
+								<input type="hidden" name="action" value="login">
+								<input type="hidden" name="tourl" value="http://wisc.king-may.com.cn/main.jhtml">
+								<div class="account">
+									<input  type="text" name="username" placeholder="请输入你的电话号码">
+								</div>
+								<div class="password">							
+									<input  type="password" name="passwd" placeholder="请输入你的登录密码">
+								</div>
+								<div class="verification">
+									<input type="text" name="authCode" placeholder="请输入您的验证码"/>
+									<img  src="http://wisc.king-may.com.cn/authimg" alt="" class="verification-right"/>
+								</div>
+								<a href="http://www.sonrtest.com/front/find-password.jsp" class="forget">忘记密码？</a>
+								<input type="submit" value="登录" class="register"/>
+							</form>
+							
+						</div>    <!--chengrencontent结尾标签-->
+						
+						<div class="form" id="beishicontent" style="display: none;">
+							
+								
+								
+								<div class="account">
+									<input type="text" name="username" class="username" placeholder="请输入你的电话号码">
+								</div>
+								<div class="password">							
+									<input type="password" name="password" class="e_password" placeholder="请输入你的登录密码">
+								</div>
+								<div class="verification">
+									<input type="text"  name="type_code" id="e_code" placeholder="请输入您的验证码"/>
+									<img id="e_codeImg" src="" alt="" class="verification-right"/>
+								</div>
+								<a href=" class="forget">忘记密码？</a>
+								
+
+								<button id="e_submit" class="register">登陆</button>
+						</div>
+					</div>    <!--left-top结尾标签-->
+					
+				</div>   <!--left-content结尾标签-->
+			</div>   <!--content-left结尾标签-->
+			
+			<!--右侧展示图-->
+			<div class="container-right">
+				<div class="right-content" id="imgHight">
+					<img src="img/registerright.png" alt="" id="siouimg" />	
+					<img src="img/registerright3.png" alt="" id="youerimg" style="display:none"/>
+					<img src="img/registerright2.png" alt="" id="ertongimg" style="display:none"/>
+					<img src="img/registerright4.png" alt="" id="chengrenimg" style="display:none"/>
+				</div>
+			</div>
+			
+			<div class="none"></div>
+		</div>
+		
+		
+	</body>
+</html>

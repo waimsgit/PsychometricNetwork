@@ -1,0 +1,388 @@
+.container{
+	width:100%;
+	height:100%;
+}
+.content{
+	width:23.4375rem;
+	height:100%;
+	margin:0 auto;
+}
+*{margin:0px;padding:0px;list-style-type:none;}
+.v_out{width:23.4375rem;margin:20px auto;overflow:hidden;}
+.v_show{width:78%;overflow:hidden;position:relative;height:222px;float:left}
+.v_cont{ width:624%;osition:absolute;left:0px;top:0px;}
+.v_cont ul{float:left;text-align:center;line-height:50px;}
+.v_cont ul li{width:100%;height:250px;background:;float:left;margin-top:3px;}
+.content1{
+	width:100%;
+	height:100%;
+	margin:0 auto;
+}
+.content1-top{
+	width:100%;
+	height:3.2rem;
+	margin-left:0;
+	margin:0 auto;
+}
+.content1-top>div{
+	width:96%;
+	height:3.2rem;
+	margin:0 auto;
+}
+.content1-top>div>img{
+	width:1.8rem;
+	height:1.8rem;
+	float:left;
+	line-height: 3.2rem;
+	padding-top: 0.6rem;
+}
+.content1-top>div>h3{
+	float:left;
+	font-size: 1rem;
+	color:black;
+	line-height: 3.2rem;
+	padding-left:0.5rem;
+}
+.content1 p{
+	clear:both;
+	width:14%;
+	height:9rem;
+	line-height: 1.8rem;
+	overflow: hidden;
+	padding-top:0.2rem;
+	margin-left:1.2%;
+	text-align: center;
+	color:#676767;
+	font-size: 0.8rem;
+}
+/*---圆圈---*/
+.v_out_p{position:relative;overflow:visible}
+.circle{position:absolute;left: 40px;top: 290px;}
+.circle li{width:120px;height:60px;float:left;margin-right:10px;background:#ccc}
+.circle .circle-cur{background:#f00}
+
+/*---切换---*/
+.prev,.next{float:left;padding:105px 6px 0}
+.prev a{ background:;}
+.prev .ico_1{ background:url(../img/the-left-arrow2.png) no-repeat left;}
+
+.next a{background:; }
+.next .ico_2{background:url(../img/the-right-arrow2.png) no-repeat right;}
+.prev,.prev a,.next,.next a{width:28px;height:28px; display:block}
+.locio-left{
+	width:28px;
+	height:28px;
+	position:absolute;
+	top:105px;
+	left:15px;
+}
+.prev:hover .redarraw{
+	display:block;
+}
+.redarraw{
+	width:28px;
+	height:28px;
+	position:absolute;
+	left:15px;
+	top:105px;
+	display:none;
+}
+.locio-right{
+	width:28px;
+	height:28px;
+	position:absolute;
+	top:105px;
+	right:15px;
+}
+.redarraw2{
+	width:28px;
+	height:28px;
+	position:absolute;
+	right:15px;
+	top:105px;
+	display:none;
+}
+.next:hover .redarraw2{
+	display:block;
+}
+
+/*学术会议*/
+.meeting{
+	width:100%;
+	height:100%;
+	clear:both;
+}
+.meeting-content{
+	width:92%;
+	height:100%;
+	margin:0 auto;
+}
+.meeting-content h3{
+	color:black;
+	font-size: 1.2rem;
+	text-align: center;
+	padding:1rem 0;
+}
+.meeting-content1{
+	position:relative;
+}
+.meeting-content1>img{
+	max-width:100%;
+} 
+.meeting-content1:hover div{
+	display:block;
+}
+.meeting-content1>div{
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:98%;
+	background:rgba(0,0,0,0.5);
+	display:none;
+}
+.meeting-content1>div>h2{
+	color:white;
+	font-size: 1.1rem;
+	text-align: center;
+	width:54%;
+    margin:0 auto;
+    padding:3rem 0 2rem 0;
+}
+.meeting-content1>div>.more{
+	display:inline-bolck;
+	width:4.5rem;
+	margin:0 auto;
+	text-align: center;
+}
+.meeting-content1>div>.more>a{
+	color:white;
+}
+
+/*视频*/
+.video{
+	width:100%;
+	height:100%;
+	margin-top:3rem;
+}
+.video-content{
+	width:92%;
+	height:100%;
+	margin:0 auto;
+}
+.video-content h3{
+	color:black;
+	font-size: 1.2rem;
+	text-align: center;
+	padding:1rem 0;
+}
+.video-content:hover div{
+	border:3px solid #FF0000;
+}
+.video-content>div>video{
+	margin-bottom:-4px;
+}
+
+/*经典文献*/
+.literature{
+	width:100%;
+	height:100%;
+	margin-top:3rem;
+}
+.literature-content{
+	width:92%;
+	height:100%;
+	margin:0 auto;
+}
+.literature-content h3{
+	color:black;
+	font-size: 1.2rem;
+	text-align: center;
+	padding:1rem 0;
+}
+.literature-content>div{
+	width:100%;
+	height:3rem;
+	background:#EEEEEE;
+	margin:0.2rem 0;
+}
+.literature-content>div>p{
+	float:left;
+	font-size: 0.8rem;
+	line-height: 3rem;
+	padding-left: 0.4rem;
+	color:#676767;
+}
+.literature-content>div>a{
+	float:right;
+	font-size: 0.6rem;
+	line-height:3rem;
+	color:#FF0000;
+}
+.literature-content>div>a>img{
+	width:0.4rem;
+	height:0.4rem;
+	padding:0  0.4rem;
+}
+
+/*照片*/
+.photo{
+	width:100%;
+	height:100%;
+	margin-top: 3rem;
+}
+.photo-content{
+	width:100%;
+	height:100%;
+	margin:0 auto;
+}
+.photo-content>div{
+	width:100%;
+	height:100%;
+}
+.photo-content>div>img{
+	display:inline-block;
+	width:33.33%;
+	height:100%;
+	float:left;
+}
+
+/*合作单位*/
+.cooperation{
+	width:100%;
+	height:100%;
+	background: pink;
+}
+.cooperation-content{
+	width:92%;
+	height:100%;
+	background: yellow;
+	margin:0 auto;
+}
+
+/*北京骄阳智心有限公司*/
+.introduction{
+	width:100%;
+	height:100%;
+	background:#EEEEEE;
+}
+.introduction-content{
+	width:92%;
+	height:100%;
+	margin:0 auto;
+	margin:7rem 0 2rem 0;
+}
+.introduction-content h3{
+	color:black;
+	font-size: 1.2rem;
+	text-align: center;
+	padding:1rem 0;
+	margin-top: 3rem;
+}
+.introduction-content p{
+	text-align: center;
+	font-size: 1rem;
+	color:gray;
+	line-height: 1.8rem;
+	font-size: 0.8rem;
+}
+.gengduo{
+	width:100%;
+	height:2rem;
+}
+.gengduo>a{
+	line-height: 2rem;
+	color:#FF0000;
+	font-size: 0.8rem;
+}
+.gengduo>a>img{
+	max-width: 0.5rem;
+}
+/*地图*/
+.map{
+	width:100%;
+	height:100%;
+}
+.map-content{
+	width:100%;
+	height:100%;
+	margin:0 auto;
+}
+.map-content>img{
+	max-width:100%;
+	height:8rem;
+}
+
+.address{
+	width:100%;
+	height:10rem;
+	background: #372f2d;
+	border-top:0.2rem solid #FF4B4B;
+	padding:2rem 0;
+}
+.address-content{
+	width:92%;
+	height:10rem;
+	margin:0 auto;
+	background: #372f2d;
+}
+.address-left{
+	border-left:0.3rem solid #FF4B4B;
+	float:left;
+}
+.address-left p{
+	padding-left: 0.5rem;
+	line-height:1.5rem;
+	color:#a1a0a0;
+	font-size: 0.5rem;
+}
+.address-right{
+	float:right;
+}
+.address-right div{
+	float:left;
+	margin:0 50px;
+	padding-top: 40px;
+}
+.address-right div img{
+	width:3rem;
+	height:3rem;
+}
+.address-right div p{
+	text-align: center;
+	color:#a1a0a0;
+	padding-top:0.6rem;
+}
+/*公司图片展示*/
+.footer{
+	width:100%;
+	height:4rem;
+	background: #FF4B4B;
+}
+.footer-content{
+	width:92%;
+	height:4rem;
+	margin:0 auto;
+}
+.footer-content div{
+	float:left;
+	width:23%;
+	padding:0 1%;
+	height:4rem;
+	text-align:center;
+}
+.footer-content div img{
+  text-align: center;	
+  vertical-align: middle;
+  padding-top:1rem;
+  height: 2rem;
+  max-width:100%;
+}
+.footer-content div:nth-of-type(1) img{
+  text-align: center;	
+  vertical-align: middle;
+  max-width: 100%;
+  height:1.3rem;
+  padding-top:1.35rem;
+}
+

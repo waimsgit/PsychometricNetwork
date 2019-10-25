@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>主试公示</title>
+		<link rel="stylesheet" type="text/css" href="css/commone.css" />
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<link rel="stylesheet" type="text/css" href="css/committee.css" />
+		<link rel="stylesheet" type="text/css" href="css/Safari.css" />	
+		<script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+		<style>
+			[v-cloak]{
+			    display: none !important;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="main">
+		<div class="container">
+			<!--左边导航内容-->
+			<div id="side"></div>
+			
+			<!--右侧内容-->
+			<div class="right" id="right">
+				<!--主试资格名单-->
+				<div class="introduce4">
+					<div class="introduce-content4">
+						<h3>主试资格名单</h3>
+						<!--标题   首页>主试公示-->
+						<!--标题-->
+						<div class="title">
+							<div class="title-content">
+							    <div class="title-left">
+							    		<span class="jiantou"></span>
+							    		<p>
+							    			<a href="train.html">培训 ></a> 
+							    			<span>主试公示 </span>
+							    		</p>
+							    </div>
+							</div>
+						</div>
+						
+						<div class="sousuo">
+							<p><span></span>按省份查找</p>
+							<div>
+								<img src="img/committeesousuo.png" alt="" />
+								<input type="text" size="18" value="请输入要查询的姓名" onfocus="if (value =='请输入要查询的姓名'){value =''}" onblur="if (value ==''){value='请输入要查询的姓名'}" />
+						    </div>
+						</div>
+						
+						<div class="content1" id="committeevue">
+						    <div class="tab-wrapper">
+							    <ul class="tab-menu">
+									<li class="active">全部</li>
+									<li>北京</li>
+									<li>天津</li>
+									<li>上海</li>
+									<li>重庆</li>
+									<br />
+									<li>河北</li>
+									<li>山西</li>
+									<li>辽宁</li>
+									<li>吉林</li>
+									
+									<li>江苏</li>
+									<li>浙江</li>
+									<li>安徽</li>
+									<li>福建</li>
+									<li>江西</li>
+									<li>山东</li>
+									<li>河南</li>
+									<li>湖北</li>
+									<li>黑龙江</li>
+									<br />
+									<li>湖南</li>
+									<li>广东</li>
+									<li>海南</li>
+									<li>四川</li>
+									<li>贵州</li>
+									<li>云南</li>
+									<li>陕西</li>
+									<li>甘肃</li>
+									<li>青海</li>
+									<li>内蒙古</li>
+									<li>广西</li>
+									<li>西藏</li>
+									<li>宁夏</li>
+									<li>新疆</li>
+									<li>香港</li>
+									<li>澳门</li>
+									<li>台湾</li>
+							    </ul>
+									  
+								<div class="tab-content">
+								  	<!--全部名单-->
+									<div class="tab-content1">
+										<div class="listbox">
+											<div class="listbox-centent">
+												<a v-cloak v-for="item in examinees" :href="url"><span>{{item.name}}</span></a>
+										 		
+											</div>
+										</div>
+									</div>
+									
+									<!--北京-->
+									<div class="tab-content1">
+									    <div class="listbox">
+											<div class="listbox-centent">
+												<a v-for="item in examinees" v-if="item.cId=='11'" :href="url+item.eId">{{item.name}}</a>
+											</div>
+										</div>
+									</div>
+									
+									<!--天津-->
+									<div class="tab-content1">
+										<div class="listbox">
+											<div class="listbox-centent">
+												<a v-for="item in examinees" v-if="item.cId=='12'" :href="url+item.eId">{{item.name}}</a>
+											</div>
+										</div>
+									</div>
+									
+									<!--上海-->
+									<div class="tab-content1">
+				                        <div class="listbox">
+											<div class="listbox-centent">
+												<a v-for="item in examinees" v-if="item.cId=='31'" :href="url+item.eId">{{item.name}}</a>
+											</div>
+										</div>
+									</div>
+									
+									<!--重庆-->
+									<div class="tab-content1">
+										<div class="listbox">
+											<div class="listbox-centent">
+												<a v-for="item in examinees" v-if="item.cId=='50'" :href="url+item.eId">{{item.name}}</a>
+											</div>
+										</div>
+									</div>
+										
+									<!--河北-->
+									<div class="tab-content1">
+										<div class="listbox">
+											<div class="listbox-centent">
+												<a v-for="item in examinees" v-if="item.cId=='13'" :href="url+item.eId">{{item.name}}</a>
+											</div>
+										</div>
+									</div>	
+										
+									<!--山西-->
+									<div class="tab-content1">
+										<div class="listbox">
+											<div class="listbox-centent">
+												<a v-for="item in examinees" v-if="item.cId=='14'" :href="url+item.eId">{{item.name}}</a>
+											</div>
+										</div>
+									</div>		
+									
+									<!--辽宁-->
+									<div class="tab-content1">
+										<div class="listbox">
+											<div class="listbox-centent">
+												<a v-for="item in examinees" v-if="item.cId=='21'" :href="url+item.eId">{{item.name}}</a>
+											</div>
+										</div>
+									</div>	
+									
+									<!--吉林-->
+									<div class="tab-content1">
+										<div class="listbox">
+											<div class="listbox-centent">
+												<a v-for="item in examinees" v-if="item.cId=='22'" :href="url+item.eId">{{item.name}}</a>
+											</div>
+										</div>
+									</div>	
+									
+									
+									<!--江苏-->
+									<div class="tab-content1">
+										<div class="listbox">
+											<div class="listbox-centent">
+												<a v-for="item in examinees" v-if="item.cId=='32'" :href="url+item.eId">{{item.name}}</a>
+											</div>
+										</div>
+									</div>	
+									
+									<!--浙江-->
+									<div class="tab-content1">
+										<div class="listbox">
+											<div class="listbox-centent">
+												<a v-for="item in examinees" v-if="item.cId=='33'" :href="url+item.eId">{{item.name}}</a>
+											</div>
+										</div>
+									</div>	
+									
+									<!--安徽-->
+									<div class="tab-content1">
+										<div class="listbox">
+											<div class="listbox-centent">
+												<a v-for="item in examinees" v-if="item.cId=='34'" :href="url+item.eId">{{item.name}}</a>
+											</div>
+										</div>
+									</div>	
+									
+									<!--福建-->
+									<div class="tab-content1">
+										<div class="listbox">
+											<div class="listbox-centent">
+												<a v-for="item in examinees" v-if="item.cId=='35'" :href="url+item.eId">{{item.name}}</a>
+											</div>
+										</div>
+									</div>	
+									
+									<!--江西-->
+									<div class="tab-content1">
+										<div class="listbox">
+											<div class="listbox-centent">
+												<a v-for="item in examinees" v-if="item.cId=='36'" :href="url+item.eId">{{item.name}}</a>
+											</div>
+										</div>
+									</div>	
+									
+									<!--山东-->
+									<div class="tab-content1">
+										<div class="listbox">
+											<div class="listbox-centent">
+												<a v-for="item in examinees" v-if="item.cId=='37'" :href="url+item.eId">{{item.name}}</a>
+											</div>
+										</div>
+									</div>	
+									
+									<!--河南-->
+									<div class="tab-content1">
+										<div class="listbox">
+											<div class="listbox-centent">
+												<a v-for="item in examinees" v-if="item.cId=='41'" :href="url+item.eId">{{item.name}}</a>
+											</div>
+										</div>
+									</div>	
+									
+									<!--湖北-->
+									<div class="tab-content1">
+										<div class="listbox">
+											<div class="listbox-centent">
+												<a v-for="item in examinees" v-if="item.cId=='42'" :href="url+item.eId">{{item.name}}</a>
+											</div>
+										</div>
+									</div>	
+									
+										
+									<!--黑龙江-->
+									<div class="tab-content1">
+										<div class="listbox">
+											<div class="listbox-centent">
+												<a v-for="item in examinees" v-if="item.cId=='23'" :href="url+item.eId">{{item.name}}</a>
+											</div>
+										</div>
+									</div>
+									
+									<!--湖南-->
+									<div class="tab-content1">
+										<div class="listbox">
+											<div class="listbox-centent">
+												<a v-for="item in examinees" v-if="item.cId=='43'" :href="url+item.eId">{{item.name}}</a>
+											</div>
+										</div>
+									</div>
+									
+									<!--广东-->
+									<div class="tab-content1">
+										<div class="listbox">
+											<div class="listbox-centent">
+												<a v-for="item in examinees" v-if="item.cId=='44'" :href="url+item.eId">{{item.name}}</a>
+											</div>
+										</div>
+									</div>	
+									
+									<!--海南-->
+									<div class="tab-content1">
+										<div class="listbox">
+											<div class="listbox-centent">
+												<a v-for="item in examinees" v-if="item.cId=='46'" :href="url+item.eId">{{item.name}}</a>
+											</div>
+										</div>
+									</div>	
+									
+									<!--四川-->
+									<div class="tab-content1">
+										<div class="listbox">
+											<div class="listbox-centent">
+												<a v-for="item in examinees" v-if="item.cId=='51'" :href="url+item.eId">{{item.name}}</a>
+											</div>
+										</div>
+									</div>	
+									
+									<!--贵州-->
+									<div class="tab-content1">
+										<div class="listbox">
+											<div class="listbox-centent">
+												<a v-for="item in examinees" v-if="item.cId=='52'" :href="url+item.eId">{{item.name}}</a>
+											</div>
+										</div>
+									</div>	
+									
+									<!--云南-->
+									<div class="tab-content1">
+										<div class="listbox">
+											<div class="listbox-centent">
+												<a v-for="item in examinees" v-if="item.cId=='53'" :href="url+item.eId">{{item.name}}</a>
+											</div>
+										</div>
+									</div>	
+									
+									<!--陕西-->
+									<div class="tab-content1">
+										<div class="listbox">
+											<div class="listbox-centent">
+												<a v-for="item in examinees" v-if="item.cId=='61'" :href="url+item.eId">{{item.name}}</a>
+											</div>
+										</div>
+									</div>	
+									
+									<!--甘肃-->
+									<div class="tab-content1">
+										<div class="listbox">
+											<div class="listbox-centent">
+												<a v-for="item in examinees" v-if="item.cId=='62'" :href="url+item.eId">{{item.name}}</a>
+											</div>
+										</div>
+									</div>	
+									
+									<!--青海-->
+									<div class="tab-content1">
+										<div class="listbox">
+											<div class="listbox-centent">
+												<a v-for="item in examinees" v-if="item.cId=='63'" :href="url+item.eId">{{item.name}}</a>
+											</div>
+										</div>
+									</div>	
+									
+									<!--内蒙古-->
+									<div class="tab-content1">
+										<div class="listbox">
+											<div class="listbox-centent">
+												<a v-for="item in examinees" v-if="item.cId=='15'" :href="url+item.eId">{{item.name}}</a>
+											</div>
+										</div>
+									</div>	
+									
+									<!--广西-->
+									<div class="tab-content1">
+										<div class="listbox">
+											<div class="listbox-centent">
+												<a v-for="item in examinees" v-if="item.cId=='45'" :href="url+item.eId">{{item.name}}</a>
+											</div>
+										</div>
+									</div>	
+									
+									<!--西藏-->
+									<div class="tab-content1">
+										<div class="listbox">
+											<div class="listbox-centent">
+												<a v-for="item in examinees" v-if="item.cId=='54'" :href="url+item.eId">{{item.name}}</a>
+											</div>
+										</div>
+									</div>	
+									
+									<!--宁夏-->
+									<div class="tab-content1">
+										<div class="listbox">
+											<div class="listbox-centent">
+												<a v-for="item in examinees" v-if="item.cId=='64'" :href="url+item.eId">{{item.name}}</a>
+											</div>
+										</div>
+									</div>	
+									
+									<!--新疆-->
+									<div class="tab-content1">
+										<div class="listbox">
+											<div class="listbox-centent">
+												<a v-for="item in examinees" v-if="item.cId=='65'" :href="url+item.eId">{{item.name}}</a>
+											</div>
+										</div>
+									</div>	
+									
+									<!--香港-->
+									<div class="tab-content1">
+										<div class="listbox">
+											<div class="listbox-centent">
+												<a v-for="item in examinees" v-if="item.cId=='81'" :href="url+item.eId">{{item.name}}</a>
+											</div>
+										</div>
+									</div>	
+									
+									<!--澳门-->
+									<div class="tab-content1">
+										<div class="listbox">
+											<div class="listbox-centent">
+												<a v-for="item in examinees" v-if="item.cId=='82'" :href="url+item.eId">{{item.name}}</a>
+											</div>
+										</div>
+									</div>	
+									
+									<!--台湾-->
+									<div class="tab-content1">
+										<div class="listbox">
+											<div class="listbox-centent">
+												<a v-for="item in examinees" v-if="item.cId=='71'" :href="url+item.eId">{{item.name}}</a>
+											</div>
+										</div>
+									</div>	
+										
+							    </div><!-- tab-content -->
+						    </div><!-- tab-wrapper -->
+						</div>
+						
+				    </div>
+				</div>
+			</div>
+				
+		
+				
+				
+			</div>   <!--描述：right的结尾标签  -->   
+			<div class="clear"></div>
+		</div>    <!--描述：container的结尾标签  -->    
+		</div>    <!--描述：main的结尾标签  -->    
+		
+		<!--版权-->
+		<div class="right-footer">
+			<div class="right-footer-content">
+				骄阳智心 版权所有 2010-2019&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;京ICP备17000866&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;京公网安备11010802023632号
+			</div>
+		</div>
+		
+	
+		<script src="js/jquery.min.js"></script>
+		 <script>
+			$(function(){
+				$("#side").load("side3.html",function(){
+			 		$("#icon6").attr("src","img/icon6_6.png");
+			 	});
+			})
+		</script>
+		<script src="js/scale.js"></script>
+		<script src="js/public.js"></script>
+		<script type="text/javascript">
+			var articleTitles = [];
+			var url1= geturl();
+			$(function(){ 
+				$.ajax({
+					"url": url1+"/scale/get/examinees",
+					"datatype": "json",
+					"success": function(result){
+						this.articleTitles = result.data;
+						vm.examinees = result.data;
+					}
+				})
+			})
+		　　 
+
+			var vm = new Vue({
+				el: "#committeevue",
+				data: {
+					"examinees": [],
+					"url":"committeeSecond.html?eId="
+				},
+				methods:{
+					
+				}
+			})
+		</script>
+	</body>
+</html>

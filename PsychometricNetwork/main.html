@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="x-ua-compatible" content="IE=edge">
+<meta name="viewport"
+	content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
+<title>Vod</title>
+<link rel="stylesheet"
+	href="//g.alicdn.com/de/prismplayer/2.6.0/skins/default/aliplayer-min.css" />
+<script type="text/javascript"
+	src="//g.alicdn.com/de/prismplayer/2.6.0/aliplayer-min.js"></script>
+</head>
+<body>
+	<div class="prism-player" id="J_prismPlayer"></div>
+	<script>
+		var player = new Aliplayer({
+			id : "J_prismPlayer",
+			autoplay : true,
+			width : "1920px",
+			height : "1280px",
+			vid : "64f187cad5aa497cb4c1f68b6fee90ea",
+			playauth : 'eyJTZWN1cml0eVRva2VuIjoiQ0FJUzN3SjFxNkZ0NUIyeWZTaklyNG5BTytEQW1aTkd3NUtoWUczY3ZXaG1YYmRMamEzK3BEejJJSHBLZVhkdUFlQVhzL28wbW1oWjcvWVlsck1xRU1BVkZSYVVQSm9xczhnT3JWdndKcExGc3QySjZyOEpqc1UvOHBNS3NGdXBzdlhKYXNEVkVma3VFNVhFTWlJNS8wMGU2TC8rY2lyWVhEN0JHSmFWaUpsaFE4MEtWdzJqRjFSdkQ4dFhJUTBRazYxOUszemRaOW1nTGlidWkzdnhDa1J2MkhCaWptOHR4cW1qL015UTV4MzFpMXYweStCM3dZSHRPY3FjYThCOU1ZMVdUc3Uxdm9oemFyR1Q2Q3BaK2psTStxQVU2cWxZNG1YcnM5cUhFa0ZOd0JpWFNaMjJsT2RpTndoa2ZLTTNOcmRacGZ6bjc1MUN0L2ZVaXA3OHhtUW1YNGdYY1Z5R0ZOLzducFNVUmJ2M2I0eGxMZXVrQVJtWGpJRFRiS3VTbWhnL2ZIY1dPRGxOZjljY01YSnFBWFF1TUdxQWRQTDVwZ2lhTTFyOUVQYmRnZmhtaTRBSjVsSHA3TWVNR1YrRGVMeVF5aDBFSWFVN2EwNDR4ckRoRzVnS3NNUWFnQUdGZEJSMHVUZEY1QXIwVjVoaEhEMExCQ0pCU2JvNGIrQUcxaVp5TUVycFFWOGV5YXp5MVNHMmo4R2Fad0tPOG14ZkY3Tmt2alFHK0RQc0NEV205QzRHRlhNMWR3Y3poakgxS01YOXFrcHJlZEx0T1BEaEFpK1dBQlM5YXB1N1hJdVVwT0d1WVlpYVRHMW5SeEVvOEZxbjZxYU93OExXQ05oc1NjV0NJY0dpNlE9PSIsIkF1dGhJbmZvIjoie1wiQ0lcIjpcIlNFczQwbVJkY3hseW1XODg0RkZuS282eEtjOUJzZ1FqRGhIblFPMW55UGkzZjJObEdBRzY0MVA2aGd4SmhxZlRcXHJcXG5cIixcIkNhbGxlclwiOlwiNFh2cHBwM3VFNXk3dm95N1NEM1ordGcrWk03dnNzK2g3anAwZXNGWFkrND1cXHJcXG5cIixcIkV4cGlyZVRpbWVcIjpcIjIwMTktMDktMTdUMDY6MzU6NTlaXCIsXCJNZWRpYUlkXCI6XCI2NGYxODdjYWQ1YWE0OTdjYjRjMWY2OGI2ZmVlOTBlYVwiLFwiUGxheURvbWFpblwiOlwidi5pZXBzeS5jb21cIixcIlNpZ25hdHVyZVwiOlwiZlV5WE9tYnF0RHl2YXBZNExHUzBDaW5lazhrPVwifSIsIlZpZGVvTWV0YSI6eyJTdGF0dXMiOiJOb3JtYWwiLCJWaWRlb0lkIjoiNjRmMTg3Y2FkNWFhNDk3Y2I0YzFmNjhiNmZlZTkwZWEiLCJUaXRsZSI6IuW4puS9oOeci+eci++8jEVBUOihjOS4mui/meeJh+iTnea1t++8iOS4iu+8iSIsIkNvdmVyVVJMIjoiaHR0cDovL3YuaWVwc3kuY29tL3NuYXBzaG90LzY0ZjE4N2NhZDVhYTQ5N2NiNGMxZjY4YjZmZWU5MGVhMDAwMDUuanBnP2F1dGhfa2V5PTE1Njg3MDIwNTktYzM0YTNjNGZmMjg3NGE0ZWE2YWVkYzhkNDlhZTg4OWQtMC00ZTAxMjVjYzU4ZTUzY2MwMTAzMjUzNTZkOGNjZGI3MSIsIkR1cmF0aW9uIjoxNjUyLjB9LCJBY2Nlc3NLZXlJZCI6IlNUUy5OSnVwWnR0TGd0UEpiS21ZaDNROGdiaFVGIiwiUGxheURvbWFpbiI6InYuaWVwc3kuY29tIiwiQWNjZXNzS2V5U2VjcmV0IjoiQUhGZzhhZWZvNlZHYkxyWUpUaUQxNDNjVkFMSDQ1TDJ6UG9NWmdyTVY4TUsiLCJSZWdpb24iOiJjbi1zaGFuZ2hhaSIsIkN1c3RvbWVySWQiOjEzNzg4Mjg5OTI1NDE0MDl9',
+			cover : ''
+		});
+	</script>
+</body>

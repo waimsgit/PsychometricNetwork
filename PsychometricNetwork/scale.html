@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>量表</title>
+		<link rel="stylesheet" type="text/css" href="css/commone.css" />
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<link rel="stylesheet" type="text/css" href="css/scale.css" />
+		<link rel="stylesheet" type="text/css" href="css/Safari.css" />
+		<script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+		<style>
+			[v-cloak]{
+			    display: none !important;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="main">
+		<div class="container">
+			<!--左侧导航内容-->
+		    <div id="side"></div>
+			
+			<!--右侧内容-->
+			<div class="right" id="right">
+				<!--标题   首页 > 关于我们>成立背景-->
+				<div class="title">
+					<div class="title-content">
+					    <div class="title-left">
+					    		<span class="jiantou"></span>
+					    		<p><a href="scale.html">量表 > </a><span>量表中心</span> </p>
+					    </div>
+					</div>
+				</div>
+				
+				<!--量表介绍-->
+				<div class="content1" id="scalevue">
+					<div class="tab-wrapper">
+					  <ul class="tab-menu">
+						<li class="active">A~F</li>
+						<li>G~M</li>
+						<li>P~W</li>
+						<li>X~Z</li>
+						<div>
+							<input type="text" placeholder="请输入要搜索的量表名称"/>
+							<img src="img/committeesousuo.png" alt="" @click="show()"/>
+						</div>
+					  </ul>
+					  
+					  <div class="tab-content">
+						<div class="tab-content1">
+							<div class="tab-content2">
+								<h4>A</h4>
+								<p>
+									<a v-cloak style="display:inline-block" v-for="item in titles" v-if="item.articleState=='A'" :href="url+item.articlePk">{{item.articleTitle}}</a>
+								    <a href="scaleSecond2.html">斯欧工具箱</a>
+								</p>
+							</div>
+							<div class="tab-content2">
+								<h4>B</h4>
+								<p>
+								    <a v-cloak style="display:inline-block" v-for="item in titles" v-if="item.articleState=='B'" :href="url+item.articlePk">{{item.articleTitle}}</a>
+								</p>
+							</div>
+							<div class="tab-content2">
+								<h4>C</h4>
+								<p>
+									 <a v-cloak style="display:inline-block" v-for="item in titles" v-if="item.articleState=='C'" :href="url+item.articlePk">{{item.articleTitle}}</a>
+								</p>
+							</div>
+							<div class="tab-content2">
+								<h4>D</h4>
+								<p>
+									 <a v-cloak style="display:inline-block" v-for="item in titles" v-if="item.articleState=='D'" :href="url+item.articlePk">{{item.articleTitle}}</a>
+								</p>
+							</div>
+							<div class="tab-content2">
+								<h4>E</h4>
+								<p>
+									<a v-cloak style="display:inline-block" v-for="item in titles" v-if="item.articleState=='E'" :href="url+item.articlePk">{{item.articleTitle}}</a>
+								</p>
+							</div>
+							<div class="tab-content2">
+								<h4>F</h4>
+								<p>
+									<a v-cloak style="display:inline-block" v-for="item in titles" v-if="item.articleState=='F'" :href="url+item.articlePk">{{item.articleTitle}}</a>
+								</p>
+							</div>
+						</div>
+						
+						<!--G~M-->
+						<div class="tab-content1">
+							<div class="tab-content2">
+								<h4>G</h4>
+								<p> 
+									<a v-cloak style="display:inline-block" v-for="item in titles" v-if="item.articleState=='G'" :href="url+item.articlePk">{{item.articleTitle}}</a>
+								</p>
+							</div>
+							<div class="tab-content2">
+								<h4>H</h4>
+								<p>
+								    <a v-cloak style="display:inline-block" v-for="item in titles" v-if="item.articleState=='H'" :href="url+item.articlePk">{{item.articleTitle}}</a>
+								</p>
+							</div>
+							<div class="tab-content2">
+								<h4>J</h4>
+								<p>
+									<a v-cloak style="display:inline-block" v-for="item in titles" v-if="item.articleState=='J'" :href="url+item.articlePk">{{item.articleTitle}}</a>
+								</p>
+							</div>
+							<div class="tab-content2">
+								<h4>K</h4>
+								<p>
+									<a v-cloak style="display:inline-block" v-for="item in titles" v-if="item.articleState=='K'" :href="url+item.articlePk">{{item.articleTitle}}</a>
+								</p>
+							</div>
+							<div class="tab-content2">
+								<h4>L</h4>
+								<p>
+									<a v-cloak style="display:inline-block" v-for="item in titles" v-if="item.articleState=='L'" :href="url+item.articlePk">{{item.articleTitle}}</a>
+								</p>
+							</div>
+							<div class="tab-content2">
+								<h4>M</h4>
+								<p>
+									<a v-cloak style="display:inline-block" v-for="item in titles" v-if="item.articleState=='M'" :href="url+item.articlePk">{{item.articleTitle}}</a>
+								</p>
+							</div>
+						</div>
+						
+						<!--P~W-->
+						<div class="tab-content1">
+							<div class="tab-content2">
+								<h4>P</h4>
+								<p>
+									<a v-cloak style="display:inline-block" v-for="item in titles" v-if="item.articleState=='P'" :href="url+item.articlePk">{{item.articleTitle}}</a>
+								</p>
+							</div>
+							<div class="tab-content2">
+								<h4>Q</h4>
+								<p>
+									<a v-cloak style="display:inline-block" v-for="item in titles" v-if="item.articleState=='Q'" :href="url+item.articlePk">{{item.articleTitle}}</a>
+								</p> 
+							</div>
+							<div class="tab-content2">
+								<h4>R</h4>
+								<p>
+									<a v-cloak style="display:inline-block" v-for="item in titles" v-if="item.articleState=='R'" :href="url+item.articlePk">{{item.articleTitle}}</a>
+								</p>
+							</div>
+							<div class="tab-content2">
+								<h4>S</h4>
+								<p>
+									<a v-cloak style="display:inline-block" v-for="item in titles" v-if="item.articleState=='S'" :href="url+item.articlePk">{{item.articleTitle}}</a>
+								</p>
+							</div>
+							<div class="tab-content2">
+								<h4>T</h4>
+								<p>
+									<a v-cloak style="display:inline-block" v-for="item in titles" v-if="item.articleState=='T'" :href="url+item.articlePk">{{item.articleTitle}}</a>
+								</p>
+							</div>
+							<div class="tab-content2">
+								<h4>W</h4>
+								<p>
+									<a v-cloak style="display:inline-block" v-for="item in titles" v-if="item.articleState=='W'" :href="url+item.articlePk">{{item.articleTitle}}</a>
+								</p>
+							</div>
+						</div>
+						
+						<!--X~Z、0-->
+						<div class="tab-content1">
+							<div class="tab-content2">
+								<h4>X</h4>
+								<p>
+									<a v-cloak style="display:inline-block" v-for="item in titles" v-if="item.articleState=='X'" :href="url+item.articlePk">{{item.articleTitle}}</a>
+								</p>
+							</div>
+							<div class="tab-content2">
+								<h4>Y</h4>
+								<p>
+									<a v-cloak style="display:inline-block" v-for="item in titles" v-if="item.articleState=='Y'" :href="url+item.articlePk">{{item.articleTitle}}</a>
+								</p> 
+							</div>
+							<div class="tab-content2">
+								<h4>Z</h4>
+								<p>
+									<a v-cloak style="display:inline-block" v-for="item in titles" v-if="item.articleState=='Z'" :href="url+item.articlePk">{{item.articleTitle}}</a>
+								</p> 
+							</div>
+						</div>
+						
+					  </div><!-- tab-content -->
+				  
+				    </div><!-- tab-wrapper -->
+				</div>
+			
+				
+			</div>   <!--right的结尾标签-->
+			<div class="clear"></div>
+		</div>  <!--container结尾标签-->
+		</div>  <!--main结尾标签-->
+		
+		<!--版权-->
+		<div class="right-footer">
+			<div class="right-footer-content">
+				骄阳智心 版权所有 2010-2019&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;京ICP备17000866&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;京公网安备11010802023632号
+			</div>
+		</div>
+		
+		<script src="js/jquery.min.js"></script>
+		<script src="js/scale.js"></script>
+		<script src="js/public.js"></script>
+		<!--引入公共部分的js-->
+		<script>
+			$(function(){
+				$("#side").load("side2.html",function(){
+			 		$("#icon2").attr("src","img/icon2_2.png");
+			 	});
+			})
+		</script>
+		<script type="text/javascript">
+			var articleTitles = [];
+			var url1=geturl();
+			$(function(){ 
+				$.ajax({
+					"url": url1+"/scale/list/articles",
+					"datatype": "json",
+					"success": function(result){
+						this.articleTitles = result.data;
+						vm.titles = result.data;
+					}
+				})
+			})
+			var vm = new Vue({
+				el: "#scalevue",
+				data: {
+					"titles": [],
+					"url":"scaleSecond.html?articlePk="
+				},
+				methods:{
+					
+				}
+			})
+		</script>
+	</body>
+</html>

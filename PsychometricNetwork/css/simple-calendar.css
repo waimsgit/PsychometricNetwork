@@ -1,0 +1,260 @@
+#calendar{
+
+}
+.clearfix{
+  margin-bottom: 50px !important;
+}
+.inner-left h3{
+  height:30px;
+	line-height:30px;
+}
+.inner-left{
+    width: 430px;
+    height: 420px;
+    background: white;
+    box-shadow: 0px 0px 13px 0px rgba(147,178,224,0.5);
+    padding: 16px;
+    position: relative;
+    overflow: hidden;
+}
+.inner-left p{
+    height: 36px;
+    line-height:36px;
+    color: #4D4D4D;
+    font-size: 14px;
+    width: 100%;
+    overflow: hidden;
+}
+.inner-left p:last-child{
+    bottom: 6px;
+    color: red;
+    position: absolute;
+    left: 0;
+    text-align: center;
+}
+
+.semicircle{
+	width: 50px;
+	height:25px;
+  background:red;
+	border-radius: 50px 50px 0 0;
+}
+.sc-calendar {
+  width: 430px;
+  height: 420px;
+  background: white;
+  text-align: center;
+  color: #4A4A4A;
+   box-shadow: 0px 0px 13px 0px rgba(147,178,224,0.5);
+  border-width: 1px 0 0 1px;
+  border-color: #E6E4E0;
+  border-style: solid;
+  float: left;
+  margin-right: 20px;
+  -moz-user-select: none;
+  /*火狐*/
+  -webkit-user-select: none;
+  /*webkit浏览器*/
+  -ms-user-select: none;
+  /*IE10*/
+  user-select: none;
+  -webkit-text-size-adjust: none;
+  font-size: 16px;
+}
+
+.sc-header {
+  height: 35px;
+  border-bottom: 0;
+}
+.sc-body {
+  height: 93%;
+  clear: both;
+}
+.sc-week {
+  font-weight: 400;
+  font-size: 20px;
+  color: #4A4A4A;
+  padding: 0 10%;
+  height: 50px;
+  background: #1d7aee;
+}
+.sc-days {
+  height: 88%;
+  width:80%;
+  margin: 0 auto;
+}
+.sc-item {
+  float: left;
+  font-weight: 600;
+  color: #565555;
+  width: 14.285%;
+  padding-top: 0px;
+  border-radius:50%;
+}
+.item-nolunar {
+  padding-top: 0px;
+}
+.sc-item:nth-child(7n) .day, .sc-item:nth-child(7n+6) .day {
+  color: rgba(224, 8, 8, 0.74);
+}
+.sc-vocation {
+  background-color: #FFEBEC;
+}
+.sc-mark{
+  background-color: #1d7aee;
+  color:white;
+}
+/*设置半天课程的时间颜色*/
+/*.sc-days .sc-mark:nth-child(6){
+	background:#b8b7b7 !important;
+	border-radius: 50%;
+  position: relative;
+  width: 14.285%;
+  height:54px;
+  box-sizing: border-box;
+  overflow: hidden;
+  line-height:54px;
+}
+.sc-days .sc-mark:nth-child(6)>.day{
+	content: '';
+	position: absolute;
+  width:100%;
+  height:50%;
+  background-color: #1d7aee;
+  top:0;
+  left:0;
+}*/
+
+
+.sc-mark>.day{
+	color:white !important;
+}
+.sc-vocation:before {
+  content: '休';
+  display: block;
+  position: absolute;
+  font-size: 0.7em;
+  width: 1.2em;
+  font-weight: 100;
+  color: white;
+  background-color: #E00808;
+  margin-top: -10px;
+}
+.sc-othermenth {
+  color: #C1C0C0 !important;
+}
+.sc-othermenth .day, .sc-othermenth .lunar-day {
+  color: #C1C0C0 !important;
+}
+.sc-active-day, .sc-selected {
+ /* background:#1da7ee;
+  color:white; */
+}
+
+.sc-today {
+ 
+
+}
+.sc-item .day {
+    font-size: 16px;
+    line-height: 54px;
+    text-align: center;
+}
+.sc-today .day {
+  /*color: white !important;*/
+}
+.sc-item .lunar-day {
+  font-size: 10px;
+  font-weight: normal;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.sc-festival .lunar-day {
+  color: #E00808;
+
+}
+
+
+.sc-week-item {
+  height: 100%;
+  float: left;
+  width: 14.285%;
+  background-color: #1d7aee;
+  border-width: 1px 0 1px 1px;
+  box-sizing: border-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color:white;
+  height: 50px;
+  line-height: 50px;
+  margin-bottom: 20px;
+}
+.sc-item-small{
+  font-size: 10px !important;
+}
+.sc-week-item:last-child {
+  border-width: 1px 1px 1px 1px;
+}
+.sc-week-item:nth-child(7n), .sc-week-item:nth-child(7n+6) {
+  color:white !important;
+}
+.sc-actions {
+  float: left;
+  width: 25%;
+  padding: 5px;
+  height: 100%;
+  box-sizing: border-box;
+  padding-top: 4px !important
+}
+.sc-actions:last-child {
+  float: right;
+}
+.sc-actions-big{
+  width: 50%;
+}
+@media screen and (max-width : 500px){
+.sc-actions{
+  width: 50%;
+}
+}
+.sc-header select {
+  border-color: rgba(0, 0, 0, 0);
+  padding: 0.2em;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  font-family: "Microsoft Yahei";
+  color: #606060;
+  font-size: 13px ;
+}
+.sc-header input {
+  border-color: rgba(0, 0, 0, 0);
+  padding: 0.2em;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  font-family: "Microsoft Yahei";
+  color: #606060;
+}
+.sc-actions div {
+  display: inline-block;
+  vertical-align: bottom;
+  width: 20px;
+  padding-bottom: 2px;
+  font-size: 1.5em;
+  line-height: 0.9em;
+}
+.sc-return-today {
+  display: block;
+  border-radius: 2px;
+  width: 60px;
+  font-size: 0.8em;
+  padding: 0.3em;
+  margin:auto;
+}
+
+.sc-time {
+  display: block;
+  margin-top: 3px;
+  font-size: 0.8em;
+}

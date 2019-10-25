@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>文献</title>
+		<link rel="stylesheet" type="text/css" href="css/commone.css" />
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<link rel="stylesheet" type="text/css" href="css/literature.css" />
+		<link rel="stylesheet" type="text/css" href="css/Safari.css" />
+		<link rel="stylesheet" type="text/css" href="css/demo.css" />
+		<link rel="stylesheet" type="text/css" href="css/tabs.css" />
+		<link rel="stylesheet" type="text/css" href="css/page.css" />
+		<script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script>		
+		<script src="js/page1.js"></script>
+		
+	</head>
+
+	<body>
+		<div class="main">
+		<div class="container">
+			<!--左边导航内容-->
+			 <div id="side"></div>
+
+			<!--右侧内容-->
+			<div class="right">
+				<!--热门文章-->
+				<div class="content1">
+					<div class="content1-center">
+						<div class="content1-left">
+							<img src="img/literaturebanner.png" alt="" />
+						</div>
+						<div class="content1-right">
+							<h2>热门</h2>
+							<ul class="content1-nav">
+								<li> 
+									<a href=""><span>1</span><span>社会心态：转型社会的社会心理研究</span><span>发布人：骄阳智心</span></a>
+								</li>
+								<li>
+									<a href=""> <span>2</span> <span>论大数据时代的心理学研究变革</span> <span>发布人：骄阳智心</span></a>
+								</li>
+								<li> 
+									<a href=""><span>3</span> <span>心理健康教育:研究对象与学科体系</span> <span>发布人：骄阳智心</span></a>
+								</li>
+								<li> 
+									<a href=""><span>4</span> <span>认知与身体:理论心理学的视角</span> <span>发布人：骄阳智心</span></a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+
+				<!--标题-->
+				<div class="title">
+					<div class="title-content">
+						<div class="title-left">
+							<p>
+							    <span class="jiantou"></span>
+								<a href="scale.html">量表 ></a> 
+								<span>文献</span>
+							</p>
+							
+							
+						</div>
+						<div class="sousuo">
+								<img src="img/committeesousuo.png" alt="" />
+							    <input type="text" placeholder="请输入要搜索的关键词"/>	
+						    </div>
+					</div>
+				</div>
+
+				<!--斯欧 韦氏 适应行为 罗夏墨迹 MMPI-->
+				<div class="content2">
+					<div class="content2-center">
+						<section>
+							<div class="tabs tabs-style-circlefill">
+								<nav>
+									<ul>
+										<li id='l1' class="sel">
+											<a href="#section-circlefill-1" class="icon icon-plug" ><span>智力测试</span></a>
+										</li>
+										<li class="sel">
+											<a href="#section-circlefill-2" class="icon icon-gift"><span>人格测试</span></a>
+										</li>
+										<li class="sel">
+											<a href="#section-circlefill-3" class="icon icon-box"><span>职业测试</span></a>
+										</li>
+										<li class="sel">
+											<a href="#section-circlefill-4" class="icon icon-date"><span>其他</span></a>
+										</li>
+									</ul>
+									
+									
+									<div>
+										<span>发布人</span>
+										<span>预览</span>
+										<span>发布时间</span>
+									</div>
+								</nav>
+
+								<div class="content-wrap">
+									<section id="section-circlefill-1">
+										<div class="info_fl" id="content">	                                      
+											<div id="sectionbox" class="sectionbox">
+												<ul id="demoContent0"></ul>
+											</div>
+										</div>
+										<ul class="page" id="page0"></ul>
+									</section>
+									<section id="section-circlefill-2">
+										<div class="info_fl" id="content">	
+											<div id="sectionbox" class="sectionbox">
+												<ul id="demoContent1"></ul>
+												
+											</div>
+										</div>
+										<ul class="page" id="page1"></ul>
+									</section>
+									<section id="section-circlefill-3">
+										<div class="info_fl" id="content">	
+											<div id="sectionbox" class="sectionbox">
+												<ul id="demoContent2"></ul>
+												
+											</div>
+										</div>
+										<ul class="page" id="page2"></ul>
+									</section>
+									<section id="section-circlefill-4">
+										<div class="info_fl" id="content">	
+											<div id="sectionbox" class="sectionbox">
+												<ul id="demoContent3"></ul>
+												
+											</div>
+										</div>
+										<ul class="page" id="page3"></ul>
+									</section>
+								</div>
+								
+							</div>
+
+						</section>
+						
+
+					</div>
+					<!--content2-center结尾标签-->
+				</div>
+				<!--content2结尾标签-->
+			</div>
+			<!--right的 结尾标签-->
+			<div class="clear"></div>
+		</div>
+		<!--container的结尾标签-->
+		</div>    <!--main的结尾标签-->
+		<!--版权-->
+		<div class="right-footer">
+			<div class="right-footer-content">
+				骄阳智心 版权所有 2010-2019&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;京ICP备17000866&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;京公网安备11010802023632号
+			</div>
+		</div>
+
+        
+		<script src="js/jquery.min.js"></script>
+		<!--引入公共部分的js-->
+		<script>
+			$(function(){
+				$("#side").load("side2.html",function(){
+			 		$("#icon2").attr("src","img/icon2_2.png");
+			 	});
+			})
+			
+		</script>
+        <script src="js/modernizr.custom.js"></script>
+		<!--选项卡js-->
+		<script src="js/cbpFWTabs.js"></script>
+		<script>
+			(function() {
+				[].slice.call(document.querySelectorAll('.tabs')).forEach(function(el) {
+					new CBPFWTabs(el);
+				});
+                
+			})();
+		</script>
+		<script>
+			var _index=$('.tab-current').index();
+			$('.tabs li').on('click',function(){
+				var _index=$('.tab-current').index();
+				//console.log(_index);
+				if(_index==0){
+					datas=datas1;
+				}else if(_index==1){
+					datas=datas2;
+				}else if(_index==2){
+					datas=datas3;
+				}else if(_index==3){
+					datas=datas4;
+				}else if(_index==4){
+					datas=datas5;
+				}
+					 options={
+					"id":"page"+_index,//显示页码的元素
+					"data":datas,//显示数据
+				    "maxshowpageitem":3,//最多显示的页码个数
+				    "pagelistcount":10,//每页显示数据个数
+				    "callBack":function(result){//返回datas数据
+				    	//console.log(result);  //输出datas的数据
+				    	var cHtml="";
+				        for(var i=0;i<result.length;i++){
+				            cHtml+="<li>"+ 
+				            '<div class="sectionboxf">'+
+							    '<a href="'+ result[i].href+'" class="href">'+
+								'<div class="section-left">' +
+									'<p>'+result[i].left+'</p>'+
+								'</div>' +
+								'<div class="section-right">' +
+									'<p>' + result[i].right1 + '</p>' +
+									'<img src="img/literature1.png" alt="" />' +
+//									'<p>' + result[i].right2 + '</p>' +
+									
+//									'<img src="img/literature2.png" alt="" /> ' +
+									'<p>' + result[i].right3 + '</p>' +
+								'</div>' +
+								'</a>'+
+							'</div>'+
+				            "</li>";//处理数据
+				        }
+				        $("#demoContent"+_index).html(cHtml);//将数据增加到页面中
+				    }
+				};
+				   page.init(datas.length,1,options);
+			})
+			var datas1=[
+			    {"did":1,"href":"http://47.104.147.26:8088/examples/siou001.pdf","left": "斯- 欧非言语智力测验在特殊群体中的应用","right1": "骄阳智心","img1": "img/literature1.png","right2": "骄阳智心","img2": "img/literature2.png","right3": "2小时前",},
+			    {"did":2,"href":"http://47.104.147.26:8088/examples/siou002.pdf","left": "SON－Ｒ6－40 非言语智力测验在中国的适用性","right1": "骄阳智心","img1": "img/literature1.png","right2": "骄阳智心","img2": "img/literature2.png","right3": "2小时前",},
+			    {"did":3,"href":"http://47.104.147.26:8088/examples/siou003.pdf","left": "斯-欧非言语智力测验评介","right1": "骄阳智心","img1": "img/literature1.png","right2": "骄阳智心","img2": "img/literature2.png","right3": "2小时前",},
+			    {"did":4,"href":"http://47.104.147.26:8088/examples/siou004.pdf","left": "斯-欧非言语智力测验在特殊与普通群体中的比较研究","right1": "骄阳智心","img1": "img/literature1.png","right2": "骄阳智心","img2": "img/literature2.png","right3": "2小时前",},
+			    {"did":5,"href":"http://47.104.147.26:8088/examples/siou005.pdf","left": "斯-欧非言语智力测验中国版介绍","right1": "骄阳智心","img1": "img/literature1.png","right2": "骄阳智心","img2": "img/literature2.png","right3": "2小时前",},
+			    {"did":6,"href":"http://47.104.147.26:8088/examples/siou006.pdf","left": "斯-欧氏非言语智力测验的修订研究","right1": "骄阳智心","img1": "img/literature1.png","right2": "骄阳智心","img2": "img/literature2.png","right3": "2小时前",},
+				{"did":7,"href":"http://47.104.147.26:8088/examples/disabledFederationnew.pdf","left": "残联新闻","right1": "骄阳智心","img1": "img/literature1.png","right2": "骄阳智心","img2": "img/literature2.png","right3": "2小时前",},
+				{"did":8,"href":"http://47.104.147.26:8088/examples/mentallyRetardedIdentification.pdf","left": "广州智障鉴定","right1": "骄阳智心","img1": "img/literature1.png","right2": "骄阳智心","img2": "img/literature2.png","right3": "2小时前",},
+				{"did":9,"href":"http://47.104.147.26:8088/examples/workingMemory.pdf","left": "工作记忆与智商","right1": "骄阳智心","img1": "img/literature1.png","right2": "骄阳智心","img2": "img/literature2.png","right3": "2小时前",},
+				{"did":10,"href":"http://47.104.147.26:8088/examples/WPPSI-IV+ABAS-II_JY.pdf","left": "韦氏幼儿智力量表第四版（WPPSI-IV）中文版简介","right1": "骄阳智心","img1": "img/literature1.png","right2": "骄阳智心","img2": "img/literature2.png","right3": "2小时前",},
+			    {"did":11,"href":"http://47.104.147.26:8088/examples/WISC-IV+ABAS-II_JY.pdf  ","left": "韦氏儿童智力量表第四版中文版（WISC-IV）","right1": "骄阳智心","img1": "img/literature1.png","right2": "骄阳智心","img2": "img/literature2.png","right3": "2小时前",},
+			    {"did":12,"href":"http://47.104.147.26:8088/examples/Wechsleradult.pdf","left": "韦氏成人智力量表和儿童智力量表第四版中文版的衔接研究","right1": "骄阳智心","img1": "img/literature1.png","right2": "骄阳智心","img2": "img/literature2.png","right3": "2小时前",},			   
+			    {"did":13,"href":"http://47.104.147.26:8088/examples/edgeIntelligence.pdf","left": "智力边缘","right1": "骄阳智心","img1": "img/literature1.png","right2": "骄阳智心","img2": "img/literature2.png","right3": "2小时前",},
+				{"did":14,"href":"http://47.104.147.26:8088/exam  ples/intellectualDisabilityScale.pdf","left": "智力残疾标准","right1": "骄阳智心","img1": "img/literature1.png","right2": "骄阳智心","img2": "img/literature2.png","right3": "2小时前",},
+				{"did":15,"href":"http://47.104.147.26:8088/examples/developmentofIntelligenceTest.pdf","left": "智力测验发展","right1": "骄阳智心","img1": "img/literature1.png","right2": "骄阳智心","img2": "img/literature2.png","right3": "2小时前",},
+				{"did":16,"href":"http://47.104.147.26:8088/examples/trainingInstituteforMentalRetardation.pdf","left": "智力障碍培训机构","right1": "骄阳智心","img1": "img/literature1.png","right2": "骄阳智心","img2": "img/literature2.png","right3": "2小时前",},
+				{"did":17,"href":"http://47.104.147.26:8088/examples/intellectualDebate.pdf","left": "智力争论","right1": "骄阳智心","img1": "img/literature1.png","right2": "骄阳智心","img2": "img/literature2.png","right3": "2小时前",},
+				{"did":18,"href":"http://47.104.147.26:8088/examples/IQandAchievement.pdf","left": "智商与成就","right1": "骄阳智心","img1": "img/literature1.png","right2": "骄阳智心","img2": "img/literature2.png","right3": "2小时前",},
+				{"did":19,"href":"http://47.104.147.26:8088/examples/peoplewiththehHighestiqs.pdf","left": "智商最高的人","right1": "骄阳智心","img1": "img/literature1.png","right2": "骄阳智心","img2": "img/literature2.png","right3": "2小时前",},
+				{"did":20,"href":"http://47.104.147.26:8088/examples/intellectualDisabilityEpidemiology.pdf","left": "智障流行病学","right1": "2018年9月11","img1": "img/literature1.png","right2": "骄阳智心","img2": "img/literature2.png","right3": "2小时前",},
+				{"did":21,"href":"http://47.104.147.26:8088/examples/LevelRetarded.pdf","left": "四级智障","right1": "骄阳智心","img1": "img/literature1.png","right2": "骄阳智心","img2": "img/literature2.png","right3": "2小时前",},
+				{"did":22,"href":"http://47.104.147.26:8088/examples/howIntelligence.pdf","left": "了解孩子的智力","right1": "骄阳智心","img1": "img/literature1.png","right2": "骄阳智心","img2": "img/literature2.png","right3": "2小时前",},
+				{"did":23,"href":"http://47.104.147.26:8088/examples/autisticIntelligence.pdf","left": "孤独症智力","right1": "骄阳智心","img1": "img/literature1.png","right2": "骄阳智心","img2": "img/literature2.png","right3": "2小时前",},
+				
+			];
+				
+				var options={
+				"id":"page0",//显示页码的元素
+				"data":datas1,//显示数据
+			    "maxshowpageitem":3,//最多显示的页码个数
+			    "pagelistcount":10,//每页显示数据个数
+			    "callBack":function(result){//返回datas数据
+			    	//console.log(result);  //输出datas的数据
+			    	var cHtml="";
+			        for(var i=0;i<result.length;i++){
+			            cHtml+="<li>"+ 
+			            '<div class="sectionboxf">'+
+						    '<a href="'+ result[i].href+'" class="href">'+
+							'<div class="section-left">' +
+								'<p>'+result[i].left+'</p>'+
+							'</div>' +
+							'<div class="section-right">' +
+								'<p>' + result[i].right1 + '</p>' +
+								'<img src="img/literature1.png" alt="" />' +
+//								'<p>' + result[i].right2 + '</p>' +
+								
+//								'<img src="img/literature2.png" alt="" /> ' +
+								'<p>' + result[i].right3 + '</p>' +
+							'</div>' +
+							'</a>'+
+						'</div>'+
+			            "</li>";//处理数据
+			        }
+			        $("#demoContent0").html(cHtml);//将数据增加到页面中
+			    }
+			};
+			   page.init(datas1.length,1,options);			
+		</script>
+		
+		
+		<script>	
+			var datas2=[
+			    {"did":1,"href":"http://47.104.147.26:8088/examples/cognitiveStyle.pdf","left": "认知风格","right1": "骄阳智心","img1": "img/literature1.png","right2": "骄阳智心","img2": "img/literature2.png","right3": "2小时前",},
+				{"did":2,"href":"http://47.104.147.26:8088/examples/cognitiveDisorder.pdf","left": "认知障碍","right1": "骄阳智心","img1": "img/literature1.png","right2": "骄阳智心","img2": "img/literature2.png","right3": "2小时前",},
+				{"did":3,"href":"http://47.104.147.26:8088/examples/MMPI01.pdf","left": "明尼苏达多相人格测验（MMPI）简介","right1": "骄阳智心","img1": "img/literature1.png","right2": "骄阳智心","img2": "img/literature2.png","right3": "2小时前",},
+				{"did":4,"href":"http://47.104.147.26:8088/examples/Rorschach01.pdf","left": "罗夏墨迹测验","right1": "骄阳智心","img1": "img/literature1.png","right2": "骄阳智心","img2": "img/literature2.png","right3": "2小时前",},
+				
+			];
+			var datas3=[
+			    {"did":1,"href":"http://47.104.147.26:8088/examples/webster'sIntelligenceProfession.pdf","left": "韦氏智力与职业","right1": "骄阳智心","img1": "img/literature1.png","right2": "骄阳智心","img2": "img/literature2.png","right3": "2小时前",},			   
+			    
+			];
+			var datas4=[
+				{"did":1,"href":"http://47.104.147.26:8088/examples/magneticResonance.pdf","left": "磁共振检测技术","right1": "骄阳智心","img1": "img/literature1.png","right2": "骄阳智心","img2": "img/literature2.png","right3": "2小时前",},
+				{"did":2,"href":"http://47.104.147.26:8088/examples/universityClass.pdf","left": "科技大学少年班","right1": "骄阳智心","img1": "img/literature1.png","right2": "骄阳智心","img2": "img/literature2.png","right3": "2小时前",},
+				{"did":3,"href":"http://47.104.147.26:8088/examples/mensah.pdf","left": "门萨","right1": "骄阳智心","img1": "img/literature1.png","right2": "骄阳智心","img2": "img/literature2.png","right3": "2小时前",},
+				{"did":4,"href":"http://47.104.147.26:8088/examples/disabilityIdentificationNews.pdf","left": "伤残鉴定新闻","right1": "骄阳智心","img1": "img/literature1.png","right2": "骄阳智心","img2": "img/literature2.png","right3": "2小时前",},
+				{"did":5,"href":"http://47.104.147.26:8088/examples/passChildren'sClass.pdf","left": "少年班通过率","right1": "骄阳智心","img1": "img/literature1.png","right2": "骄阳智心","img2": "img/literature2.png","right3": "2小时前",},
+				{"did":6,"href":"http://47.104.147.26:8088/examples/fourSupernormalClasses.pdf","left": "四大超常实验班","right1": "骄阳智心","img1": "img/literature1.png","right2": "骄阳智心","img2": "img/literature2.png","right3": "2小时前",},
+				{"did":7,"href":"http://47.104.147.26:8088/examples/TALEducationGroup.pdf","left": "学而思北京少年班","right1": "骄阳智心","img1": "img/literature1.png","right2": "骄阳智心","img2": "img/literature2.png","right3": "2小时前",},
+				{"did":8,"href":"http://47.104.147.26:8088/examples/TALEducationGroupChildren.pdf","left": "学而思少年班","right1": "骄阳智心","img1": "img/literature1.png","right2": "骄阳智心","img2": "img/literature2.png","right3": "2小时前",},
+				{"did":9,"href":"http://47.104.147.26:8088/examples/hourRule.pdf","left": "一万小时定律","right1": "骄阳智心","img1": "img/literature1.png","right2": "骄阳智心","img2": "img/literature2.png","right3": "2小时前",},
+				{"did":10,"href":"http://47.104.147.26:8088/examples/educationPeople.pdf","left": "育民","right1": "骄阳智心","img1": "img/literature1.png","right2": "骄阳智心","img2": "img/literature2.png","right3": "2小时前",},
+				{"did":11,"href":"http://47.104.147.26:8088/examples/yucaiEducationPeople.pdf","left": "育民育才总汇","right1": "骄阳智心","img1": "img/literature1.png","right2": "骄阳智心","img2": "img/literature2.png","right3": "2小时前",},
+			];
+		</script>
+	</body>
+
+</html>

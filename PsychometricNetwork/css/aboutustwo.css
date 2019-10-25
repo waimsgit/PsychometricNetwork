@@ -1,0 +1,197 @@
+.sidebar>ul>li:nth-of-type(7){
+	background:#ff4b4b;
+}
+.sidebar>ul>li:nth-of-type(7)>a{
+	color:white;
+}
+.sidebar>ul>li:nth-of-type(7)>a:hover{
+	color:white;
+}
+/*二级导航*/
+#dropdown1{
+	display:block;
+}
+.subnav>ul>li:nth-of-type(2)>a{
+	background:#ff4b4b;
+}
+/*右侧头部*/
+.right-top{
+	width:100%;
+	height:60px;
+	border-bottom: 1px solid lightgray;
+	background: white;
+	z-index:10;
+}
+.right-top-content{
+	width:90%;
+	height:42px;
+	margin:0 auto;
+	padding-top:15px;
+}
+.right-top-left{
+	float:right;
+	margin-right: 20px;
+}
+.right-top-left>input{
+	width:220px;
+	height:30px;
+	border:none;  /*去掉边框*/
+	outline:medium;  /*去掉点击有蓝框的效果*/
+	border-radius:20px;
+	background:url(../img/search.png) no-repeat 15px rgb(233,233,233) ;
+	font-size: 12px;
+	color:gray;
+	text-indent:50px
+}
+.right-top-right{
+	float:right;
+	font-size: 12px;
+	color:gray;
+	line-height: 30px;
+}
+.right-top-right>p>span:nth-of-type(1){
+	color:#FF4B4B;
+}
+.right-top-right>p>span:hover{
+	color:#FF4B4B;
+}
+
+/*banner区*/
+.banner{
+	width:100%;
+	height:100%;
+	margin-top: 28px;
+}
+.banner-content{
+	width:90%;
+	height:100%;
+	margin:0 auto;
+}
+.banner-content>img{
+	width: 100%;
+}
+
+/*首页 > 关于我们>骄阳智心*/
+.title{
+	width:100%;
+	height:24px;
+	margin-top: 30px;
+}
+.title-content{
+	width:90%;
+	height:24px;
+	margin:0 auto;
+}
+.title-left{
+	float:left;
+}
+.title-left>img{
+	margin-top: 7px;
+	margin-right: 7px;
+}
+.title-left>img,.title-left>p{
+	float:left;
+	line-height: 24px;
+	font-size: 14px;
+}
+
+/*北京骄阳智心教育咨询有限公司*/
+.content1{
+	width:100%;
+	height:100%;
+}
+.content1-center{
+	width:82%;
+	height:100%;
+	margin:0 auto;
+}
+.content1-center h3{
+	font-size: 22px;
+    font-weight: bold;
+    color: #201e1e;
+   text-align: center;
+   padding:50px 0 30px 0;
+}
+.content1-center>p{
+	font-size: 14px;
+ 	color:#a1a0a0;
+ 	line-height:30px;
+ 	text-indent:28px;
+}
+/*三大标题*/
+.the-title-collection{
+	width:390px;
+	height:60px;
+	margin:17px auto;
+}
+.the-title-collectionp{
+	width: 130px;
+	float: left;
+	font-size: 14px;
+	color: #FF4B4B;
+	text-align: center;
+	line-height:60px;
+}
+.the-title-collectionp>span{
+	display:inline-block;
+	width:5px;
+	height:5px;
+	border-radius:50%;
+	background: #FF4B4B;
+	margin-right: 4px;
+	margin-bottom: 4px;
+}
+
+/*培训服务*/
+.training{
+	margin-top:15px;
+}
+.content2-center h3{
+	font-size: 22px;
+    font-weight: bold;
+    color: #201e1e;
+   text-align: center;
+   padding:40px 0 25px 0;
+}
+.content2{
+	width:100%;
+	height:100%;
+}
+.group,.scientificresearch{
+	background: rgb(247,247,247);
+}
+.content2-center{
+	width:82%;
+	height:100%;
+	margin:0 auto;
+}
+.content2-center p{
+	font-size: 14px;
+ 	color:#a1a0a0;
+ 	line-height:30px;
+ 	text-align: center;
+}
+.content2-center img{
+	width:100%;
+	background-size: cover;
+	padding: 40px 0 80px 0;
+}
+
+
+/*版权*/
+.right-footer{
+	width:100%;
+	height:40px;
+	clear:both;
+	margin-top: -30px;
+}
+.right-footer-content{
+	width:100%;
+	height:40px;
+	margin:0 auto;
+	background:#323232;
+	text-align: center;
+	line-height: 40px;
+	font-size: 14px;
+	color:white;
+}

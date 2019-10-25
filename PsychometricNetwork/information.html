@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>资讯中心</title>
+		<link rel="stylesheet" type="text/css" href="css/commone.css" />
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<link rel="stylesheet" type="text/css" href="css/information.css" />
+		<link rel="stylesheet" type="text/css" href="css/Safari.css" />
+		<link rel="stylesheet" type="text/css" href="css/demo.css" />
+		<link rel="stylesheet" type="text/css" href="css/tabs.css" />
+	    <link rel="stylesheet" href="css/page.css" />
+	    <script src="js/page1.js"></script>
+	    <script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+	</head>
+	<body>
+		<div class="main">
+		<div class="container">
+			<!--左边导航内容-->
+			<div id="side"></div>
+			
+			<!--右侧的内容-->
+			<div class="right" id="right">
+				<div class="right-content">
+				<!--标题-->
+				<div class="title">
+					<div class="title-content">
+					    <div class="title-left">
+					    		<span class="jiantou"></span>
+					    		<p><a href="information.html">资讯 > </a><span>资讯中心</span> </p>
+					    </div>
+					</div>
+				</div>
+				
+				<!--美国机构如何培养出优秀的心理咨询师-->
+				<div class="content1">
+					<div class="content1-center">
+						<div class="content1-left">
+						    <img src="img/informationbanner.png" alt="" />
+						</div>
+						<div class="content1-right">
+							<h2>美国机构如何培养出优秀的心理咨询师？| 加州整合大学</h2>
+							<p>心理咨询与信息技术在世界上从无到有的历史都是 100 多年左右，心理学治疗语言与编程语言的进化速率也惊人相似，每几年就有一次迭代，旧金山湾区的科技和人文创新都是引领性的，加州整合大学正处在心理咨询创新技术应用最快的核心地带。</p>
+						</div> 
+					</div>
+				</div>
+				
+				
+				<!--分页切换内容-->
+				<div class="title-box">
+					<!--医疗类  科学类-->
+				<div class="content2">
+					<div class="content2-center">
+						<section>
+							<div class="tabs tabs-style-circlefill">
+								<nav>
+									<ul>
+										<li id='l1' class="sel">
+											<a href="#section-circlefill-1" class="icon icon-plug" ><span>业界新闻</span></a>
+										</li>
+										<li class="sel">
+											<a href="#section-circlefill-2" class="icon icon-gift"><span>心理学界</span></a>
+										</li>
+									</ul>
+									
+									
+								</nav>
+
+								<div class="content-wrap">
+									<section id="section-circlefill-1">
+										<div class="info_fl" id="content">	
+											<div id="sectionbox" class="sectionbox">
+												<ul id="demoContent0"></ul>
+												
+											</div>
+										</div>
+										<ul class="page" id="page0"></ul>
+									</section>
+									<section id="section-circlefill-2">
+										<div class="info_fl" id="content">	
+											<div id="sectionbox" class="sectionbox">
+												<ul id="demoContent1"></ul>
+												
+											</div>
+										</div>
+										<ul class="page" id="page1"></ul>
+									</section>
+								</div>
+								
+							</div>
+
+						</section>
+						
+
+					</div>
+					<!--content2-center结尾标签-->
+				</div>
+				<!--content2结尾标签-->
+			    </div>
+				<div class="pagecontent">
+					<div class="pagecontent-center" >
+						<div id="content2">
+							<ul id="demoContent"></ul>
+							<ul class="page" id="page"></ul>
+						</div>
+
+					</div>
+				</div>
+				
+				
+				
+				
+			</div>  <!--right-content 结尾标签-->
+			</div>   <!--right的结尾标签-->
+			<div class="clear"></div>
+		</div>     <!--container的结尾标签-->
+		</div>
+		<!--版权-->
+		<div class="right-footer" style="width:88%">
+			<div class="right-footer-content">
+				骄阳智心 版权所有 2010-2019&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;京ICP备17000866&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;京公网安备11010802023632号
+			</div>
+		</div>
+
+		
+		
+        <script src="js/jquery.min.js"></script>
+         <script>
+			$(function(){
+				$("#side").load("side.html",function(){
+			 		$("#icon3").attr("src","img/icon3_3.png");
+			 	});
+			})
+		</script>
+        <script src="js/modernizr.custom.js"></script>
+		<!--选项卡js-->
+		<script src="js/cbpFWTabs.js"></script>
+		<script>
+			(function() {
+				[].slice.call(document.querySelectorAll('.tabs')).forEach(function(el) {
+					new CBPFWTabs(el);
+				});
+                
+			})();
+		</script>
+		<script>
+			var _index=$('.tab-current').index();
+			$('.tabs li').on('click',function(){
+				var _index=$('.tab-current').index();
+				//console.log(_index);
+				if(_index==0){
+					datas=datas1;
+				}else if(_index==1){
+					datas=datas2;
+				}
+					 options={
+					"id":"page"+_index,//显示页码的元素
+					"data":datas,//显示数据
+				    "maxshowpageitem":3,//最多显示的页码个数
+				    "pagelistcount":10,//每页显示数据个数
+				    "callBack":function(result){//返回datas数据
+				    	//console.log(result);  //输出datas的数据
+				    	var cHtml="";
+				        for(var i=0;i<result.length;i++){
+				            cHtml+="<li>"+ 
+				            '<div class="sectionboxf">'+
+							    '<a href="'+ result[i].href+'" class="href">'+
+								'<div class="section-left">' +
+									'<p>'+result[i].left+'<span>'+result[i].left2+'</span>'+'</p>'+
+									'<p>'+result[i].left3+'</p>'+
+								'</div>' +
+								'</a>'+
+							'</div>'+
+				            "</li>";//处理数据
+				        }
+				        $("#demoContent"+_index).html(cHtml);//将数据增加到页面中
+				    }
+				};
+				   page.init(datas.length,1,options);
+			})
+			var datas1=[
+			    {"did":1,"href":"americanInstitutions10.html","left": "2019年9月份北京培训通知","left2": "2019年8月26日","left3": "“心理测量理论与应用系列课程”主试讲师培训圆满举办"},
+			    {"did":2,"href":"americanInstitutions3.html","left": "看电视的搏斗：要不要让孩子看电视","left2": "2019年8月15日","left3": "孙燕姿最新的微博，讲到五岁的儿子短暂生病时的母子两个人艰难又甜蜜的冲突，其中一项是两个人为看电视的“搏斗”。"},
+			    {"did":3,"href":"americanInstitutions2.html","left": "当测谎仪遇到心理测评专家","left2": "2019年7月10日","left3": "绝大多数人在说谎或受到有关情绪词的影响时，会发生一系列植物神经系统功能的变化，检测这些变化可反映受试者当时的情绪状态，言语是否真实。在此基础上，测谎仪应运而生。"},
+			    {"did":4,"href":"americanInstitutions6.html","left": "心理测试告诉你，要当上警察有多难","left2": "2019年06月09日","left3": "最近热播的韩剧《live》，让我们看到警察这个职业的艰难和辛苦，也让我们看到每一个第一线的普通警察在一天之中所经历巨大的体力消耗和情绪激荡"},
+			    {"did":5,"href":"americanInstitutions4.html","left": "鬼有什么好怕的，穷才可怕","left2": "2019年05月17日","left3": "《今生是第一次》，男主不想结婚但又需要有人帮自己承担每月房贷的缺口，女主急需一个便宜稳定的住处，于是两个人假结婚了，他们签了合同规定彼此所要交换的东西。"},
+			    {"did":6,"href":"americanInstitutions5.html","left": "你对认可有过度需求吗","left2": "2019年04月15日","left3": "被一个很年轻的朋友问太在乎别人的看法要怎么办，我心里想笑：我以前一直是这样啊，现在可能也是，只是没以前那么严重。所以这个问题是要向和尚借梳子吗？"},
+			    {"did":7,"href":"americanInstitutions1.html","left": "第一届心理测量理论与应用系列课程主试讲师培训报道","left2": "2018年11月02日","left3": "为了推广心理测量理论与技术的应用，促进心理测量学科的繁荣和发展，同时满足社会各界对心理测量技术的需求，自2016年由中国心理学会心理测量专业委员会主办、北京骄阳智心教育咨询有限公司承办、并联合多家专业心理测评机构推出了“心理测量理论与应用系列课程”"},
+			    {"did":8,"href":"americanInstitutions9.html","left": "骄阳特训","left2": "2018年06月04日","left3": "为了推广心理测量理论与技术的应用，促进心理测量学科的繁荣和发展，同时满足社会各界对心理测量技术的需求，自2016年由中国心理学会心理测量专业委员会主办、北京骄阳智心教育咨询有限公司承办、并联合多家专业心理测评机构推出了“心理测量理论与应用系列课程”"},
+			    {"did":9,"href":"americanInstitutions8.html","left": "2017年心理测评理论与应用技术大会暨主试培训","left2": "2017年12月11日","left3": "为了推广心理测量理论与技术的应用，促进心理测量学科的繁荣和发展，同时满足社会各界对心理测量技术的需求，自2016年由中国心理学会心理测量专业委员会主办、北京骄阳智心教育咨询有限公司承办、并联合多家专业心理测评机构推出了“心理测量理论与应用系列课程”"},
+			    {"did":10,"href":"americanInstitutions7.html","left": "智力量表系列培训","left2": "2017年09月14日","left3": "为了推广心理测量理论与技术的应用，促进心理测量学科的繁荣和发展，同时满足社会各界对心理测量技术的需求，自2016年由中国心理学会心理测量专业委员会主办、北京骄阳智心教育咨询有限公司承办、并联合多家专业心理测评机构推出了“心理测量理论与应用系列课程”"},
+			    
+			];
+				
+				var options={
+				"id":"page0",//显示页码的元素
+				"data":datas1,//显示数据
+			    "maxshowpageitem":3,//最多显示的页码个数
+			    "pagelistcount":10,//每页显示数据个数
+			    "callBack":function(result){//返回datas数据
+			    	//console.log(result);  //输出datas的数据
+			    	var cHtml="";
+			        for(var i=0;i<result.length;i++){
+			            cHtml+="<li>"+ 
+			            '<div class="sectionboxf">'+
+						    '<a href="'+ result[i].href+'" class="href">'+
+							'<div class="section-left">' +
+								'<p>'+result[i].left+'<span>'+result[i].left2+'</span>'+'</p>'+
+								'<p>'+result[i].left3+'</p>'+
+							'</div>' +
+							'</a>'+
+						'</div>'+
+			            "</li>";//处理数据
+			        }
+			        $("#demoContent0").html(cHtml);//将数据增加到页面中
+			    }
+			};
+			   page.init(datas1.length,1,options);			
+		</script>
+		
+		
+		<script>	
+			var datas2=[
+			    {"did":1,"href":"psyinformation5.html","left": "你以为的矫情，要了20万人的命！","left2": "2019年9月17日","left3": "乔任梁去世三年后，22岁女孩深夜失联：你以为的矫情，要了20万人的命！"},
+			    {"did":2,"href":"psyinformation1.html","left": "爱不爱一个人，身体最诚实","left2": "2019年9月17日","left3": "黄磊曾对女儿多多说：未来如果一个男人既说娶你，又不给你婚礼，你千万不能嫁，因为他连婚礼这个仪式都省了，还有什么可以给你。"},
+			    {"did":3,"href":"psyinformation2.html","left": "惜命的最好方式，不是养生，是给自己“暂停”","left2": "2019年9月9日","left3": "后来，我才发觉在成年人的世界，天气好，真是生活里为数不多的快乐。"},
+			    {"did":5,"href":"psyinformation6.html","left": "抑郁症就医指南","left2": "2019年4月16日","left3": "以北京为例，推荐的医院有三个一是北京安定医院；二是北医六院；三是北京回龙观医院"},
+			    {"did":5,"href":"psyinformation3.html","left": "床上说的话到底算数吗 ？","left2": "2019年1月20日","left3": "“床上说的话到底算数吗 ？” —— 心理学的哲学起源与心理学建立140周年"},
+			    {"did":6,"href":"psyinformation4.html","left": "19岁女孩分裂6重人格被疑演戏","left2": "2018年8月15日","left3": "你的无知，正在谋杀每一个想活下去的人"},
+			];
+			
+		</script>
+		
+		
+		
+		
+		<!--根据不同浏览器引入不同的css js-->
+		<script type="text/javascript">
+			function getBrowser() {
+				var ua = window.navigator.userAgent;
+				var isIE = window.ActiveXObject != undefined && ua.indexOf("MSIE") != -1;
+				var isFirefox = ua.indexOf("Firefox") != -1;
+				var isOpera = window.opr != undefined;
+				var isChrome = ua.indexOf("Chrome") && window.chrome;
+				var isSafari = ua.indexOf("Safari") != -1 && ua.indexOf("Version") != -1;
+				if(isIE) {
+					return "IE";
+				} else if(isFirefox) {
+					return "Firefox";
+				} else if(isOpera) {
+					return "Opera";
+				} else if(isChrome) {
+					return "Chrome";
+				} else if(isSafari) {
+					return "Safari";
+				} else {
+					return "Unkown";
+				}
+			}
+
+			var linkNode = document.createElement("link"),
+				scriptNode = document.createElement("script");
+			linkNode.setAttribute("rel", "stylesheet");
+			linkNode.setAttribute("type", "text/css");
+			scriptNode.setAttribute("type", "text/javascript");
+
+			if(getBrowser() == "IE") {
+				linkNode.setAttribute("href", "css/IE.css");
+				scriptNode.setAttribute("src", "js/index-ie.js");
+			} else if(getBrowser() == "Firefox") {
+				linkNode.setAttribute("href", "css/index-firefox.css");
+				scriptNode.setAttribute("src", "");
+			} else if(getBrowser() == "Opera") {
+				linkNode.setAttribute("href", "css/index-opera.css");
+				scriptNode.setAttribute("src", "");
+			} else if(getBrowser() == "Chrome") {
+				linkNode.setAttribute("href", "css/ft-carousel.css");
+				scriptNode.setAttribute("src", "");
+			} else if(getBrowser() == "Safari") {
+				linkNode.setAttribute("href", "css/Safari.css");
+				scriptNode.setAttribute("src", "");
+			}
+			document.head.appendChild(linkNode);
+			document.head.appendChild(scriptNode);
+		</script>
+	</body>
+</html>
