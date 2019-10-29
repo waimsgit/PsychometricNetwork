@@ -26,7 +26,7 @@
 	</head>
 	<body>
 		<div id="regist-main">
-			<form id="registForm" action="/Account/Register" method="post" onsubmit="alert('验证通过，可以提交！');return false;">
+			<div id="registForm" action="/Account/Register" method="post" onsubmit="alert('验证通过，可以提交！');return false;">
 				<ol>
 					<li>
 						<label for="UserName">用户名：</label>
@@ -35,12 +35,17 @@
 						<span class="field-validation-valid" data-valmsg-for="UserName" data-valmsg-replace="true"></span>
 					</li>
 					<li>
-						<label for="Email">电子邮件：</label>
+						<label for="Email">电子邮箱：</label>
 						<input id="Email" name="Email" type="text" value="">
 						<span class="kitjs-validator" for="@Email" rules="[{notNull:true, message:'电子邮件不能为空'},{isEmail:true,message:'电子邮件格式不正确'}]"></span>
 						<span class="field-validation-valid" data-valmsg-for="Email" data-valmsg-replace="true"></span>
 					</li>
 					<li>
+						<label for="Email">验证码：</label> <br />
+						<input type="text" placeholder="请输入您的验证码" id="verification" style="text-indent:10px"/>
+						<input type="button" id="btn" value="免费获取验证码" onclick="settime(this)" /> 
+					</li>
+					<li style="clear:both;padding-top:10px;" >
 						<label for="Password">密码：</label>
 						<input id="Password" name="Password" type="password">
 						<span class="kitjs-validator" for="@Password" rules="[{notNull:true, message:'密码不能为空'},{minLength:'6',message:'密码长度最少为6位'}]"></span>
@@ -56,8 +61,26 @@
 				<div class="registError"></div>
 				<input type="submit" value="注册" class="btn-submit">
 				<a href="register_1.html" class="redist">去登录</a>
-			</form>
+			</div>
 		</div>
 
+    <script type="text/javascript"> 
+		var countdown=60; 
+		function settime(val) { 
+		if (countdown == 0) { 
+		val.removeAttribute("disabled");    
+		val.value="免费获取验证码"; 
+		countdown = 60; 
+		} else { 
+		val.setAttribute("disabled", true); 
+		val.value="重新发送(" + countdown + ")"; 
+		countdown--; 
+		} 
+		setTimeout(function() { 
+		settime(val) 
+		},1000) 
+		} 
+	</script> 
+     
 	</body>
 </html>

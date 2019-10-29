@@ -67,8 +67,8 @@ h1 img {
 		margin: 0;
 		padding: 0;
 		top: 98px;
-		left: 300px;
-		width: 400px;
+		left: 400px;
+		width: 370px;
 	}
 	#registForm {
 		height:auto!important; 
@@ -77,9 +77,9 @@ h1 img {
 		overflow:hidden;
 		position: relative;
 		border: 1px solid #d7d7d7;
-		box-shadow: 0 0 10px #d7d7d7;
+		box-shadow: 0px 0px 14px 0px rgba(147,178,224,0.5);
 		background-color: #fff;
-		width: 300px;
+		width: 370px;
 		margin:0 auto;
 		color: #818181;
 		padding:24px;
@@ -116,7 +116,7 @@ h1 img {
 		margin-top: 10px;
 	}
 	#registForm li input {
-		width: 295px;
+		width: 100%;
 		height: 33px;
 		line-height: 33px;
 		border: 1px solid #ccd1d5;
@@ -131,7 +131,7 @@ h1 img {
 		line-height: 30px;
 		cursor: pointer;
 		color:white;
-	    margin-left: 106px;
+	    margin-left: 186px;
 	    margin-top: 30px;
 	    border: 0;
 	    padding: 0px;
@@ -166,3 +166,13 @@ h1 img {
     	color:red;
     	margin-top: 15px;
     }
+    
+/*注册页面获取邮箱验证码*/
+#registForm li #verification{
+	width:60%;
+	float:left;
+}
+#registForm li #btn{
+	width:30%;
+	float:right;
+}
