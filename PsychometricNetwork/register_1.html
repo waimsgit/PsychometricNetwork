@@ -3,6 +3,9 @@
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 		<link rel="stylesheet" href="css/resister_12.css" />
+		<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+		<script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+		<script src="js/public.js"></script>
 		<script src="js/regist/kit.js"></script>
 		<script type="text/javascript">
 			var _gaq = _gaq || [];
@@ -26,34 +29,53 @@
 	</head>
 	<body>
 		<div id="regist-main">
-			<form id="registForm" action="/Account/Register" method="post" onsubmit="alert('验证通过，可以提交！');return false;">
+			<div id="registForm">
 				<ol>
 					<li>
-						<label for="UserName">用户名：</label>
-						<input id="UserName" name="UserName" type="text" value="">
-						<span class="kitjs-validator" for="@UserName" rules="[{notNull:true, message:'用户名不能为空'}]"></span>
-						<span class="field-validation-valid" data-valmsg-for="UserName" data-valmsg-replace="true"></span>
-					</li>
-					<li>
 						<label for="Email">电子邮件：</label>
-						<input id="Email" name="Email" type="text" value="">
+						<input id="Email" name="Email" type="text" v-model="email" value="">
 						<span class="kitjs-validator" for="@Email" rules="[{notNull:true, message:'电子邮件不能为空'},{isEmail:true,message:'电子邮件格式不正确'}]"></span>
 						<span class="field-validation-valid" data-valmsg-for="Email" data-valmsg-replace="true"></span>
 					</li>
 					<li>
 						<label for="Password">密码：</label>
-						<input id="Password" name="Password" type="password">
+						<input id="Password" name="Password" type="password" v-model="password">
 						<span class="kitjs-validator" for="@Password" rules="[{notNull:true, message:'密码不能为空'},{minLength:'6',message:'密码长度最少为6位'}]"></span>
 						<span class="field-validation-valid" data-valmsg-for="Password" data-valmsg-replace="true"></span>
 					</li>
 				</ol>
 				<div class="registError"></div>
-				<input type="submit" value="登录" class="btn-submit">
-				
+				<input type="submit" @click="login" value="登录" class="btn-submit">
 				<a href="register_2.html" class="redist">去注册</a>
-			</form>
-			
+			</div>
 		</div>
-
+		<script>
+			var url1=geturl();
+			var vm = new Vue({
+				el: "#registForm",
+				data: {
+					"email": "",
+					"password":""
+				},
+				methods:{
+					"login":function(){
+						$.ajax({
+							"url": url1+"/scale/user/login",
+							"datatype": "json",
+							"data":{"email":this.email,"password":this.password},
+							"success": function(result){
+								if(result.status == 200){
+									window.localStorage.setItem("token",result.data.token);
+									window.localStorage.setItem("user",JSON.stringify(result.data.user));
+									window.location.href="index.html";
+								}else{
+									alert(result.message);
+								}
+							}
+						})
+					}
+				}
+			})
+		</script>
 	</body>
 </html>
