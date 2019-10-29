@@ -109,7 +109,7 @@
 
 /*全部课程*/
 .content1{
-	width:80%;
+	width:70%;
 	margin:0 auto;
 }
 /*tab li*/
@@ -240,7 +240,7 @@
 }
 /*家庭学校教育*/
 .family:last-of-type>.family-content{
-	margin-bottom:120px;
+	margin-bottom:90px;
 }
 .family{
 	width:100%;
@@ -249,7 +249,8 @@
 }
 .family-content{
 	width:100%;
-	height:320px;
+	height:282px;
+	overflow: hidden;
 	margin:0 auto;
 }
 .family-nav{
@@ -308,23 +309,31 @@
 .family-box{
 	width:100%;
     clear:both;
-    margin-top:38px;
+    margin-top:24px;
+    display:flex;
 }
-.family-box1{
+.family-box>a{
+	display:block;
 	width:23.1%;
 	height:100%;
 	float:left;
 }
-.family-box1:nth-of-type(2),.family-box1:nth-of-type(3){
+.family-box>a:nth-of-type(1) .family-box1>img{
+	height:280px !important;
+}
+.family-box1{
+	width:100%;
+	height:100%;
+}
+.family-box>a:nth-of-type(2),.family-box>a:nth-of-type(3),.family-box>a:nth-of-type(4){
 	float:left;
 	margin-left: 2.5%;
 }
-.family-box1:nth-of-type(4){
-	float:right;
-	margin-left: 2.5%;
-}
+
 .family-box1>img{
-	width: 100%;z-index:0;
+	width: 100%;
+	max-height: 157px;
+	z-index:0;
 }
 .family-box1>video{
 	width: 100%;
@@ -336,14 +345,14 @@
 	font-size: 14px;
 	color:#383838;
 	font-weight: bold;
-	margin-top: 27px;
-	height: 38px;
+	margin-top: 4px;
+	height: 40px;
     overflow: hidden;
 }
 .family-box1>p:nth-of-type(2){
 	font-size: 12px;
 	color:#6d6d6d;
-	padding-top: 12px;
+	padding-top: 6px;
 	width:100%;
 	height:20px;
 }
@@ -409,6 +418,14 @@
     line-height: 40px;
     font-size: 12px;
     color: #a3a3a3;
+}
+
+/*视频播放跳转的页面*/
+.moreh3{
+	font-size: 24px;
+    color: #201e1e;
+    text-align: center;
+    padding: 30px 0 0 0;
 }
 
 @media only screen and (min-width: 1381px) and (max-width: 1919px) {
