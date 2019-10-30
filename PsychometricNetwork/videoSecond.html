@@ -9,7 +9,8 @@
 		<link rel="stylesheet" type="text/css" href="css/video.css" />
 		<link rel="stylesheet" type="text/css" href="css/Safari.css" />
 		<link rel="stylesheet" href="css/videoSecond.css" />
-		<script src="js/jquery-2.1.1.min.js"></script>
+		<!--<script src="js/jquery-2.1.1.min.js"></script>-->
+		<script src="js/jquery.min.js"></script>
 	</head>
 
 	<body>
@@ -63,7 +64,17 @@
 									</li>
 									
 									<li index="0">
-										<a href="javascript:funcShow(2)" class="on" onclick="changespan()"> 
+										<a href="javascript:funcShow(1)" class="on" onclick="changespan()"> 
+											<img src="img/video02.png"/>
+											<div> 
+												<p>张厚粲中国心理学的曲折发展</p>
+												<img src="img/eye.png"/><span> 1566</span>
+											</div>
+										</a>
+									</li>
+									
+									<li index="1">
+										<a href="javascript:funcShow(2)"> 
 											<img src="img/videosecond01.png"/>
 											<div> 
 												<p>王健儿童异常心理及行为的评估诊断和治疗</p>
@@ -72,7 +83,7 @@
 										</a>
 									</li>
 										
-									<li index="1">
+									<li index="2">
 										<a href="javascript:funcShow(3)">
 											<img src="img/videosecond02.png"/>
 											<div> 
@@ -82,7 +93,7 @@
 										</a>
 									</li>
 									
-								    <li index="2">
+								    <li index="3">
 										<a href="javascript:funcShow(4)">
 											<img src="img/videosecond03.png"/>
 											<div> 
@@ -92,7 +103,7 @@
 										</a>
 									</li>
 									
-									<li index="3">
+									<li index="4">
 										<a href="javascript:funcShow(5)">
 											<img src="img/video06.png"/>
 											<div> 
@@ -102,7 +113,7 @@
 										</a>
 									</li>
 									
-									<li index="4">
+									<li index="5">
 										<a href="javascript:funcShow(6)">
 											<img src="img/video09.png"/>
 											<div> 
@@ -315,24 +326,6 @@
 		    };
 		    with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src=
 		      'http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
-		</script>
-		
-		
-	    <script type="text/javascript">
-        $.ajax({
-            url: "http://localhost:8080/TestServlet/controller/ListFileServlet",
-            type: 'post',
-            async: true,
-            data: null,
-            dataType:'json',
-            success: function (data) {                    
-                for(var filename in data){
-                    console.log("文件名：" + filename + ",下载地址："+ data[filename]);
-                }
-            },
-            error: function (XMLHttpRequest, textStatus, error) {
-            }
-        });       
-       </script>	
+		</script>	
    </body>
 </html>
