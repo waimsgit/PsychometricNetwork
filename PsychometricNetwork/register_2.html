@@ -60,6 +60,10 @@
 						<span class="kitjs-validator" for="@ConfirmPassword" rules="[{notNull:true, message:'重新输入密码不能为空'},{equalWith:'@Password',message:'两次输入密码必须一致'},{minLength:'6',message:'密码长度最少为6位'}]"></span>
 						<span class="field-validation-valid" data-valmsg-for="ConfirmPassword" data-valmsg-replace="true"></span>
 					</li>
+					<li>
+						<label id="agree"><input type="checkbox" name="" value="我已同意该隐私声明">我已同意该</label> <a id="agree2" href="agree.html"><span>隐私声明</span></a>
+					</li>
+					<li style="clear:both"></li>
 				</ol>
 				<div class="registError"></div>
 				<input type="submit" value="注册" class="btn-submit">

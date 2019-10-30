@@ -11,9 +11,7 @@
 		<link rel="stylesheet" type="text/css" href="css/demo.css" />
 		<link rel="stylesheet" type="text/css" href="css/tabs.css" />
 		<link rel="stylesheet" type="text/css" href="css/page.css" />
-		<script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script>		
-		<script src="js/page1.js"></script>
-		
+		<script src="js/page1.js"></script>	
 	</head>
 
 	<body>
@@ -94,6 +92,7 @@
 									<div>
 										<span>发布人</span>
 										<span>预览</span>
+										<span>预览量</span>
 										<span>发布时间</span>
 									</div>
 								</nav>
@@ -216,7 +215,8 @@
 									'<img src="img/literature1.png" alt="" />' +
 //									'<p>' + result[i].right2 + '</p>' +
 									
-//									'<img src="img/literature2.png" alt="" /> ' +
+									'<img src="img/eye.png" alt="" /> ' +
+									'<span>'+result[i].right2+'</span>'+
 									'<p>' + result[i].right3 + '</p>' +
 								'</div>' +
 								'</a>'+
@@ -229,29 +229,29 @@
 				   page.init(datas.length,1,options);
 			})
 			var datas1=[
-			    {"did":1,"href":"http://47.104.147.26:8088/examples/siou001.pdf","left": "斯- 欧非言语智力测验在特殊群体中的应用","right1": "骄阳智心","img1": "img/literature1.png","right2": "骄阳智心","img2": "img/literature2.png","right3": "2小时前",},
-			    {"did":2,"href":"http://47.104.147.26:8088/examples/siou002.pdf","left": "SON－Ｒ6－40 非言语智力测验在中国的适用性","right1": "骄阳智心","img1": "img/literature1.png","right2": "骄阳智心","img2": "img/literature2.png","right3": "2小时前",},
-			    {"did":3,"href":"http://47.104.147.26:8088/examples/siou003.pdf","left": "斯-欧非言语智力测验评介","right1": "骄阳智心","img1": "img/literature1.png","right2": "骄阳智心","img2": "img/literature2.png","right3": "2小时前",},
-			    {"did":4,"href":"http://47.104.147.26:8088/examples/siou004.pdf","left": "斯-欧非言语智力测验在特殊与普通群体中的比较研究","right1": "骄阳智心","img1": "img/literature1.png","right2": "骄阳智心","img2": "img/literature2.png","right3": "2小时前",},
-			    {"did":5,"href":"http://47.104.147.26:8088/examples/siou005.pdf","left": "斯-欧非言语智力测验中国版介绍","right1": "骄阳智心","img1": "img/literature1.png","right2": "骄阳智心","img2": "img/literature2.png","right3": "2小时前",},
-			    {"did":6,"href":"http://47.104.147.26:8088/examples/siou006.pdf","left": "斯-欧氏非言语智力测验的修订研究","right1": "骄阳智心","img1": "img/literature1.png","right2": "骄阳智心","img2": "img/literature2.png","right3": "2小时前",},
-				{"did":7,"href":"http://47.104.147.26:8088/examples/disabledFederationnew.pdf","left": "残联新闻","right1": "骄阳智心","img1": "img/literature1.png","right2": "骄阳智心","img2": "img/literature2.png","right3": "2小时前",},
-				{"did":8,"href":"http://47.104.147.26:8088/examples/mentallyRetardedIdentification.pdf","left": "广州智障鉴定","right1": "骄阳智心","img1": "img/literature1.png","right2": "骄阳智心","img2": "img/literature2.png","right3": "2小时前",},
-				{"did":9,"href":"http://47.104.147.26:8088/examples/workingMemory.pdf","left": "工作记忆与智商","right1": "骄阳智心","img1": "img/literature1.png","right2": "骄阳智心","img2": "img/literature2.png","right3": "2小时前",},
-				{"did":10,"href":"http://47.104.147.26:8088/examples/WPPSI-IV+ABAS-II_JY.pdf","left": "韦氏幼儿智力量表第四版（WPPSI-IV）中文版简介","right1": "骄阳智心","img1": "img/literature1.png","right2": "骄阳智心","img2": "img/literature2.png","right3": "2小时前",},
-			    {"did":11,"href":"http://47.104.147.26:8088/examples/WISC-IV+ABAS-II_JY.pdf  ","left": "韦氏儿童智力量表第四版中文版（WISC-IV）","right1": "骄阳智心","img1": "img/literature1.png","right2": "骄阳智心","img2": "img/literature2.png","right3": "2小时前",},
-			    {"did":12,"href":"http://47.104.147.26:8088/examples/Wechsleradult.pdf","left": "韦氏成人智力量表和儿童智力量表第四版中文版的衔接研究","right1": "骄阳智心","img1": "img/literature1.png","right2": "骄阳智心","img2": "img/literature2.png","right3": "2小时前",},			   
-			    {"did":13,"href":"http://47.104.147.26:8088/examples/edgeIntelligence.pdf","left": "智力边缘","right1": "骄阳智心","img1": "img/literature1.png","right2": "骄阳智心","img2": "img/literature2.png","right3": "2小时前",},
-				{"did":14,"href":"http://47.104.147.26:8088/exam  ples/intellectualDisabilityScale.pdf","left": "智力残疾标准","right1": "骄阳智心","img1": "img/literature1.png","right2": "骄阳智心","img2": "img/literature2.png","right3": "2小时前",},
-				{"did":15,"href":"http://47.104.147.26:8088/examples/developmentofIntelligenceTest.pdf","left": "智力测验发展","right1": "骄阳智心","img1": "img/literature1.png","right2": "骄阳智心","img2": "img/literature2.png","right3": "2小时前",},
-				{"did":16,"href":"http://47.104.147.26:8088/examples/trainingInstituteforMentalRetardation.pdf","left": "智力障碍培训机构","right1": "骄阳智心","img1": "img/literature1.png","right2": "骄阳智心","img2": "img/literature2.png","right3": "2小时前",},
-				{"did":17,"href":"http://47.104.147.26:8088/examples/intellectualDebate.pdf","left": "智力争论","right1": "骄阳智心","img1": "img/literature1.png","right2": "骄阳智心","img2": "img/literature2.png","right3": "2小时前",},
-				{"did":18,"href":"http://47.104.147.26:8088/examples/IQandAchievement.pdf","left": "智商与成就","right1": "骄阳智心","img1": "img/literature1.png","right2": "骄阳智心","img2": "img/literature2.png","right3": "2小时前",},
-				{"did":19,"href":"http://47.104.147.26:8088/examples/peoplewiththehHighestiqs.pdf","left": "智商最高的人","right1": "骄阳智心","img1": "img/literature1.png","right2": "骄阳智心","img2": "img/literature2.png","right3": "2小时前",},
-				{"did":20,"href":"http://47.104.147.26:8088/examples/intellectualDisabilityEpidemiology.pdf","left": "智障流行病学","right1": "2018年9月11","img1": "img/literature1.png","right2": "骄阳智心","img2": "img/literature2.png","right3": "2小时前",},
-				{"did":21,"href":"http://47.104.147.26:8088/examples/LevelRetarded.pdf","left": "四级智障","right1": "骄阳智心","img1": "img/literature1.png","right2": "骄阳智心","img2": "img/literature2.png","right3": "2小时前",},
-				{"did":22,"href":"http://47.104.147.26:8088/examples/howIntelligence.pdf","left": "了解孩子的智力","right1": "骄阳智心","img1": "img/literature1.png","right2": "骄阳智心","img2": "img/literature2.png","right3": "2小时前",},
-				{"did":23,"href":"http://47.104.147.26:8088/examples/autisticIntelligence.pdf","left": "孤独症智力","right1": "骄阳智心","img1": "img/literature1.png","right2": "骄阳智心","img2": "img/literature2.png","right3": "2小时前",},
+			    {"did":1,"href":"http://47.104.147.26:8088/examples/siou001.pdf","left": "斯- 欧非言语智力测验在特殊群体中的应用","right1": "骄阳智心","img1": "img/literature1.png","right2": "1000","img2": "img/literature2.png","right3": "2小时前",},
+			    {"did":2,"href":"http://47.104.147.26:8088/examples/siou002.pdf","left": "SON－Ｒ6－40 非言语智力测验在中国的适用性","right1": "骄阳智心","img1": "img/literature1.png","right2": "7600","img2": "img/literature2.png","right3": "2小时前",},
+			    {"did":3,"href":"http://47.104.147.26:8088/examples/siou003.pdf","left": "斯-欧非言语智力测验评介","right1": "骄阳智心","img1": "img/literature1.png","right2": "450","img2": "img/literature2.png","right3": "2小时前",},
+			    {"did":4,"href":"http://47.104.147.26:8088/examples/siou004.pdf","left": "斯-欧非言语智力测验在特殊与普通群体中的比较研究","right1": "骄阳智心","img1": "img/literature1.png","right2": "260","img2": "img/literature2.png","right3": "2小时前",},
+			    {"did":5,"href":"http://47.104.147.26:8088/examples/siou005.pdf","left": "斯-欧非言语智力测验中国版介绍","right1": "骄阳智心","img1": "img/literature1.png","right2": "1300","img2": "img/literature2.png","right3": "2小时前",},
+			    {"did":6,"href":"http://47.104.147.26:8088/examples/siou006.pdf","left": "斯-欧氏非言语智力测验的修订研究","right1": "骄阳智心","img1": "img/literature1.png","right2": "160","img2": "img/literature2.png","right3": "2小时前",},
+				{"did":7,"href":"http://47.104.147.26:8088/examples/disabledFederationnew.pdf","left": "残联新闻","right1": "骄阳智心","img1": "img/literature1.png","right2": "790","img2": "img/literature2.png","right3": "2小时前",},
+				{"did":8,"href":"http://47.104.147.26:8088/examples/mentallyRetardedIdentification.pdf","left": "广州智障鉴定","right1": "骄阳智心","img1": "img/literature1.png","right2": "460","img2": "img/literature2.png","right3": "2小时前",},
+				{"did":9,"href":"http://47.104.147.26:8088/examples/workingMemory.pdf","left": "工作记忆与智商","right1": "骄阳智心","img1": "img/literature1.png","right2": "840","img2": "img/literature2.png","right3": "2小时前",},
+				{"did":10,"href":"http://47.104.147.26:8088/examples/WPPSI-IV+ABAS-II_JY.pdf","left": "韦氏幼儿智力量表第四版（WPPSI-IV）中文版简介","right1": "骄阳智心","img1": "img/literature1.png","right2": "950","img2": "img/literature2.png","right3": "2小时前",},
+			    {"did":11,"href":"http://47.104.147.26:8088/examples/WISC-IV+ABAS-II_JY.pdf  ","left": "韦氏儿童智力量表第四版中文版（WISC-IV）","right1": "骄阳智心","img1": "img/literature1.png","right2": "780","img2": "img/literature2.png","right3": "2小时前",},
+			    {"did":12,"href":"http://47.104.147.26:8088/examples/Wechsleradult.pdf","left": "韦氏成人智力量表和儿童智力量表第四版中文版的衔接研究","right1": "骄阳智心","img1": "img/literature1.png","right2": "1650","img2": "img/literature2.png","right3": "2小时前",},			   
+			    {"did":13,"href":"http://47.104.147.26:8088/examples/edgeIntelligence.pdf","left": "智力边缘","right1": "骄阳智心","img1": "img/literature1.png","right2": "346","img2": "img/literature2.png","right3": "2小时前",},
+				{"did":14,"href":"http://47.104.147.26:8088/exam  ples/intellectualDisabilityScale.pdf","left": "智力残疾标准","right1": "骄阳智心","img1": "img/literature1.png","right2": "162","img2": "img/literature2.png","right3": "2小时前",},
+				{"did":15,"href":"http://47.104.147.26:8088/examples/developmentofIntelligenceTest.pdf","left": "智力测验发展","right1": "骄阳智心","img1": "img/literature1.png","right2": "950","img2": "img/literature2.png","right3": "2小时前",},
+				{"did":16,"href":"http://47.104.147.26:8088/examples/trainingInstituteforMentalRetardation.pdf","left": "智力障碍培训机构","right1": "骄阳智心","img1": "img/literature1.png","right2": "130","img2": "img/literature2.png","right3": "2小时前",},
+				{"did":17,"href":"http://47.104.147.26:8088/examples/intellectualDebate.pdf","left": "智力争论","right1": "骄阳智心","img1": "img/literature1.png","right2": "650","img2": "img/literature2.png","right3": "2小时前",},
+				{"did":18,"href":"http://47.104.147.26:8088/examples/IQandAchievement.pdf","left": "智商与成就","right1": "骄阳智心","img1": "img/literature1.png","right2": "490","img2": "img/literature2.png","right3": "2小时前",},
+				{"did":19,"href":"http://47.104.147.26:8088/examples/peoplewiththehHighestiqs.pdf","left": "智商最高的人","right1": "骄阳智心","img1": "img/literature1.png","right2": "860","img2": "img/literature2.png","right3": "2小时前",},
+				{"did":20,"href":"http://47.104.147.26:8088/examples/intellectualDisabilityEpidemiology.pdf","left": "智障流行病学","right1": "2018年9月11","img1": "img/literature1.png","right2": "760","img2": "img/literature2.png","right3": "2小时前",},
+				{"did":21,"href":"http://47.104.147.26:8088/examples/LevelRetarded.pdf","left": "四级智障","right1": "骄阳智心","img1": "img/literature1.png","right2": "140","img2": "img/literature2.png","right3": "2小时前",},
+				{"did":22,"href":"http://47.104.147.26:8088/examples/howIntelligence.pdf","left": "了解孩子的智力","right1": "骄阳智心","img1": "img/literature1.png","right2": "560","img2": "img/literature2.png","right3": "2小时前",},
+				{"did":23,"href":"http://47.104.147.26:8088/examples/autisticIntelligence.pdf","left": "孤独症智力","right1": "骄阳智心","img1": "img/literature1.png","right2": "850","img2": "img/literature2.png","right3": "2小时前",},
 				
 			];
 				
@@ -275,7 +275,8 @@
 								'<img src="img/literature1.png" alt="" />' +
 //								'<p>' + result[i].right2 + '</p>' +
 								
-//								'<img src="img/literature2.png" alt="" /> ' +
+								'<img src="img/eye.png" alt="" /> ' +
+								'<span>'+result[i].right2+'</span>'+
 								'<p>' + result[i].right3 + '</p>' +
 							'</div>' +
 							'</a>'+
@@ -291,28 +292,28 @@
 		
 		<script>	
 			var datas2=[
-			    {"did":1,"href":"http://47.104.147.26:8088/examples/cognitiveStyle.pdf","left": "认知风格","right1": "骄阳智心","img1": "img/literature1.png","right2": "骄阳智心","img2": "img/literature2.png","right3": "2小时前",},
-				{"did":2,"href":"http://47.104.147.26:8088/examples/cognitiveDisorder.pdf","left": "认知障碍","right1": "骄阳智心","img1": "img/literature1.png","right2": "骄阳智心","img2": "img/literature2.png","right3": "2小时前",},
-				{"did":3,"href":"http://47.104.147.26:8088/examples/MMPI01.pdf","left": "明尼苏达多相人格测验（MMPI）简介","right1": "骄阳智心","img1": "img/literature1.png","right2": "骄阳智心","img2": "img/literature2.png","right3": "2小时前",},
-				{"did":4,"href":"http://47.104.147.26:8088/examples/Rorschach01.pdf","left": "罗夏墨迹测验","right1": "骄阳智心","img1": "img/literature1.png","right2": "骄阳智心","img2": "img/literature2.png","right3": "2小时前",},
+			    {"did":1,"href":"http://47.104.147.26:8088/examples/cognitiveStyle.pdf","left": "认知风格","right1": "骄阳智心","img1": "img/literature1.png","right2": "1000","img2": "img/eye.png","right3": "2小时前",},
+				{"did":2,"href":"http://47.104.147.26:8088/examples/cognitiveDisorder.pdf","left": "认知障碍","right1": "骄阳智心","img1": "img/literature1.png","right2": "200","img2": "img/literature2.png","right3": "2小时前",},
+				{"did":3,"href":"http://47.104.147.26:8088/examples/MMPI01.pdf","left": "明尼苏达多相人格测验（MMPI）简介","right1": "骄阳智心","img1": "img/literature1.png","right2": "400","img2": "img/literature2.png","right3": "2小时前",},
+				{"did":4,"href":"http://47.104.147.26:8088/examples/Rorschach01.pdf","left": "罗夏墨迹测验","right1": "骄阳智心","img1": "img/literature1.png","right2": "600","img2": "img/literature2.png","right3": "2小时前",},
 				
 			];
 			var datas3=[
-			    {"did":1,"href":"http://47.104.147.26:8088/examples/webster'sIntelligenceProfession.pdf","left": "韦氏智力与职业","right1": "骄阳智心","img1": "img/literature1.png","right2": "骄阳智心","img2": "img/literature2.png","right3": "2小时前",},			   
+			    {"did":1,"href":"http://47.104.147.26:8088/examples/webster'sIntelligenceProfession.pdf","left": "韦氏智力与职业","right1": "骄阳智心","img1": "img/literature1.png","right2": "500","img2": "img/literature2.png","right3": "2小时前",},			   
 			    
 			];
 			var datas4=[
-				{"did":1,"href":"http://47.104.147.26:8088/examples/magneticResonance.pdf","left": "磁共振检测技术","right1": "骄阳智心","img1": "img/literature1.png","right2": "骄阳智心","img2": "img/literature2.png","right3": "2小时前",},
-				{"did":2,"href":"http://47.104.147.26:8088/examples/universityClass.pdf","left": "科技大学少年班","right1": "骄阳智心","img1": "img/literature1.png","right2": "骄阳智心","img2": "img/literature2.png","right3": "2小时前",},
-				{"did":3,"href":"http://47.104.147.26:8088/examples/mensah.pdf","left": "门萨","right1": "骄阳智心","img1": "img/literature1.png","right2": "骄阳智心","img2": "img/literature2.png","right3": "2小时前",},
-				{"did":4,"href":"http://47.104.147.26:8088/examples/disabilityIdentificationNews.pdf","left": "伤残鉴定新闻","right1": "骄阳智心","img1": "img/literature1.png","right2": "骄阳智心","img2": "img/literature2.png","right3": "2小时前",},
-				{"did":5,"href":"http://47.104.147.26:8088/examples/passChildren'sClass.pdf","left": "少年班通过率","right1": "骄阳智心","img1": "img/literature1.png","right2": "骄阳智心","img2": "img/literature2.png","right3": "2小时前",},
-				{"did":6,"href":"http://47.104.147.26:8088/examples/fourSupernormalClasses.pdf","left": "四大超常实验班","right1": "骄阳智心","img1": "img/literature1.png","right2": "骄阳智心","img2": "img/literature2.png","right3": "2小时前",},
-				{"did":7,"href":"http://47.104.147.26:8088/examples/TALEducationGroup.pdf","left": "学而思北京少年班","right1": "骄阳智心","img1": "img/literature1.png","right2": "骄阳智心","img2": "img/literature2.png","right3": "2小时前",},
-				{"did":8,"href":"http://47.104.147.26:8088/examples/TALEducationGroupChildren.pdf","left": "学而思少年班","right1": "骄阳智心","img1": "img/literature1.png","right2": "骄阳智心","img2": "img/literature2.png","right3": "2小时前",},
-				{"did":9,"href":"http://47.104.147.26:8088/examples/hourRule.pdf","left": "一万小时定律","right1": "骄阳智心","img1": "img/literature1.png","right2": "骄阳智心","img2": "img/literature2.png","right3": "2小时前",},
-				{"did":10,"href":"http://47.104.147.26:8088/examples/educationPeople.pdf","left": "育民","right1": "骄阳智心","img1": "img/literature1.png","right2": "骄阳智心","img2": "img/literature2.png","right3": "2小时前",},
-				{"did":11,"href":"http://47.104.147.26:8088/examples/yucaiEducationPeople.pdf","left": "育民育才总汇","right1": "骄阳智心","img1": "img/literature1.png","right2": "骄阳智心","img2": "img/literature2.png","right3": "2小时前",},
+				{"did":1,"href":"http://47.104.147.26:8088/examples/magneticResonance.pdf","left": "磁共振检测技术","right1": "骄阳智心","img1": "img/literature1.png","right2": "300","img2": "img/literature2.png","right3": "2小时前",},
+				{"did":2,"href":"http://47.104.147.26:8088/examples/universityClass.pdf","left": "科技大学少年班","right1": "骄阳智心","img1": "img/literature1.png","right2": "460","img2": "img/literature2.png","right3": "2小时前",},
+				{"did":3,"href":"http://47.104.147.26:8088/examples/mensah.pdf","left": "门萨","right1": "骄阳智心","img1": "img/literature1.png","right2": "950","img2": "img/literature2.png","right3": "2小时前",},
+				{"did":4,"href":"http://47.104.147.26:8088/examples/disabilityIdentificationNews.pdf","left": "伤残鉴定新闻","right1": "骄阳智心","img1": "img/literature1.png","right2": "340","img2": "img/literature2.png","right3": "2小时前",},
+				{"did":5,"href":"http://47.104.147.26:8088/examples/passChildren'sClass.pdf","left": "少年班通过率","right1": "骄阳智心","img1": "img/literature1.png","right2": "750","img2": "img/literature2.png","right3": "2小时前",},
+				{"did":6,"href":"http://47.104.147.26:8088/examples/fourSupernormalClasses.pdf","left": "四大超常实验班","right1": "骄阳智心","img1": "img/literature1.png","right2": "2600","img2": "img/literature2.png","right3": "2小时前",},
+				{"did":7,"href":"http://47.104.147.26:8088/examples/TALEducationGroup.pdf","left": "学而思北京少年班","right1": "骄阳智心","img1": "img/literature1.png","right2": "420","img2": "img/literature2.png","right3": "2小时前",},
+				{"did":8,"href":"http://47.104.147.26:8088/examples/TALEducationGroupChildren.pdf","left": "学而思少年班","right1": "骄阳智心","img1": "img/literature1.png","right2": "260","img2": "img/literature2.png","right3": "2小时前",},
+				{"did":9,"href":"http://47.104.147.26:8088/examples/hourRule.pdf","left": "一万小时定律","right1": "骄阳智心","img1": "img/literature1.png","right2": "370","img2": "img/literature2.png","right3": "2小时前",},
+				{"did":10,"href":"http://47.104.147.26:8088/examples/educationPeople.pdf","left": "育民","right1": "骄阳智心","img1": "img/literature1.png","right2": "590","img2": "img/literature2.png","right3": "2小时前",},
+				{"did":11,"href":"http://47.104.147.26:8088/examples/yucaiEducationPeople.pdf","left": "育民育才总汇","right1": "骄阳智心","img1": "img/literature1.png","right2": "760","img2": "img/literature2.png","right3": "2小时前",},
 			];
 		</script>
 	</body>
