@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html>
 	<head>
@@ -142,4 +143,152 @@
 	</script> 
      
 	</body>
+=======
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<link rel="stylesheet" href="css/resister_12.css" />
+		<script src="js/regist/kit.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+		<script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+		<script src="js/public.js"></script>
+		<script type="text/javascript">
+			var _gaq = _gaq || [];
+			_gaq.push(['_setAccount', 'UA-30210234-1']);
+			_gaq.push(['_trackPageview']);
+			(function() {
+				var ga = document.createElement('script');
+				ga.type = 'text/javascript';
+				ga.async = true;
+				ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+				var s = document.getElementsByTagName('script')[0];
+				s.parentNode.insertBefore(ga, s);
+			})();
+
+		</script>
+		<script src="js/regist/dom.js"></script>
+		<script src="js/regist/form.js"></script>
+		<!--validator-->
+		<script src="js/regist/validator.js"></script>
+		<script src="js/regist/autowired.validator.js"></script>
+	</head>
+	<body>
+		<div id="regist-main">
+			<div id="registForm">
+				<ol>
+					<li>
+						<label for="UserName">用户名：</label>
+						<input id="UserName" name="UserName" type="text" v-model="username" value="">
+						<span class="kitjs-validator" for="@UserName" rules="[{notNull:true, message:'用户名不能为空'}]"></span>
+						<span class="field-validation-valid" data-valmsg-for="UserName" data-valmsg-replace="true"></span>
+					</li>
+					<li>
+						<label for="Email">电子邮箱：</label>
+						<input id="Email" name="Email" type="text" value="" v-model="email">
+						<span class="kitjs-validator" for="@Email" rules="[{notNull:true, message:'电子邮件不能为空'},{isEmail:true,message:'电子邮件格式不正确'}]"></span>
+						<span class="field-validation-valid" data-valmsg-for="Email" data-valmsg-replace="true"></span>
+					</li>
+					<li>
+						<label for="Email">验证码：</label> <br />
+						<input type="text" placeholder="请输入您的验证码" id="verification" style="text-indent:10px" v-model="code"/>
+						<input type="button" id="btn" value="免费获取验证码" onclick="settime(this)" /> 
+					</li>
+					<li style="clear:both;padding-top:10px;" >
+						<label for="Password">密码：</label>
+						<input id="Password" name="Password" type="password" v-model="password">
+						<span class="kitjs-validator" for="@Password" rules="[{notNull:true, message:'密码不能为空'},{minLength:'6',message:'密码长度最少为6位'}]"></span>
+						<span class="field-validation-valid" data-valmsg-for="Password" data-valmsg-replace="true"></span>
+					</li>
+					<li>
+						<label for="ConfirmPassword">重新输入密码：</label>
+						<input id="ConfirmPassword" name="ConfirmPassword" type="password" v-model="password">
+						<span class="kitjs-validator" for="@ConfirmPassword" rules="[{notNull:true, message:'重新输入密码不能为空'},{equalWith:'@Password',message:'两次输入密码必须一致'},{minLength:'6',message:'密码长度最少为6位'}]"></span>
+						<span class="field-validation-valid" data-valmsg-for="ConfirmPassword" data-valmsg-replace="true"></span>
+					</li>
+					<li>
+						<label id="agree"><input type="checkbox" name="" value="我已同意该隐私声明">我已同意该</label> <a id="agree2" href="agree.html"><span>隐私声明</span></a>
+					</li>
+					<li style="clear:both"></li>
+				</ol>
+				<div class="registError"></div>
+				<input type="submit" value="注册" class="btn-submit">
+				<a href="register_1.html" class="redist">去登录</a>
+			</div>
+		</div>
+
+    <script type="text/javascript"> 
+		var countdown=60; 
+		var flag = false;
+		/**
+		 * 验证码函数
+		 * @param {Object} val
+		 */
+		function settime(val) { 
+			if(vm.email == null || vm.email == ""){
+				alert("请输入邮箱！");
+				return ;
+			}
+			var email = vm.email;
+			if (!flag) {
+				$.ajax({
+					"url": url1+"/scale/get/code",
+					"datatype": "json",
+					"data":{"email":email},
+					"success": function(result){
+						if(result.status == 200){
+							alert(result.message);
+						}else{
+							alert(result.message);
+						}
+					}
+				})
+				flag = true;
+			}
+			if (countdown == 0) { 
+				val.removeAttribute("disabled");    
+				val.value="免费获取验证码"; 
+				countdown = 60; 
+			} else { 
+				val.setAttribute("disabled", true); 
+				val.value="重新发送(" + countdown + ")"; 
+				countdown--; 
+			} 
+			setTimeout(function() { 
+				settime(val) 
+				},1000) 
+		} 
+		
+		var url1=geturl();
+		var vm = new Vue({
+			el: "#registForm",
+			data: {
+				"username":"",
+				"email": "",
+				"code":"",
+				"password":""
+			},
+			methods:{
+				"login":function(){
+					$.ajax({
+						"url": url1+"/scale/user/login",
+						"datatype": "json",
+						"data":{"username":this.username,"code":this.code,"email":this.email,"password":this.password},
+						"success": function(result){
+							if(result.status == 200){
+								window.localStorage.setItem("token",result.data.token);
+								window.localStorage.setItem("user",JSON.stringify(result.data.user));
+								window.location.href="index.html";
+							}else{
+								alert(result.message);
+							}
+						}
+					})
+				}
+			}
+		})
+	</script> 
+     
+	</body>
+>>>>>>> 70565d725e8b8e68b62374d35c182eb00d5d0f48
 </html>

@@ -17,6 +17,10 @@ li * {
 h1 img {
 	vertical-align: middle;
 }
+a{text-decoration: none;}
+a:link{text-decoration:none;   /* 指正常的未被访问过的链接*/}
+a:visited{text-decoration:none; /*指已经访问过的链接*/}
+a:hover{text-decoration:none;/*指鼠标在链接*/}a:active{text-decoration:none;/* 指正在点的链接*/ }
 .code {
 	margin-left: 2em;
 	background-color: #aaa;
@@ -26,146 +30,148 @@ h1 img {
 	color: #fff;
 }
 
-	table td {
-		font-size: 14px;
+table td {
+	font-size: 14px;
+}
+label {
+	cursor: pointer;
+}
+.kitjs-validator {
+	display: none;
+	margin-left: 1em;
+}
+.validator-show {
+	display: inline;
+	-webkit-animation: validator-show-anim 300ms 1 ease-in;
+}
+@-webkit-keyframes validator-show-anim {
+	0% {
+		opacity: 0;
 	}
-	label {
-		cursor: pointer;
-		margin-right: 1em;
+	100% {
+		opacity: 1;
 	}
-	.kitjs-validator {
-		display: none;
-		margin-left: 1em;
-	}
-	.validator-show {
-		display: inline;
-		-webkit-animation: validator-show-anim 300ms 1 ease-in;
-	}
-	@-webkit-keyframes validator-show-anim {
-		0% {
-			opacity: 0;
-		}
-		100% {
-			opacity: 1;
-		}
-	}
-	
-	#regist-main {
-	    width: 100%;
-	    height:100%;
-	    overflow:hidden;
-	    margin:0;
-		padding:0;
-	    opacity: 0.8;
-	    padding-top: 200px;
-	}
-	ol {
-		list-style: none;
-	}
-	#regist-main .cap {
-		position: absolute;
-		margin: 0;
-		padding: 0;
-		top: 98px;
-		left: 400px;
-		width: 370px;
-	}
-	#registForm {
-		height:auto!important; 
-		min-height:320px; 
-		height:379px; 
-		overflow:hidden;
-		position: relative;
-		border: 1px solid #d7d7d7;
-		box-shadow: 0px 0px 14px 0px rgba(147,178,224,0.5);
-		background-color: #fff;
-		width: 370px;
-		margin:0 auto;
-		color: #818181;
-		padding:24px;
-		font-size: 14px;
-	}
-	#regist-main .cap h3 {
-		position: absolute;
-		top: 0;
-		left: 0;
-		margin: 0;
-		padding: 0;
-		height: 40px;
-		line-height: 40px;
-	}
-	#regist-main .cap a {
-		position: absolute;
-		color: #818181;
-		left: 173px;
-		top: 27px;
-	}
-	.cap .login-error {
-		position: absolute;
-		top: 24px;
-		left: 91px;
-	}
-	#regist-main a {
-		text-decoration: none;
-	}
-	#regist-main a:hover {
-		text-decoration: underline;
-	}
-	#registForm li {
-		line-height: 30px;
-		margin-top: 10px;
-	}
-	#registForm li input {
-		width: 100%;
-		height: 33px;
-		line-height: 33px;
-		border: 1px solid #ccd1d5;
-		display: block;
-		border-radius: 5px;
-	}
-	#registForm input.btn-submit {
-		display: block;
-		overflow: hidden;
-		width: 88px;
-		height: 30px;
-		line-height: 30px;
-		cursor: pointer;
-		color:white;
-	    margin-left: 186px;
-	    margin-top: 30px;
-	    border: 0;
-	    padding: 0px;
-	    outline: none;
-	    background: #1d7aee;
-	}
-	#registForm input.btn-submit:hover {
-		background-position: 0 -30px;
-	}
-	#registForm input.btn-submit:active {
-		background-position: 0 -62px;
-	}
-	#registForm .registError {
-		position: absolute;
-		width: 298px;
-		top: 301px;
-		left: 40px;
-		color: #BF1623;
-	}
-	.field-validation-error {
-		color: #BF1623;
-	}
-	.kitjs-validator {
-		color: #BF1623;
-	}
-	
-    .redist{
-    	display:block;
-    	width:100%;
-    	font-size: 14px;
-    	text-align: right;
-    	color:red;
-    	margin-top: 15px;
-    }
+}
+
+#regist-main {
+    width: 100%;
+    height:100%;
+    overflow:hidden;
+    margin:0;
+	padding:0;
+    opacity: 0.8;
+    padding-top: 200px;
+}
+ol {
+	list-style: none;
+}
+#regist-main .cap {
+	position: absolute;
+	margin: 0;
+	padding: 0;
+	top: 98px;
+	left: 400px;
+	width: 370px;
+}
+#registForm {
+	height:auto!important; 
+	min-height:320px; 
+	height:379px; 
+	overflow:hidden;
+	position: relative;
+	border: 1px solid #d7d7d7;
+	box-shadow: 0px 0px 14px 0px rgba(147,178,224,0.5);
+	background-color: #fff;
+	width: 370px;
+	margin:0 auto;
+	color: #818181;
+	padding:24px;
+	font-size: 14px;
+}
+#registForm li a:hover{
+	text-decoration: none;
+}	
+#regist-main .cap h3 {
+	position: absolute;
+	top: 0;
+	left: 0;
+	margin: 0;
+	padding: 0;
+	height: 40px;
+	line-height: 40px;
+}
+#regist-main .cap a {
+	position: absolute;
+	color: #818181;
+	left: 173px;
+	top: 27px;
+}
+.cap .login-error {
+	position: absolute;
+	top: 24px;
+	left: 91px;
+}
+#regist-main a {
+	text-decoration: none;
+}
+#regist-main a:hover {
+	text-decoration: underline;
+}
+#registForm li {
+	line-height: 30px;
+	margin-top: 10px;
+}
+#registForm li input {
+	width: 100%;
+	height: 33px;
+	line-height: 33px;
+	border: 1px solid #ccd1d5;
+	display: block;
+	border-radius: 5px;
+}
+#registForm input.btn-submit {
+	display: block;
+	overflow: hidden;
+	width: 88px;
+	height: 30px;
+	line-height: 30px;
+	cursor: pointer;
+	color:white;
+    margin-left: 141px;
+    margin-top: 30px;
+    border: 0;
+    padding: 0px;
+    outline: none;
+    background: #1d7aee;
+}
+#registForm input.btn-submit:hover {
+	background-position: 0 -30px;
+}
+#registForm input.btn-submit:active {
+	background-position: 0 -62px;
+}
+#registForm .registError {
+	position: absolute;
+	width: 298px;
+	top: 301px;
+	left: 40px;
+	color: #BF1623;
+}
+.field-validation-error {
+	color: #BF1623;
+}
+.kitjs-validator {
+	color: #BF1623;
+}
+
+.redist{
+	display:block;
+	width:100%;
+	font-size: 14px;
+	text-align: right;
+	color:red;
+	margin-top: 15px;
+}
     
 /*注册页面获取邮箱验证码*/
 #registForm li #verification{
@@ -176,3 +182,29 @@ h1 img {
 	width:30%;
 	float:right;
 }
+#registForm li #agree{
+	display: inline-block;
+  float:left;
+}
+#registForm li #agree input{
+	width:14px;
+	height:26px;
+	float:left;
+}
+#registForm li #agree2{
+	display:inline-block;
+	float:left;
+	color:red;
+}
+/*隐私声明页面*/
+.content{
+	width:370px;
+	height:auto!important; 
+	min-height:320px; 
+	height:380px; 
+	overflow:hidden;
+	background: pink;
+	margin:0 auto;
+}
+
+
