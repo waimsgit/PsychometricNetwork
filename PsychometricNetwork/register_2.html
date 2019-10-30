@@ -56,13 +56,13 @@
 					</li>
 					<li>
 						<label for="ConfirmPassword">重新输入密码：</label>
-						<input id="ConfirmPassword" name="ConfirmPassword" type="password" v-model="password">
+						<input id="ConfirmPassword" name="ConfirmPassword" type="password" v-model="ConfirmPassword">
 						<span class="kitjs-validator" for="@ConfirmPassword" rules="[{notNull:true, message:'重新输入密码不能为空'},{equalWith:'@Password',message:'两次输入密码必须一致'},{minLength:'6',message:'密码长度最少为6位'}]"></span>
 						<span class="field-validation-valid" data-valmsg-for="ConfirmPassword" data-valmsg-replace="true"></span>
 					</li>
 				</ol>
 				<div class="registError"></div>
-				<input type="submit" value="注册" class="btn-submit">
+				<input type="submit" @click="login" value="注册" class="btn-submit">
 				<a href="register_1.html" class="redist">去登录</a>
 			</div>
 		</div>
@@ -79,6 +79,7 @@
 				alert("请输入邮箱！");
 				return ;
 			}
+			var timer ;
 			var email = vm.email;
 			if (!flag) {
 				$.ajax({
@@ -99,12 +100,14 @@
 				val.removeAttribute("disabled");    
 				val.value="免费获取验证码"; 
 				countdown = 60; 
+				flag = false;
+				return false;  
 			} else { 
 				val.setAttribute("disabled", true); 
 				val.value="重新发送(" + countdown + ")"; 
 				countdown--; 
 			} 
-			setTimeout(function() { 
+			timer = setTimeout(function() { 
 				settime(val) 
 				},1000) 
 		} 
@@ -116,19 +119,18 @@
 				"username":"",
 				"email": "",
 				"code":"",
-				"password":""
+				"password":"",
+				"ConfirmPassword":""
 			},
 			methods:{
 				"login":function(){
 					$.ajax({
-						"url": url1+"/scale/user/login",
+						"url": url1+"/scale/save/user",
 						"datatype": "json",
-						"data":{"username":this.username,"code":this.code,"email":this.email,"password":this.password},
+						"data":{"nickname":this.username,"code":this.code,"email":this.email,"password":this.password},
 						"success": function(result){
 							if(result.status == 200){
-								window.localStorage.setItem("token",result.data.token);
-								window.localStorage.setItem("user",JSON.stringify(result.data.user));
-								window.location.href="index.html";
+								window.location.href="register_1.html";
 							}else{
 								alert(result.message);
 							}

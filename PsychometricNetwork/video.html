@@ -8,6 +8,9 @@
 		<link rel="stylesheet" type="text/css" href="css/style.css" />
 		<link rel="stylesheet" type="text/css" href="css/video.css" />
 		<link rel="stylesheet" type="text/css" href="css/Safari.css" />
+		<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+		<script src="js/jquery.min.js"></script>
+		<script src="js/public.js"></script>
 	</head>
 
 	<body>
@@ -433,19 +436,19 @@
 						
 						<!--系列课程-->
 						<div class="tab-content1">
-								<div class="family">
+								<div class="family" id="iepsy">
 									<div class="family-content">
 										<ul class="family-nav">
 											<h3><span></span>系列课程</h3>
 											<li class="familytext0"><a href="">更多 <span>></span> </a></li>
 										</ul>
 										<div class="family-box">
-											<a href="videoSecond.html">
+											<a href="videoSecond.html" v-for="item in lists">
 												<div class="family-box1">
-													<img src="img/videotentative.png" alt="" />
-													<p>暂定</p>
-													<p><img src="img/eye.png" alt="" />&nbsp;&nbsp;1499 <span>骄阳智心</span> </p>
-													<p>免费</p>
+													<img src="{{item.img}}" alt="" />
+													<p>{{item.title}}</p>
+													<p><img src="img/eye.png" alt="" />&nbsp;&nbsp;1499 <span>{{item.name}}</span> </p>
+													<p>¥ {{item.price}}</p>
 												</div>
 											</a>
 										</div>
@@ -491,17 +494,17 @@
         <!--引入视频的js-->
         <!--- iframe切换停止播放js -->
 		<script src="js/video.js"></script>
-			<script type="text/javascript">
+		<script type="text/javascript">
 		    $(function() {
-		    var iframe = $("div.video_player iframe"); //播放页面
-		    $('ul.video_list li ').on('click',function() {
-		      iframe.attr("src", $(this).find('a').eq(0).attr("name")); //更改iframe src
-		      $('ul.video_list li').removeClass('on');
-		      $(this).addClass('on'); //给点击的元素添加正在播放标识
-		    })   
+		    		var iframe = $("div.video_player iframe"); //播放页面
+			    $('ul.video_list li ').on('click',function() {
+			      	iframe.attr("src", $(this).find('a').eq(0).attr("name")); //更改iframe src
+			      	$('ul.video_list li').removeClass('on');
+			      	$(this).addClass('on'); //给点击的元素添加正在播放标识
+			    })   
 		    })
 		</script>
-		
+		<script src="js/live.js"></script>
 		<script type="text/javascript">
 			function funcShow(id) {
 				for(var i = 0; i < 13; i++) {
@@ -511,9 +514,32 @@
 				var div = document.getElementById('div' + id);
 				div.style.display = 'block';
 			}
+			var url1 = geturl();
+			$(function(){
+				$.ajax({
+					type:"get",
+					url:url1+"/scale/get/scoures",
+					async:true,
+					success:function (result){
+						if(result.status == 200){
+							vm.lists = result.data.list;
+							console.log(vm.lists)
+						}else{
+							alert(result.message)
+						}
+					}
+				});
+			})
+			var vm = new Vue({
+				el: "#iepsy",
+				data: {
+					lists:[]
+				},
+				methods:{
+					
+				}
+			});
 		</script>
-		
-
-        <script src="js/live.js"></script>
+        
    </body>
 </html>
