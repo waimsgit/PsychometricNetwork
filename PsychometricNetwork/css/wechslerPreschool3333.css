@@ -236,7 +236,56 @@
 	margin:0 auto;
 }
 
-@media (min-width: 750px) {
+@media (min-width:750px){
+	.content4{
+		width: 50% !important;
+	    height: auto !important;
+	    margin: 0 auto;
+	}
+	.content4_4{
+		width: 70% !important;
+	}
+	.content4-center {
+    width: 100% !important;
+    height: auto !important;
+    margin: 0 auto;
+    }
+    .inner-left {
+    width: 300px !important; 
+    height:390px !important;
+    margin:0 auto 40px auto !important;
+    clear:both !important;
+    }
+    .sc-calendar {
+    width: 300px !important;
+    height:390px !important;
+    margin:0 auto !important;
+    clear:both !important;
+    }
+    .schedule{
+	width:300px !important;
+	margin:0 auto !important;
+    }
+    
+    .pdf{
+    	width:100% !important;
+    }
+    .cost-content .pdf>a{
+       width:100% !important;
+       padding:0 6% !important;
+    }
+    .pdf>a>div:nth-of-type(2) {
+    display: inline-block;
+    float: left;
+    height: 58px;
+    overflow: hidden;
+    margin-top: 16px;
+    padding-left: 10% !important;
+    }
+
+} /*>=750的设备*/
+
+@media (min-width: 1024px){
 	.content4{
 		width: 100% !important;
 	    margin: 0 auto;
@@ -250,11 +299,11 @@
 	    margin: 0 auto;
 	}
     .schedule{
-		width:280px !important;
+		width:300px !important;
 		margin:0 auto !important;
     }
    .inner-left {
-	    width: 280px !important; 
+	    width: 300px !important; 
 	    height:320px !important;
 	    float:left !important;
     }
@@ -264,7 +313,7 @@
         line-height: 26px !important;
     }
     .sc-calendar {
-	    width: 280px !important;
+	    width: 300px !important;
 	    height:320px !important;
 	    float:right !important;
     }
@@ -277,11 +326,6 @@
 	    line-height: 38px !important;
 	    text-align: center;
     }
-}
-
-
-@media (min-width: 1024px){
-	
     
 } /*>=1024的设备*/
 
@@ -301,7 +345,7 @@
     width: 71% !important;
     margin: 0 auto;
     }
-     .content4_4-center{
+    .content4_4-center{
 		width: 70% !important;
 	    margin: 0 auto;
 	}
@@ -312,9 +356,13 @@
    
 } /*>=1280的设备*/
 
-@media (min-width: 1366px) {}  
+@media (min-width: 1366px) {
 
-@media (min-width: 1440px) {} 
+}  
+
+@media (min-width: 1440px) {
+	
+} 
 
 @media (min-width: 1600px) {
 	.content4-center {
@@ -654,7 +702,8 @@
 	width:50%;
 }
 .cost-content{
-	width:94%;
+	width:92%;
+	/*height:100%;*/
 	margin:0 auto;
 }
 .cost-content h4{

@@ -130,6 +130,9 @@
 											<a href="videoSecond.html">
 												<div class="family-box1">
 													<img src="img/video01.png" alt=""/>
+													<p>韩霖开幕式</p>
+													<p><img src="img/eye.png" alt="" />&nbsp;&nbsp;1499 <span>骄阳智心</span> </p>
+													<p>免费</p>
 												</div>
 											</a>
 											<a href="videoSecond.html">
@@ -443,12 +446,12 @@
 											<li class="familytext0"><a href="">更多 <span>></span> </a></li>
 										</ul>
 										<div class="family-box">
-											<a href="videoSecond.html" v-for="item in lists">
+											<a href="videoSecond.html" v-for="(item,index) in lists" >
 												<div class="family-box1">
 													<img :src="'http://www.iepsy.com/'+item.img" alt="" />
 													<p>{{item.title}}</p>
 													<p><img src="img/eye.png" alt="" />&nbsp;&nbsp;1499 <span>{{item.name}}</span> </p>
-													<p>¥ {{item.price}}</p>
+													<p class="price">¥ {{item.price}}</p>
 												</div>
 											</a>
 										</div>

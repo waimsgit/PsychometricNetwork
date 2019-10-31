@@ -118,7 +118,7 @@
   width: 100%;
 }
 .tab-menu{
-	background:rgba(240,240,240);
+	background:white;
 }
 .tab-menu li {
 	position:relative;
@@ -156,11 +156,17 @@
 }
 .tab-menu li.active {
 	font-size: 14px;
-  font-weight:bold;
-   padding:8px 20px;
-  color:white;
-  background: #1d7aee;;
-  opacity: 1;
+  	font-weight:bold;
+   	padding:8px 20px;
+	color:white;
+	background: #1d7aee;;
+	opacity: 1;
+	transition: all 2s linear;
+    transition:all 2s linear;
+    -webkit-transition: all 2s linear;
+    -o-transition: all 2s linear;
+    -moz-transition: all 2s linear;
+    -ms-transition: all 2s linear;
 }
 .tab-content{
 	margin-top: 60px;
@@ -249,7 +255,7 @@
 }
 .family-content{
 	width:100%;
-	height:282px;
+	height:292px;
 	overflow: hidden;
 	margin:0 auto;
 }
@@ -277,9 +283,10 @@
 	float:left;
 }
 .family-nav li a{
-	font-size: 14px;
+	font-size: 12px;
 	padding-right:30px;
 	color:#545454;
+	line-height: 24px;
 }
 .family-nav li a:hover{
 	color:#1d7aee;
@@ -304,7 +311,7 @@
 .family-nav .familytext0 a>span{
 	color:#1d7aee;
 	font-weight: bold;
-	padding-left: 6px;
+	padding-left:2px;
 }
 .family-box{
 	width:100%;
@@ -317,10 +324,12 @@
 	width:23.1%;
 	height:100%;
 	float:left;
+	padding:0 0 10px 0;
+	background: white;
+	border-radius:4px;
+	overflow: hidden;
 }
-.family-box>a:nth-of-type(1) .family-box1>img{
-	height:280px !important;
-}
+
 .family-box1{
 	width:100%;
 	height:100%;
@@ -334,12 +343,24 @@
 	width: 100%;
 	max-height: 157px;
 	z-index:0;
+	transition: all 0.6s;
+    -webkit-transition: all 0.6s;
+    -o-transition: all 0.6s;
+    -moz-transition: all 0.6s;
+    -ms-transition: all 0.6s;
+}
+.family-box1>img:hover{
+	width: 100%;
+	transform: scale(1.1);
 }
 .family-box1>video{
 	width: 100%;
 	z-index:0;
 	height: 152px;
 	background: black;
+}
+.family-box1>p{
+	padding:0 10px;
 }
 .family-box1>p:nth-of-type(1){
 	font-size: 14px;
@@ -353,20 +374,28 @@
 	font-size: 12px;
 	color:#6d6d6d;
 	padding-top: 6px;
-	width:100%;
+	width:92%;
 	height:20px;
 }
+.family-box1>p:nth-of-type(2)>img{
+	width: 18px;
+    height: 10px;
+    line-height: 26px;
+}
 .family-box1>p:nth-of-type(2)>span{
+	display:inline-block;
 	float:right;
 	font-size: 12px;
+	overflow: hidden;
+	width:70%;
+    height: 18px;
+    text-align: right;
 }
 .family-box1>p:nth-of-type(3){
 	font-size: 12px;
-    color: white;
-    width: 34px;
-    background: #ff4b4b;
-    text-align: center;
+    color: red;
     margin-top: 8px;
+    width: 100%;
 }
 
 /*查看更多课程*/

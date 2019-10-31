@@ -237,17 +237,20 @@
 .contents>p{
 	text-indent:28px;
 	background: 0 !important;
+	text-align: justify;
 }
 .contents>p>strong>span{
 	font-size:20px !important;
 	margin: 30px 0 !important;
     display: block !important;
+    text-align: justify;
 }
 .contents td>p>span{
 	color:gray;
 	font-size:16px !important;
 	line-height: 36px;
 	background: 0 !important;
+	text-align: justify;
 }
 .contents>p>span{
 	color:gray;
