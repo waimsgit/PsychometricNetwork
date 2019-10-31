@@ -445,7 +445,7 @@
 										<div class="family-box">
 											<a href="videoSecond.html" v-for="item in lists">
 												<div class="family-box1">
-													<img src="{{item.img}}" alt="" />
+													<img :src="'http://www.iepsy.com/'+item.img" alt="" />
 													<p>{{item.title}}</p>
 													<p><img src="img/eye.png" alt="" />&nbsp;&nbsp;1499 <span>{{item.name}}</span> </p>
 													<p>¥ {{item.price}}</p>
@@ -519,6 +519,7 @@
 				$.ajax({
 					type:"get",
 					url:url1+"/scale/get/scoures",
+					//url:"http://192.168.1.173:8886/scale/get/scoures",
 					async:true,
 					success:function (result){
 						if(result.status == 200){
