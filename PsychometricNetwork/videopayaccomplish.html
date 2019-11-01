@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>订单支付</title>
+		<link rel="stylesheet" type="text/css" href="css/commone.css" />
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<link rel="stylesheet" type="text/css" href="css/video.css" />
+		<link rel="stylesheet" type="text/css" href="css/videoOrderform.css" />
+		<script src="js/jquery.min.js"></script>
+		<style>
+			.ordertop-center li:nth-of-type(1){
+				color:lightgray;
+			}
+			.ordertop-center li:nth-of-type(2){
+				color:lightgray;
+			}
+			.ordertop-center li:nth-of-type(3){
+				color:white;
+			}
+			.ordertop-center li:nth-of-type(3)>span:nth-of-type(1){
+				border:1px solid white;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="main">
+		<div class="container">
+			<!--左边导航内容-->
+			<div id="side"></div>
+
+			<div class="right">
+				<div class="orderform">
+					<div class="ordertop">
+						<div class="ordertop-center">
+							<ul>
+								<li><span>1</span> <span>订单确认</span> <span>.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.</span></li>
+								<li><span>2</span> <span>订单支付</span> <span>.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.</span></li>
+								<li><span>3</span> <span>订单完成</span></li>
+							</ul>
+						</div>
+					</div>
+					
+					<div class="orderbottom orderbottom2">
+						<p>√</p>
+						<p>您的订单已支付完成</p>
+						<p><a href="">查看订单</a></p>
+					</div>
+				</div>
+			</div>  <!--right的结尾标签-->
+			<div class="clear"></div>
+		</div>
+		<!--container的结尾标签-->
+        			
+		</div>  <!--main的结尾标签-->
+		
+		<!--版权-->
+		<div class="right-footer">
+			<div class="right-footer-content">
+				骄阳智心 版权所有 2010-2019&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;京ICP备17000866&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;京公网安备11010802023632号
+			</div>
+		</div>
+
+        
+        <!--引入公共部分的js-->
+		<script>
+			$(function(){
+				$("#side").load("side.html",function(){
+			 		$("#icon4").attr("src","img/icon4_4.png");
+			 	});
+			})
+		</script>
+		
+   </body>
+</html>

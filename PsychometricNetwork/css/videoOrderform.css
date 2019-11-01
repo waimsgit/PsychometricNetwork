@@ -1,0 +1,202 @@
+.orderform{
+	width:70%;
+	margin:0 auto;
+	margin-top:30px;
+}
+.ordertop{
+	width:100%;
+	height:260px;
+	background: #1D7AEE;
+}
+.ordertop-center{
+	width:80%;
+	height:46px;
+	margin:0 auto;
+	padding-top:92px;
+}
+.ordertop-center ul{
+	width:100%;
+	height:46px;
+	overflow:hidden;
+}
+.ordertop-center li:nth-of-type(1){
+	width:34%;
+	float:left;
+	color:white;
+}
+.ordertop-center li:nth-of-type(2){
+	width:34%;
+	padding:0 5%;
+	float:left;
+	color:white;
+}
+.ordertop-center li:nth-of-type(3){
+	width:22%;
+	float:right;
+	color:lightgray;
+}
+.ordertop-center li>span{
+	display:inline-block;
+	float:left;
+	flex:1;
+}
+.ordertop-center li>span:nth-of-type(1){
+	width:44px;
+	height:44px;
+	border-radius:50%;
+	border:1px solid white;
+	text-align: center;
+	line-height: 44px;
+	font-size: 16px;
+}
+.ordertop-center li>span:nth-of-type(2){
+	line-height: 46px;
+	font-size: 16px;
+	padding:0 30px 0 20px;
+}
+.ordertop-center li>span:nth-of-type(3){
+	line-height: 40px;
+	font-size: 16px;
+	font-weight: bold;
+}
+.ordertop-center li:nth-of-type(3)>span:nth-of-type(1){
+	border:1px solid lightgray;
+}
+
+.orderbottom{
+    width:100%;
+	height:580px;
+	background: white;
+	position: relative;
+	top:-20px;
+	left:0;
+	border-radius: 16px 16px 0 0;
+	z-index:2;
+}
+.orderbottom>p{
+	text-align: center;
+	font-size: 16px;
+	color:rgb(254,85,2);
+	padding:70px 0 110px 0;
+}
+.orderbox{
+	width:60%;
+	height: 140px;
+	margin: 0 auto;
+}
+.orderimg{
+	width:30%;
+	height:140px;
+	float:left;
+}
+.orderimg>img{
+	width:100%;
+	height:140px;
+}
+.ordermessage{
+	width:70%;
+	height:120px;
+	padding: 10px 0;
+	float:left;
+	background: rgba(242,246,249);
+}
+.ordermessage>p{
+	clear:both;
+	font-size: 14px;
+	color:gray;
+	width:100%;
+	height:20px;
+	overflow: hidden;
+	line-height: 20px;
+	padding:10px 0;
+	text-indent:40px
+}
+.ordermessage>p>span{
+	font-size: 14px;
+	color:black;
+}
+.ordermessage>p:nth-of-type(3)>span{
+	color:red;
+}
+.payway{
+	clear:both;
+	padding:90px 0 50px 0;
+	font-size:14px;
+	text-align: center;
+}
+.wechatpay{
+	display:block;
+	margin:0 auto;
+}
+
+/*支付二维码*/
+.wechatcode{
+	width:390px;
+	height:390px;
+	position:fixed;
+	top:38%;
+	left:45%;
+	background:white;
+	z-index:3;
+	box-shadow: 0px 0px 13px 0px rgba(147,178,224,0.5);
+	display:none;
+}
+.close{
+	float:right;
+	padding:20px;
+}
+.wechatcode>img{
+	clear:both;
+	display:block;
+	width:170px;
+	height:170px;
+	margin:0 auto;
+}
+.wechatcode>p:nth-of-type(2){
+	text-align: center;
+	font-size: 16px;
+	color:red;
+	padding:40px 0 30px 0;
+}
+.wechatcode>p:nth-of-type(3){
+	width:160px;
+	height:40px;
+	border:1px solid lightgray;
+	text-align: center;
+	line-height: 40px;
+	margin:0 auto;
+	font-size: 16px;
+	color:gray;
+}
+
+/*支付完成页面的css*/
+.orderbottom2{
+	padding-top:110px;
+}
+.orderbottom2>p:nth-of-type(1){
+	width:44px;
+	height:44px;
+	border-radius:50%;
+	border:3px solid green;
+	text-align: center;
+	line-height: 44px;
+	font-size: 20px;
+	font-weight: bold;
+	padding:0;
+	margin:0 auto;
+	color:green;
+}
+.orderbottom2>p:nth-of-type(2){
+	color:black;
+    font-size: 20px;
+}
+.orderbottom2>p:nth-of-type(3)>a{
+	display:block;
+	width:200px;
+	height:40px;
+	line-height: 40px;
+	text-align: center;
+	margin:0 auto;
+	background:#1D7AEE;
+	color:white;
+}
