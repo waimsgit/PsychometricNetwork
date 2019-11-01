@@ -38,7 +38,6 @@
 .ordertop-center li>span{
 	display:inline-block;
 	float:left;
-	flex:1;
 }
 .ordertop-center li>span:nth-of-type(1){
 	width:44px;
@@ -200,3 +199,197 @@
 	background:#1D7AEE;
 	color:white;
 }
+
+
+/*适配*/
+@media (min-width:750px){
+	.ordertop-center{
+		width:90% !important;
+	}
+	.ordertop-center li:nth-of-type(1){
+		width:38% !important;
+	}
+	.ordertop-center li:nth-of-type(2){
+		width:38% !important;
+		padding:0 !important;
+	}
+	.ordertop-center li:nth-of-type(3){
+		width:24% !important;
+	}
+	.ordertop-center li>span:nth-of-type(2){
+		padding:0 4px 0 8px !important;
+	}
+	
+	.orderbox{
+		height:110px !important; 
+	}
+	.orderimg{
+		height:110px !important; 
+	}
+	.orderimg>img{
+		height:110px !important;
+	}
+	.ordermessage{
+		height:90px !important; 
+		padding:10px 0 !important;
+	}
+	.ordermessage>p{
+		padding:7px 0;
+	}
+	.ordermessage>p{
+		height: 16px !important;
+	}
+	
+	.wechatcode{
+		position: fixed;
+	    top: 14% !important;
+	    left: 35% !important;
+	}
+}
+
+@media (min-width: 1024px){
+	.ordertop-center li:nth-of-type(2){
+		width:38% !important;
+		padding:0 0 0 2% !important;
+	}
+	.ordertop-center li:nth-of-type(3){
+		width:22% !important;
+	}
+	
+	.wechatcode{
+		position: fixed;
+	    top: 35% !important;
+	    left: 37% !important;
+	}
+}
+
+@media (min-width: 1100px){
+	.wechatcode{
+		position: fixed;
+	    top: 35% !important;
+	    left: 38% !important;
+	}
+}
+
+@media (min-width: 1280px){
+	.ordertop-center li:nth-of-type(1){
+		width:38% !important;
+	}
+	.ordertop-center li:nth-of-type(2){
+		width:38% !important;
+		padding:0 2.5% !important;
+	}
+	.ordertop-center li:nth-of-type(3){
+		width:19% !important;
+	}
+	.ordertop-center li>span:nth-of-type(2){
+		padding:0 10px 0 8px !important;
+	}
+	
+	.orderbox{
+		height:110px !important; 
+	}
+	.orderimg{
+		height:110px !important; 
+	}
+	.orderimg>img{
+		height:110px !important;
+	}
+	.ordermessage{
+		height:90px !important; 
+		padding:10px 0 !important;
+	}
+	.ordermessage>p{
+		padding:6px 0;
+	}
+}
+
+@media (min-width: 1366px){
+	.ordertop-center li:nth-of-type(1){
+		width:38% !important;
+	}
+	.ordertop-center li>span:nth-of-type(2){
+		padding:0 10px 0 20px !important;
+	}
+	.orderbox{
+		height:120px !important; 
+	}
+	.orderimg{
+		height:120px !important; 
+	}
+	.orderimg>img{
+		height:120px !important;
+	}
+	.ordermessage{
+		height:100px !important; 
+		padding:10px 0 !important;
+	}
+	.ordermessage>p{
+		padding:8px 0;
+	}
+	
+	.wechatcode{
+		position: fixed;
+	    top: 35% !important;
+	    left: 42% !important;
+	}
+}
+
+@media (min-width: 1440px){
+	
+}
+
+@media (min-width: 1600px){
+	.ordertop-center {
+    	width: 74% !important;
+	}
+	.ordertop-center li:nth-of-type(1){
+		width:34% !important;
+	}
+	.ordertop-center li:nth-of-type(2){
+		width:34% !important;
+		padding:0 4% !important;
+	}
+	.ordertop-center li:nth-of-type(3){
+		width:24% !important;
+	}
+	.ordertop-center li>span:nth-of-type(2){
+		padding:0 30px 0 20px !important;
+	}
+	.orderbox{
+		height:140px !important; 
+	}
+	.orderimg{
+		height:140px !important; 
+	}
+	.orderimg>img{
+		height:140px !important;
+	}
+	.ordermessage{
+		height:120px !important; 
+		padding:10px 0 !important;
+	}
+	.ordermessage>p{
+		padding:10px 0;
+	}
+	
+	.wechatcode{
+		position: fixed;
+	    top: 35% !important;
+	    left: 44% !important;
+	}
+}
+
+@media (min-width: 1680px){
+	
+}
+
+@media (min-width: 1920px){
+	.wechatcode{
+		position: fixed;
+	    top: 35% !important;
+	    left: 45% !important;
+	}
+}
+
+

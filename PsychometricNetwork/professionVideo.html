@@ -41,7 +41,7 @@
 									<p class="collect">收藏</p>
                  				</p>
                  			</div>
-                 			<div><h4>￥3800 <span><s>￥4200</s></span></h4> <a href="">立&nbsp;即&nbsp;购&nbsp;买</a></div>
+                 			<div><h4>￥3800 <span><s>￥4200</s></span></h4> <a class="buy">立&nbsp;即&nbsp;购&nbsp;买</a></div>
                  		</div>
                  	</div>
                  	</div>
@@ -57,12 +57,12 @@
 	                 			
 	                 			<h5>课程列表 <span></span></h5>
 	                 			<ul>
-	                 				<li><a href="">抑郁症：一种认知治疗(1) <img src="img/rightred.png" alt="" /> </a></li>
-	                 				<li><a href="">抑郁症：一种认知治疗(2) <img src="img/rightred.png" alt="" /></a></li>
-	                 				<li><a href="">抑郁症：一种认知治疗(3) <img src="img/rightred.png" alt="" /></a></li>
-	                 				<li><a href="">抑郁症：一种认知治疗(4) <img src="img/rightred.png" alt="" /></a></li>
-	                 				<li><a href="">抑郁症：一种认知治疗(5) <img src="img/rightred.png" alt="" /></a></li>
-	                 				<li><a href="">抑郁症：一种认知治疗(6) <img src="img/rightred.png" alt="" /></a></li>
+	                 				<li><a href="">抑郁症：一种认知治疗(1) <img src="img/professionVideoplay.png" alt="" /> </a></li>
+	                 				<li><a href="">抑郁症：一种认知治疗(2) <img src="img/professionVideoplay.png" alt="" /></a></li>
+	                 				<li><a href="">抑郁症：一种认知治疗(3) <img src="img/professionVideoplay.png" alt="" /></a></li>
+	                 				<li><a href="">抑郁症：一种认知治疗(4) <img src="img/professionVideoplay.png" alt="" /></a></li>
+	                 				<li><a href="">抑郁症：一种认知治疗(5) <img src="img/professionVideoplay.png" alt="" /></a></li>
+	                 				<li><a href="">抑郁症：一种认知治疗(6) <img src="img/professionVideoplay.png" alt="" /></a></li>
 	                 			</ul>
                  			</div>
                  		</div>
@@ -71,7 +71,7 @@
                  			<div class="content2-right1">
                  				<h5>主讲老师 </h5>
                  				<div><img src="img/figuretwo.png" alt="" /><span>周辰</span> </div>
-                 				<p>主试讲师周辰是河北人</p>
+                 				<p>主试讲师周辰</p>
                  			</div>
                  		
                  			<div class="content2-right2">
@@ -87,6 +87,11 @@
                 </div>
                 </div>
 			
+				<div class="notarize">
+					<h5>是否确认购买视频</h5>
+					<p class="open"><a href="videoOrderform.html">确认购买</a></p>
+					<p class="close">点击取消</p>
+				</div>
 					
 			</div>  <!--right的结尾标签-->
 			<div class="clear"></div>
@@ -123,6 +128,14 @@
 			});
 		</script>
 
-
+        <!--确认是否购买弹框-->
+		<script>
+			$(".buy").click(function(){
+				$(".notarize").show()
+			})
+			$(".close").click(function(){
+				$(".notarize").hide()
+			})
+		</script>
    </body>
 </html>

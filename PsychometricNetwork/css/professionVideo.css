@@ -259,6 +259,7 @@
 /*相关课程*/
 .content2-right2{
 	width:86%;
+	height: 342px;
 	margin:0 auto;
 	padding:0 7% 4% 7%;
     margin-top: 10px;
@@ -307,6 +308,46 @@
    font-size: 14px;
 }
 
+/*弹框是否确认购买*/
+.notarize{
+	width:390px;
+	height:200px;
+	position:fixed;
+	top:38%;
+	left:38.5%;
+	background:white;
+	z-index:3;
+	box-shadow: 9px 9px 18px 0px rgba(147,178,224,0.5);
+	display:none;
+	padding:0 30px;
+}
+.notarize>h5{
+	font-size: 16px;
+	padding-top:30px;
+	text-align: center;
+}
+.open>a{
+	display:inline-block;
+	width:40%;
+	height:40px;
+	margin-top:60px;
+	line-height: 40px;
+    text-align: center;
+    float:left;
+    background: rgb(254,85,2);
+    color:white;
+}
+.close{
+	width:40%;
+	height:40px;
+    margin-top:60px;
+	line-height: 40px;
+    text-align: center;
+	float:right;
+	background: lightgray;
+	color:white;
+}
+
 
 
 @media (min-width: 750px) {
@@ -344,6 +385,36 @@
 		height:38px !important;
 		line-height: 38px !important;
 	}
+	
+	.content1-right>div>ul {
+    	width: 266px !important;
+	}
+	.content1-right>div>ul>li{
+		padding:0 10px !important;
+	}
+	.content1-right #tol>img{
+		margin-left:6px !important;
+	}
+	.content2-right2>div>img{
+		height:110px !important;
+	}
+	.content2-right2>div>p:nth-of-type(1), .content2-right2>div>p:nth-of-type(2){
+		margin:10px 0 22px 0;
+	}
+	.content1-right>div:nth-of-type(2)>a{
+		width:200px !important;
+		height:46px !important;
+		line-height: 46px !important;
+	}
+	.content2-left1>ul>li {
+    line-height: 48px !important;
+	}
+	.content2-right2{
+		padding:0 7% 8% 7% !important;
+	}
+	.content2-right2>div>a{
+		width:130px !important;
+	}
 }
 
 
@@ -360,7 +431,7 @@
 		font-size: 16px !important;
 	}
 	.content1-right>div>ul{
-		width:284px !important;
+		width:266px !important;
 	}
 	.content1-right>div>p{
 		margin-left: 10px !important;
@@ -382,6 +453,9 @@
 		height:38px !important;
 		line-height: 38px !important;
 	}
+	.content2-right2>div>a{
+		width:140px !important;
+	}
     
 } /*>=1024的设备*/
 
@@ -391,6 +465,9 @@
 	}
 	.content1-right{
 		height:135px !important;
+	}
+	.content2-right2>div>a{
+		width:148px !important;
 	}
     
 } /*>=1100的设备*/
@@ -407,6 +484,26 @@
 	.content1-right>h3{
 		padding-bottom: 20px !important;
 		font-size: 18px !important;
+	}
+	.content2-right2>div>img{
+		height:110px !important;
+	}
+	.content2-right2>div>p:nth-of-type(1), .content2-right2>div>p:nth-of-type(2){
+		margin:10px 0 22px 0;
+	}
+	.content1-right>div:nth-of-type(2)>a{
+		width:200px !important;
+		height:46px !important;
+		line-height: 46px !important;
+	}
+	.content2-left1>ul>li {
+    line-height: 48px !important;
+	}
+	.content2-right2{
+		padding:0 7% 5% 7% !important;
+	}
+	.content2-right2>div>a{
+		width:174px !important;
 	}
    
 } /*>=1280的设备*/
@@ -436,6 +533,15 @@
 		height:46px !important;
 		line-height: 46px !important;
 	}
+	.content2-left1>ul>li {
+    line-height: 48px !important;
+	}
+	.content2-right2{
+		padding:0 7% 5% 7% !important;
+	}
+	.content2-right2>div>a{
+		width:198px !important;
+	}
 }  
 
 @media (min-width: 1440px) {
@@ -445,6 +551,7 @@
 	.content1-right{
 		height:177px !important;
 	}
+	
 } 
 
 @media (min-width: 1600px) {
@@ -456,6 +563,12 @@
 	}
 	.content1-right>div>p {
     margin-left:70px !important;
+	}
+	.content2-right2{
+		padding:0 7% 4% 7% !important;
+	}
+	.content2-right2>div>a{
+		width:218px !important;
 	}
 } 
 
@@ -474,5 +587,11 @@
 	}
 	.content1-right{
 		height:230px !important;
+	}
+	.content2-left1>ul>li {
+    line-height:50px !important;
+	}
+	.content2-right2>div>a{
+		width:260px !important;
 	}
 } 
