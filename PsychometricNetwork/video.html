@@ -256,7 +256,7 @@
 										<li class="familytext0"><a href="video01.html">更多 <span>></span> </a></li>
 									</ul>
 									<div class="family-box">
-										<a href="professionVideo.html" v-for="(item,index) in lists" >
+										<a :href="'professionVideo.html?id='+item.id" v-for="(item,index) in lists" >
 											<div class="family-box1">
 												<img :src="'http://www.iepsy.com/'+item.img" alt="" />
 												<p>{{item.title}}</p>
@@ -422,7 +422,7 @@
 											<li class="familytext0"><a href="">更多 <span>></span> </a></li>
 										</ul>
 										<div class="family-box">
-											<a href="professionVideo.html" v-for="(item,index) in lists" >
+											<a :href="'professionVideo.html?id='+item.id" v-for="(item,index) in lists" >
 												<div class="family-box1">
 													<img :src="'http://www.iepsy.com/'+item.img" alt="" />
 													<p>{{item.title}}</p>
@@ -503,7 +503,6 @@
 					success:function (result){
 						if(result.status == 200){
 							vm.lists = result.data.list;
-							console.log(vm.lists)
 						}else{
 							alert(result.message)
 						}

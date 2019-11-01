@@ -10,6 +10,8 @@
 		<link rel="stylesheet" type="text/css" href="css/Safari.css" />
 		<link rel="stylesheet" type="text/css" href="css/professionVideo.css" />
 		<script src="js/jquery.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+		<script src="js/public.js"></script>
 	</head>
 
 	<body>
@@ -18,20 +20,19 @@
 			<!--左边导航内容-->
 			<div id="side"></div>
 
-			<div class="right">
+			<div class="right" id="video">
                 <div class="contentarea">
                 	<!--视频购买区-->
                  	<div class="content1">
                  		<div class="content1-left">
-                 			<img src="img/video01.png" alt="" />
+                 			<img :src="'http://www.iepsy.com/'+scoure.img" alt="" />
                  		</div>
                  		<div class="content1-right">
-                 			<h3>抑郁症：一种认知治疗方法</h3>
+                 			<h3>{{scoure.title}}</h3>
                  			<div>
                  				<ul>
                  					<li>456 人购买</li>
-                 					<li>时长：3小时</li>
-                 					<li>有效期：30天</li>
+                 					<li>时长：{{scoure.duration}}分</li>
                  				</ul>
                  				<p>
                  					<img src="img/eye.png" alt="" /><span>分享</span>
@@ -41,7 +42,7 @@
 									<p class="collect">收藏</p>
                  				</p>
                  			</div>
-                 			<div><h4>￥3800 <span><s>￥4200</s></span></h4> <a class="buy">立&nbsp;即&nbsp;购&nbsp;买</a></div>
+                 			<div><h4>￥{{scoure.price}} </h4> <a class="buy">立&nbsp;即&nbsp;购&nbsp;买</a></div>
                  		</div>
                  	</div>
                  	</div>
@@ -52,17 +53,12 @@
                  	<div class="content2">
                  		<div class="content2-left">
                  			<div class="content2-left1">
-                 				<h5>课程介绍 <span>主讲人：劳雷尔</span> </h5>
-	                 			<p>本课程阐述了抑郁症的症状等。本课程阐述了抑郁症的症状等。本课程阐述了抑郁症的症状等。本课程阐述了抑郁症的症状等。本课程阐述了抑郁症的症状等。本课程阐述了抑郁症的症状等。本课程阐述了抑郁症的症状等。本课程阐述了抑郁症的症状等。本课程阐述了抑郁症的症状等。本课程阐述了抑郁症的症状等。本课程阐述了抑郁症的症状等。本课程阐述了抑郁症的症状等。本课程阐述了抑郁症的症状等。本课程阐述了抑郁症的症状等。本课程阐述了抑郁症的症状等。本课程阐述了抑郁症的症状等。本课程阐述了抑郁症的症状等。本课程阐述了抑郁症的症状等。本课程阐述了抑郁症的症状等。本课程阐述了抑郁症的症状等。本课程阐述了抑郁症的症状等。本课程阐述了抑郁症的症状等。本课程阐述了抑郁症的症状等。本课程阐述了抑郁症的症状等。本课程阐述了抑郁症的症状等。本课程阐述了抑郁症的症状等。本课程阐述了抑郁症的症状等。本课程阐述了抑郁症的症状等。本课程阐述了抑郁症的症状等。本课程阐述了抑郁症的症状等。本课程阐述了抑郁症的症状等。本课程阐述了抑郁症的症状等。本课程阐述了抑郁症的症状等。本课程阐述了抑郁症的症状等。本课程阐述了抑郁症的症状等。</p>
+                 				<h5>课程介绍 <span></span> </h5>
+	                 			<p>{{scoure.text}}</p>
 	                 			
 	                 			<h5>课程列表 <span></span></h5>
 	                 			<ul>
-	                 				<li><a href="">抑郁症：一种认知治疗(1) <img src="img/professionVideoplay.png" alt="" /> </a></li>
-	                 				<li><a href="">抑郁症：一种认知治疗(2) <img src="img/professionVideoplay.png" alt="" /></a></li>
-	                 				<li><a href="">抑郁症：一种认知治疗(3) <img src="img/professionVideoplay.png" alt="" /></a></li>
-	                 				<li><a href="">抑郁症：一种认知治疗(4) <img src="img/professionVideoplay.png" alt="" /></a></li>
-	                 				<li><a href="">抑郁症：一种认知治疗(5) <img src="img/professionVideoplay.png" alt="" /></a></li>
-	                 				<li><a href="">抑郁症：一种认知治疗(6) <img src="img/professionVideoplay.png" alt="" /></a></li>
+	                 				<li v-for="(item,index) in scoure.chapter"><a href="">{{item.title}}<img src="img/professionVideoplay.png" alt="" /> </a></li>
 	                 			</ul>
                  			</div>
                  		</div>
@@ -88,9 +84,9 @@
                 </div>
 			
 				<div class="notarize">
-					<h5>是否确认购买视频</h5>
-					<p class="open"><a href="videoOrderform.html">确认购买</a></p>
-					<p class="close">点击取消</p>
+					<h5>是否生成订单？</h5>
+					<p class="open"><button onclick="createOrder()">确认</button></p>
+					<p class="close">取消</p>
 				</div>
 					
 			</div>  <!--right的结尾标签-->
@@ -130,12 +126,70 @@
 
         <!--确认是否购买弹框-->
 		<script>
-			$(".buy").click(function(){
-				$(".notarize").show()
-			})
-			$(".close").click(function(){
-				$(".notarize").hide()
+			$(function(){
+				$(".buy").click(function(){
+					$(".notarize").show()
+				})
+				$(".close").click(function(){
+					$(".notarize").hide()
+				})
 			})
 		</script>
    </body>
+   <script>
+   	function createOrder(){
+   		var id = getQueryString("id");
+   		$.ajax({
+			type:"get",
+			url:url1+"/scale/post/order",
+			//url:"http://192.168.1.173:8886/scale/get/scoures",
+			data:{"scoureId":id},
+			async:true,
+			success:function (result){
+				if(result.status == 200){
+					vm.scoure = result.data;
+					console.log(result.data)
+				}else{
+					alert(result.message)
+				}
+			}
+		});
+   	}
+   	function getQueryString(name) {
+	    var reg = new RegExp('(^|&)' + name + '=([^&]*)(&|$)', 'i');
+	    var r = window.location.search.substr(1).match(reg);
+	    if (r != null) {
+	        return unescape(r[2]);
+	    }
+	    return null;
+	}
+   	var url1 = geturl();
+   	$(function(){
+   		var id = getQueryString("id");
+		$.ajax({
+			type:"get",
+			url:url1+"/scale/get/scoure/"+id,
+			//url:"http://192.168.1.173:8886/scale/get/scoures",
+			async:true,
+			success:function (result){
+				if(result.status == 200){
+					vm.scoure = result.data;
+					console.log(result.data)
+				}else{
+					alert(result.message)
+				}
+			}
+		});
+	})
+   	
+	var vm = new Vue({
+		el: "#video",
+		data: {
+			scoure:{}
+		},
+		methods:{
+			
+		}
+	});
+   </script>
 </html>
