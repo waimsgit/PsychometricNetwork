@@ -310,7 +310,8 @@
 	height:379px; 
 	overflow:hidden;
 }
-.listbox-centent>a{
+
+.listbox-centent a{
 	width:8.333%;
 	overflow: hidden;
     display: inline-block;
@@ -321,7 +322,7 @@
     color: #898989;
     text-align: center;
 }
-.listbox-centent>a>span{
+.listbox-centent a>span{
 	width:52px;
 	margin:0 auto;
 	overflow: hidden;

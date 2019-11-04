@@ -255,7 +255,7 @@
     }
    .inner-left {
 	    width: 280px !important; 
-	    height:320px !important;
+	    height:310px !important;
 	    float:left !important;
     }
     .inner-left p{
@@ -265,7 +265,7 @@
     }
     .sc-calendar {
 	    width: 280px !important;
-	    height:320px !important;
+	    height:310px !important;
 	    float:right !important;
     }
     .sc-actions {
@@ -277,6 +277,20 @@
 	    line-height: 38px !important;
 	    text-align: center;
     }
+    .costbox1-content{
+    	width: 71% !important;
+    	margin: 0 auto;
+    }
+    .cost-content,.cost{
+    	width:280px !important;
+    }
+    .cost-content .pdf>a{
+    	padding:0 1% !important;
+    }
+    .pdf{
+	width:100% !important;
+    }
+    
 }
 
 
@@ -309,6 +323,11 @@
 	width:380px !important;
 	margin:0 auto !important;
     }
+    
+    .costbox1-content{
+    	width: 71% !important;
+    	margin: 0 auto;
+    }
    
 } /*>=1280的设备*/
 
@@ -318,11 +337,11 @@
 
 @media (min-width: 1600px) {
 	.content4-center {
-	    width: 65% !important;
+	    width: 60% !important;
 	    margin: 0 auto;
     }
     .content4_4-center{
-		width: 67% !important;
+		width: 60% !important;
 	    margin: 0 auto;
 	}
     .inner-left{
@@ -338,25 +357,32 @@
 	    line-height: 40px !important;
 	    text-align: center;
     }
+    
+    .costbox1-content{
+    	width: 60% !important;
+    	margin: 0 auto;
+    }
     .pdf{
 	width:94% !important;
 	border:1px solid lightgray
     }
+    
+    
 } 
 
 @media (min-width: 1680px) {} 
 
 @media (min-width: 1920px) {
 	.content4-center {
-    width: 58% !important;
+    width: 60% !important;
     margin: 0 auto;
     }
     .content4_4-center{
-		width: 67% !important;
+		width: 60% !important;
 	    margin: 0 auto;
 	}
     .pdf{
-	width:62% !important;
+	width:380px !important;
 	border:1px solid lightgray;
     }
 } 
@@ -587,14 +613,15 @@
 /*斯欧韦氏成人韦氏儿童pdfcss*/
 .pdf{
 	width:100%;
-	border:1px solid lightgray
+	border:1px solid lightgray;
+	overflow: hidden;
 }
 .cost-content .pdf>a{
 	display:block;
 	width:100%;
 	height:90px;
 	margin:0 auto;
-	padding:0 8%;
+	padding:0 5%;
 }
 .pdf>a>div{
 	display:inline-block;
@@ -610,9 +637,11 @@
 	display:inline-block;
 	float:left;
 	height:58px;
-	overflow: hidden;
 	margin-top:16px;
-	padding-left: 10%;
+	padding-left: 4%;
+	float: right;
+	width:80%;
+    overflow: hidden;
 }
 .pdf>a>div:nth-of-type(2)>p{
 	text-align: left;
@@ -622,6 +651,7 @@
     font-weight: bold;
     color: #545454;
     line-height: 58px;
+    overflow: hidden;
 }
 
 .pdf>a>div:nth-of-type(3){
@@ -643,7 +673,7 @@
 	width:100%;
 }
 .costbox1-content{
-	width:70%;
+	width:60%;
 	margin:0 auto;
 }
 .costbox{
@@ -651,10 +681,10 @@
 	margin:0 auto;
 }
 .cost{
-	width:50%;
+	width:380px;
 }
 .cost-content{
-	width:94%;
+	width:380px;
 	margin:0 auto;
 }
 .cost-content h4{

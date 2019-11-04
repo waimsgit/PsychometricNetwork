@@ -153,52 +153,69 @@
     overflow: hidden;
     position: relative;
 }
-.video-right li a div>p{
-	height:72px;
+.video-right li a div>p:nth-of-type(1){
+	height:36px;
 	overflow: hidden;
 	font-size: 14px;
     font-weight: normal;
     line-height: 18px;
 }
-.video-right li a>div>img{
-	padding-top: 42px;
+.video-right li a div>p:nth-of-type(2){
 	position: absolute;
-	bottom:0;
+	bottom:4px;
 	left:0;
 }
-.video-right li a div>span{
-	position: absolute;
-	top:72px;
-	left:28px;
+.video-right li a>div>p>img{
+	display:inline-block;
+	float:left;
+}
+.video-right li a div>p>span{
+	display:inline-block;
 	font-size: 12px;
+	float:left;
 	font-weight: normal;
 	line-height: 14px;
 	height:14px;
+	text-indent:6px;
 	background: none;
 }
 .video-right li:onclick a{
 	border:1px solid #1D7AEE;
 }
+.on span{
+	position:static;
+}
 .video-right .video-list li a{
 	background:white;
 }
 
-/*抑郁是现代社会的摧残性疾病*/
+/*视频介绍*/
+.videobottom{
+	width:82%;
+	margin:0 auto;
+}
+.videobottomleft{
+	width:68%;
+    float:left;
+}
+/*第三届心理研讨会*/
 .depression{
 	width:100%;
 }
 .depression-content{
-	width:82%;
+	width:100%;
 	height: 50px;
 	margin:0 auto;
 }
 .depression-left{
-	width:72%;
+	width:100%;
 	float:left;
+	overflow: hidden;
 }
 .depression-right{
 	width:40%;
 	float:right;
+	overflow: hidden;
 }
 .depression-left>h4{
 	font-size: 15px;
@@ -206,6 +223,7 @@
 }
 .depression-left1{
 	float:left;
+	width:61%;
 }
 .depression-left1>span{
 	padding-right: 30px;
@@ -213,9 +231,11 @@
 }
 .depression-left2{
   float:right;	
+  width:38%;
 }
 .depression-left2>span{
 	color:#545454;
+	font-size: 14px;
 }
 .depression-left2>a{
    padding:0 5px;	
@@ -248,15 +268,15 @@
 	margin-top: 50px;
 }
 .summarize-content{
-	width:82%;
+	width:100%;
 	margin:0 auto;
 }
 .summarize-left{
-	width:72%;
+	width:100%;
 	float:left;
 }
 .summarize-right{
-	width:40%;
+	width:;
 	float:right;
 }
 .summarize-left>h4{
@@ -283,6 +303,7 @@
 	padding:3px 6px;
 	color:#1d7aee;
 	float:right;
+	margin-top:6px;
 }
 /*评论*/
 .comment{
@@ -291,15 +312,15 @@
     padding-top: 40px;
 }
 .comment-content{
-	width:82%;
+	width:100%;
 	margin:0 auto;
 }
 .comment-left{
-	width:67%;
+	width:92%;
 	float:left;
 }
 .comment-right{
-	width:33%;
+	width:;
 	float:right;
 }
 .comment-left>h4{
@@ -310,7 +331,7 @@
 }
 .comment-left>p{
 	display:inline-block;
-	width:80%;
+	width:100%;
 	border-top:1px solid lightgray;
 	margin-left: 50px;
 }
@@ -344,15 +365,15 @@
 	padding-top: 40px;
 }
 .leave-content{
-	width:82%;
+	width:100%;
 	margin:0 auto;
 }
 .leave-left{
-	width:67%;
+	width:92%;
 	float:left;
 }
 .leave-right{
-	width:40%;
+	width:;
 	float:right;
 }
 .leave-left>h4{
@@ -383,7 +404,7 @@
 	margin-bottom: 70px;
 }
 .save-content{
-	width:82%;
+	width:100%;
 	margin: 0 auto;
 }
 .btn{
@@ -426,3 +447,154 @@
     font-size: 12px;
     color: #a3a3a3;
 }
+
+@media (min-width: 750px){
+	.video,.video-content{
+   		height:360px !important;
+   		margin-bottom: 50px !important;
+	}
+	.video-left,.video-left div video,.video-right,.video_list{
+		height:286px !important;
+		overflow: hidden;
+	}
+	.video-right li{
+		height:83px !important; 
+	}
+	.video-right li a,.video-right li a>img,.video-right li a>div{
+		height:70px !important;
+	}
+	.depression-left1,.depression-left2,.bdsharebuttonbox{
+		width:100%;
+		margin:4px 0;
+	}
+}
+
+@media (min-width: 1024px){
+	.video,.video-content{
+   		height:360px !important;
+   		margin-bottom: 50px !important;
+	}
+	.video-left,.video-left div video,.video-right,.video_list{
+		height:300px !important;
+		overflow: hidden;
+	}
+	.video-right li{
+		height:87px !important; 
+	}
+	.video-right li a,.video-right li a>img,.video-right li a>div{
+		height:76px !important;
+	}
+}
+
+@media (min-width: 1100px){
+	.video,.video-content{
+   		height:378px !important;
+   		margin-bottom: 50px !important;
+	}
+	.video-left,.video-left div video,.video-right,.video_list{
+		height:320px !important;
+		overflow: hidden;
+	}
+	.video-right li{
+		height:97px !important; 
+	}
+}
+
+@media (min-width: 1280px){
+	.video,.video-content{
+   		height:432px !important;
+   		margin-bottom: 50px !important;
+	}
+	.video-left,.video-left div video,.video-right,.video_list{
+		height:370px !important;
+		overflow: hidden;
+	}
+	.video-right li{
+		height:81px !important; 
+	}
+}
+
+@media (min-width: 1366px) {
+	.video,.video-content{
+   		height:456px !important;
+   		margin-bottom: 50px !important;
+	}
+	.video-left,.video-left div video,.video-right,.video_list{
+		height:396px !important;
+	}
+	.video-right li{
+		height:92px !important; 
+	}
+	.video-right li a,.video-right li a>img,.video-right li a>div{
+		height:70px !important;
+	}
+	.video-right li a div>span{
+		bottom:0 !important;
+	}
+} 
+
+@media (min-width: 1440px){
+	.video,.video-content{
+   		height:478px !important;
+   		margin-bottom: 50px !important;
+	}
+	.video-left,.video-left div video,.video-right,.video_list{
+		height:418px !important;
+		overflow: hidden;
+	}
+	.video-right li{
+		height:74px !important; 
+	}
+}
+
+@media (min-width: 1600px) {
+	.video,.video-content{
+   		height:526px !important;
+   		margin-bottom: 50px !important;
+	}
+	.video-left,.video-left div video,.video-right,.video_list{
+		height:465px !important;
+		overflow: hidden;
+	}
+	.video-right li{
+		height:85px !important; 
+	}
+	.video-right li a, .video-right li a>img, .video-right li a>div{
+		height:76px !important;
+	}
+	.depression-left1{
+		width:61% !important;
+		float:left !important;
+	}
+	.depression-left2{
+		width:38% !important;
+		float:right !important;
+	}
+} 
+
+@media (min-width: 1680px) {
+	.video,.video-content{
+   		height:550px !important;
+   		margin-bottom: 50px !important;
+	}
+	.video-left,.video-left div video,.video-right,.video_list{
+		height:490px !important;
+		overflow: hidden;
+	}
+	.video-right li{
+		height:91px !important; 
+	}
+} 
+
+@media (min-width: 1920px) {
+	.video,.video-content{
+   		height:620px !important;
+   		margin-bottom: 50px !important;
+	}
+	.video-left,.video-left div video,.video-right,.video_list{
+		height:550px !important;
+	}
+	.video-right li{
+		height:85px !important; 
+	}
+} 

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			span{
+			display:inline-block;
+			width:60px;
+			}
+		</style>
+	</head>
+	<body>
+		<table>
+			<tr><td><a href=""><span>汉字</span><span>汉字</span><span>汉字</span></a></td></tr>
+			<tr><td><span>汉字</span><span>汉字</span><span>汉字</span></td></tr>
+			<tr><td><a href=""><span>汉字呀</span></a><a href=""><span>汉字呀</span></a><a href=""><span>汉字呀</span></a></td></tr>
+		</table>
+		
+		<script src="js/jquery.min.js"></script>
+		<script>
+			var addBlank=function(table){
+		        var $tds=table.find('td span');//索要修改的元素
+		        var arr=[];
+		        $.each($tds,function(i){
+		            if($tds[i].innerHTML.length<3){//2个字的姓名
+		                temp=$tds[i].innerHTML.split('');
+		                temp.splice(1,0,"&nbsp;&nbsp;&nbsp;&nbsp;");//空格的个数
+		                temp=temp.join("");
+		                $tds[i].innerHTML=temp;
+		                arr.push(temp);
+		            }
+		        });
+	    	};
+	
+			//这里是调用代码，哪一个元素里的td需要处理
+			addBlank($('table'));
+		</script>
+	</body>
+</html>
