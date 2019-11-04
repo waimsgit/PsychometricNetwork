@@ -222,7 +222,7 @@
 }
 .content2-right1 div{
 	height:66px;
-	margin: 20px 0 30px 0;
+	margin: 20px 0 24px 0;
 }
 .content2-right1 div>img{
 	display:inline-block;
@@ -290,7 +290,7 @@
 }
 .content2-right2>div>p:nth-of-type(2)>span{
 	display:inline-block;
-	font-size: 14px;
+	font-size: 12px;
 	float:right;
 	color:gray;
 	
@@ -407,7 +407,7 @@
 		line-height: 46px !important;
 	}
 	.content2-left1>ul>li {
-    line-height: 48px !important;
+    	line-height: 48px !important;
 	}
 	.content2-right2{
 		padding:0 7% 8% 7% !important;
@@ -420,7 +420,7 @@
 
 @media (min-width: 1024px){
 	.content1 {
-    height: 186px !important;
+    	height: 186px !important;
 	}
 	.content1-right{
 		width:62% !important;
@@ -461,7 +461,7 @@
 
 @media (min-width: 1100px) {
    .content1 {
-    height: 195px !important;
+    	height: 195px !important;
 	}
 	.content1-right{
 		height:135px !important;
@@ -474,7 +474,7 @@
 
 @media (min-width: 1280px) {
 	.content1 {
-    height: 217px !important;
+    	height: 217px !important;
 	}
 	.content1-right{
 		width:60% !important;
@@ -497,7 +497,7 @@
 		line-height: 46px !important;
 	}
 	.content2-left1>ul>li {
-    line-height: 48px !important;
+    	line-height: 48px !important;
 	}
 	.content2-right2{
 		padding:0 7% 5% 7% !important;
@@ -510,7 +510,7 @@
 
 @media (min-width: 1366px) {
 	.content1 {
-    height: 228px !important;
+   	 	height: 228px !important;
 	}
 	.content1-right{
 		height:168px !important;
@@ -520,13 +520,13 @@
 		font-size: 18px !important;
 	}
 	.content1-right>div:nth-of-type(2)>h4{
-	font-size: 26px;
-	height:46px !important;
-	line-height: 62px !important;
+		font-size: 26px;
+		height:46px !important;
+		line-height: 62px !important;
 	}
 	.content1-right>div:nth-of-type(2)>h4>span{
-	font-size:14px;
-	color:gray;
+		font-size:14px;
+		color:gray;
 	}
 	.content1-right>div:nth-of-type(2)>a{
 		width:200px !important;
@@ -534,7 +534,7 @@
 		line-height: 46px !important;
 	}
 	.content2-left1>ul>li {
-    line-height: 48px !important;
+    	line-height: 48px !important;
 	}
 	.content2-right2{
 		padding:0 7% 5% 7% !important;
@@ -546,7 +546,7 @@
 
 @media (min-width: 1440px) {
 	.content1 {
-    height: 237px !important;
+    	height: 237px !important;
 	}
 	.content1-right{
 		height:177px !important;
@@ -556,13 +556,13 @@
 
 @media (min-width: 1600px) {
 	.content1 {
-    height: 257px !important;
+    	height: 257px !important;
 	}
 	.content1-right{
 		height:197px !important;
 	}
 	.content1-right>div>p {
-    margin-left:70px !important;
+    	margin-left:70px !important;
 	}
 	.content2-right2{
 		padding:0 7% 4% 7% !important;
@@ -574,7 +574,7 @@
 
 @media (min-width: 1680px) {
 	.content1 {
-    height: 267px !important;
+    	height: 267px !important;
 	}
 	.content1-right{
 		height:207px !important;
@@ -583,13 +583,13 @@
 
 @media (min-width: 1920px) {
 	.content1 {
-    height: 290px !important;
+    	height: 290px !important;
 	}
 	.content1-right{
 		height:230px !important;
 	}
 	.content2-left1>ul>li {
-    line-height:50px !important;
+    	line-height:50px !important;
 	}
 	.content2-right2>div>a{
 		width:260px !important;

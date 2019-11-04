@@ -9,10 +9,7 @@
 		<link rel="stylesheet" type="text/css" href="css/Safari.css" />
 		<script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
 		<script src="https://cdn.jsdelivr.net/npm/vue"></script>
-		<style>
-			iframe{display:block !important}
-			.popup_sqq{height:22px !important;}
-		</style>
+		<script src="js/public.js"></script>
 	</head>
 	<body>
 		<div class="main">
@@ -41,13 +38,10 @@
 			   <div class="content_bottom">
 					<div class="bdsharebuttonbox">
 					    <span>分享到：</span>
-					  <!--<a href="#" class="bds_more" data-cmd="more"></a>-->
-					  <!--<a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>-->
-					  <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
-					  <!--<a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a>-->
-					  <a href="#" class="popup_sqq" data-cmd="sqq" title="分享到qq好友"></a>
-					  <!--<a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a>-->
+					  <a href="#" class="bds_more" data-cmd="more"></a>
 					  <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+					  <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+					  <a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
 					</div>
 				</div>
 				
@@ -76,8 +70,8 @@
 			window._bd_share_config={
 		      "common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"16"},
 		      "share":{},
-		      "image":{"viewList":["tsina","sqq","weixin"],"viewText":"分享到：","viewSize":"16"},  
-		      "selectShare":{"bdContainerClass":null,"bdSelectMiniList":["tsina","sqq","weixin"]}
+		      "image":{"viewList":["qzone","tsina","tqq","renren","weixin"],"viewText":"分享到：","viewSize":"16"},  
+		      "selectShare":{"bdContainerClass":null,"bdSelectMiniList":["qzone","tsina","tqq","renren","weixin"]}
 		    };
 		    with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src=
 		      'http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
@@ -90,35 +84,12 @@
 			    }
 			    return null;
 			}
-			
-			
-			
-			
-//			window._bd_share_config={
-//		      "common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"16"},
-//		      "share":{},
-//		      "image":{"viewList":["qzone","tsina","sqq","renren","weixin"],"viewText":"分享到：","viewSize":"16"},  
-//		      "selectShare":{"bdContainerClass":null,"bdSelectMiniList":["qzone","tsina","sqq","renren","weixin"]}
-//		    };
-//		    with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src=
-//		      'http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
-//
-//		    function getQueryString(name) {
-//			    var reg = new RegExp('(^|&)' + name + '=([^&]*)(&|$)', 'i');
-//			    var r = window.location.search.substr(1).match(reg);
-//			    if (r != null) {
-//			        return unescape(r[2]);
-//			    }
-//			    return null;
-//			}
-		    
-		    
-		    
 
 			$(function(){ 
+				var url1 = geturl();
 				var articlePk = getQueryString("articlePk");
 				$.ajax({
-					"url": "http://192.168.1.145:8886/scale/get/article",
+					"url": url1+"/scale/get/article",
 					"data":{"articlePk":articlePk},
 					"datatype": "json",
 					"success": function(result){

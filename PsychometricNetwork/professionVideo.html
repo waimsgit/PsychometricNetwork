@@ -25,10 +25,10 @@
                 	<!--视频购买区-->
                  	<div class="content1">
                  		<div class="content1-left">
-                 			<img :src="'http://www.iepsy.com/'+scoure.img" alt="" />
+                 			<img id="iepsyimg" :src="'http://www.iepsy.com/'+scoure.img" alt="" />
                  		</div>
                  		<div class="content1-right">
-                 			<h3>{{scoure.title}}</h3>
+                 			<h3 id="iepsytitle">{{scoure.title}}</h3>
                  			<div>
                  				<ul>
                  					<li>456 人购买</li>
@@ -42,7 +42,7 @@
 									<p class="collect">收藏</p>
                  				</p>
                  			</div>
-                 			<div><h4>￥{{scoure.price}} </h4> <a class="buy">立&nbsp;即&nbsp;购&nbsp;买</a></div>
+                 			<div><h4 id="price">￥{{scoure.price}} </h4> <a class="buy">立&nbsp;即&nbsp;购&nbsp;买</a></div>
                  		</div>
                  	</div>
                  	</div>
@@ -55,7 +55,6 @@
                  			<div class="content2-left1">
                  				<h5>课程介绍 <span></span> </h5>
 	                 			<p>{{scoure.text}}</p>
-	                 			
 	                 			<h5>课程列表 <span></span></h5>
 	                 			<ul>
 	                 				<li v-for="(item,index) in scoure.chapter"><a href="">{{item.title}}<img src="img/professionVideoplay.png" alt="" /> </a></li>
@@ -67,7 +66,7 @@
                  			<div class="content2-right1">
                  				<h5>主讲老师 </h5>
                  				<div><img src="img/figuretwo.png" alt="" /><span>周辰</span> </div>
-                 				<p>主试讲师周辰</p>
+                 				<p>韦氏资深测评师，实操讲师。首都儿科研究所《对高原藏族和汉族居民的神经发育和认知功能的评估》项目认知测评师。参与适应行为评定量表幼儿版第二版中文版的采样工作。韦氏成人/儿童/幼儿智力量表中文版测评师，适应行为评定量表儿童版第二版中文版测评师。</p>
                  			</div>
                  		
                  			<div class="content2-right2">
@@ -139,16 +138,26 @@
    <script>
    	function createOrder(){
    		var id = getQueryString("id");
+   		var imgpath = $("#iepsyimg").attr("src");
+   		var title = $("#iepsytitle").text();
+   		var price = $("#price").text();
    		$.ajax({
-			type:"get",
+			type:"post",
 			url:url1+"/scale/post/order",
 			//url:"http://192.168.1.173:8886/scale/get/scoures",
-			data:{"scoureId":id},
+			data:{"scoureId":id, "orderAmount":vm.scoure.price},
+			dataType:"json",
+			//TODO token值
+			headers:{'token':'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOlsiMTg1MTEwMTQ2NjJAMTYzLmNvbSIsIjgiXX0.Ekotd0bKVCz6YA1kZUgu5xNgouAHa714nz9VNOs_Lsc'},
 			async:true,
 			success:function (result){
 				if(result.status == 200){
 					vm.scoure = result.data;
-					console.log(result.data)
+					//console.log(encodeURI('videoOrderform.html?id='+result.data.orderNumber+"&img="+imgpath+"&title="+title+"&price="+price))
+					window.open(encodeURI('videoOrderform.html?id='+result.data.orderNumber+"&img="+imgpath+"&title="+title+"&price="+price),'_blank')
+					console.log(result.data);
+					
+					
 				}else{
 					alert(result.message)
 				}
