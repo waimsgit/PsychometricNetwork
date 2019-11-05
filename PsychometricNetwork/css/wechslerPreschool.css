@@ -246,7 +246,7 @@
 	    margin: 0 auto;
     }
     .content4_4-center{
-		width: 67% !important;
+		width: 71% !important;
 	    margin: 0 auto;
 	}
     .schedule{
@@ -282,7 +282,7 @@
     	margin: 0 auto;
     }
     .cost-content,.cost{
-    	width:280px !important;
+    	width:270px !important;
     }
     .cost-content .pdf>a{
     	padding:0 1% !important;
@@ -311,6 +311,7 @@
     .sc-calendar {
     width: 380px !important;
     }
+
     .content4-center {
     width: 71% !important;
     margin: 0 auto;
@@ -323,10 +324,12 @@
 	width:380px !important;
 	margin:0 auto !important;
     }
-    
     .costbox1-content{
     	width: 71% !important;
     	margin: 0 auto;
+    }
+    .cost-content,.cost{
+    	width:366px !important;
     }
    
 } /*>=1280的设备*/
@@ -366,6 +369,9 @@
 	width:94% !important;
 	border:1px solid lightgray
     }
+    .pdf>a>div:nth-of-type(2){
+    	padding-left:2% !important;
+    }
     
     
 } 
@@ -384,6 +390,10 @@
     .pdf{
 	width:380px !important;
 	border:1px solid lightgray;
+    }
+    .pdf>a>div:nth-of-type(2){
+    	width:85% !important;
+    	padding-left:0 !important;
     }
 } 
 
@@ -638,9 +648,9 @@
 	float:left;
 	height:58px;
 	margin-top:16px;
-	padding-left: 4%;
+	padding-left: 0%;
 	float: right;
-	width:80%;
+	width:76%;
     overflow: hidden;
 }
 .pdf>a>div:nth-of-type(2)>p{
@@ -716,12 +726,10 @@
     height: 40px;
     background: none;
     line-height: 40px;
-    margin-top: 80px !important;
     color: #a3a3a3;
-    font-size: 30px;
     text-align: center;
     z-index: 1;
-    width: 100% !important;
+    width: 88% !important;
     float: right;
     clear: both;
     border-top: 1px solid lightgray;

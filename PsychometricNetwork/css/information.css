@@ -210,6 +210,8 @@ html, body,.main{ height:100%; }
     overflow: hidden;
 }
 .section-left>p{
+	height:18px;
+	overflow: hidden;
 	color: #4d4d4d;
     font-weight: bold;
     font-size: 14px;

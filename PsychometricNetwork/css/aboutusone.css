@@ -158,6 +158,7 @@
  	line-height:30px;
  	text-indent:28px;
  	text-align: justify;
+ 	text-justify:inter-ideograph;/*ie中必须有这个*/
 }
 
 /*培训服务区*/
@@ -205,6 +206,7 @@
     color: #898989;
     text-indent: 24px;
     text-align: justify;
+ 	text-justify:inter-ideograph;/*ie中必须有这个*/
     line-height: 22px;
 }
 

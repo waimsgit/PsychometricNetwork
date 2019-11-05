@@ -7,6 +7,7 @@
 		<link rel="stylesheet" type="text/css" href="css/style.css" />
 		<link rel="stylesheet" type="text/css" href="css/information.css" />
 		<link rel="stylesheet" href="css/americanInstitutions.css" />
+		<script src="js/jquery.min.js"></script>
 		<style>
 			h5{
 				font-size: 14px;
@@ -16,74 +17,13 @@
 		</style>
 	</head>
 	<body>
+		<div class="main">
 		<div class="container">
 			<!--左边导航内容-->
-			<div class="left">
-				<div class="left-content">
-					<!--logo-->
-					<div class="left-top">
-						<img src="img/logo.png" />
-					</div>
-
-					<!--导航-->
-					<div class="left-middle">
-						<div class="sidebar">
-							<ul>
-								<li>
-									<a href="pcIndex.html"><i class="fa fa-dashboard push"><img src="img/icon1.png" alt="" /></i>首&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;页<i class="fa fa-angle-right"></i></a><span class="hover"></span>
-								</li>
-								<li>
-									<a href="scale.html"><i class="fa fa-cog push"><img src="img/icon2.png" alt="" /></i>量&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;表<i class="fa fa-angle-right"></i></a><span class="hover"></span>
-								</li>
-								<li>
-									<a href="train.html"><i class="fa fa-cog push"><img src="img/icon6.png" alt=""/></i>培&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;训<i class="fa fa-angle-right"></i></a><span class="hover"></span>
-								</li>
-								<li>
-									<a href="information.html"><i class="fa fa-user push"><img src="img/icon3_3.png" alt="" /></i>资&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;讯<i class="fa fa-angle-right"></i></a><span class="hover"></span>
-								</li>
-								<li>
-									<a href="video.html"><i class="fa fa-user push"><img src="img/icon4.png" alt="" /></i>视&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;频<i class="fa fa-angle-right"></i></a><span class="hover"></span>
-								</li>
-								<li>
-									<a href="aboutusone.html"><i class="fa fa-cog push"><img src="img/icon5.png" alt="" /></i>关 于 我 们<i class="fa fa-angle-right"></i></a><span class="hover"></span>
-								</li>
-							</ul>
-						</div>
-
-					</div>
-
-					<!--登录-->
-					<div class="left-bottom">
-						<div class="left-bottom-content">
-							<!--<a href="register.html" class="denglu">登录</a>-->
-						</div>
-					</div>
-				</div>
-			</div>
+			<div id="side"></div>
 			
 			<!--右侧内容-->
 			<div class="right">
-				<!--搜索及中英文切换区-->
-				<div class="right-top">
-					<div class="right-top-content">
-						<div class="right-top-right">
-							<img src="img/china.png" alt="" />
-						</div>
-						<div class="right-top-left">
-							<input type="text" />
-							<span>搜索</span>
-						</div>
-					</div>
-				</div>
-				
-				<!--广告区-->
-				<!--<div class="right-content1">
-					<div class="right-content1center">
-						<img src="img/literaturetop.png" alt="" />
-						<a href="#">了解更多</a>
-					</div>
-				</div>-->
-				
 				<!--标题区-->
 				<div class="title">
 					<div class="title-content">
@@ -214,18 +154,28 @@
 					</div>
 				</div>
 				
-				<!--版权-->
-				<div class="right-footer">
-					<div class="right-footer-content">
-						骄阳智心 版权所有 2010-2019&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;京ICP备17000866&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;京公网安备11010802023632号
-					</div>
-				</div>
-				
 			</div>   <!--right的结尾标签-->
+			<div class="clear"></div>
+			
 		</div>   <!--container的结尾标签-->
+		</div>   <!--main的结尾标签-->
 		
+		<!--版权-->
+		<div class="right-footer">
+			<div class="right-footer-content">
+				骄阳智心 版权所有 2010-2019&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;京ICP备17000866&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;京公网安备11010802023632号
+			</div>
+		</div>
+		
+		<!--引入侧导航-->
+		<script>
+			$(function(){
+				$("#side").load("side.html",function(){
+			 		$("#icon6").attr("src","img/icon6_6.png");
+			 	});
+			})
+		</script>
 		<!--转发功能-->
-		<script src="js/jquery-2.1.1.min.js"></script>
 		<script>
 			window._bd_share_config={
 		      "common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"16"},
@@ -236,24 +186,5 @@
 		    with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src=
 		      'http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
 		</script>
-		
-		
-	    <script type="text/javascript">
-        $.ajax({
-            url: "http://localhost:8080/TestServlet/controller/ListFileServlet",
-            type: 'post',
-            async: true,
-            data: null,
-            dataType:'json',
-            success: function (data) {                    
-                for(var filename in data){
-                    console.log("文件名：" + filename + ",下载地址："+ data[filename]);
-                }
-            },
-            error: function (XMLHttpRequest, textStatus, error) {
-//              alert(error);
-            }
-        });       
-        </script>
 	</body>
 </html>

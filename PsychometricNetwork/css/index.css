@@ -36,7 +36,12 @@
     height:138px;
     margin:0 auto;
     position:relative;
-    display:flex;
+    display: box;               /* OLD - Android 4.4- */
+	display: -webkit-box;       /* OLD - iOS 6-, Safari 3.1-6 */
+	display: -moz-box;          /* OLD - Firefox 19- (buggy but mostly works) */
+	display: -ms-flexbox;       /* TWEENER - IE 10 */
+	display: -webkit-flex;      /* NEW - Chrome */
+	display: flex;              /* NEW, Spec - Opera 12.1, Firefox 20+ */
 }
 .content1-center:nth-of-type(2){
 	margin-top:30px;
@@ -44,8 +49,12 @@
 .content1-center1{
 	height:138px;
 	text-align: center;
-	overflow: hidden;
-	flex:1;
+	overflow: hidden;	
+	-webkit-box-flex: 1;              /* OLD - iOS 6-, Safari 3.1-6 */
+	-moz-box-flex: 1;                 /* OLD - Firefox 19- */
+	-webkit-flex: 1;                     /* Chrome */
+	-ms-flex: 1;                           /* IE 10 */
+	flex: 1;                                   /* NEW, Spec - Opera 12.1, Firefox 20+ */
 	background: white;
 	margin:0 10px;
 	box-shadow:6px 6px 6px 0px rgba(197,212,233,0.5);
@@ -77,7 +86,7 @@
 	width: 148px !important;
 	height:36px;
 	overflow: hidden;
-	/*text-align: left;*/
+	text-align: left;
 }
 .content1-center1>div>a{
 	display:block;
@@ -438,7 +447,12 @@
     margin: 0 auto;
     text-align: center;
     display: block;
-    margin-top: 10px;
+    margin-top: 6px;
+    transition: all 0.6s;
+    -webkit-transition: all 0.6s;
+    -o-transition: all 0.6s;
+    -moz-transition: all 0.6s;
+    -ms-transition: all 0.6s;
 }
 .content2-top>a>img:hover{
 	 transform: scale(1.1);
@@ -631,17 +645,19 @@
     	width:64px !important;
     }
     .content1-center1>div>a {
-	    height: 14px !important;
+    	width:60px !important;
+	    height: 16px !important;
 	    bottom: 38px !important;
-	    line-height: 12px !important;
+	    line-height: 14px !important;
     }
     
     /*资讯*/
    .content2-top>a>img {
-    	height: 140px;
+    	height: 110px !important;
     }
    .content2-bottom .content2-bottom-middle {
-    	margin-bottom: 24px !important;
+   		margin-top:0px !important;
+    	margin-bottom: 10px !important;
     }
     .content2-bottom .content2-bottom-title{
     	font-size: 12px !important;
@@ -769,7 +785,9 @@
     height: 140px;
     }
    .content2-bottom .content2-bottom-middle {
-    margin-bottom: 24px !important;
+        margin-bottom: 10px !important;
+        line-height: 24px !important;
+    	height: 46px !important;
     }
     
     /*视频*/
@@ -1029,6 +1047,8 @@
     }
     .content2-bottom .content2-bottom-middle {
     margin-bottom: 24px !important;
+    line-height: 30px !important;
+    height: 60px !important;
     }
     .content2-bottom .content2-bottom-title{
     	font-size: 14px !important;

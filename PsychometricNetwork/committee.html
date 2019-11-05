@@ -436,25 +436,6 @@
 		
 	
 		<script src="js/jquery.min.js"></script>
-		<script>
-		    var addBlank=function(table){
-		        var $tds=table.find('td a');//索要修改的元素
-		        var $tds=table.find('td span');//索要修改的元素
-		        var arr=[];
-		        $.each($tds,function(i){
-		            if($tds[i].innerHTML.length<3){//2个字的姓名
-		                temp=$tds[i].innerHTML.split('');
-		                temp.splice(1,0,"&nbsp;&nbsp;");//空格的个数
-		                temp=temp.join("");
-		                $tds[i].innerHTML=temp;
-		                arr.push(temp);
-		            }
-		        });
-	    	};
-	
-			//这里是调用代码，哪一个元素里的td需要处理
-			addBlank($('table'));
-   	 	</script>
 		 <script>
 			$(function(){
 				$("#side").load("side3.html",function(){

@@ -170,6 +170,9 @@ html, body,.main{ height:100%; }
 	float:right;
 	color:gray;
 }
+.right-top-right2>a>img{
+	border:none;
+}
 #userbox{
 	z-index:3;
 }

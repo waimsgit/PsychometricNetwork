@@ -1,0 +1,31 @@
+
+
+/*首页的量表介绍*/
+.content1-center{
+	width:84%;
+    height:138px;
+    margin:0 auto;
+    position:relative;
+}
+.content1-center:nth-of-type(2){
+	margin-top:30px;
+}
+.content1-center1{
+	width:20%;
+	float:left;
+	height:138px;
+	text-align: center;
+	overflow: hidden;	
+}
+.content1-center1>div{
+	width:82%;
+	height:138px;
+	margin:0 auto;
+    position: relative;
+    overflow:hidden;
+}
+
+
+.video-content > h3{
+	background: yellow;
+}

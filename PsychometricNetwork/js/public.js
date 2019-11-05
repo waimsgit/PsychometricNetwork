@@ -4,19 +4,19 @@ function geturl(){
 	return globalurl;
 }
 
-var v = new Vue({
-	el: "#content",
-	data: {
-		"token":"",
-		"user":"",
-		"isLogin":false
-	},
-	methods:{
-		
-	}
-});
-$(function(){
-	v.token = sessionStorage.getItem("token");
-	v.user = sessionStorage.getItem("user");
-	v.isLogin = sessionStorage.getItem("isLogin");
-})
+//var v = new Vue({
+//	el: "#content",
+//	data: {
+//		"token":"",
+//		"user":"",
+//		"isLogin":false
+//	},
+//	methods:{
+//		
+//	}
+//});
+//$(function(){
+//	v.token = sessionStorage.getItem("token");
+//	v.user = sessionStorage.getItem("user");
+//	v.isLogin = sessionStorage.getItem("isLogin");
+//})
