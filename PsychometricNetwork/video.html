@@ -256,36 +256,12 @@
 										<li class="familytext0"><a href="videoall.html">更多 <span>></span> </a></li>
 									</ul>
 									<div class="family-box">
-										<a href="videoSecond.html" style="display:block;">
+										<a :href="'professionVideo.html?id='+item.id" v-for="(item,index) in lists" >
 											<div class="family-box1">
-												<img src="img/video06.png" alt="" />
-												<p>谢晶非言语智力测评在中国的的最新发展及其应用价值</p>
-												<p><img src="img/eye.png" alt="" />&nbsp;&nbsp;1499 <span>骄阳智心</span> </p>
-												<p>免费</p>
-											</div>
-										</a>
-										<a href="videoSecond.html" style="display:block;">
-											<div class="family-box1">
-												<img src="img/video06.png" alt="" />
-												<p>谢晶非言语智力测评在中国的的最新发展及其应用价值</p>
-												<p><img src="img/eye.png" alt="" />&nbsp;&nbsp;1499 <span>骄阳智心</span> </p>
-												<p>免费</p>
-											</div>
-										</a>
-										<a href="videoSecond.html" style="display:block;">
-											<div class="family-box1">
-												<img src="img/video06.png" alt="" />
-												<p>谢晶非言语智力测评在中国的的最新发展及其应用价值</p>
-												<p><img src="img/eye.png" alt="" />&nbsp;&nbsp;1499 <span>骄阳智心</span> </p>
-												<p>免费</p>
-											</div>
-										</a>
-										<a href="videoSecond.html" style="display:block;">
-											<div class="family-box1">
-												<img src="img/video06.png" alt="" />
-												<p>谢晶非言语智力测评在中国的的最新发展及其应用价值</p>
-												<p><img src="img/eye.png" alt="" />&nbsp;&nbsp;1499 <span>骄阳智心</span> </p>
-												<p>免费</p>
+												<img :src="'http://www.iepsy.com/'+item.img" alt="" />
+												<p>{{item.title}}</p>
+												<p><img src="img/eye.png" alt="" />&nbsp;&nbsp;1499 <span>{{item.name}}</span> </p>
+												<p class="price">¥ {{item.price}}</p>
 											</div>
 										</a>
 									</div>
@@ -439,14 +415,14 @@
 						
 						<!--系列课程-->
 						<div class="tab-content1">
-								<div class="family" id="iepsy">
+								<div class="family" >
 									<div class="family-content">
 										<ul class="family-nav">
 											<h3><span></span>系列课程</h3>
 											<li class="familytext0"><a href="">更多 <span>></span> </a></li>
 										</ul>
 										<div class="family-box">
-											<a href="videoSecond.html" v-for="(item,index) in lists" >
+											<a :href="'professionVideo.html?id='+item.id" v-for="(item,index) in lists" >
 												<div class="family-box1">
 													<img :src="'http://www.iepsy.com/'+item.img" alt="" />
 													<p>{{item.title}}</p>
@@ -535,7 +511,7 @@
 				});
 			})
 			var vm = new Vue({
-				el: "#iepsy",
+				el: "#scalevue",
 				data: {
 					lists:[]
 				},
