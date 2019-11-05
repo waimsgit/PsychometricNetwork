@@ -40,7 +40,7 @@
 							<div class="ordermessage">
 								<p>订单号：<span>{{ordernumber}}</span></p>
 								<p>订单名称：<span>{{title}}</span></p>
-								<p>订单金额：<span>¥{{price}}</span></p>
+								<p>订单金额：<span>{{price}}</span></p>
 							</div>
 							<p class="payway">————&nbsp;&nbsp;&nbsp;&nbsp;支付方式&nbsp;&nbsp;&nbsp;&nbsp;————</p>
 							<img src="img/videopay.png" alt="" class="wechatpay"/>
@@ -103,6 +103,7 @@
 						vm.qrcode = result.message;
 					}
 				})
+				load(vm.ordernumber)
 				//二维码弹框
 				$(".wechatpay").click(function(){
 					$(".wechatcode").show()
@@ -110,15 +111,43 @@
 				$(".close").click(function(){
 					$(".wechatcode").hide()
 				})
-			 	
+				
 			})
-			
-			
 			function getUrlParam(name) {              //name是路径参数名称
 				var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
-				var r = window.location.search.substr(1).match(reg);
+				var r = decodeURI(window.location.search).substr(1).match(reg);
 				if (r != null) return unescape(r[2]); return null;
 			}
+			
+			function load(sid){
+		    		var socket = null;
+		    		//建立连接
+		    		if('WebSocket' in window){
+		    			socket = new WebSocket("ws://localhost:8886/scale/websocket/"+sid);
+		    			//打开事件  
+		            socket.onopen = function() {  
+		                console.log("Socket 已打开");  
+		                //socket.send("这是来自客户端的消息" + location.href + new Date());  
+		            };  
+		            //获得消息事件  
+		            socket.onmessage = function(msg) {  
+		                console.log(msg.data);  
+		                //发现消息进入    开始处理前端触发逻辑
+		            };  
+		            //关闭事件  
+		            socket.onclose = function() {  
+		                console.log("Socket已关闭");  
+		            };  
+		            //发生了错误事件  
+		            socket.onerror = function() {  
+		                alert("Socket发生了错误");  
+		                //此时可以尝试刷新页面
+		            }  
+	
+		    		}else{
+		    			alert("浏览器不兼容，请更换浏览器")
+		    		}
+		    }
 		</script>
    </body>
 </html>
