@@ -199,7 +199,7 @@
 	float:left;
 }
 .tabs>nav>div{
-	width:33%;
+	width:40%;
 	height:30px;
 	float:right;
 	display:-webkit-box;
@@ -210,7 +210,12 @@
 }
 .tabs>nav>div>span{
 	display:inline-block;
-	flex:1;
+	-webkit-box-flex: 1;      /* OLD - iOS 6-, Safari 3.1-6 */
+    -moz-box-flex: 1;         /* OLD - Firefox 19- */
+    width: 21.5%;               /* For old syntax, otherwise collapses. */
+    -webkit-flex: 1;          /* Chrome */
+    -ms-flex: 1;              /* IE 10 */
+    flex: 1;                  /* NEW, Spec - Opera 12.1, Firefox 20+ */
 	justify-content:space-between;
 	float:right;
 	font-size: 14px;
@@ -255,8 +260,12 @@
 	color: #4d4d4d;
     font-weight: bold;
     font-size: 14px;
+    width: 100%;
+    height:56px;
     line-height: 56px;
+    overflow: hidden;
     text-align: left;
+    text-indent: 10px;
 }
 .section-right{
     width:33%;
@@ -308,7 +317,7 @@
 	/*background:#009FB6 !important;*/
 }
 .tab-current>a>span{
-	border-bottom: 3px solid rgba(216,37,58); !important;
+	border-bottom: 3px solid rgb(216,37,58) !important;
 }
 /*智力类样式*/
 #demoContent5{

@@ -221,10 +221,13 @@
   padding: 0.2em;
   -webkit-appearance: none;
   -moz-appearance: none;
+  -ms-appearance:none;
   appearance: none;
-  font-family: "Microsoft Yahei";
   color: #606060;
-  font-size: 13px ;
+  font-size: 13px;
+  background: none;
+  border: none;
+  outline: none;
 }
 .sc-header input {
   border-color: rgba(0, 0, 0, 0);

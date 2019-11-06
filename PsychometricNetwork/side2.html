@@ -8,6 +8,31 @@
 		<link rel="stylesheet" type="text/css" href="css/Safari.css" />
 		<script src="js/jquery.min.js"></script>
 		<script src="js/common.js"></script>
+		
+		<style>
+			.animation{
+				width:100%;
+				height:7px;
+				background: #1D7AEE;
+				position:relative;
+			    -webkit-transition: width 10s ease-in-out;
+			    transition: width 10s ease-in-out;
+				
+				animation:name 5s 1;
+				-webkit-animation:name 5s 1; /*Safari and Chrome*/
+			}
+			/*@keyframes name
+				{
+				from {right:0px;}
+				to {right:100%;}
+				}
+			
+			@-webkit-keyframes name /*Safari and Chrome*
+				{
+				from {right:0px;}
+				to {right:100%;}
+				}*/
+		</style>
 	</head>
 	<body>
 			<!--左边导航内容-->
@@ -51,7 +76,7 @@
 			
             <div class="head">
            	    <!--搜索及中英文切换区-->
-				<div class="right-top" style="border-bottom: 7px solid #1D7AEE;">
+				<div class="right-top" style="">
 					<div class="right-top-content">
 						<div class="right-top-left1">
 							<a href="scale.html">量表中心</a>
@@ -61,6 +86,7 @@
 						<div class="right-top-right">
 							<div class="china">
 								<img src="img/china.png" alt="" />
+								<span>中文</span>
 							</div>
 							
 							<div class="right-top-right1">
@@ -70,7 +96,7 @@
 							</div>
 							
 							<div class="right-top-right2" id="userbox" style="display:none">
-								<a href=""> 酷酷 <img src="img/indexgrade.png"/> </a>
+								<a href=""> <span>用户名</span> <img src="img/indexgrade.png"/> </a>
 								<div id="userinfo">
 									<ul>
 										<li><a href=""><img src="img/indexpersonal.png" alt="" />个人中心</a></li>
@@ -86,10 +112,50 @@
 					</div>
 					<div class="clear"></div>
 				</div>
+				<canvas id="canvas" width="100%" height="10" style="background: pink; ">
+           浏览器不支持canvas
+</canvas>
 				
            </div>
 	
 			</div>
+			
+			<script>
+				window.onload=function () {
+
+         var canvas=document.getElementById("canvas");//获取canvas对象
+
+         var ctx=canvas.getContext("2d"); //创建二维的绘图上下文对象
+
+         //通过上下文对象调用属性或方法来绘图
+
+         ctx.beginPath();//  “beginPath()” 表开始一条路径或者重置当前的路径
+         ctx.lineCap="round";//圆角线条
+         ctx.moveTo(5,100);//开始点坐标
+         ctx.lineTo(200,300);//结束点坐标
+         ctx.lineWidth=20;//“lineWidth”定义路径的宽度（有继承性，如要定义不同宽度的路径则要单独定义）
+         ctx.strokeStyle="lightblue";//“strokeStyle”填充路径的颜色
+         ctx.stroke();//调用 绘制
+
+         ctx.beginPath();//  “beginPath()” 表开始一条路径或者重置当前的路径
+         ctx.lineCap="round";//圆角线条
+         ctx.moveTo(30,30);//开始点坐标
+         ctx.lineTo(300,300);//结束点坐标
+         ctx.lineWidth=20;//“lineWidth”定义路径的宽度（有继承性，如要定义不同宽度的路径则要单独定义）
+         ctx.strokeStyle="lightpink";//“strokeStyle”填充路径的颜色
+         ctx.stroke();//调用 绘制
+
+         ctx.beginPath();//  “beginPath()” 表开始一条路径或者重置当前的路径
+         ctx.lineCap="square";// 正方形线条
+         ctx.moveTo(10,50);//开始点坐标
+         ctx.lineTo(350,400);//结束点坐标
+         ctx.strokeStyle="lightgreen";//填充路径的颜色
+         ctx.stroke();//调用 绘制
+
+
+     }
+
+			</script>
 
 	</body>
 </html>

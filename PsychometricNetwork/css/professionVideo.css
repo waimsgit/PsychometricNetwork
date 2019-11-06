@@ -330,8 +330,10 @@
 	padding-top:30px;
 	text-align: center;
 }
-.open>a{
+.open>button{
 	display:inline-block;
+	border:none;
+	outline: none;
 	width:40%;
 	height:40px;
 	margin-top:60px;

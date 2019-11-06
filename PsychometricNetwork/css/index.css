@@ -99,7 +99,9 @@
 	font-size: 12px;
 	color:lightgray;
     line-height: 18px;
-    border-radius: 15px;
+    -moz-border-radius: 15px; /* Firefox */
+    -webkit-border-radius: 15px; /* Safari 和 Chrome */
+    border-radius: 15px; /* Opera 10.5+, 以及使用了IE-CSS3的IE浏览器 */
 }
 .content1-center1>div>a:hover{
 	background: #1d7aee;
@@ -1247,7 +1249,11 @@
 	    font-size: 12px;
 	    color: lightgray;
 	    line-height: 16px;
-	    border-radius: 15px;
+	    -moz-border-radius: 15px; /* Firefox */
+        -webkit-border-radius: 15px; /* Safari 和 Chrome */
+        -ms-border-radius: 15px; /* Opera 10.5+, 以及使用了IE-CSS3的IE浏览器 */
+        -o-border-radius: 15px; /* Opera 10.5+, 以及使用了opera的IE浏览器 */
+        border-radius: 15px; /* Opera 10.5+, 以及使用了IE-CSS3的IE浏览器 */
     }
     
    /*资讯模块*/
@@ -1271,21 +1277,9 @@
    .video-content{
    		height:608px !important;
    }
-   .video-bottom {
-    	height: 430px !important;
+   .video-bottom,.video-left,.video-left video, .video-right,.video-rightcontent {
+    	height: 396px !important;
     }
-    .video-left {
-    	height: 430px !important;
-    }
-    .video-left video{
-    	height: 430px !important;
-    }
-    .video-right {
-    	height:430px !important;
-	}
-	.video-rightcontent {
-   	 	height:430px !important;
-	}
 	.video-rightcontent>h4 {
 	    font-size: 24px !important;
 	    line-height: 40px !important;
@@ -1294,7 +1288,7 @@
     .video-rightcontent>p {
 	    line-height: 28px !important;
 	    font-size: 14px !important;
-	    height:276px !important; 
+	    height:254px !important; 
     }
 	
 } 
@@ -1321,6 +1315,7 @@
 	font-size: 12px;
 	line-height: 20px;
     height: 20px;
+    overflow: hidden;
 }
 .content2-nav>li>a{
 	color:#bbbbbb !important;
@@ -1624,6 +1619,12 @@
 	object-fit:fill;
     width:100%;
     height:430px;
+}
+.video-left div img{
+	display:block;
+	width:100%;
+	height:100%;
+	border:0px;
 }
 .video-right{
 	width:32%;

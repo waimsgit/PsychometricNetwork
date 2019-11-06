@@ -50,7 +50,7 @@
 					<div class="wechatcode">
 						<p class="close">X</p>
 						<img :src="qrcode" alt="" />
-						<p>￥{{price}}</p>
+						<p>{{price}}</p>
 						<p>请用微信扫码支付</p>
 					</div>
 				</div>
@@ -123,7 +123,7 @@
 		    		var socket = null;
 		    		//建立连接
 		    		if('WebSocket' in window){
-		    			socket = new WebSocket("ws://localhost:8886/scale/websocket/"+sid);
+		    			socket = new WebSocket("ws://192.168.1.145:8886/scale/websocket/"+sid);
 		    			//打开事件  
 		            socket.onopen = function() {  
 		                console.log("Socket 已打开");  

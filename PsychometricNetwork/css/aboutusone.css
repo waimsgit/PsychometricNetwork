@@ -245,7 +245,7 @@
 	width:30%;
 	float:left;
 	background:white;
-	border:1px solid rgba(247,247,247);
+	border:1px solid rgb(247,247,247);
 	box-shadow: 0 0 18px lightgray;
 	border-radius:8px;
 }

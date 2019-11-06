@@ -1,31 +1,49 @@
-
-
 /*首页的量表介绍*/
 .content1-center{
-	width:84%;
-    height:138px;
-    margin:0 auto;
-    position:relative;
-}
-.content1-center:nth-of-type(2){
-	margin-top:30px;
+	margin-bottom:30px !important;
 }
 .content1-center1{
+	width:23.5%;
+	float:left;
+}
+.content1-center1:first-child>div>img,.content1-center1:first-child+div>div>img,.content1-center1:first-child+div+div>div>img,.content1-center1:nth-of-type(5)>div>img{
+	
+}
+
+/*首页资讯*/
+.content2-box{
+	width:30.9%;
+	float:left;
+}
+.content2-nav{
+	width:100%;
+}
+.content2-nav>li{
+	width:33%;
+	float:left;
+}
+
+/*首页合作单位*/
+.box_ul>li>div{
+	width:100%;
+}
+.box_ul>li:nth-child(even)>div>p{
+	width:25%;
+	float:left;
+}
+.box_ul>li:nth-child(odd)>div>p{
 	width:20%;
 	float:left;
-	height:138px;
-	text-align: center;
-	overflow: hidden;	
 }
-.content1-center1>div{
-	width:82%;
-	height:138px;
-	margin:0 auto;
-    position: relative;
-    overflow:hidden;
+.box_img{
+	border-right:0px !important;
 }
 
-
-.video-content > h3{
-	background: yellow;
+/*首页联系我们二维码*/
+.copy-right1{
+	float:left;
+}
+.copy-right2{
+	float:right;
+	margin-left:30px;
 }

@@ -9,7 +9,7 @@
 		<link rel="stylesheet" type="text/css" href="css/video.css" />
 		<link rel="stylesheet" type="text/css" href="css/Safari.css" />
 		<link rel="stylesheet" type="text/css" href="css/professionVideo.css" />
-		<script src="js/jquery.min.js"></script>
+		<script src="js/jquery.js"></script>
 		<script src="https://cdn.jsdelivr.net/npm/vue"></script>
 		<script src="js/public.js"></script>
 	</head>
@@ -155,9 +155,6 @@
 					vm.scoure = result.data;
 					//console.log(encodeURI('videoOrderform.html?id='+result.data.orderNumber+"&img="+imgpath+"&title="+title+"&price="+price))
 					window.open(encodeURI('videoOrderform.html?id='+result.data.orderNumber+"&img="+imgpath+"&title="+title+"&price="+price),'_blank')
-					console.log(result.data);
-					
-					
 				}else{
 					alert(result.message)
 				}
@@ -183,7 +180,6 @@
 			success:function (result){
 				if(result.status == 200){
 					vm.scoure = result.data;
-					console.log(result.data)
 				}else{
 					alert(result.message)
 				}

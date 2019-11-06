@@ -316,7 +316,7 @@
 	margin:0 auto;
 }
 .comment-left{
-	width:92%;
+	width:100%;
 	float:left;
 }
 .comment-right{
@@ -331,13 +331,13 @@
 }
 .comment-left>p{
 	display:inline-block;
-	width:100%;
+	width:84%;
 	border-top:1px solid lightgray;
-	margin-left: 50px;
+	margin-left: 10px;
 }
 .comments{
 	clear:both;
-	width:100%;
+	width:92%;
 	max-height: 100px;
 	overflow-y:auto;
 	margin:0 auto;
