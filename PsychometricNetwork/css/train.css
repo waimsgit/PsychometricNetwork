@@ -17,6 +17,8 @@
 /*banner区*/
 .banner{
 	width:100%;
+	height: 290px;
+    margin-top: 60px;
 }
 .banner-content{
 	width:100%;

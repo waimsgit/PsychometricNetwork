@@ -11,6 +11,16 @@
 		<script src="https://cdn.jsdelivr.net/npm/vue"></script>
 		<script src="js/common.js"></script>
 		<script src="js/public.js"></script>
+		<script src="js/progressBar.js"></script>
+		<style>
+			#loader{
+				width:88%;
+				height:10px;
+				position:fixed;
+				top:46px;
+				right:0;
+			}
+		</style>
 	</head>
 	<body>
 			<!--左边导航内容-->
@@ -51,7 +61,6 @@
 			</div>
 			
 			<div class="right">
-			
             <div class="head">
            	     <!--搜索及中英文切换区-->
 				<div class="right-top">
@@ -75,16 +84,40 @@
 										<li><a href=""><img src="img/indexpersonal.png" alt="" />个人中心</a></li>
 										<li><a href=""><img src="img/indexmessage.png" alt="" />消&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;息&nbsp;&nbsp;<span>99+</span></a></li>
 										<li><a href=""><img src="img/indexcollect.png" alt="" />收&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;藏 <span>&nbsp;(99+)</span></a></li>
-										<li><a href=""><img src="img/indexdownload.png" alt="" />下载记录</a></li>
-										<li><a href="">退出登录</a> </li>
+										<li><a href=""><img src="img/indexdownload.png" alt="" />订&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;单</a></li>
+										<li><a href=""><img src="img/logout.png" alt="" />退出登录</a> </li>
 									</ul>
 								</div>
 							</div>
 						</div>
-						
 					</div>
-				</div>
-            </div>
-			</div>
+					
+				    <!--进度条-->
+					<div id="loader">
+						<progress id='p' max='100'></progress>
+						<output for='p'></output>
+				    </div>
+					<div class="clear"></div>
+					
+				</div>   <!--right-top  结尾标签-->
+				
+            </div>   <!--head 结尾标签-->
+			</div>   <!--right 结尾标签-->
+		
+		
+        <script language="javascript">
+			const _PRG = document.getElementById('p'),
+			_OUT = document.querySelector('[for=p]'),
+			K = 0.5,TMAX = K * _PRG.max;
+			
+			function load(t = 0) {
+			  if (t <= TMAX) {
+			    if (t % K === 0) _OUT.value = _PRG.value = t / K;
+			    requestAnimationFrame(load.bind(this, t + (Math.random() > .5)));
+			  }
+			};
+			
+			load();
+        </script>
 	</body>
 </html>

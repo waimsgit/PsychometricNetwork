@@ -46,9 +46,8 @@ window.onload = function(){
 		var mb = myBrowser();
 		if ("IE" == mb) {
 //		    alert("我是 IE");
-		}
-		
-		//判断ie版本
+
+	    //判断ie版本
 		if (isIE) {
 	        var IE5 = IE55 = IE6 = IE7 = IE8 = false;
 	        var reIE = new RegExp("MSIE (\\d+\\.\\d+);");
@@ -62,11 +61,15 @@ window.onload = function(){
 			scriptNode.setAttribute("type", "text/javascript");
 	      
 	        if (IE8) {
-	            return "IE8";
+//	            return "IE8";
 	            linkNode.setAttribute("href", "css/all-ie-only.css");
 				scriptNode.setAttribute("src", "");
 	        }
 		}//isIE end
+
+		}
+		
+		
 
 		if ("FF" == mb) {
 //		    alert("我是 Firefox");

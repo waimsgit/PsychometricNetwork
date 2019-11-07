@@ -11,7 +11,7 @@
 /*右侧头部*/
 .right-top {
     width: 100%;
-    height: 67px !important;
+    height: 60px !important;
     background: white;
     z-index: 10;
 }
@@ -26,8 +26,7 @@
 /*热门文章*/
 .content1{
 	width:100%;
-	/*height:221px;*/
-	margin-top: 30px;
+	margin-top:90px;
 	clear:both;
 }
 .content1-center{

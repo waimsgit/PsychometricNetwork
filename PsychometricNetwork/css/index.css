@@ -15,6 +15,7 @@
 	width:100%;
 	max-height: 290px;
 	overflow: hidden;
+	margin-top:60px;
 }
 .banner-left{
 	width:100%;
@@ -369,8 +370,6 @@
 }
 
 /*学术会议*/
-/*小圆点*/
-/*学术会议*/
 .content2{
 	width:100%;
 	/*height:100%;*/
@@ -417,7 +416,6 @@
 	-webkit-flex: 1;
 	-moz-box-flex: 1;
 	height:100%;
-	/*border:1px solid rgba(233,233,233);*/
 	box-shadow:0px 0px 13px 0px rgba(147,178,224,0.5);
 	margin:0 1.2%;
 	position: relative;
@@ -436,7 +434,6 @@
 }
 
 .content2-box:hover{
-	/*border:1px solid #009FB6;*/
 	box-shadow:0px 8px 12px 0px rgba(147,178,224,0.9);
 }
 .content2-top{
@@ -463,6 +460,8 @@
 .content2-middle{
 	width:100%;
 }
+
+
 @media (min-width: 750px){
     .banner-left{
 	width:100%;

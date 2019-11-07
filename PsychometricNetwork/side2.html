@@ -8,31 +8,7 @@
 		<link rel="stylesheet" type="text/css" href="css/Safari.css" />
 		<script src="js/jquery.min.js"></script>
 		<script src="js/common.js"></script>
-		
-		<style>
-			.animation{
-				width:100%;
-				height:7px;
-				background: #1D7AEE;
-				position:relative;
-			    -webkit-transition: width 10s ease-in-out;
-			    transition: width 10s ease-in-out;
-				
-				animation:name 5s 1;
-				-webkit-animation:name 5s 1; /*Safari and Chrome*/
-			}
-			/*@keyframes name
-				{
-				from {right:0px;}
-				to {right:100%;}
-				}
-			
-			@-webkit-keyframes name /*Safari and Chrome*
-				{
-				from {right:0px;}
-				to {right:100%;}
-				}*/
-		</style>
+		<script src="js/progressBar.js"></script>
 	</head>
 	<body>
 			<!--左边导航内容-->
@@ -73,7 +49,6 @@
 			</div>
 			
 			<div class="right">
-			
             <div class="head">
            	    <!--搜索及中英文切换区-->
 				<div class="right-top" style="">
@@ -92,7 +67,6 @@
 							<div class="right-top-right1">
 								<a href="register_1.html">登录</a>
 								<a href="register_2.html">注册</a>
-								
 							</div>
 							
 							<div class="right-top-right2" id="userbox" style="display:none">
@@ -102,60 +76,41 @@
 										<li><a href=""><img src="img/indexpersonal.png" alt="" />个人中心</a></li>
 										<li><a href=""><img src="img/indexmessage.png" alt="" />消&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;息&nbsp;&nbsp;<span>99+</span></a></li>
 										<li><a href=""><img src="img/indexcollect.png" alt="" />收&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;藏 <span>&nbsp;(99+)</span></a></li>
-										<li><a href=""><img src="img/indexdownload.png" alt="" />下载记录</a></li>
-										<li><a href="">退出登录</a> </li>
+										<li><a href=""><img src="img/indexdownload.png" alt="" />订&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;单</a></li>
+										<li><a href=""><img src="img/logout.png" alt="" />退出登录</a> </li>
 									</ul>
 								</div>
 							</div>
 						</div>
-						
 					</div>
+					
+					<!--进度条-->
+					<div id="loader">
+						<progress id='p' max='100'></progress>
+						<output for='p'></output>
+				    </div>
 					<div class="clear"></div>
-				</div>
-				<canvas id="canvas" width="100%" height="10" style="background: pink; ">
-           浏览器不支持canvas
-</canvas>
+					
+				</div>   <!--right-top  结尾标签-->
 				
-           </div>
-	
-			</div>
+            </div>   <!--head 结尾标签-->
+			</div>   <!--right 结尾标签-->
+		
+		
+        <script language="javascript">
+			const _PRG = document.getElementById('p'),
+			_OUT = document.querySelector('[for=p]'),
+			K = 0.5,TMAX = K * _PRG.max;
 			
-			<script>
-				window.onload=function () {
-
-         var canvas=document.getElementById("canvas");//获取canvas对象
-
-         var ctx=canvas.getContext("2d"); //创建二维的绘图上下文对象
-
-         //通过上下文对象调用属性或方法来绘图
-
-         ctx.beginPath();//  “beginPath()” 表开始一条路径或者重置当前的路径
-         ctx.lineCap="round";//圆角线条
-         ctx.moveTo(5,100);//开始点坐标
-         ctx.lineTo(200,300);//结束点坐标
-         ctx.lineWidth=20;//“lineWidth”定义路径的宽度（有继承性，如要定义不同宽度的路径则要单独定义）
-         ctx.strokeStyle="lightblue";//“strokeStyle”填充路径的颜色
-         ctx.stroke();//调用 绘制
-
-         ctx.beginPath();//  “beginPath()” 表开始一条路径或者重置当前的路径
-         ctx.lineCap="round";//圆角线条
-         ctx.moveTo(30,30);//开始点坐标
-         ctx.lineTo(300,300);//结束点坐标
-         ctx.lineWidth=20;//“lineWidth”定义路径的宽度（有继承性，如要定义不同宽度的路径则要单独定义）
-         ctx.strokeStyle="lightpink";//“strokeStyle”填充路径的颜色
-         ctx.stroke();//调用 绘制
-
-         ctx.beginPath();//  “beginPath()” 表开始一条路径或者重置当前的路径
-         ctx.lineCap="square";// 正方形线条
-         ctx.moveTo(10,50);//开始点坐标
-         ctx.lineTo(350,400);//结束点坐标
-         ctx.strokeStyle="lightgreen";//填充路径的颜色
-         ctx.stroke();//调用 绘制
-
-
-     }
-
-			</script>
-
+			function load(t = 0) {
+			  if (t <= TMAX) {
+			    if (t % K === 0) _OUT.value = _PRG.value = t / K;
+			    requestAnimationFrame(load.bind(this, t + (Math.random() > .5)));
+			  }
+			};
+			
+			load();
+        </script>
+        
 	</body>
 </html>
