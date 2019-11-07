@@ -13,6 +13,8 @@
 		<link rel="stylesheet" href="css/tabstyle.css" />
 		<link rel="stylesheet" href="css/style.css" />
 		<link rel="stylesheet" href="css/bootstrap.css" />
+		<script type="text/javascript" src="APP_js/jquery.min.js" ></script>
+		<script type="text/javascript" src = "js/public.js"></script>
 		<style>
 			video{display:inline-block;}
 		</style>
@@ -348,8 +350,27 @@
 		<script>
 			$(function(){
 				$("#side").load("side.html",function(){
-			 		$("#icon1").attr("src","img/icon1_1.png");
-			 	});
+					$("#icon1").attr("src","img/icon1_1.png");
+					var islogin = window.localStorage.getItem("isLogin");
+					var user = localStorage.getItem("user");
+					var  jsonuser = eval("(" + user + ")");
+					var username = jsonuser.nickname;
+					if(islogin){
+						$("#userinf").html('<div class="right-top-right2" id="userbox" >'+
+												'<a href=""> <span>'+ username +'</span> <img src="img/indexgrade.png"/> </a>'+
+												'<div id="userinfo">'+
+												'<ul><li><a href=""><img src="img/indexpersonal.png" alt="" />个人中心</a></li>'+
+												'<li><a href=""><img src="img/indexmessage.png" alt="" />消&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;息&nbsp;&nbsp;<span>99+</span></a></li>'+
+												'<li><a href=""><img src="img/indexcollect.png" alt="" />收&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;藏 <span>&nbsp;(99+)</span></a></li>'+
+												'<li><a href=""><img src="img/indexdownload.png" alt="" />下载记录</a></li>'+
+												'<li><a href="">退出登录</a> </li></ul></div></div>');
+					}else{
+						$("#userinf").html('<div class="right-top-right1">'+
+												'<a href="register_1.html">登录</a>'+
+												'<a href="register_2.html">注册</a>'+
+											'</div>')
+					}
+				});
 			})
 		</script>
 		
