@@ -9,6 +9,8 @@
 		<link rel="stylesheet" type="text/css" href="css/Safari.css" />	
 		<script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
 		<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+		<script src="js/jquery.min.js"></script>
+		<script src="js/public.js"></script>
 		<style>
 			[v-cloak]{
 			    display: none !important;
@@ -434,11 +436,10 @@
 			</div>
 		</div>
 		
-	
-		<script src="js/jquery.min.js"></script>
 		 <script>
 			$(function(){
 				$("#side").load("side3.html",function(){
+					getlogin();
 			 		$("#icon6").attr("src","img/icon6_6.png");
 			 	});
 			})

@@ -4,11 +4,10 @@ function geturl(){
 	return globalurl;
 }
 
-var login="";
+
 function getlogin(){
 	var islogin = false;
 	var username;
-	$("#icon1").attr("src","img/icon1_1.png");
 	islogin = window.localStorage.getItem("isLogin");
 	var user = localStorage.getItem("user");
 	var  jsonuser = eval("(" + user + ")");
@@ -27,11 +26,11 @@ function getlogin(){
 	}else{
 		$("#userinf").html('<div class="right-top-right1">'+
 								'<a href="register_1.html">登录</a>'+
-								'<a href="register_2.html">注册</a>'+
 							'</div>')
 	}
-	return login;
+	
 }
+
 
 var HttpRequest = function (options) {
   var defaults = {

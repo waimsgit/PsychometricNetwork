@@ -11,6 +11,8 @@
 		<link rel="stylesheet" type="text/css" href="css/demo.css" />
 		<link rel="stylesheet" type="text/css" href="css/tabs.css" />
 		<link rel="stylesheet" type="text/css" href="css/page.css" />
+		<script src="js/jquery.min.js"></script>
+		<script src="js/public.js"></script>
 		<script src="js/page1.js"></script>	
 	</head>
 
@@ -157,12 +159,11 @@
 			</div>
 		</div>
 
-        
-		<script src="js/jquery.min.js"></script>
 		<!--引入公共部分的js-->
 		<script>
 			$(function(){
 				$("#side").load("side2.html",function(){
+					getlogin();
 			 		$("#icon2").attr("src","img/icon2_2.png");
 			 	});
 			})

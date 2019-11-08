@@ -73,6 +73,7 @@
 		<script>
 			$(function(){
 				$("#side").load("side.html",function(){
+					getlogin();
 			 		$("#icon4").attr("src","img/icon4_4.png");
 			 	});
 			 	
@@ -87,7 +88,6 @@
 					},
 					methods:{}
 			 	});
-			 	console.log(getUrlParam("id"))
 			 	vm.ordernumber = getUrlParam("id");
 			 	vm.img = getUrlParam("img");
 			 	vm.title = getUrlParam("title");
@@ -99,7 +99,6 @@
 					"datatype": "json",
 					headers:{'token':'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOlsiMTg1MTEwMTQ2NjJAMTYzLmNvbSIsIjgiXX0.Ekotd0bKVCz6YA1kZUgu5xNgouAHa714nz9VNOs_Lsc'},
 					"success": function(result){
-						console.log(result)
 						vm.qrcode = result.message;
 					}
 				})
@@ -125,19 +124,11 @@
 		    		if('WebSocket' in window){
 		    			socket = new WebSocket("ws://192.168.1.145:8886/scale/websocket/"+sid);
 		    			//打开事件  
-		            socket.onopen = function() {  
-		                console.log("Socket 已打开");  
-		                //socket.send("这是来自客户端的消息" + location.href + new Date());  
-		            };  
+		            socket.onopen = function() {  };  
 		            //获得消息事件  
-		            socket.onmessage = function(msg) {  
-		                console.log(msg.data);  
-		                //发现消息进入    开始处理前端触发逻辑
-		            };  
+		            socket.onmessage = function(msg) {  };  
 		            //关闭事件  
-		            socket.onclose = function() {  
-		                console.log("Socket已关闭");  
-		            };  
+		            socket.onclose = function() {  };  
 		            //发生了错误事件  
 		            socket.onerror = function() {  
 		                alert("Socket发生了错误");  

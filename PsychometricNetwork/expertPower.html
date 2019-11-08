@@ -8,6 +8,8 @@
 		<link rel="stylesheet" type="text/css" href="css/train.css" />
 		<link rel="stylesheet" type="text/css" href="css/expertPower.css" />
 		<link rel="stylesheet" type="text/css" href="css/Safari.css" />
+		<script src="js/jquery.min.js"></script>
+		<script src="js/public.js"></script>
 	</head>
 	<body>
 		<div class="main">
@@ -248,11 +250,11 @@
 				骄阳智心 版权所有 2010-2019&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;京ICP备17000866&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;京公网安备11010802023632号
 			</div>
 		</div>
-		
-		<script src="js/jquery.min.js"></script>
+	
 	    <script>
 			$(function(){
 				$("#side").load("side3.html",function(){
+                    getlogin();					
 			 		$("#icon6").attr("src","img/icon6_6.png");
 			 	});
 			})

@@ -12,6 +12,7 @@
 	    <link rel="stylesheet" href="css/page.css" />
 	    <script src="js/jquery.min.js"></script>
 	    <script src="js/page1.js"></script>
+	    <script src="js/public.js"></script>
 	</head>
 	<body>
 		<div class="main">
@@ -126,10 +127,13 @@
         <script>
 			$(function(){
 				$("#side").load("side.html",function(){
+					getlogin();
 			 		$("#icon3").attr("src","img/icon3_3.png");
 			 	});
 			})
 		</script>
+
+		
         <script src="js/modernizr.custom.js"></script>
 		<!--选项卡js-->
 		<script src="js/cbpFWTabs.js"></script>

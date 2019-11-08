@@ -9,6 +9,7 @@ body {
 ul{list-style: none;}
 a{text-decoration: none;}
 a:hover{text-decoration: none;}
+i{font-style: normal;}
 img{border:0;}
 .clearfix:after{
 	clear: both;
@@ -135,7 +136,6 @@ html, body,.main{ height:100%; }
 	float:left;
 	line-height: 30px;
 	font-size: 14px;
-	margin-top: 15px;
 }
 .right-top-left1 a{
 	display:inline-block;
@@ -271,59 +271,7 @@ html, body,.main{ height:100%; }
     left: 0;
     bottom: 0;
 }
-
-/*渐变进度条*/
-#loader{
-	width:88%;
-	height:3px;
-	position:fixed;
-	top:45px;
-	right:0;
-}
-progress[value] {
-  display:block;
-  width: 100%;
-  height:3px;
-  border: none;
-  border-radius: 0.125em;
-  background: #e6eeff;  
-  color:#e6eeff; /*IE10*/ 
-}
-/*ie6-ie9*/  
-progress ie {   
-    display:block;   
-    height: 100%;   
-    background: #0064B4;   
-} 
-progress[value]::-webkit-progress-bar {
-  border: none;
-  border-radius: 0.125em;
-  background: #e6eeff;
-}
-progress[value]::-webkit-progress-value {
-  border: none;
-  border-radius: inherit;
-  background: linear-gradient(90deg, #8aaaff, #fa8cff);
-}
-progress[value]::-moz-progress-bar {
-  border: none;
-  border-radius: inherit;
-  background: linear-gradient(90deg, #8aaaff, #fa8cff);
-}
-progress[value]::-ms-fill {
-  border: none;
-  border-radius: inherit;
-  background: linear-gradient(90deg, #8aaaff, #fa8cff);
-}
-output:not(:empty) {
-	display:none;
-}
-output:not(:empty):after {
-  content: 'none';
-  display:none;
-}
-
-
+    
 /*底部版权*/
 .right-footer { 
     position: relative;

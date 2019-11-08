@@ -1,0 +1,60 @@
+<!DOCTYPE HTML>
+
+<html>
+
+ <head>
+
+  <title> new document </title>  
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>   
+  <script src="js/jquery.min.js"></script>
+
+  <script type="text/javascript">  
+
+    
+
+    // 新窗口打开时弹出确认框，是否打开
+
+    function openWindow(){
+
+         var mydialog=confirm("是否打开");
+
+         if(mydialog==true){
+
+            var https , myhttp;
+
+                https = "http://www.imooc.com";
+
+                myhttp=prompt("请输入网址",https);
+
+                // 通过输入对话框，确定打开的网址，默认为 http：//www.imooc.com/
+
+             if(myhttp!=null){
+
+                  //打开的窗口要求，宽400像素，高500像素，无菜单栏、无工具栏。
+
+                 window.open(myhttp,'_blank',
+
+                 'width=400,height=500,
+
+                 menubar=no,toolbar=no');
+
+             }else;
+
+         }else;
+
+        }
+
+
+
+  </script> 
+
+ </head> 
+
+ <body> 
+
+ <input type="button" value="新窗口打开网站" onclick="openWindow()" /> 
+
+ </body>
+
+</html>

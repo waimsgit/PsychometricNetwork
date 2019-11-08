@@ -26,6 +26,7 @@
 }
 .banner-content>img{
 	width: 100%;
+	max-height: 290px;
 	position: relative;
 }
 

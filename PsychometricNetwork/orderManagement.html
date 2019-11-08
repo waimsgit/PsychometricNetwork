@@ -6,7 +6,9 @@
 		<link rel="stylesheet" type="text/css" href="css/commone.css" />
 		<link rel="stylesheet" type="text/css" href="css/style.css" />
 		<link rel="stylesheet" type="text/css" href="css/Safari.css" />
-		<link rel="stylesheet" type="text/css" href="css/orderManagement.css" />		
+		<link rel="stylesheet" type="text/css" href="css/orderManagement.css" />
+		<script src="js/jquery.min.js"></script>
+		<script src="js/public.js"></script>
 	</head>
 	<body>
 		<div class="main">
@@ -81,13 +83,13 @@
 			</div>
 		</div>
 		
-		
-		<script src="js/jquery.min.js"></script>
+
 		<!--引入公共部分的js-->
 		<script>
 			$(function(){
 				$("#side").load("sideuser.html",function(){
-			 		$("#icon2").attr("src","img/icon2_2.png");
+					getlogin();
+			 		$("#icon3").attr("src","img/icon3_3.png");
 			 	});
 			})
 		</script>

@@ -15,15 +15,10 @@
 		<link rel="stylesheet" href="css/bootstrap.css" />
 		<script type="text/javascript" src="APP_js/jquery.min.js" ></script>
 		<script type="text/javascript" src = "js/public.js"></script>
+		<script src="js/jquery.min.js"></script>
+		<script src="js/index.js"></script>
 		<style>
 			video{display:inline-block;}
-			/*#loader{
-				width:88%;
-				height:10px;
-				position:fixed;
-				top:46px !important;
-				right:0;
-			}*/
 		</style>
 	</head>
 	<body>
@@ -352,39 +347,17 @@
 			})
 		</script>
 
-		<script src="js/jquery.min.js"></script>
+		
 		<!--引入公共部分侧导航和头部-->
-		var login1=getlogin();
 		<script>
-			$(function(){
-				$("#side").load("side.html",function(getlogin){
-//					var islogin = false;
-//					var username;
-//					$("#icon1").attr("src","img/icon1_1.png");
-//					islogin = window.localStorage.getItem("isLogin");
-//					var user = localStorage.getItem("user");
-//					var  jsonuser = eval("(" + user + ")");
-//					if(jsonuser){
-//						username = jsonuser.nickname;
-//					}
-//					if(islogin){
-//						$("#userinf").html('<div class="right-top-right2" id="userbox" >'+
-//												'<a href=""> <span>'+ username +'</span> <img src="img/indexgrade.png"/> </a>'+
-//												'<div id="userinfo">'+
-//												'<ul><li><a href=""><img src="img/indexpersonal.png" alt="" />个人中心</a></li>'+
-//												'<li><a href=""><img src="img/indexmessage.png" alt="" />消&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;息&nbsp;&nbsp;<span>99+</span></a></li>'+
-//												'<li><a href=""><img src="img/indexcollect.png" alt="" />收&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;藏 <span>&nbsp;(99+)</span></a></li>'+
-//												'<li><a href="orderManagement.html"><img src="img/indexdownload.png" alt="" />订&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;单 </a></li>'+
-//												'<li><a href=""><img src="img/logout.png" alt="" />退出登录</a> </li></ul></div></div>');
-//					}else{
-//						$("#userinf").html('<div class="right-top-right1">'+
-//												'<a href="register_1.html">登录</a>'+
-//												'<a href="register_2.html">注册</a>'+
-//											'</div>')
-//					}
-				});
-			})
+//			$(function(){
+//				$("#side").load("side.html",function(){
+//					getlogin();
+//			 		$("#icon1").attr("src","img/icon1_1.png");
+//			 	});
+//			})
 		</script>
+		
 		
         <!--引入视频的js-->
 		<script src="js/video.js"></script>
@@ -395,35 +368,34 @@
 		<!--合作单位-->
         <script type="text/javascript">
 			//li元素的宽（包括padding，margin，border）
-			var liW = $('.box_ul li').outerWidth(true)
-			var len = $('.box_ul li').length
-			$('.box_ul').css("width",liW*len)
-			var flag = true
-			$(".btn_left").click(function(){
-				if(flag){
-					flag = false
-					$('.box_ul').find("li").eq(len-1).prependTo($('.box_ul'))
-					$('.box_ul').css({"marginLeft":-liW}).delay(9).queue(function(){
-						$('.box_ul').animate({"marginLeft":0})
-						flag = true
-						$(this).dequeue();
-					})
-				}
-			})
-			
-			$(".btn_right").click(function(){
-				if(flag){
-					flag = false
-					$('.box_ul').animate({"marginLeft":-liW}).delay(9).queue(function(){
-						$('.box_ul').find("li").eq(0).appendTo($('.box_ul'))
-						$('.box_ul').css({"marginLeft":0})
-						flag = true
-						$(this).dequeue();
-					})
-				}
-			})
-			
-			$(window).resize(function(){});	
+//			var liW = $('.box_ul li').outerWidth(true)
+//			var len = $('.box_ul li').length
+//			$('.box_ul').css("width",liW*len)
+//			var flag = true
+//			$(".btn_left").click(function(){
+//				if(flag){
+//					flag = false
+//					$('.box_ul').find("li").eq(len-1).prependTo($('.box_ul'))
+//					$('.box_ul').css({"marginLeft":-liW}).delay(9).queue(function(){
+//						$('.box_ul').animate({"marginLeft":0})
+//						flag = true
+//						$(this).dequeue();
+//					})
+//				}
+//			})
+//			
+//			$(".btn_right").click(function(){
+//				if(flag){
+//					flag = false
+//					$('.box_ul').animate({"marginLeft":-liW}).delay(9).queue(function(){
+//						$('.box_ul').find("li").eq(0).appendTo($('.box_ul'))
+//						$('.box_ul').css({"marginLeft":0})
+//						flag = true
+//						$(this).dequeue();
+//					})
+//				}
+//			})
+//			
         </script>	
 	</body>
 </html>

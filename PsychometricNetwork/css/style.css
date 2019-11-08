@@ -29,14 +29,26 @@ html {
 	width:20px;
 	height:18px;
 	display:inline-block;
-	margin:9px 12px 9px 8px;
 	float:left;
 	border:0px;
 }
 .sidebar li:nth-of-type(3)>a>i>img{
 	width:20px;
-	height:24px;
-	margin:6px 12px 6px 8px;
+	height:22px;
+	float:left;
+}
+.sidebar li>a>span{
+	display:block;
+	width:80px;
+	height:20px;
+	line-height: 20px;
+	overflow: hidden;
+	text-align:justify;
+	text-align-last:justify;
+	text-justify:distribute-all-lines;  /*这行必加，兼容ie浏览器*/
+	text-justify:inter-ideograph;/*IE*/
+	float:left;
+  margin-left:20px;
 }
 .sidebar li:hover>a{
 	color:#1da7ee;
@@ -49,8 +61,9 @@ html {
   position: relative;
   z-index: 1000;
   width: 120px;
-  height:36px;
+  height:20px;
   margin: 0 auto;
+  padding:8px 0;
   display: block;
 }
 .sidebar .hover {

@@ -8,13 +8,15 @@
 		<link rel="stylesheet" type="text/css" href="css/wechslerPreschool.css" />
 		<link rel="stylesheet" type="text/css" href="css/Safari.css" />
 		<link rel="stylesheet" href="css/layer.css" />
-		<link rel="stylesheet" href="css/pdfstyle.css" />
 		<!--日历css-->
 		<link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
 	    <link rel="stylesheet" type="text/css" href="css/simple-calendar-print.css" media="print">
 	    <link rel="stylesheet" type="text/css" href="css/simple-calendar.css">
 	    <script src="js/jquery.min.js"></script>
+	    <script src="js/public.js"></script>
 	    <script src="js/common.js"></script>
+	    <!--日历-->
+		<script type="text/javascript" src="js/simple-calendarSion.js"></script>
 	    <style>
 	    	.inner-left {
 			    width: 0px;
@@ -185,13 +187,13 @@
 		<script>
 			$(function(){
 				$("#side").load("side.html",function(){
+					getlogin();
 			 		$("#icon6").attr("src","img/icon6_6.png");
 			 	});
 			})
 		</script>
 		
 		<!--日历-->
-		<script type="text/javascript" src="js/simple-calendarSion.js"></script>
 	    <script>
 	     var myCalendar = new SimpleCalendar('#calendar');
 	    </script>
