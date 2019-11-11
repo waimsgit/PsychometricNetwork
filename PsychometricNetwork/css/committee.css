@@ -322,15 +322,18 @@
     text-align: center;
 }
 .listbox-centent a>span{
-	width:52px;
+	width:46px;
 	margin:0 auto;
 	overflow: hidden;
-    display: inline-block;
+    display: block;
     height: 34px;
     line-height: 34px;
     font-size: 14px;
     color: #898989;
-    text-align: left;
+    text-align:justify;
+	text-align-last:justify;
+	text-justify:distribute-all-lines;  /*这行必加，兼容ie浏览器*/
+	text-justify:inter-ideograph;/*IE*/
 }		
 
 /*版权*/

@@ -132,10 +132,14 @@
 	width:100%;
 }
 .content1-bottom>div>h4{
-	width:12%;
+	width:10%;
+	height:24px;
+	line-height: 24px;
+	margin-right: 2%;
+	overflow: hidden;
 	font-size: 14px;
 	float:left;
-	line-height: 23px;
+	
 }
 .content1-bottom>div>p{
 	width:88%;

@@ -1,19 +1,19 @@
-
-
-
-// 引入公共部分侧导航和头部
 $(function(){
+	// 引入公共部分侧导航和头部
 	$("#side").load("side.html",function(){
 		getlogin();
  		$("#icon1").attr("src","img/icon1_1.png");
  	});
-})
-
-
-
-//合作单位
-$(function(){
-	var liW = $('.box_ul li').outerWidth(true)
+ 	
+ 	
+ 	//近期培训
+ 	new slider({
+		id: 'slider'
+	})
+ 	
+ 	
+ 	//合作单位
+ 	var liW = $('.box_ul li').outerWidth(true)
 	var len = $('.box_ul li').length
 	$('.box_ul').css("width",liW*len)
 	var flag = true
@@ -40,7 +40,6 @@ $(function(){
 			})
 		}
 	})
-			
 })
 
 

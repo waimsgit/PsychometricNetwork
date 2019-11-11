@@ -137,18 +137,66 @@
 		</script>
 
 	   <script>
+	   	function createXmlHttpRequest(){
+			   varxmlHttp;
+			   try{    //Firefox, Opera 8.0+, Safari
+			           xmlHttp=newXMLHttpRequest();
+			    }catch (e){
+			           try{    //Internet Explorer
+			                  xmlHttp=newActiveXObject("Msxml2.XMLHTTP");
+			            }catch (e){
+			                  try{
+			                          xmlHttp=newActiveXObject("Microsoft.XMLHTTP");
+			                  }catch (e){} 
+			           }
+			    }
+			   returnxmlHttp;
+	    }
 	   	function createOrder(){
 	   		var id = getQueryString("id");
 	   		var imgpath = $("#iepsyimg").attr("src");
 	   		var title = $("#iepsytitle").text();
 	   		var price = $("#price").text();
+	   		var xmlhttp=null;  
+	   		
+			function createXMLHTTPReaquest(){  
+					if(window.XMLHttpRequest){  
+					   xmlhttp=new XMLHttpRequest()  
+					}else if(window.ActiveXObject){  
+					   xmlhttp=new ActiveXObject("Microsoft.XMLHTTP")  
+					}  
+			}  
+			
+			function ajaxFunction(){
+			   var xmlHttp;
+			   try{ // Firefox, Opera 8.0+, Safari
+			        xmlHttp=new XMLHttpRequest();
+			    }
+			    catch (e){
+			       try{// Internet Explorer
+			             xmlHttp=new ActiveXObject("Msxml2.XMLHTTP");
+			          }
+			        catch (e){
+			          try{
+			             xmlHttp=new ActiveXObject("Microsoft.XMLHTTP");
+			          }
+			          catch (e){}
+			          }
+			    }
+			    return xmlHttp;
+			 }
+			
 	   		$.ajax({
 				type:"post",
 				url:url1+"/scale/post/order",
 				data:{"scoureId":id, "orderAmount":vm.scoure.price},
 				dataType:"json",
-				async:true,
+				async:true, //异步请求
+//				complete: function(XMLHttpRequest, textStatus){
+//			        isPost = false;
+//			    },
 				beforeSend: function(request) {
+					console.log(request);
 		        	request.setRequestHeader("token",localStorage.getItem("token"));
 		        },
 				success:function (result){

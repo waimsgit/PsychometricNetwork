@@ -21,6 +21,24 @@
 			    bottom:0;
 			    left:0;
      	    }
+     	    
+     	    .sidebar li>a>i>img{
+     	    	width: 15px;
+    			height: 16px;
+     	    }
+     	    .sidebar li:nth-of-type(3)>a>i>img{
+ 	    	    width: 15px;
+			    height: 16px;
+			    float: left;
+     	    }
+     	    .sidebar a{
+     	    	height:16px;
+     	    	padding:10px 0;
+     	    }
+     	    .sidebar li>a>span{
+     	    	height:16px;
+     	    	line-height: 16px;
+     	    }
 		</style>
 	</head>
 	<body>
@@ -36,16 +54,19 @@
 						<div class="sidebar" id="iconbox">
 							<ul>
 								<li>
-									<a href="pcIndex.html"><i class="fa fa-dashboard push"><img id="icon1" src="img/icon1.png"/></i><span>个人中心</span></i></a></span>
+									<a href="pcIndex.html"><i class="fa fa-dashboard push"><img id="icon1" src="img/iconuser1.png"/></i><span>个人中心</span></i></a></span>
 								</li>
 								<li>
-									<a href="scale.html"><i class="fa fa-cog push"><img id="icon2" src="img/icon2.png"/></i><span>消息</span></a>
+									<a href="scale.html"><i class="fa fa-cog push"><img id="icon2" src="img/iconuser2.png"/></i><span>课程</span></a>
 								</li>
 								<li>
-									<a href="train.html"><i class="fa fa-cog push"><img id="icon6" src="img/icon6.png"/></i><span>收藏</span></a>
+									<a href="message.html"><i class="fa fa-cog push"><img id="icon3" src="img/iconuser3.png"/></i><span>消息</span></a>
 								</li>
 								<li>
-									<a href="orderManagement"><i class="fa fa-user push"><img id="icon3" src="img/icon3.png"/></i><span>订单</span></a>
+									<a href="train.html"><i class="fa fa-cog push"><img id="icon4" src="img/iconuser4.png"/></i><span>收藏</span></a>
+								</li>
+								<li>
+									<a href="orderManagement.html"><i class="fa fa-user push"><img id="icon5" src="img/iconuser5.png"/></i><span>订单</span></a>
 								</li>
 							</ul>
 						</div>
@@ -67,13 +88,15 @@
 					<div class="right-top-content">
 						
 						<div class="right-top-right">
+							<!--登录框-->
+							<div id="userinf"></div>
+							
 							<div class="china">
 								<img src="img/china.png" alt="" /> 
 								<span>中文</span>
 							</div>
 							
-							<!--登录框-->
-							<div id="userinf"></div>
+							
 						</div>
 						
 					<div class="clear"></div>

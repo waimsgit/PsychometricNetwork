@@ -11,6 +11,7 @@
 		<script src="https://cdn.jsdelivr.net/npm/vue"></script>
 		<script src="js/jquery.min.js"></script>
 		<script src="js/public.js"></script>
+		<script src="js/scale.js"></script>
 		<style>
 			[v-cloak]{
 			    display: none !important;
@@ -110,7 +111,7 @@
 									<div class="tab-content1">
 									    <div class="listbox">
 											<div class="listbox-centent">
-													<a v-for="item in examinees" v-if="item.cId=='11'" :href="url+item.eId">{{item.name}}</a>
+													<a v-for="item in examinees" v-if="item.cId=='11'" :href="url+item.eId"><span>{{item.name}}</span></a>
 											</div>
 										</div>
 									</div>
@@ -119,7 +120,7 @@
 									<div class="tab-content1">
 										<div class="listbox">
 											<div class="listbox-centent">
-												<a v-for="item in examinees" v-if="item.cId=='12'" :href="url+item.eId">{{item.name}}</a>
+												<a v-for="item in examinees" v-if="item.cId=='12'" :href="url+item.eId"><span>{{item.name}}</span></a>
 											</div>
 										</div>
 									</div>
@@ -128,7 +129,7 @@
 									<div class="tab-content1">
 				                        <div class="listbox">
 											<div class="listbox-centent">
-												<a v-for="item in examinees" v-if="item.cId=='31'" :href="url+item.eId">{{item.name}}</a>
+												<a v-for="item in examinees" v-if="item.cId=='31'" :href="url+item.eId"><span>{{item.name}}</span></a>
 											</div>
 										</div>
 									</div>
@@ -137,7 +138,7 @@
 									<div class="tab-content1">
 										<div class="listbox">
 											<div class="listbox-centent">
-												<a v-for="item in examinees" v-if="item.cId=='50'" :href="url+item.eId">{{item.name}}</a>
+												<a v-for="item in examinees" v-if="item.cId=='50'" :href="url+item.eId"><span>{{item.name}}</span></a>
 											</div>
 										</div>
 									</div>
@@ -146,7 +147,7 @@
 									<div class="tab-content1">
 										<div class="listbox">
 											<div class="listbox-centent">
-												<a v-for="item in examinees" v-if="item.cId=='13'" :href="url+item.eId">{{item.name}}</a>
+												<a v-for="item in examinees" v-if="item.cId=='13'" :href="url+item.eId"><span>{{item.name}}</span></a>
 											</div>
 										</div>
 									</div>	
@@ -155,7 +156,7 @@
 									<div class="tab-content1">
 										<div class="listbox">
 											<div class="listbox-centent">
-												<a v-for="item in examinees" v-if="item.cId=='14'" :href="url+item.eId">{{item.name}}</a>
+												<a v-for="item in examinees" v-if="item.cId=='14'" :href="url+item.eId"><span>{{item.name}}</span></a>
 											</div>
 										</div>
 									</div>		
@@ -164,7 +165,7 @@
 									<div class="tab-content1">
 										<div class="listbox">
 											<div class="listbox-centent">
-												<a v-for="item in examinees" v-if="item.cId=='21'" :href="url+item.eId">{{item.name}}</a>
+												<a v-for="item in examinees" v-if="item.cId=='21'" :href="url+item.eId"><span>{{item.name}}</span></a>
 											</div>
 										</div>
 									</div>	
@@ -173,7 +174,7 @@
 									<div class="tab-content1">
 										<div class="listbox">
 											<div class="listbox-centent">
-												<a v-for="item in examinees" v-if="item.cId=='22'" :href="url+item.eId">{{item.name}}</a>
+												<a v-for="item in examinees" v-if="item.cId=='22'" :href="url+item.eId"><span>{{item.name}}</span></a>
 											</div>
 										</div>
 									</div>	
@@ -183,7 +184,7 @@
 									<div class="tab-content1">
 										<div class="listbox">
 											<div class="listbox-centent">
-												<a v-for="item in examinees" v-if="item.cId=='32'" :href="url+item.eId">{{item.name}}</a>
+												<a v-for="item in examinees" v-if="item.cId=='32'" :href="url+item.eId"><span>{{item.name}}</span></a>
 											</div>
 										</div>
 									</div>	
@@ -192,7 +193,7 @@
 									<div class="tab-content1">
 										<div class="listbox">
 											<div class="listbox-centent">
-												<a v-for="item in examinees" v-if="item.cId=='33'" :href="url+item.eId">{{item.name}}</a>
+												<a v-for="item in examinees" v-if="item.cId=='33'" :href="url+item.eId"><span>{{item.name}}</span></a>
 											</div>
 										</div>
 									</div>	
@@ -201,7 +202,7 @@
 									<div class="tab-content1">
 										<div class="listbox">
 											<div class="listbox-centent">
-												<a v-for="item in examinees" v-if="item.cId=='34'" :href="url+item.eId">{{item.name}}</a>
+												<a v-for="item in examinees" v-if="item.cId=='34'" :href="url+item.eId"><span>{{item.name}}</span></a>
 											</div>
 										</div>
 									</div>	
@@ -210,7 +211,7 @@
 									<div class="tab-content1">
 										<div class="listbox">
 											<div class="listbox-centent">
-												<a v-for="item in examinees" v-if="item.cId=='35'" :href="url+item.eId">{{item.name}}</a>
+												<a v-for="item in examinees" v-if="item.cId=='35'" :href="url+item.eId"><span>{{item.name}}</span></a>
 											</div>
 										</div>
 									</div>	
@@ -219,7 +220,7 @@
 									<div class="tab-content1">
 										<div class="listbox">
 											<div class="listbox-centent">
-												<a v-for="item in examinees" v-if="item.cId=='36'" :href="url+item.eId">{{item.name}}</a>
+												<a v-for="item in examinees" v-if="item.cId=='36'" :href="url+item.eId"><span>{{item.name}}</span></a>
 											</div>
 										</div>
 									</div>	
@@ -228,7 +229,7 @@
 									<div class="tab-content1">
 										<div class="listbox">
 											<div class="listbox-centent">
-												<a v-for="item in examinees" v-if="item.cId=='37'" :href="url+item.eId">{{item.name}}</a>
+												<a v-for="item in examinees" v-if="item.cId=='37'" :href="url+item.eId"><span>{{item.name}}</span></a>
 											</div>
 										</div>
 									</div>	
@@ -237,7 +238,7 @@
 									<div class="tab-content1">
 										<div class="listbox">
 											<div class="listbox-centent">
-												<a v-for="item in examinees" v-if="item.cId=='41'" :href="url+item.eId">{{item.name}}</a>
+												<a v-for="item in examinees" v-if="item.cId=='41'" :href="url+item.eId"><span>{{item.name}}</span></a>
 											</div>
 										</div>
 									</div>	
@@ -246,7 +247,7 @@
 									<div class="tab-content1">
 										<div class="listbox">
 											<div class="listbox-centent">
-												<a v-for="item in examinees" v-if="item.cId=='42'" :href="url+item.eId">{{item.name}}</a>
+												<a v-for="item in examinees" v-if="item.cId=='42'" :href="url+item.eId"><span>{{item.name}}</span></a>
 											</div>
 										</div>
 									</div>	
@@ -256,7 +257,7 @@
 									<div class="tab-content1">
 										<div class="listbox">
 											<div class="listbox-centent">
-												<a v-for="item in examinees" v-if="item.cId=='23'" :href="url+item.eId">{{item.name}}</a>
+												<a v-for="item in examinees" v-if="item.cId=='23'" :href="url+item.eId"><span>{{item.name}}</span></a>
 											</div>
 										</div>
 									</div>
@@ -265,7 +266,7 @@
 									<div class="tab-content1">
 										<div class="listbox">
 											<div class="listbox-centent">
-												<a v-for="item in examinees" v-if="item.cId=='43'" :href="url+item.eId">{{item.name}}</a>
+												<a v-for="item in examinees" v-if="item.cId=='43'" :href="url+item.eId"><span>{{item.name}}</span></a>
 											</div>
 										</div>
 									</div>
@@ -274,7 +275,7 @@
 									<div class="tab-content1">
 										<div class="listbox">
 											<div class="listbox-centent">
-												<a v-for="item in examinees" v-if="item.cId=='44'" :href="url+item.eId">{{item.name}}</a>
+												<a v-for="item in examinees" v-if="item.cId=='44'" :href="url+item.eId"><span>{{item.name}}</span></a>
 											</div>
 										</div>
 									</div>	
@@ -283,7 +284,7 @@
 									<div class="tab-content1">
 										<div class="listbox">
 											<div class="listbox-centent">
-												<a v-for="item in examinees" v-if="item.cId=='46'" :href="url+item.eId">{{item.name}}</a>
+												<a v-for="item in examinees" v-if="item.cId=='46'" :href="url+item.eId"><span>{{item.name}}</span></a>
 											</div>
 										</div>
 									</div>	
@@ -292,7 +293,7 @@
 									<div class="tab-content1">
 										<div class="listbox">
 											<div class="listbox-centent">
-												<a v-for="item in examinees" v-if="item.cId=='51'" :href="url+item.eId">{{item.name}}</a>
+												<a v-for="item in examinees" v-if="item.cId=='51'" :href="url+item.eId"><span>{{item.name}}</span></a>
 											</div>
 										</div>
 									</div>	
@@ -301,7 +302,7 @@
 									<div class="tab-content1">
 										<div class="listbox">
 											<div class="listbox-centent">
-												<a v-for="item in examinees" v-if="item.cId=='52'" :href="url+item.eId">{{item.name}}</a>
+												<a v-for="item in examinees" v-if="item.cId=='52'" :href="url+item.eId"><span>{{item.name}}</span></a>
 											</div>
 										</div>
 									</div>	
@@ -310,7 +311,7 @@
 									<div class="tab-content1">
 										<div class="listbox">
 											<div class="listbox-centent">
-												<a v-for="item in examinees" v-if="item.cId=='53'" :href="url+item.eId">{{item.name}}</a>
+												<a v-for="item in examinees" v-if="item.cId=='53'" :href="url+item.eId"><span>{{item.name}}</span></a>
 											</div>
 										</div>
 									</div>	
@@ -319,7 +320,7 @@
 									<div class="tab-content1">
 										<div class="listbox">
 											<div class="listbox-centent">
-												<a v-for="item in examinees" v-if="item.cId=='61'" :href="url+item.eId">{{item.name}}</a>
+												<a v-for="item in examinees" v-if="item.cId=='61'" :href="url+item.eId"><span>{{item.name}}</span></a>
 											</div>
 										</div>
 									</div>	
@@ -328,7 +329,7 @@
 									<div class="tab-content1">
 										<div class="listbox">
 											<div class="listbox-centent">
-												<a v-for="item in examinees" v-if="item.cId=='62'" :href="url+item.eId">{{item.name}}</a>
+												<a v-for="item in examinees" v-if="item.cId=='62'" :href="url+item.eId"><span>{{item.name}}</span></a>
 											</div>
 										</div>
 									</div>	
@@ -337,7 +338,7 @@
 									<div class="tab-content1">
 										<div class="listbox">
 											<div class="listbox-centent">
-												<a v-for="item in examinees" v-if="item.cId=='63'" :href="url+item.eId">{{item.name}}</a>
+												<a v-for="item in examinees" v-if="item.cId=='63'" :href="url+item.eId"><span>{{item.name}}</span></a>
 											</div>
 										</div>
 									</div>	
@@ -346,7 +347,7 @@
 									<div class="tab-content1">
 										<div class="listbox">
 											<div class="listbox-centent">
-												<a v-for="item in examinees" v-if="item.cId=='15'" :href="url+item.eId">{{item.name}}</a>
+												<a v-for="item in examinees" v-if="item.cId=='15'" :href="url+item.eId"><span>{{item.name}}</span></a>
 											</div>
 										</div>
 									</div>	
@@ -355,7 +356,7 @@
 									<div class="tab-content1">
 										<div class="listbox">
 											<div class="listbox-centent">
-												<a v-for="item in examinees" v-if="item.cId=='45'" :href="url+item.eId">{{item.name}}</a>
+												<a v-for="item in examinees" v-if="item.cId=='45'" :href="url+item.eId"><span>{{item.name}}</span></a>
 											</div>
 										</div>
 									</div>	
@@ -364,7 +365,7 @@
 									<div class="tab-content1">
 										<div class="listbox">
 											<div class="listbox-centent">
-												<a v-for="item in examinees" v-if="item.cId=='54'" :href="url+item.eId">{{item.name}}</a>
+												<a v-for="item in examinees" v-if="item.cId=='54'" :href="url+item.eId"><span>{{item.name}}</span></a>
 											</div>
 										</div>
 									</div>	
@@ -373,7 +374,7 @@
 									<div class="tab-content1">
 										<div class="listbox">
 											<div class="listbox-centent">
-												<a v-for="item in examinees" v-if="item.cId=='64'" :href="url+item.eId">{{item.name}}</a>
+												<a v-for="item in examinees" v-if="item.cId=='64'" :href="url+item.eId"><span>{{item.name}}</span></a>
 											</div>
 										</div>
 									</div>	
@@ -382,7 +383,7 @@
 									<div class="tab-content1">
 										<div class="listbox">
 											<div class="listbox-centent">
-												<a v-for="item in examinees" v-if="item.cId=='65'" :href="url+item.eId">{{item.name}}</a>
+												<a v-for="item in examinees" v-if="item.cId=='65'" :href="url+item.eId"><span>{{item.name}}</span></a>
 											</div>
 										</div>
 									</div>	
@@ -391,7 +392,7 @@
 									<div class="tab-content1">
 										<div class="listbox">
 											<div class="listbox-centent">
-												<a v-for="item in examinees" v-if="item.cId=='81'" :href="url+item.eId">{{item.name}}</a>
+												<a v-for="item in examinees" v-if="item.cId=='81'" :href="url+item.eId"><span>{{item.name}}</span></a>
 											</div>
 										</div>
 									</div>	
@@ -400,7 +401,7 @@
 									<div class="tab-content1">
 										<div class="listbox">
 											<div class="listbox-centent">
-												<a v-for="item in examinees" v-if="item.cId=='82'" :href="url+item.eId">{{item.name}}</a>
+												<a v-for="item in examinees" v-if="item.cId=='82'" :href="url+item.eId"><span>{{item.name}}</span></a>
 											</div>
 										</div>
 									</div>	
@@ -409,7 +410,7 @@
 									<div class="tab-content1">
 										<div class="listbox">
 											<div class="listbox-centent">
-												<a v-for="item in examinees" v-if="item.cId=='71'" :href="url+item.eId">{{item.name}}</a>
+												<a v-for="item in examinees" v-if="item.cId=='71'" :href="url+item.eId"><span>{{item.name}}</span></a>
 											</div>
 										</div>
 									</div>	
@@ -439,13 +440,12 @@
 		 <script>
 			$(function(){
 				$("#side").load("side3.html",function(){
-					getlogin();
+                    getlogin();					
 			 		$("#icon6").attr("src","img/icon6_6.png");
 			 	});
 			})
 		</script>
-		<script src="js/scale.js"></script>
-		<script src="js/public.js"></script>
+		
 		<script type="text/javascript">
 			var articleTitles = [];
 			var url1= geturl();
@@ -472,8 +472,6 @@
 				}
 			})
 		</script>
-		
 
-	
 	</body>
 </html>

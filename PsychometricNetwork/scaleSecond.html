@@ -7,10 +7,12 @@
 		<link rel="stylesheet" type="text/css" href="css/style.css" />
 		<link rel="stylesheet" type="text/css" href="css/scale.css" />
 		<link rel="stylesheet" type="text/css" href="css/Safari.css" />
+		<script src=""></script>
 		<script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
 		<script src="https://cdn.jsdelivr.net/npm/vue"></script>
 		<script src="js/jquery.min.js"></script>
 		<script src="js/public.js"></script>
+		<script src="js/scaleSecond.js"></script>
 	</head>
 	<body>
 		<div class="main">
@@ -58,51 +60,8 @@
 			</div>
 		</div>
 		
-
-        <script>
-			$(function(){
-				$("#side").load("side.html",function(){
-					getlogin();
-			 		$("#icon2").attr("src","img/icon2_2.png");
-			 	});
-			})
-		</script>
 		
 		<script>
-			window._bd_share_config={
-		      "common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"16"},
-		      "share":{},
-		      "image":{"viewList":["qzone","tsina","tqq","renren","weixin"],"viewText":"分享到：","viewSize":"16"},  
-		      "selectShare":{"bdContainerClass":null,"bdSelectMiniList":["qzone","tsina","tqq","renren","weixin"]}
-		    };
-		    with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src=
-		      'http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
-
-		    function getQueryString(name) {
-			    var reg = new RegExp('(^|&)' + name + '=([^&]*)(&|$)', 'i');
-			    var r = window.location.search.substr(1).match(reg);
-			    if (r != null) {
-			        return unescape(r[2]);
-			    }
-			    return null;
-			}
-
-			$(function(){ 
-				var articlePk = getQueryString("articlePk");
-				$.ajax({
-					"url": "http://192.168.1.145:8886/scale/get/article",
-					"data":{"articlePk":articlePk},
-					"datatype": "json",
-					"success": function(result){
-						vm.articleTitle = result.data.articleTitle;
-						vm.articleContent = result.data.articleContent;
-//						console.log(vm.articleTitle)
-//						console.log(vm.articleContent)
-					}
-				})
-			})
-		　　 
-
 			var vm = new Vue({
 				el: "#right",
 				data: {
@@ -111,7 +70,6 @@
 				},
 				methods:{}
 			})
-
 		</script>
 	</body>
 </html>

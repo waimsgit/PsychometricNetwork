@@ -7,6 +7,9 @@
 		<link rel="stylesheet" type="text/css" href="css/style.css" />
 		<link rel="stylesheet" type="text/css" href="css/scale.css" />
 		<link rel="stylesheet" type="text/css" href="css/Safari.css" />
+		<script src="js/jquery.min.js"></script>
+		<script src="js/scale.js"></script>
+		<script src="js/public.js"></script>
 		<script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
 		<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 		<script src="js/vue.min.js"></script>
@@ -209,20 +212,19 @@
 			</div>
 		</div>
 		
-		<script src="js/jquery.min.js"></script>
-		<script src="js/scale.js"></script>
-		<script src="js/public.js"></script>
+		
 		<!--引入公共部分的js-->
 		<script>
-			$(function(){
-				$("#side").load("side2.html",function(){
-					getlogin();
-			 		$("#icon2").attr("src","img/icon2_2.png");
-			 	});
-			})
+		     //引入公共部分侧导航及头部
+			$("#side").load("side2.html",function(){
+				getlogin();
+		 		$("#icon2").attr("src","img/icon2_2.png");
+		    });
 		</script>
+		
 		<script type="text/javascript">
-			var articleTitles = [];
+		//查看详细的量表介绍
+        var articleTitles = [];
 			var url1=geturl();
 			$(function(){ 
 				$.ajax({
@@ -243,7 +245,7 @@
 				methods:{
 					
 				}
-			})
+		})
 		</script>
 	</body>
 </html>

@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 	<head>
 		<meta charset="UTF-8">
 		<title>文献</title>
@@ -14,6 +13,10 @@
 		<script src="js/jquery.min.js"></script>
 		<script src="js/public.js"></script>
 		<script src="js/page1.js"></script>	
+		<script src="js/literature.js"></script>
+		 <script src="js/modernizr.custom.js"></script>
+		<!--选项卡js-->
+		<script src="js/cbpFWTabs.js"></script>
 	</head>
 
 	<body>
@@ -58,14 +61,13 @@
 							    <span class="jiantou"></span>
 								<a href="scale.html">量表 ></a> 
 								<span>文献</span>
-							</p>
-							
-							
+							</p>	
 						</div>
+						
 						<div class="sousuo">
 								<img src="img/committeesousuo.png" alt="" />
 							    <input type="text" placeholder="请输入要搜索的关键词"/>	
-						    </div>
+						</div>
 					</div>
 				</div>
 
@@ -159,25 +161,12 @@
 			</div>
 		</div>
 
-		<!--引入公共部分的js-->
-		<script>
-			$(function(){
-				$("#side").load("side2.html",function(){
-					getlogin();
-			 		$("#icon2").attr("src","img/icon2_2.png");
-			 	});
-			})
-			
-		</script>
-        <script src="js/modernizr.custom.js"></script>
-		<!--选项卡js-->
-		<script src="js/cbpFWTabs.js"></script>
+       
 		<script>
 			(function() {
 				[].slice.call(document.querySelectorAll('.tabs')).forEach(function(el) {
 					new CBPFWTabs(el);
-				});
-                
+				})
 			})();
 		</script>
 		<script>
@@ -301,7 +290,6 @@
 			];
 			var datas3=[
 			    {"did":1,"href":"http://47.104.147.26:8088/examples/webster'sIntelligenceProfession.pdf","left": "韦氏智力与职业","right1": "骄阳智心","img1": "img/literature1.png","right2": "500","img2": "img/literature2.png","right3": "2小时前",},			   
-			    
 			];
 			var datas4=[
 				{"did":1,"href":"http://47.104.147.26:8088/examples/magneticResonance.pdf","left": "磁共振检测技术","right1": "骄阳智心","img1": "img/literature1.png","right2": "300","img2": "img/literature2.png","right3": "2小时前",},
@@ -318,5 +306,4 @@
 			];
 		</script>
 	</body>
-
 </html>

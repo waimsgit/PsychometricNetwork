@@ -1,7 +1,3 @@
-/**
- * Created by zzg on 2017/4/26.
- */
-
 var  page = {
     "pageId":"",
     "data":null,

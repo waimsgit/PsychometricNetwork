@@ -1,0 +1,157 @@
+/*侧导航选中*/
+.sidebar>ul>li:nth-of-type(3){
+	background:#1d7aee;
+	box-shadow: 0px 0px 13px 0px rgba(147,178,224,0.5);
+}
+.sidebar>ul>li:nth-of-type(3)>a{
+	color:white;
+}
+.sidebar>ul>li:nth-of-type(3)>a:hover{
+	color:white;
+}
+
+.content{
+	width:80%;
+	margin:120px auto;
+}
+/*系统消息*/
+.contentTitle{
+	width:100%;
+	height:24px;
+}
+.contentTitle2{
+	margin-top:100px;
+}
+.contentTitle>h3{
+	display:inline-block;
+	font-size: 18px;
+	color:#201e1e;
+	text-align: center;
+	line-height: 24px;
+	float:left;
+}
+.contentTitle>h3>span{
+	display:inline-block;
+	width:7px;
+	height:24px;
+	background:#1d7aee;
+	margin-right: 24px;
+	float:left;
+}
+
+/*系统消息框*/
+.btn1-content,.btn2-content{
+	display:none;
+}
+.btn1,.btn2{
+	font-size: 12px;
+	border: none;
+    outline: none;
+    padding: 3px 6px;
+    color: gray;
+    float: right;
+    margin-top: 16px;
+    background: none;
+}
+.contentCenter{
+	width:100%;
+	margin-top:40px;
+}
+
+.contentCenters1,.contentCenters2{
+	width:100%;
+	height:130px;
+	margin:0 auto;
+	margin-top:20px;
+	box-shadow: 6px 8px 6px 0px rgba(197,212,233,0.5);
+	border-radius:4px;
+}
+.contentCenters1{
+	background: white;
+}
+.contentCenters2{
+	background:#f9f9f9;
+}
+
+/*未读或已读*/
+.contentCenters1_left,.contentCenters2_left{
+	float:left;
+	width:12%;
+	height:20px;
+	margin:55px 30px;
+}
+.contentCenters1_left>span:nth-of-type(1),.contentCenters2_left>span:nth-of-type(1){
+	display:inline-block;
+	width:8px;
+	height:8px;
+	border-radius:50%;
+}
+.contentCenters1_left>span:nth-of-type(1){
+	background: red;
+}
+.contentCenters2_left>span:nth-of-type(1){
+	background: green;
+}
+.contentCenters1_left>span:nth-of-type(2),.contentCenters2_left>span:nth-of-type(2){
+	margin-left:40px;
+	font-size: 14px;
+}
+.contentCenters2_left>span:nth-of-type(2){
+	color:gray;
+}
+
+
+/*订单完成或待支付*/
+.contentCenters1_middle,.contentCenters2_middle{
+	width:58%;
+	height:100px;
+	float:left;
+	margin:15px 0;
+}
+.contentCenters1_middle>h4,.contentCenters2_middle>h4{
+	width:100%;
+	height:50px;
+	line-height:50px;
+	overflow:hidden;
+	font-size: 16px;
+}
+.contentCenters2_middle>h4{
+	color:gray;
+}
+.contentCenters1_middle>p,.contentCenters2_middle>p{
+	width:100%;
+	height:50px;
+	line-height:50px;
+	overflow:hidden;
+	color:gray;
+}
+.contentCenters1_middle>h4>a,.contentCenters1_middle>p>a,.contentCenters2_middle>h4>a,.contentCenters2_middle>p>a{
+	color:#1D7AEE;
+	text-decoration: underline;
+}
+
+/*订单生成时间*/
+.contentCenters1_right,.contentCenters2_right{
+	width:16%;
+	height:20px;
+	line-height: 20px;
+	float:left;
+	color:gray;
+	margin:80px 0 30px 0;
+}
+.contentCenters_right>button{
+	width:50px;
+	height:24px;
+	background: rgb(50,189,60);
+	color:white;
+	border:none;
+	outline: none;
+	position:absolute;
+	bottom:16px;
+	left:20%;
+}
+.contentCenters_right>img{
+	position:absolute;
+	bottom:16px;
+	left:60%;
+}
