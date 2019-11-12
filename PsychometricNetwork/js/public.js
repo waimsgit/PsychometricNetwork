@@ -6,6 +6,7 @@ function geturl(){
 
 
 function getlogin(){
+	console.log("getlogin!!!!");
 	var islogin = false;
 	var username;
 	islogin = window.localStorage.getItem("isLogin");
@@ -14,7 +15,9 @@ function getlogin(){
 	if(jsonuser){
 		username = jsonuser.nickname;
 	}
-	if(islogin){
+	console.log(islogin)
+	if(islogin == "true"){
+		console.log("进入了 true!")
 		$("#userinf").html('<div class="right-top-right2" id="userbox" >'+
 								'<a href=""> <span>'+ username +'</span> <img src="img/indexgrade.png"/> </a>'+
 								'<div id="userinfo">'+

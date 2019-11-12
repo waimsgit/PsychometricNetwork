@@ -157,47 +157,20 @@
 	   		var imgpath = $("#iepsyimg").attr("src");
 	   		var title = $("#iepsytitle").text();
 	   		var price = $("#price").text();
-	   		var xmlhttp=null;  
-	   		
-			function createXMLHTTPReaquest(){  
-					if(window.XMLHttpRequest){  
-					   xmlhttp=new XMLHttpRequest()  
-					}else if(window.ActiveXObject){  
-					   xmlhttp=new ActiveXObject("Microsoft.XMLHTTP")  
-					}  
-			}  
-			
-			function ajaxFunction(){
-			   var xmlHttp;
-			   try{ // Firefox, Opera 8.0+, Safari
-			        xmlHttp=new XMLHttpRequest();
-			    }
-			    catch (e){
-			       try{// Internet Explorer
-			             xmlHttp=new ActiveXObject("Msxml2.XMLHTTP");
-			          }
-			        catch (e){
-			          try{
-			             xmlHttp=new ActiveXObject("Microsoft.XMLHTTP");
-			          }
-			          catch (e){}
-			          }
-			    }
-			    return xmlHttp;
-			 }
-			
+			var token = localStorage.getItem("token");
+			if(token == undefined || token == ""){
+				alert("请先登陆！");
+				window.open("register_1.html"); 
+				return ;
+			}
 	   		$.ajax({
 				type:"post",
 				url:url1+"/scale/post/order",
 				data:{"scoureId":id, "orderAmount":vm.scoure.price},
 				dataType:"json",
-				async:true, //异步请求
-//				complete: function(XMLHttpRequest, textStatus){
-//			        isPost = false;
-//			    },
+				async:true,
 				beforeSend: function(request) {
-					console.log(request);
-		        	request.setRequestHeader("token",localStorage.getItem("token"));
+		        		request.setRequestHeader("token",localStorage.getItem("token"));
 		        },
 				success:function (result){
 					if(result.status == 200){
