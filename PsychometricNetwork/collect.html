@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>课程</title>
+		<link rel="stylesheet" type="text/css" href="css/commone.css" />
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<link rel="stylesheet" type="text/css" href="css/Safari.css" />
+		<link rel="stylesheet" type="text/css" href="css/curriculum.css" />
+		<link rel="stylesheet" type="text/css" href="css/collect.css" />
+		<script src="js/jquery.min.js"></script>
+		<script src="js/public.js"></script>
+	</head>
+	<body>
+		<div class="main">
+			<div class="container">
+				<!--左侧导航内容-->
+			    <div id="side"></div>
+				
+				<!--右侧内容-->
+				<div class="right">
+					<div class="content">
+						<!--订单管理  系统消息-->
+						<div class="contentTitle">
+							<h3><span></span>收藏</h3>
+						</div>
+						
+						<!--订单详情-->
+						<div class="contentCenter">
+							<p>视频<span>（4）</span></p>
+							<div class="contentCenter1">
+								<img src="img/videosecond1.png" alt="" />
+								<h4>抑郁症：一种认知治疗方法</h4>
+								<ul>
+									<li>主讲老师：周辰</li>
+									<li>课时：6课时</li>
+								</ul>
+								<a href="">查看</a>
+							</div>
+							<div class="contentCenter1">
+								<img src="img/videosecond2.png" alt="" />
+								<h4>抑郁症：一种认知治疗方法</h4>
+								<ul>
+									<li>主讲老师：周辰</li>
+									<li>课时：6课时</li>
+								</ul>
+								<a href="">查看</a>
+							</div>
+							<div class="contentCenter1">
+								<img src="img/videosecond3.png" alt="" />
+								<h4>抑郁症：一种认知治疗方法</h4>
+								<ul>
+									<li>主讲老师：周辰</li>
+									<li>主讲老师：周辰</li>
+								</ul>
+								<a href="">查看</a>
+							</div>
+							<div class="contentCenter1">
+								<img src="img/videosecond1.png" alt="" />
+								<h4>抑郁症：一种认知治疗方法</h4>
+								<ul>
+									<li>主讲老师:周辰周辰周辰</li>
+									<li>课时：6课时</li>
+								</ul>
+								<a href="">查看</a>
+							</div>
+						</div>
+						
+						<div class="contentCenter2">
+							<p class="contentCenter2_lefttitle">文献<span>（5）</span></p>
+							<p class="contentCenter2_righttitle">资讯<span>（0）</span></p>
+							<div class="contentCenter2_left">
+								<div>
+									<ul>
+										<li><a href=""><span>积极心理学视角</span><span>作者：网无尘</span><img src="img/literature2.png" alt="" /></a></li>
+										<li></li>
+										<li></li>
+										<li></li>
+									</ul>
+								</div>
+							</div>
+							
+							<div class="contentCenter2_right">
+								<p>您尚未收藏任何资讯</p>
+							</div>
+						</div>
+
+					</div>  <!--end   content-->
+				</div>   <!--end   right-->
+				
+				<div class="clear"></div>
+				
+			</div>   <!--end   container-->
+		</div>   <!--end   main-->
+		
+		<!--版权-->
+		<div class="right-footer">
+			<div class="right-footer-content">
+				骄阳智心 版权所有 2010-2019&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;京ICP备17000866&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;京公网安备11010802023632号
+			</div>
+		</div>
+		
+
+		<!--引入公共部分的js-->
+		<script>
+			$(function(){
+				$("#side").load("sideuser.html",function(){
+					getlogin();
+			 		$("#icon4").attr("src","img/iconuser4_4.png");
+			 	});
+			})
+		</script>
+	</body>
+</html>

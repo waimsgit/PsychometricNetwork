@@ -1,0 +1,112 @@
+/*侧导航选中*/
+.sidebar>ul>li:nth-of-type(2){
+	background:#1d7aee;
+	box-shadow: 0px 0px 13px 0px rgba(147,178,224,0.5);
+}
+.sidebar>ul>li:nth-of-type(2)>a{
+	color:white;
+}
+.sidebar>ul>li:nth-of-type(2)>a:hover{
+	color:white;
+}
+
+.content{
+	width:80%;
+	margin:120px auto;
+}
+/*我的课程*/
+.contentTitle{
+	width:100%;
+	height:24px;
+}
+.contentTitle>h3{
+	display:inline-block;
+	font-size: 18px;
+	color:#201e1e;
+	text-align: center;
+	line-height: 24px;
+	float:left;
+}
+.contentTitle>h3>span{
+	display:inline-block;
+	width:7px;
+	height:24px;
+	background:#1d7aee;
+	margin-right: 24px;
+	float:left;
+}
+
+/*课程*/
+.contentCenter{
+	width:100%;
+	margin:0 auto;
+	margin-top:30px;
+}
+.contentCenter1{
+	width:21%;
+	float:left;
+	background: white;
+	padding:1%;
+	border-radius:4px;
+	box-shadow: 8px 8px 8px 0px rgba(197,212,233,0.5);
+}
+.contentCenter1:nth-of-type(2),.contentCenter1:nth-of-type(3),.contentCenter1:nth-of-type(4){
+	margin-left: 2.6%;
+}
+.contentCenter1>img{
+	display:block;
+	width:100%;
+	max-height: 140px;
+	margin:0 auto;
+	transition: all 0.6s;
+    -webkit-transition: all 0.6s;
+    -o-transition: all 0.6s;
+    -moz-transition: all 0.6s;
+    -ms-transition: all 0.6s;
+}
+.contentCenter1>h4{
+	height:28px;
+	line-height: 28px;
+	overflow: hidden;
+	font-size: 14px;
+	margin:20px 0;
+}
+.contentCenter1>ul{
+	height:20px;
+	line-height: 20px;
+	overflow: hidden;
+}
+.contentCenter1>ul>li{
+	font-size: 12px;
+	color:gray;
+	height:20px;
+	line-height: 20px;
+	overflow:hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.contentCenter1>ul>li:nth-of-type(1){
+    overflow: hidden;
+    float: left;
+    margin-right:16px;
+}
+.contentCenter1>ul>li:nth-of-type(2){
+    float: left;
+}
+.contentCenter1>ul>li:nth-of-type(3){
+    overflow: hidden;
+    float: left;
+    margin-left: 16px;
+}
+.contentCenter1>a{
+	float:right;
+	display:block;
+	width:66px;
+	height:24px;
+	line-height:24px;
+	text-align: center;
+	border-radius:20px;
+	background: #1D7AEE;
+	color:white;
+	margin-top:30px;
+}

@@ -8,74 +8,22 @@
 		<link rel="stylesheet" type="text/css" href="css/style.css" />
 		<link rel="stylesheet" type="text/css" href="css/wechslerPreschool.css" />
 		<link rel="stylesheet" type="text/css" href="css/Safari.css" />
-		
 		<!--日历css-->
 		<link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
 	    <link rel="stylesheet" type="text/css" href="css/simple-calendar-print.css" media="print">
 	    <link rel="stylesheet" type="text/css" href="css/simple-calendar.css">
+	    <script src="js/jquery.min.js"></script>
+	    <script src="js/public.js"></script>
+	    <script src="js/common.js"></script>
 	</head>
 
 	<body>
 		<div class="container">
 			<!--左边导航内容-->
-			<div class="left">
-				<div class="left-content">
-					<!--logo-->
-					<div class="left-top">
-						<img src="img/logo.png" />
-					</div>
-
-					<!--导航-->
-					<div class="left-middle">
-						<div class="sidebar">
-							<ul>
-								<li>
-									<a href="pcIndex.html"><i class="fa fa-dashboard push"><img src="img/icon1.png" alt=""/></i>首&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;页<i class="fa fa-angle-right"></i></a><span class="hover"></span>
-								</li>
-								<li>
-									<a href="scale.html"><i class="fa fa-cog push"><img src="img/icon2.png" alt="" /></i>量&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;表<i class="fa fa-angle-right"></i></a><span class="hover"></span>
-								</li>
-								<li>
-									<a href="train.html"><i class="fa fa-cog push"><img src="img/icon6_6.png" alt=""/></i>培&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;训<i class="fa fa-angle-right"></i></a><span class="hover"></span>
-								</li>
-								<li>
-									<a href="information.html"><i class="fa fa-user push"><img src="img/icon3.png" alt="" /></i>资&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;讯<i class="fa fa-angle-right"></i></a><span class="hover"></span>
-								</li>
-								<li>
-									<a href="video.html"><i class="fa fa-user push"><img src="img/icon4.png" alt="" /></i>视&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;频<i class="fa fa-angle-right"></i></a><span class="hover"></span>
-								</li>
-								<li>
-									<a href="aboutusone.html"><i class="fa fa-cog push"><img src="img/icon5.png" alt="" /></i>关 于 我 们<i class="fa fa-angle-right"></i></a><span class="hover"></span>
-								</li>
-							</ul>
-						</div>
-
-					</div>
-
-					<!--登录-->
-					<div class="left-bottom">
-						<div class="left-bottom-content">
-							<!--<a href="register.html" class="denglu">登录</a>-->
-						</div>
-					</div>
-				</div>
-			</div>
+			<div id="side"></div>
 
 			<!--右侧内容-->
 			<div class="right">
-				<!--搜索及中英文切换区-->
-				<div class="right-top">
-					<div class="right-top-content">
-						<div class="right-top-right">
-							<img src="img/china.png" alt="" />
-						</div>
-						<div class="right-top-left">
-							<input type="text" />
-							<span>搜索</span>
-						</div>
-					</div>
-				</div>
-
 				<div class="banner">
 					<div class="banner-content">
 						<img src="img/trainbanner.png" alt="" style="max-height: 314px;"/>
@@ -238,8 +186,15 @@
 
 		</div>
 
-		<script src="js/jquery.min.js"></script>
-
+        <script>
+			$(function(){
+				$("#side").load("side.html",function(){
+					getlogin();
+			 		$("#icon2").attr("src","img/icon2_2.png");
+			 	});
+			})
+		</script>
+        
         <!--日历-->
 		<script type="text/javascript" src="js/simple-calendarASQ.js"></script>
 	    <script>
