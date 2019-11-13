@@ -1,28 +1,28 @@
-.page{
+.page,.page2{
     list-style: none;
     clear:both;
 }
-.page>li{
+.page>li,.page2>li{
     float: left;
     padding: 5px 10px;
     cursor: pointer;
 }
-.page .pageItem{
+.page .pageItem,.page2 .pageItem{
     border: solid thin #DDDDDD;
     margin: 5px;
 }
-.page .pageItemActive{
+.page .pageItemActive,.page2 .pageItemActive{
     border: solid thin #1d7aee;
     margin: 5px;
     background-color:#1d7aee;;
     color:white;
 }
-.page .pageItem:hover{
+.page .pageItem:hover,.page2 .pageItem:hover{
     border: solid thin #0099FF;
     background-color: #0099FF;
     color:white;
 }
-.page .pageItemDisable{
+.page .pageItemDisable,.page2 .pageItemDisable{
     border: solid thin #DDDDDD;
     margin: 5px;
     background-color: #DDDDDD;

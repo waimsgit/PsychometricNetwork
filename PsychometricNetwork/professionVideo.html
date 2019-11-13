@@ -137,21 +137,6 @@
 		</script>
 
 	   <script>
-	   	function createXmlHttpRequest(){
-			   varxmlHttp;
-			   try{    //Firefox, Opera 8.0+, Safari
-			           xmlHttp=newXMLHttpRequest();
-			    }catch (e){
-			           try{    //Internet Explorer
-			                  xmlHttp=newActiveXObject("Msxml2.XMLHTTP");
-			            }catch (e){
-			                  try{
-			                          xmlHttp=newActiveXObject("Microsoft.XMLHTTP");
-			                  }catch (e){} 
-			           }
-			    }
-			   returnxmlHttp;
-	    }
 	   	function createOrder(){
 	   		var id = getQueryString("id");
 	   		var imgpath = $("#iepsyimg").attr("src");
