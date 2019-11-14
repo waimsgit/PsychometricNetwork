@@ -7,6 +7,7 @@
 		<link rel="stylesheet" type="text/css" href="css/style.css" />
 		<link rel="stylesheet" type="text/css" href="css/Safari.css" />
 		<link rel="stylesheet" type="text/css" href="css/curriculum.css" />
+		<script src="https://cdn.jsdelivr.net/npm/vue"></script>
 		<script src="js/jquery.min.js"></script>
 		<script src="js/public.js"></script>
 	</head>
@@ -25,46 +26,16 @@
 						</div>
 						
 						<!--订单详情-->
-						<div class="contentCenter">
-							<div class="contentCenter1">
-								<img src="img/videosecond1.png" alt="" />
-								<h4>抑郁症：一种认知治疗方法</h4>
+						<div class="contentCenter" id="sources">
+							<div class="contentCenter1" v-for="item in sources">
+								<img :src="'http://www.iepsy.com/'+item.img" alt="" />
+								<h4>{{item.title}}</h4>
 								<ul>
-									<li>共10节</li>
+									<li>¥ {{item.orderAmount}}</li>
 									<li>|</li>
 									<li>周辰</li>
 								</ul>
-								<a href="">查看</a>
-							</div>
-							<div class="contentCenter1">
-								<img src="img/videosecond2.png" alt="" />
-								<h4>抑郁症：一种认知治疗方法</h4>
-								<ul>
-									<li>共100000节</li>
-									<li>|</li>
-									<li>周辰</li>
-								</ul>
-								<a href="">查看</a>
-							</div>
-							<div class="contentCenter1">
-								<img src="img/videosecond3.png" alt="" />
-								<h4>抑郁症：一种认知治疗方法</h4>
-								<ul>
-									<li>共1节</li>
-									<li>|</li>
-									<li>周辰</li>
-								</ul>
-								<a href="">查看</a>
-							</div>
-							<div class="contentCenter1">
-								<img src="img/videosecond1.png" alt="" />
-								<h4>抑郁症：一种认知治疗方法</h4>
-								<ul>
-									<li>共100节</li>
-									<li>|</li>
-									<li>周辰周辰周辰周辰周辰</li>
-								</ul>
-								<a href="">查看</a>
+								<a :href="'course.html?id='+item.orderId">查看</a>
 							</div>
 						</div>
 
@@ -86,10 +57,40 @@
 
 		<!--引入公共部分的js-->
 		<script>
+			var vm = new Vue({
+				el: "#sources",
+				data: {
+					sources:{}
+				},
+				methods:{
+					
+				}
+			});
 			$(function(){
 				$("#side").load("sideuser.html",function(){
 					getlogin();
 			 		$("#icon2").attr("src","img/iconuser2_2.png");
+			 	});
+			 	var url1 = geturl();
+			 	$.ajax({
+			 		type:"post",
+			 		url:url1 +"/scale/post/sources",
+			 		async:true,
+			 		beforeSend: function(request) {
+				        	request.setRequestHeader("token",localStorage.getItem("token"));
+			        },
+			        success:function(result){
+			        		if(result.status == 200){
+			        			console.log("success")
+			        			vm.sources=result.data;
+			        		}else{
+			        			alert(result.message);
+			        		}
+			        },
+			        error:function(result){
+			        		console.log(result);
+			        		//alert(result.message);
+			        }
 			 	});
 			})
 		</script>

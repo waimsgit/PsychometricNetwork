@@ -1,0 +1,65 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="IE=edge" >
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no"/>
+  <title>Aliplayer Functions</title>
+  <link rel="stylesheet" href="https://g.alicdn.com/de/prismplayer/2.8.2/skins/default/aliplayer-min.css" />
+  <script src="js/jquery.js"></script>
+  <script src="js/public.js"></script>
+  <script type="text/javascript" charset="utf-8" src="https://g.alicdn.com/de/prismplayer/2.8.2/aliplayer-min.js"></script>
+</head>
+<body>
+<div id="player-con"></div>
+<script>
+	function getQueryString(name) {
+	    var reg = new RegExp('(^|&)' + name + '=([^&]*)(&|$)', 'i');
+	    var r = window.location.search.substr(1).match(reg);
+	    if (r != null) {
+	        return unescape(r[2]);
+	    }
+	    return null;
+	}
+	var vid = getQueryString("val");
+	var url1 = geturl();
+	var playauth;
+	var video;
+	var token = localStorage.getItem("token");
+	console.log(token)
+	if(token == undefined || token == ""){
+		alert("请先登陆！");
+		window.open("register_1.html"); 
+		
+	}
+	$.ajax({
+		type:"post",
+		url:url1+"/scale/get/video/"+vid,
+		dataTpe:"json",
+		async:false,
+		beforeSend: function(request) {
+			request.setRequestHeader("token",localStorage.getItem("token"));
+	    },
+		success:function(result){
+			console.log("ajax")
+			video = result.data;
+		}
+	});
+	playauth = video.playauth;
+	  var player = new Aliplayer({
+	    id: "player-con",
+	    vid: vid,
+	    playauth:playauth,
+	    width: "100%",
+	    height: "100%",
+	    cover: video.img,
+	    /* To set an album art, you must set 'autoplay' and 'preload' to 'false' */
+	    encryptType:1,
+	    autoplay: false,
+	    preload: false,
+	    isLive: false
+	  }, function (player) {
+	    console.log("The player is created");
+	  });
+</script>
+</body>
+</html>
