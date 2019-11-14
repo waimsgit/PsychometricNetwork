@@ -4,7 +4,7 @@
 	box-shadow:none;
 }
 .sidebar>ul>li:nth-of-type(2)>a{
-	color:#1D7AEE;
+	color:black;
 }
 .sidebar>ul>li:nth-of-type(2)>a:hover{
 	color:#1D7AEE;
@@ -20,10 +20,6 @@
 .sidebar>ul>li:nth-of-type(4)>a:hover{
 	color:white;
 }
-.contentCenter{
-	height:350px;
-	margin-bottom: 70px;
-}
 .contentCenter>p{
 	font-size: 14px;
 	color:gray;
@@ -35,6 +31,7 @@
 /*资讯和文献的收藏*/
 .contentCenter2{
 	width:100%;
+	clear:both;
 }
 .contentCenter2_lefttitle{
 	width:49%;
@@ -42,7 +39,7 @@
     font-size: 14px;
 	color:gray;
 	font-weight: bold;
-	margin-bottom:16px;
+	margin:50px 0 30px 0;
 }
 .contentCenter2_righttitle{
 	width:49%;
@@ -50,11 +47,12 @@
     font-size: 14px;
 	color:gray;
 	font-weight: bold;
-	margin-bottom:16px;
+	margin:50px 0 30px 0;
 }
 .contentCenter2_left{
 	width:49%;
 	height:300px;
+	margin-bottom: 80px;
 	overflow: hidden;
 	float:left;
 	background: white;
@@ -99,6 +97,7 @@
 }
 .section-left>span{
 	display:inline-block;
+	width:24%;
 	float:left;
 	overflow: hidden;
 	white-space: nowrap;
@@ -118,6 +117,7 @@
 .contentCenter2_right{
 	width:49%;
 	height:300px;
+	margin-bottom: 80px;
 	overflow: hidden;
 	float:right;
 	background: white;

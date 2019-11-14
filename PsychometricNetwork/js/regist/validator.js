@@ -50,7 +50,7 @@ $kit.merge($kit.ui.Validator,
 			for(var i = 0; i < rules.length; i++) {
 				var rule = rules[i];
 				if(rule.notNull) {
-					if(/^\s*$/i.test(checkStr)) {
+					if(/^\s*$/i.test(checkStr)){
 						return rule.message;
 					}
 				} else if(rule.minLength) {

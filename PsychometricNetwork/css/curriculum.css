@@ -46,21 +46,25 @@
 	width:21%;
 	float:left;
 	background: white;
-	padding:1%;
+	padding:0.55% 1% 1% 1%;
 	border-radius:4px;
 	box-shadow: 8px 8px 8px 0px rgba(197,212,233,0.5);
 	margin: 1.4% 1%;
+}
+.contentCenter1>img:hover{
+	transform: scale(1.1);
 }
 .contentCenter1>img{
 	display:block;
 	width:100%;
 	max-height: 140px;
 	margin:0 auto;
-	transition: all 0.6s;
-    -webkit-transition: all 0.6s;
-    -o-transition: all 0.6s;
-    -moz-transition: all 0.6s;
-    -ms-transition: all 0.6s;
+    transition: all 1s linear;
+    transition: all 1s linear;
+    -webkit-transition: all 1s linear;
+    -o-transition: all 1s linear;
+    -moz-transition: all 1s linear;
+    -ms-transition: all 1s linear;
 }
 .contentCenter1>h4{
 	height:28px;

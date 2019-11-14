@@ -120,7 +120,8 @@
 .content1-bottom{
 	clear: both;
     width: 86%;
-    min-height: 134px;
+    height: auto!important;
+    min-height: 110px;
     background: white;
     padding: 30px 50px;
     border-radius: 8px;

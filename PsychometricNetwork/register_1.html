@@ -42,11 +42,6 @@
 							<input id="Email" name="Email" type="text" value="" v-model="email">
 							<span class="kitjs-validator" for="@Email" rules="[{notNull:true, message:'电子邮件不能为空'},{isEmail:true,message:'电子邮件格式不正确'}]"></span>
 							<span class="field-validation-valid" data-valmsg-for="Email" data-valmsg-replace="true"></span>
-							
-							<!--<input id="Email" name="Email" type="text" v-model="email" value="" class="emali" for="@Email" rules="[{notNull:true},{isEmail:true}]" class="field-validation-valid" data-valmsg-for="Email" data-valmsg-replace="true">
-							<div class="kitjs-validator" for="@Email" rules="[{notNull:true},{isEmail:true}]">
-							</div>-->
-							<!--<span class="field-validation-valid" data-valmsg-for="Email" data-valmsg-replace="true"></span>-->
 						</li>
 						<li>
 							<label for="Password">密码：</label>
@@ -66,7 +61,6 @@
 			骄阳智心 版权所有 2010-2019&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;京ICP备17000866&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;京公网安备11010802023632号
 		</div>
 		<script>
-//			$('.kitjs-validator').html('')
 			var url1=geturl();
 			var vm = new Vue({
 				el: "#registForm",
@@ -76,6 +70,8 @@
 				},
 				methods:{
 					"login":function(){
+						console.log(this.email);
+						console.log(this.password);
 						$.ajax({
 							"url": url1+"/scale/user/login",
 							"type":"post",
