@@ -1,0 +1,39 @@
+#page0{
+	height:20px;
+	line-height: 20px;
+	position: absolute;
+	right:6%;
+	bottom:6%;
+}
+.page{
+    list-style: none;
+    clear:both;
+}
+.page>ul{
+	text-align: right;
+}
+.page>li{
+    float: left;
+    cursor: pointer;
+    margin:0 4px;
+    text-align: right;
+    font-size: 12px;
+}
+.page>li:first-child{
+	color:black;
+}
+.page>li:last-child{
+	color:black;
+}
+.page .pageItem{
+    color:gray;
+}
+.page .pageItemActive{
+    color:#1D7AEE;
+}
+.page .pageItem:hover{
+    color:black;
+}
+.page .pageItemDisable{
+    color:gray;
+}

@@ -1,9 +1,12 @@
+*{margin:0;padding:0;}
 ul, ol, li {
 	margin: 0;
 	padding: 0;
 	text-align: left;
 	vertical-align: top;
+	list-style: none;
 }
+
 li * {
 	vertical-align: middle;
 }
@@ -36,14 +39,6 @@ table td {
 label {
 	cursor: pointer;
 }
-.kitjs-validator {
-	display: none;
-	margin-left: 1em;
-}
-.validator-show {
-	display: inline;
-	-webkit-animation: validator-show-anim 300ms 1 ease-in;
-}
 @-webkit-keyframes validator-show-anim {
 	0% {
 		opacity: 0;
@@ -53,10 +48,8 @@ label {
 	}
 }
 
-.header{
-	width:100%;
-	height:;
-	
+.headerlogo,.headerlogo>img{
+	height:63px;
 }
 
 
@@ -66,12 +59,20 @@ label {
     overflow:hidden;
     margin:0;
 	padding:0;
-    opacity: 0.8;
-    padding-top: 200px;
-    background: url(../img/trainbanner.png) no-repeat center
+    position: relative;
 }
-ol {
-	list-style: none;
+.regist-mainbanner{
+	width:100%;
+	height:850px;
+	position:relative;
+}
+.regist-mainbanner>img{
+	width:100%;
+	height:850px;
+	position: absolute;
+	top:0;
+	left:0;
+	z-index:1;
 }
 #regist-main .cap {
 	position: absolute;
@@ -86,15 +87,33 @@ ol {
 	min-height:320px; 
 	height:379px; 
 	overflow:hidden;
-	position: relative;
+	position: absolute;
+	bottom:-1px;
+    right: 5%;
+	z-index:3;
 	border: 1px solid #d7d7d7;
 	box-shadow: 0px 0px 14px 0px rgba(147,178,224,0.5);
 	background-color: #fff;
-	width: 370px;
+	width: 330px;
 	margin:0 auto;
 	color: #818181;
-	padding:24px;
+	padding:50px;
 	font-size: 14px;
+}
+#registForm>h4{
+	height:24px;
+	line-height: 24px;
+	font-size: 18px;
+	color:black;
+	margin-bottom: 30px;
+}
+#registForm>h4>span{
+	display: inline-block;
+	width:6px;
+	height:24px;
+	float:left;
+	margin-right:10px;
+	background: #1D7AEE;
 }
 #registForm li a:hover{
 	text-decoration: none;
@@ -131,27 +150,59 @@ ol {
 }
 #registForm li input {
 	width: 100%;
-	height: 33px;
-	line-height: 33px;
+	height: 34px;
+	line-height: 34px;
 	border: 1px solid #ccd1d5;
 	display: block;
-	border-radius: 5px;
 }
 #registForm input.btn-submit {
 	display: block;
 	overflow: hidden;
-	width: 88px;
-	height: 30px;
-	line-height: 30px;
+	width: 100%;
+	height: 34px;
+	line-height: 34px;
 	cursor: pointer;
 	color:white;
-    margin-left: 141px;
-    margin-top: 30px;
+    margin-top: 34px;
     border: 0;
     padding: 0px;
     outline: none;
     background: #1d7aee;
 }
+
+.redist{
+	display:block;
+	width: 100%;
+	height: 34px;
+	line-height:34px;
+	text-align: center;
+	color:#1D7AEE;
+    margin-top:10px;
+    border:1px solid lightgray;
+    text-decoration:none !important;
+}
+.forget{
+	width:100%;
+	display:block;
+	text-align: right;
+	margin-top:20px;
+	color:gray;
+}
+
+/*忘记密码登录*/
+.redistlogin{
+	display:block;
+	width: 100%;
+	height: 34px;
+	line-height:34px;
+	text-align: center;
+	color:white;
+    margin-top:30px;
+    background: #1D7AEE;
+    text-decoration:none !important;
+}
+
+
 #registForm input.btn-submit:hover {
 	background-position: 0 -30px;
 }
@@ -168,18 +219,22 @@ ol {
 .field-validation-error {
 	color: #BF1623;
 }
-.kitjs-validator {
+
+.kitjs-validator{
 	color: #BF1623;
+	/*width:100%;
+	height:34px;
+	border:1px solid red !important;
+	margin-top:-36px;*/
+}
+.validator-show{
+	display: inline;
+	-webkit-animation: validator-show-anim 300ms 1 ease-in;
+}
+.email{
+	border:1px solid gray !important;
 }
 
-.redist{
-	display:block;
-	width:100%;
-	font-size: 14px;
-	text-align: right;
-	color:red;
-	margin-top: 15px;
-}
     
 /*注册页面获取邮箱验证码*/
 #registForm li #verification{
@@ -216,3 +271,39 @@ ol {
 }
 
 
+/*版权*/
+.footer{
+	width:100%;
+	clear:both;
+	margin-top:30px;
+	text-align: center;
+	color:gray;
+}
+
+
+
+/*适配*/
+@media (max-width:1920px) {
+	.regist-mainbanner,.regist-mainbanner>img{
+		height:850px !important;
+	}
+    #registForm {
+		padding:50px !important;
+    }
+}
+@media (max-width:1680px) {
+	.regist-mainbanner,.regist-mainbanner>img{
+		height:800px !important;
+	}
+    #registForm {
+		padding:40px !important;
+    }
+}
+@media (max-width:1600px) {
+	.regist-mainbanner,.regist-mainbanner>img{
+		height:760px !important;
+	}
+    #registForm {
+		padding:40px !important;
+    }
+}

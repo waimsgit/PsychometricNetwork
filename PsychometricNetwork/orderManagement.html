@@ -95,7 +95,7 @@
 			 		url:url1 +"/scale/get/orders",
 			 		async:true,
 			 		beforeSend: function(request) {
-						console.log(request);
+//						console.log(request);
 				        	request.setRequestHeader("token",localStorage.getItem("token"));
 			        },
 			        success:function(result){
