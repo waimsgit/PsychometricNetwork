@@ -6,8 +6,7 @@ ul, ol, li {
 	vertical-align: top;
 	list-style: none;
 }
-
-li * {
+li{
 	vertical-align: middle;
 }
 .indent {
@@ -16,9 +15,6 @@ li * {
 .footer {
 	text-align: right;
 	font-size: 12px;
-}
-h1 img {
-	vertical-align: middle;
 }
 a{text-decoration: none;}
 a:link{text-decoration:none;   /* 指正常的未被访问过的链接*/}
@@ -36,7 +32,7 @@ a:hover{text-decoration:none;/*指鼠标在链接*/}a:active{text-decoration:non
 		display: none;
 }
 .validator-show{
-	display: inline;
+	display:block;
 	-webkit-animation: validator-show-anim 300ms 1 ease-in;
 }
 table td {
@@ -53,32 +49,31 @@ label {
 		opacity: 1;
 	}
 }
-
-.headerlogo,.headerlogo>img{
-	height:63px;
+/*logo图*/
+.headerlogo>img{
+	width: 150px;
+    height: 36px;
+    margin: 14px 38px;
+}
+.mainbox,.regist-mainbanner,.bannerbox,.bannerbox>img{
+	width:100%;
+	height:770px;
+}
+.mainbox{
+	position: relative;
+}
+/*背景图*/
+.bannerbox{
+	background: url(../img/registerbanner.png) no-repeat;
+	background-size: cover;
 }
 
-
-#regist-main {
+/*登录注册框*/
+#regist-main{
     width: 100%;
-    height:100%;
     overflow:hidden;
     margin:0;
 	padding:0;
-    position: relative;
-}
-.regist-mainbanner{
-	width:100%;
-	height:850px;
-	position:relative;
-}
-.regist-mainbanner>img{
-	width:100%;
-	height:850px;
-	position: absolute;
-	top:0;
-	left:0;
-	z-index:1;
 }
 #regist-main .cap {
 	position: absolute;
@@ -88,23 +83,19 @@ label {
 	left: 400px;
 	width: 370px;
 }
-#registForm {
-	height:auto!important; 
-	min-height:320px; 
-	height:379px; 
+
+/*注册*/
+#registForm{
+	width:380px;
+	height:500px; 
+	padding:30px 40px;
+	margin:0 auto;
 	overflow:hidden;
-	position: absolute;
-	bottom:-1px;
-    right: 5%;
 	z-index:3;
 	border: 1px solid #d7d7d7;
-	box-shadow: 0px 0px 14px 0px rgba(147,178,224,0.5);
-	background-color: #fff;
-	width: 330px;
-	margin:0 auto;
-	color: #818181;
-	padding:34px 50px;
 	font-size: 14px;
+	background: white;
+	margin-top:100px;
 }
 #registForm>h4{
 	height:24px;
@@ -150,9 +141,10 @@ label {
 #regist-main a:hover {
 	text-decoration: underline;
 }
-#registForm li {
+#registForm li{
 	line-height: 30px;
-	margin-top: 10px;
+	margin-top: 6px;
+	height:54px;
 }
 #registForm li input {
 	width: 100%;
@@ -160,13 +152,18 @@ label {
 	line-height: 30px;
 	border: 1px solid #ccd1d5;
 	display: block;
+	text-indent:10px;
 }
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */color:#bcbcbc;}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */color:#bcbcbc;}
+::-moz-placeholder { /* Mozilla Firefox 19+ */color:#bcbcbc;}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */color:#bcbcbc;}
 #registForm input.btn-submit {
 	display: block;
 	overflow: hidden;
 	width: 100%;
-	height: 30px;
-	line-height: 30px;
+	height:40px;
+	line-height: 40px;
 	cursor: pointer;
 	color:white;
     margin-top: 30px;
@@ -175,12 +172,11 @@ label {
     outline: none;
     background: #1d7aee;
 }
-
 .redist{
 	display:block;
 	width: 100%;
-	height: 30px;
-	line-height:30px;
+	height:40px;
+	line-height:40px;
 	text-align: center;
 	color:#1D7AEE;
     margin-top:10px;
@@ -194,8 +190,134 @@ label {
 	margin-top:20px;
 	color:gray;
 }
+/*注册页面获取邮箱验证码*/
+#registForm li #verification{
+	width:60%;
+	float:left;
+}
+#registForm li #btn{
+	width:30%;
+	float:right;
+	background: #1D7AEE;
+	color:white;
+	border:none;
+	text-indent:0px;
+}
+#registForm li #agree{
+	display: inline-block;
+  float:left;
+}
+#registForm li #agree input{
+	width:14px;
+	height:26px;
+	float:left;
+}
+#registForm li #agree2{
+	display:inline-block;
+	float:left;
+	color:red;
+}
+
+
+
+/*同意隐私政策*/
+.agreeregister{
+	width:100%;
+	height:20px;
+	line-height: 20px;
+	margin-top:10px;
+	color:#bcbcbc;
+}
+.agreeregister>input{
+	display:inline-block;
+	margin-right:4px;
+	float:left;
+	line-height: 20px;
+	margin-top:3px;
+}
+.agreeregister>span{
+	float:left;
+	margin-right:4px;
+}
+.agreeregister>a{
+	float:left;
+	color:#595959;
+}
+
+
+/*登录页面*/
+#registForm1{ 
+    width:330px;
+	height:360px; 
+	padding:40px 30px;
+	margin:0 auto;
+	overflow:hidden;
+	position: absolute;
+	top:20%;
+    right: 5%;
+	z-index:3;
+	border: 1px solid #d7d7d7;
+	font-size: 14px;
+	background: white;
+}
+#registForm1>h4{
+	height:24px;
+	line-height: 24px;
+	font-size: 18px;
+	color:black;
+	margin-bottom: 30px;
+}
+#registForm1>h4>span{
+	display: inline-block;
+	width:6px;
+	height:24px;
+	float:left;
+	margin-right:10px;
+	background: #1D7AEE;
+}
+#registForm1 li{
+	line-height: 30px;
+	margin-top: 6px;
+	height:54px;
+}
+#registForm1 li input {
+	width: 100%;
+	height: 30px;
+	line-height: 30px;
+	border: 1px solid #ccd1d5;
+	display: block;
+	text-indent:10px;
+}
+/*登录按钮*/
+#registForm1 input.btn-submit {
+	display: block;
+	overflow: hidden;
+	width: 100%;
+	height:40px;
+	line-height: 40px;
+	cursor: pointer;
+	color:white;
+    margin-top: 30px;
+    border: 0;
+    padding: 0px;
+    outline: none;
+    background: #1d7aee;
+}
+
 
 /*忘记密码登录*/
+.forgetregisterForm{ 
+	height:354px !important;
+	padding:40px 30px !important;
+	position: absolute;
+	top:8% !important;
+    right: 5%;
+	z-index:3;
+	border: 1px solid #d7d7d7;
+	font-size: 14px;
+	background: white;
+	margin-top:0px !important;
+}
 .redistlogin{
 	display:block;
 	width: 100%;
@@ -220,48 +342,48 @@ label {
 	width: 298px;
 	top: 301px;
 	left: 40px;
-	color: #BF1623;
+	color: #ff1111;
 }
 .field-validation-error {
-	color: #BF1623;
+	color: #ff1111;
 }
 
 .kitjs-validator{
-	color: #BF1623;
+	color: #ff1111;
+	font-size: 12px;
+	height: 18px;
+    line-height: 18px;
+    padding: 4px 0;
 }
     
-/*注册页面获取邮箱验证码*/
-#registForm li #verification{
-	width:60%;
-	float:left;
-}
-#registForm li #btn{
-	width:30%;
-	float:right;
-}
-#registForm li #agree{
-	display: inline-block;
-  float:left;
-}
-#registForm li #agree input{
-	width:14px;
-	height:26px;
-	float:left;
-}
-#registForm li #agree2{
-	display:inline-block;
-	float:left;
-	color:red;
-}
+
 /*隐私声明页面*/
 .content{
-	width:370px;
+	width:50%;
 	height:auto!important; 
 	min-height:320px; 
 	height:380px; 
 	overflow:hidden;
 	background: pink;
 	margin:0 auto;
+	background: white;
+	padding:30px 50px;
+	font-size: 12px;
+	line-height: 24px;
+}
+.content>h4{
+	text-align: center;
+	font-size: 16px;
+	padding:30px 0;
+	margin-bottom:30px;
+	width:100%;
+	border-bottom: 1px solid #e1e1e1;
+}
+.content>h6{
+	margin-top:30px;
+}
+.content>p{
+	color:#646464;
 }
 
 
@@ -271,41 +393,112 @@ label {
 	clear:both;
 	margin-top:30px;
 	text-align: center;
-	color:gray;
+	color:#bebebe;
+	line-height: 24px;
+	margin-bottom: 40px;
 }
 
 
 
 /*适配*/
 @media (min-width:750px) {
-	.regist-mainbanner,.regist-mainbanner>img{
-		height:650px !important;
+	.mainbox,.regist-mainbanner,.bannerbox,.bannerbox>img{
+		height:380px !important;
 	}
-    #registForm {
-		padding:30px 40px !important;
-    }
+	#registForm1{
+		width: 286px !important;
+	    height: 320px !important;
+	    padding: 20px !important;
+	    position: absolute;
+	    top: 2% !important;
+	    right: 5% !important;
+	}
+	.forgetregisterForm{
+		width: 286px !important;
+	    height: 330px !important;
+	    padding: 20px !important;
+	    position: absolute;
+	    top: 1% !important;
+	    right: 5% !important;
+	}
+	.redistlogin{
+		margin-top: 8px !important;
+	}
 }
+@media (min-width:1280px) {
+	.mainbox,.regist-mainbanner,.bannerbox,.bannerbox>img{
+		height:520px !important;
+	}
+	#registForm1{
+		width:300px !important;
+	    height: 340px !important;
+	    padding: 20px !important;
+	    position: absolute;
+	    top:13% !important;
+	    right: 5% !important;
+	}
+	.forgetregisterForm{
+		width:300px !important;
+	    height: 370px !important;
+	    padding: 20px !important;
+	    position: absolute;
+	    top:11% !important;
+	    right: 5% !important;
+	}
+}
+
+@media (min-width:1366px) {
+	.mainbox,.regist-mainbanner,.bannerbox, .bannerbox>img{
+		height:580px !important;
+	}
+	#registForm1{
+		top:17% !important;
+	}
+	.forgetregisterForm{
+		top:15% !important;
+	}
+}
+
 @media (min-width:1440px) {
-	.regist-mainbanner,.regist-mainbanner>img{
-		height:690px !important;
+	.mainbox,.regist-mainbanner,.bannerbox, .bannerbox>img{
+		height:700px !important;
+	}
+	#registForm1{
+		top:22% !important;
+	}
+	.forgetregisterForm{
+		top:19% !important;
 	}
 }
+
 @media (min-width:1600px) {
-	.regist-mainbanner,.regist-mainbanner>img{
-		height:760px !important;
+	.mainbox,.regist-mainbanner,.bannerbox, .bannerbox>img{
+		height:730px !important;
+	}
+	#registForm1{
+		width: 330px !important;
+	    height: 360px !important;
+	    padding: 40px 30px !important;
+		top:20% !important;
+	}
+	.forgetregisterForm{
+		width: 330px !important;
+	    height: 360px !important;
+	    padding: 40px 30px !important;
+		top:20% !important;
 	}
 }
 @media (min-width:1680px) {
-	.regist-mainbanner,.regist-mainbanner>img{
-		height:800px !important;
-	}
 }
 @media (min-width:1920px) {
-	.regist-mainbanner,.regist-mainbanner>img{
-		height:850px !important;
+	.mainbox,.regist-mainbanner,.bannerbox,.bannerbox>img{
+		height:770px !important;
 	}
-    #registForm {
-		padding:34px 50px !important;
-    }
+	#registForm1{
+		top:21% !important;
+	}
+	.forgetregisterForm{
+		top:21% !important;
+	}
 }
 
