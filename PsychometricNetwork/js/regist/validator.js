@@ -83,7 +83,7 @@ $kit.merge($kit.ui.Validator,
 					if(rule.fn.call(this, checkStr)) {
 						return rule.message;
 					}
-				}
+				} 
 			}
 			return false;
 		}

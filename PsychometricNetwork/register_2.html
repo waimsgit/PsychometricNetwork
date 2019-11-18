@@ -2,6 +2,7 @@
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<title>账号注册</title>
 		<link rel="stylesheet" href="css/resister_12.css" />
 		<script src="js/regist/kit.js"></script>
 		<script src="https://cdn.jsdelivr.net/npm/vue"></script>
@@ -67,11 +68,14 @@
 								<span class="field-validation-valid" data-valmsg-for="ConfirmPassword" data-valmsg-replace="true"></span>
 							</li>
 						</ol>
-						
+
 						<div class="registError"></div>
-						<input type="submit" @click="login" value="注册" class="btn-submit">
+						<input type="submit" @click="login" value="注册" class="btn-submit" id="submit">
 						<a href="register_1.html" class="redist">登录</a>
-						<p class="agreeregister"><input type="checkbox" name="checkbox1" value="同意注册"/><span>已阅读并同意  </span><a href="agree.html">隐私政策</a></p>
+						<li class="agreeregister">
+							<input type="checkbox" id="checkbox" name="rule" v-model="checkVal" value="同意隐私声明"/><span>已阅读并同意  </span><a href="agree.html">隐私政策</a>
+						</li>
+						
 					</div>
 				</div>
 	    </div>
@@ -122,8 +126,16 @@
 			} 
 			timer = setTimeout(function() { 
 				settime(val) 
-				},1000) 
+				},1000) 		
 		} 
+		
+		//验证隐私声明	         	        
+		$("#submit").click(function(){
+		    if(!document.getElementById("checkbox").checked) {
+                alert("请核对信息,并勾选隐私声明!");
+                return false;
+            }
+		});
 		
 		var url1=geturl();
 		var vm = new Vue({
@@ -133,14 +145,15 @@
 				"email": "",
 				"code":"",
 				"password":"",
-				"ConfirmPassword":""
+				"ConfirmPassword":"",
+				"checkVal":""
 			},
 			methods:{
 				"login":function(){
 					$.ajax({
 						"url": url1+"/scale/save/user",
 						"datatype": "json",
-						"data":{"nickname":this.username,"code":this.code,"email":this.email,"password":this.password},
+						"data":{"nickname":this.username,"code":this.code,"email":this.email,"password":this.password,"checkbox":this.checkVal},
 						"success": function(result){
 							if(result.status == 200){
 								window.location.href="register_1.html";
