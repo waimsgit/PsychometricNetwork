@@ -1,14 +1,14 @@
 var  page2 = {
     "pageId":"",
-    "data2":null,
+    "data":null,
     "maxshowpageitem":5,//最多显示的页码个数
     "pagelistcount":9,//每一页显示的内容条数
       "init":function(listCount,currentPage,options){
-      	this.data2=options2.data2,
+      	this.data=options2.data,
       	this.pageId=options.id,
     this.maxshowpageitem=options.maxshowpageitem,//最多显示的页码个数
     this.pagelistcount=options.pagelistcount//每一页显示的内容条数
-    page2.initPage(listCount,currentPage);
+    page.initPage(listCount,currentPage);
   },
   /**
      * 初始化数据处理
@@ -16,7 +16,7 @@ var  page2 = {
      * @param currentPage 当前页
      */
   "initPage":function(listCount,currentPage){
-        var maxshowpageitem = page2.maxshowpageitem;
+        var maxshowpageitem = page.maxshowpageitem;
         if(maxshowpageitem!=null&&maxshowpageitem>0&&maxshowpageitem!=""){
             page.maxshowpageitem = maxshowpageitem;
         }
@@ -24,7 +24,7 @@ var  page2 = {
         if(pagelistcount!=null&&pagelistcount>0&&pagelistcount!=""){
             page.pagelistcount = pagelistcount;
         }   
-        page2.pagelistcount=pagelistcount;
+        page.pagelistcount=pagelistcount;
         if(listCount<0){
             listCount = 0;
         }
@@ -32,7 +32,7 @@ var  page2 = {
             currentPage=1;
         }
      
-        page2.setPageListCount(listCount,currentPage);
+        page.setPageListCount(listCount,currentPage);
    },
     /**
      * 初始化分页界面
@@ -44,7 +44,7 @@ var  page2 = {
             var pageCount = listCount%page.pagelistcount>0?parseInt(listCount/page.pagelistcount)+1:parseInt(listCount/page.pagelistcount);
         }
         var appendStr = page.getPageListModel(pageCount,currentPage);
-        $("#"+page2.pageId).html(appendStr);
+        $("#"+page.pageId).html(appendStr);
     },
     /**
      * 设置列表总量和当前页码
@@ -55,24 +55,24 @@ var  page2 = {
         listCount = parseInt(listCount);
         currentPage = parseInt(currentPage);
         page.initWithUl(listCount,currentPage);
-        page2.initPageEvent(listCount);
-        page2.viewPage(currentPage,listCount,page2.pagelistcount,page2.data2)
+        page.initPageEvent(listCount);
+        page.viewPage(currentPage,listCount,page.pagelistcount,page.data2)
 //      fun(currentPage);
     },
     //页面显示功能
      "viewPage":function (currentPage,listCount,pagelistcount,data2){
             var NUM=listCount%pagelistcount==0?listCount/pagelistcount:parseInt(listCount/pagelistcount)+1;
             if(currentPage==NUM){
-                var result=data2.slice((currentPage-1)* pagelistcount,data.length);
+                var result=data.slice((currentPage-1)* pagelistcount,data.length);
             }
             else{
-                var result=data2.slice((currentPage-1)*pagelistcount,(currentPage-1)*pagelistcount+pagelistcount);
+                var result=data.slice((currentPage-1)*pagelistcount,(currentPage-1)*pagelistcount+pagelistcount);
             }
-            options.callBack(result);
+            options2.callBack(result);
     },
     "initPageEvent":function(listCount){
-        $("#"+page2.pageId +">li[class='pageItem']").on("click",function(){
-            page2.setPageListCount(listCount,$(this).attr("page-data2"),page2.fun);
+        $("#"+page.pageId +">li[class='pageItem']").on("click",function(){
+            page.setPageListCount(listCount,$(this).attr("page-data2"),page.fun);
         });
     },
     "getPageListModel":function(pageCount,currentPage){
@@ -97,7 +97,7 @@ var  page2 = {
                 miniPageNumber=1;
             }
         }
-        var showPageNum = parseInt(page2.maxshowpageitem);
+        var showPageNum = parseInt(page.maxshowpageitem);
         if(pageCount<showPageNum){
             showPageNum = pageCount;
         }

@@ -89,7 +89,7 @@
 							</div>
 							
 							<div class="contentCenter2_right">
-								<p>您尚未收藏任何资讯</p>
+								<!--<p>您尚未收藏任何资讯</p>-->
 								<section id="section-circlefill-2">
 										<div class="info_fl" id="content2">	
 											<div id="sectionbox2" class="sectionbox">
@@ -128,8 +128,8 @@
 		</script>
 		
 		
+		<!--文献收藏-->
 		<script>
-			//文献收藏
 			var datas=[
 			    {"did":1,"href":"http://47.104.147.26:8088/examples/siou001.pdf","left": "斯-欧非言语智力测验在特殊群体中的应用","middle": "作者：张厚粲","right": ""},
 			    {"did":2,"href":"http://47.104.147.26:8088/examples/siou003.pdf","left": "斯-欧非言语智力测验评介","middle": "作者：徐建平","right": ""},
@@ -145,7 +145,6 @@
 			    {"did":12,"href":"pcIndex.html","left": "积极心理学视角下中学生心理健康现状及影响因素探讨","middle": "作者：王五辰","right": ""},
 			    {"did":13,"href":"pcIndex.html","left": "积极心理学视角下中学生心理健康现状及影响因素探讨","middle": "作者：王五辰","right": ""},
 			    {"did":14,"href":"pcIndex.html","left": "积极心理学视角下中学生心理健康现状及影响因素探讨","middle": "作者：王五辰","right": ""},
-			    {"did":15,"href":"pcIndex.html","left": "积极心理学视角下中学生心理健康现状及影响因素探讨","middle": "作者：王五辰","right": ""},
 		    ];
 			var options={
 					"id":"page0",//显示页码的元素
@@ -172,40 +171,45 @@
 				};
 			page.init(datas.length,1,options);
 			
-			//资讯收藏
-//			var datas2=[
-//			    {"did":1,"href":"pcIndex.html","left": "心理学视角下中学生心理健康现状及影响因素探讨","middle": "作者：王五辰"},
-//			    {"did":2,"href":"pcIndex.html","left": "积极心理学视角下中学生心理健康现状及影响因素探讨","middle": "作者：王五辰"},
-//			    {"did":3,"href":"pcIndex.html","left": "积极心理学视角下中学生心素探讨","middle": "作者：王五辰"},
-//			    {"did":4,"href":"pcIndex.html","left": "积极心理学视角下中学生心理健康现状及影响因素探讨","middle": "作者：王五辰"},
-//			    {"did":5,"href":"pcIndex.html","left": "积极心健康现状及影响因素探讨","middle": "作者：王五辰"},
-//			    {"did":6,"href":"pcIndex.html","left": "积极心理学视角下中学响因素探讨","middle": "作者：王五辰"},
-//			    {"did":7,"href":"pcIndex.html","left": "积极心理学视角下中学生心理健康现状及影响因素探讨","middle": "作者：王五辰"},
-//			    {"did":8,"href":"pcIndex.html","left": "积极心理学视角下中学生心理健康现状及影响因素探讨","middle": "作者：王五辰"},
-//		    ];
-//			var options2={
-//					"id":"page2",//显示页码的元素
-//					"data2":datas2,//显示数据
-//				    "maxshowpageitem":9,//最多显示的页码个数
-//				    "pagelistcount":5,//每页显示数据个数
-//				    "callBack":function(result){//返回datas数据
-//				    	var dHtml="";
-//				        for(var i=0;i<result.length;i++){
-//				            cHtml+="<li>"+ 
-//				            '<div class="sectionboxf">'+
-//							    '<a href="'+ result[i].href+'" class="href">'+
-//									'<div class="section-left section-left2">' +
-//										'<p>'+result[i].left+'</p>'+
-//										'<span>'+result[i].middle+'</span>'+
-//									'</div>' +
-//								'</a>'+
-//							'</div>'+
-//				            "</li>";//处理数据
-//				        }
-//				        $("#demoContent2").html(dHtml);//将数据增加到页面中
-//				    }
-//				};
-//			page2.init(datas2.length,1,options2);
-		</script>
+			</script>
+			
+			<!--资讯收藏-->
+			<!--<script src="js/collectpage_2.js"></script>
+			<script>
+			var datas2=[
+			    {"did":1,"href":"pcIndex.html","left": "心理学视角下中学生心理健康现状及影响因素探讨","middle": "作者：王五辰"},
+			    {"did":2,"href":"pcIndex.html","left": "积极心理学视角下中学生心理健康现状及影响因素探讨","middle": "作者：王五辰"},
+			    {"did":3,"href":"pcIndex.html","left": "积极心理学视角下中学生心素探讨","middle": "作者：王五辰"},
+			    {"did":4,"href":"pcIndex.html","left": "积极心理学视角下中学生心理健康现状及影响因素探讨","middle": "作者：王五辰"},
+			    {"did":5,"href":"pcIndex.html","left": "积极心健康现状及影响因素探讨","middle": "作者：王五辰"},
+			    {"did":6,"href":"pcIndex.html","left": "积极心理学视角下中学响因素探讨","middle": "作者：王五辰"},
+			    {"did":7,"href":"pcIndex.html","left": "积极心理学视角下中学生心理健康现状及影响因素探讨","middle": "作者：王五辰"},
+			    {"did":8,"href":"pcIndex.html","left": "积极心理学视角下中学生心理健康现状及影响因素探讨","middle": "作者：王五辰"},
+		    ];
+			var options2={
+					"id":"page2",//显示页码的元素
+					"data":datas2,//显示数据
+				    "maxshowpageitem":9,//最多显示的页码个数
+				    "pagelistcount":5,//每页显示数据个数
+				    "callBack":function(result){//返回datas数据
+				    	var dHtml="";
+				        for(var i=0;i<result.length;i++){
+				            dHtml+="<li>"+ 
+				            '<div class="sectionboxf2">'+
+							    '<a href="'+ result[i].href+'" class="href">'+
+									'<div class="section-left section-left2">' +
+										'<p>'+result[i].left+'</p>'+
+										'<span>'+result[i].middle+'</span>'+
+									'</div>' +
+								'</a>'+
+							'</div>'+
+				            "</li>";//处理数据
+				        }
+				        $("#demoContent2").html(dHtml);//将数据增加到页面中
+				    }
+				    page.init(datas2.length,2,options2);
+				};
+			
+		</script>-->
 	</body>
 </html>

@@ -1,60 +1,203 @@
-<!DOCTYPE HTML>
-
+<!DOCTYPE html>
 <html>
+	<head>
+		<meta charset="UTF-8">
+		<title>文献</title>
+		<link rel="stylesheet" type="text/css" href="css/commone.css" />
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<!--<link rel="stylesheet" type="text/css" href="css/literature.css" />-->
+		<link rel="stylesheet" type="text/css" href="css/Safari.css" />
+		<link rel="stylesheet" type="text/css" href="css/demo.css" />
+		<link rel="stylesheet" type="text/css" href="css/tabs.css" />
+		<link rel="stylesheet" type="text/css" href="css/page.css" />
+		<link rel="stylesheet" type="text/css" href="css/colleatpage.css" />
+		<script src="js/jquery.min.js"></script>
+		<script src="js/public.js"></script>
+		<script src="js/page1.js"></script>	
+		<script src="js/literature.js"></script>
+		 <script src="js/modernizr.custom.js"></script>
+		<!--选项卡js-->
+		<script src="js/cbpFWTabs.js"></script>
+	</head>
 
- <head>
+	<body>
+		<div class="main">
+		<div class="container">
+			<!--左边导航内容-->
+			 <div id="side"></div>
 
-  <title> new document </title>  
+			<!--右侧内容-->
+			<div class="right">
+				<!--斯欧 韦氏 适应行为 罗夏墨迹 MMPI-->
+				<div class="content2">
+					<div class="content2-center">
+						<section>
+							<div class="tabs tabs-style-circlefill">
+								<nav>
+									<ul>
+										<li id='l1' class="sel">
+											<a href="#section-circlefill-1" class="icon icon-plug" ><span>测试1</span></a>
+										</li>
+										<li class="sel">
+											<a href="#section-circlefill-2" class="icon icon-gift"><span>测试2</span></a>
+										</li>
+									</ul>
+									
+									
+									<div>
+										<span>发布人</span>
+										<span>预览</span>
+										<span>预览量</span>
+										<span>发布时间</span>
+									</div>
+								</nav>
 
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>   
-  <script src="js/jquery.min.js"></script>
+								<div class="content-wrap">
+									<section id="section-circlefill-1">
+										<div class="info_fl" id="content">	                                      
+											<div id="sectionbox" class="sectionbox">
+												<ul id="demoContent0"></ul>
+											</div>
+										</div>
+										<ul class="page" id="page0"></ul>
+									</section>
+									<section id="section-circlefill-2">
+										<div class="info_fl" id="content">	
+											<div id="sectionbox" class="sectionbox">
+												<ul id="demoContent1"></ul>
+												
+											</div>
+										</div>
+										<ul class="page" id="page1"></ul>
+									</section>
+								</div>
+								
+							</div>
 
-  <script type="text/javascript">  
+						</section>
+						
 
-    
+					</div>
+					<!--content2-center结尾标签-->
+				</div>
+				<!--content2结尾标签-->
+			</div>
+			<!--right的 结尾标签-->
+			<div class="clear"></div>
+		</div>
+		<!--container的结尾标签-->
+		</div>    <!--main的结尾标签-->
+		<!--版权-->
+		<div class="right-footer">
+			<div class="right-footer-content">
+				骄阳智心 版权所有 2010-2019&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;京ICP备17000866&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;京公网安备11010802023632号
+			</div>
+		</div>
 
-    // 新窗口打开时弹出确认框，是否打开
-
-    function openWindow(){
-
-         var mydialog=confirm("是否打开");
-
-         if(mydialog==true){
-
-            var https , myhttp;
-
-                https = "http://www.imooc.com";
-
-                myhttp=prompt("请输入网址",https);
-
-                // 通过输入对话框，确定打开的网址，默认为 http：//www.imooc.com/
-
-             if(myhttp!=null){
-
-                  //打开的窗口要求，宽400像素，高500像素，无菜单栏、无工具栏。
-
-                 window.open(myhttp,'_blank',
-
-                 'width=400,height=500,
-
-                 menubar=no,toolbar=no');
-
-             }else;
-
-         }else;
-
-        }
-
-
-
-  </script> 
-
- </head> 
-
- <body> 
-
- <input type="button" value="新窗口打开网站" onclick="openWindow()" /> 
-
- </body>
-
+       
+		<script>
+			(function() {
+				[].slice.call(document.querySelectorAll('.tabs')).forEach(function(el) {
+					new CBPFWTabs(el);
+				})
+			})();
+		</script>
+		<script>
+			var _index=$('.tab-current').index();
+			$('.tabs li').on('click',function(){
+				var _index=$('.tab-current').index();
+				//console.log(_index);
+				if(_index==0){
+					datas=datas1;
+				}else if(_index==1){
+					datas=datas2;
+				}
+					 options={
+					"id":"page"+_index,//显示页码的元素
+					"data":datas,//显示数据
+				    "maxshowpageitem":3,//最多显示的页码个数
+				    "pagelistcount":10,//每页显示数据个数
+				    "callBack":function(result){//返回datas数据
+				    	//console.log(result);  //输出datas的数据
+				    	var cHtml="";
+				        for(var i=0;i<result.length;i++){
+				            cHtml+="<li>"+ 
+				            '<div class="sectionboxf">'+
+							    '<a href="'+ result[i].href+'" class="href">'+
+								'<div class="section-left">' +
+									'<p>'+result[i].left+'</p>'+
+								'</div>' +
+								'<div class="section-right">' +
+									'<p>' + result[i].right1 + '</p>' +
+									'<img src="img/literature1.png" alt="" />' +
+//									'<p>' + result[i].right2 + '</p>' +
+									
+									'<img src="img/eye.png" alt="" /> ' +
+									'<span>'+result[i].right2+'</span>'+
+									'<p>' + result[i].right3 + '</p>' +
+								'</div>' +
+								'</a>'+
+							'</div>'+
+				            "</li>";//处理数据
+				        }
+				        $("#demoContent"+_index).html(cHtml);//将数据增加到页面中
+				    }
+				};
+				   page.init(datas.length,1,options);
+			})
+			var datas1=[
+			    {"did":1,"href":"http://47.104.147.26:8088/examples/siou001.pdf","left": "斯-欧非言语智力测验在特殊群体中的应用","middle": "作者：张厚粲","right": ""},
+			    {"did":2,"href":"http://47.104.147.26:8088/examples/siou003.pdf","left": "斯-欧非言语智力测验评介","middle": "作者：徐建平","right": ""},
+			    {"did":3,"href":"http://47.104.147.26:8088/examples/siou005.pdf","left": "斯-欧非言语智力测验(6-40 岁)中国版(SON-R 6-40 中国版)","middle": "作者：张厚粲、徐建平与PeterJ.Tellegen、JacobA.Laros","right": ""},
+			    {"did":4,"href":"http://47.104.147.26:8088/examples/WPPSI-IV+ABAS-II_JY.pdf","left": "韦氏幼儿智力量表第四版中国版","middle": "联系：骄阳智心","right": ""},
+			    {"did":5,"href":"http://47.104.147.26:8088/examples/MMPI01.pdf","left": "明尼苏达多相人格测验（MMPI）简介","middle": "联系：骄阳智心","right": ""},
+			    {"did":6,"href":"pcIndex.html","left": "积极心理学视角下中学响因素探讨","middle": "作者：王五辰","right": ""},
+			    {"did":7,"href":"pcIndex.html","left": "积极心理学视角下中学生心理健康现状及影响因素探讨","middle": "作者：王五辰","right": ""},
+			    {"did":8,"href":"pcIndex.html","left": "积极心理学视角下中学生心理健康现状及影响因素探讨","middle": "作者：王五辰","right": ""},
+			    {"did":9,"href":"pcIndex.html","left": "积极心理学视角下中学生心理健康现状及影响因素探讨","middle": "作者：王五辰","right": ""},
+			    {"did":10,"href":"pcIndex.html","left": "积极心理学视角下中学生心理健康现状及影响因素探讨","middle": "作者：王五辰","right": ""},
+			    {"did":11,"href":"pcIndex.html","left": "积极心理学视角下中学生心理健康现状及影响因素探讨","middle": "作者：王五辰","right": ""},
+			    {"did":12,"href":"pcIndex.html","left": "积极心理学视角下中学生心理健康现状及影响因素探讨","middle": "作者：王五辰","right": ""},
+			    {"did":13,"href":"pcIndex.html","left": "积极心理学视角下中学生心理健康现状及影响因素探讨","middle": "作者：王五辰","right": ""},
+			    {"did":14,"href":"pcIndex.html","left": "积极心理学视角下中学生心理健康现状及影响因素探讨","middle": "作者：王五辰","right": ""},
+			];
+				
+				var options={
+				"id":"page0",//显示页码的元素
+				"data":datas1,//显示数据
+			    "maxshowpageitem":3,//最多显示的页码个数
+			    "pagelistcount":10,//每页显示数据个数
+			    "callBack":function(result){//返回datas数据
+			    	//console.log(result);  //输出datas的数据
+			    	var cHtml="";
+			        for(var i=0;i<result.length;i++){
+			            cHtml+="<li>"+ 
+			            '<div class="sectionboxf">'+
+							    '<a href="'+ result[i].href+'" class="href">'+
+									'<div class="section-left">' +
+										'<p>'+result[i].left+'</p>'+
+										'<span>'+result[i].middle+'</span>'+
+										'<img src="img/literature2.png"/>'+
+									'</div>' +
+								'</a>'+
+						'</div>'+
+			            "</li>";//处理数据
+			        }
+			        $("#demoContent0").html(cHtml);//将数据增加到页面中
+			    }
+			};
+			   page.init(datas1.length,1,options);			
+		</script>
+		
+		
+		<script>	
+			var datas2=[
+			    {"did":1,"href":"http://47.104.147.26:8088/examples/cognitiveStyle.pdf","left": "认知风格","right1": "骄阳智心","img1": "img/literature1.png","right2": "1000","img2": "img/eye.png","right3": "2小时前",},
+				{"did":2,"href":"http://47.104.147.26:8088/examples/cognitiveDisorder.pdf","left": "认知障碍","right1": "骄阳智心","img1": "img/literature1.png","right2": "200","img2": "img/literature2.png","right3": "2小时前",},
+				{"did":3,"href":"http://47.104.147.26:8088/examples/MMPI01.pdf","left": "明尼苏达多相人格测验（MMPI）简介","right1": "骄阳智心","img1": "img/literature1.png","right2": "400","img2": "img/literature2.png","right3": "2小时前",},
+				{"did":4,"href":"http://47.104.147.26:8088/examples/Rorschach01.pdf","left": "罗夏墨迹测验","right1": "骄阳智心","img1": "img/literature1.png","right2": "600","img2": "img/literature2.png","right3": "2小时前",},
+				
+			];
+		</script>
+	</body>
 </html>
