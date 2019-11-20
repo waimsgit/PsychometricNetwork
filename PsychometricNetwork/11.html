@@ -29,7 +29,7 @@
 			<!--右侧内容-->
 			<div class="right">
 				<!--斯欧 韦氏 适应行为 罗夏墨迹 MMPI-->
-				<div class="content2">
+				<div class="content2" style="margin-top: 100px;">
 					<div class="content2-center">
 						<section>
 							<div class="tabs tabs-style-circlefill">
@@ -38,22 +38,11 @@
 										<li id='l1' class="sel">
 											<a href="#section-circlefill-1" class="icon icon-plug" ><span>测试1</span></a>
 										</li>
-										<li class="sel">
-											<a href="#section-circlefill-2" class="icon icon-gift"><span>测试2</span></a>
-										</li>
 									</ul>
-									
-									
-									<div>
-										<span>发布人</span>
-										<span>预览</span>
-										<span>预览量</span>
-										<span>发布时间</span>
-									</div>
 								</nav>
 
 								<div class="content-wrap">
-									<section id="section-circlefill-1">
+									<section id="section-circlefill-1" class="content-current">
 										<div class="info_fl" id="content">	                                      
 											<div id="sectionbox" class="sectionbox">
 												<ul id="demoContent0"></ul>
@@ -61,11 +50,27 @@
 										</div>
 										<ul class="page" id="page0"></ul>
 									</section>
-									<section id="section-circlefill-2">
-										<div class="info_fl" id="content">	
+								</div>
+								
+							</div>
+						</section>
+						
+						
+						<section>
+							<div class="tabs tabs-style-circlefill">
+								<nav>
+									<ul>
+										<li id='l1' class="sel">
+											<a href="#section-circlefill-2" class="icon icon-gift"><span>测试2</span></a>
+										</li>
+									</ul>
+								</nav>
+
+								<div class="content-wrap">
+									<section id="section-circlefill-2" class="content-current">
+										<div class="info_fl" id="content">	                                      
 											<div id="sectionbox" class="sectionbox">
 												<ul id="demoContent1"></ul>
-												
 											</div>
 										</div>
 										<ul class="page" id="page1"></ul>
@@ -73,7 +78,6 @@
 								</div>
 								
 							</div>
-
 						</section>
 						
 
@@ -109,8 +113,6 @@
 				//console.log(_index);
 				if(_index==0){
 					datas=datas1;
-				}else if(_index==1){
-					datas=datas2;
 				}
 					 options={
 					"id":"page"+_index,//显示页码的元素
@@ -122,22 +124,15 @@
 				    	var cHtml="";
 				        for(var i=0;i<result.length;i++){
 				            cHtml+="<li>"+ 
-				            '<div class="sectionboxf">'+
+				             '<div class="sectionboxf">'+
 							    '<a href="'+ result[i].href+'" class="href">'+
-								'<div class="section-left">' +
-									'<p>'+result[i].left+'</p>'+
-								'</div>' +
-								'<div class="section-right">' +
-									'<p>' + result[i].right1 + '</p>' +
-									'<img src="img/literature1.png" alt="" />' +
-//									'<p>' + result[i].right2 + '</p>' +
-									
-									'<img src="img/eye.png" alt="" /> ' +
-									'<span>'+result[i].right2+'</span>'+
-									'<p>' + result[i].right3 + '</p>' +
-								'</div>' +
+									'<div class="section-left">' +
+										'<p>'+result[i].left+'</p>'+
+										'<span>'+result[i].middle+'</span>'+
+										'<img src="img/literature2.png"/>'+
+									'</div>' +
 								'</a>'+
-							'</div>'+
+						'</div>'+
 				            "</li>";//处理数据
 				        }
 				        $("#demoContent"+_index).html(cHtml);//将数据增加到页面中
@@ -161,18 +156,28 @@
 			    {"did":13,"href":"pcIndex.html","left": "积极心理学视角下中学生心理健康现状及影响因素探讨","middle": "作者：王五辰","right": ""},
 			    {"did":14,"href":"pcIndex.html","left": "积极心理学视角下中学生心理健康现状及影响因素探讨","middle": "作者：王五辰","right": ""},
 			];
-				
-				var options={
-				"id":"page0",//显示页码的元素
-				"data":datas1,//显示数据
-			    "maxshowpageitem":3,//最多显示的页码个数
-			    "pagelistcount":10,//每页显示数据个数
-			    "callBack":function(result){//返回datas数据
-			    	//console.log(result);  //输出datas的数据
-			    	var cHtml="";
-			        for(var i=0;i<result.length;i++){
-			            cHtml+="<li>"+ 
-			            '<div class="sectionboxf">'+
+			</script>
+			
+			
+			<script>
+			var _index=$('.tab-current').index();
+			$('.tabs li').on('click',function(){
+				var _index=$('.tab-current').index();
+				//console.log(_index);
+				if(_index==0){
+					datas=datas2;
+				}
+					 options={
+					"id":"page"+_index,//显示页码的元素
+					"data":datas,//显示数据
+				    "maxshowpageitem":3,//最多显示的页码个数
+				    "pagelistcount":10,//每页显示数据个数
+				    "callBack":function(result){//返回datas数据
+				    	//console.log(result);  //输出datas的数据
+				    	var cHtml="";
+				        for(var i=0;i<result.length;i++){
+				            cHtml+="<li>"+ 
+				             '<div class="sectionboxf">'+
 							    '<a href="'+ result[i].href+'" class="href">'+
 									'<div class="section-left">' +
 										'<p>'+result[i].left+'</p>'+
@@ -181,23 +186,29 @@
 									'</div>' +
 								'</a>'+
 						'</div>'+
-			            "</li>";//处理数据
-			        }
-			        $("#demoContent0").html(cHtml);//将数据增加到页面中
-			    }
-			};
-			   page.init(datas1.length,1,options);			
-		</script>
-		
-		
-		<script>	
+				            "</li>";//处理数据
+				        }
+				        $("#demoContent1"+_index).html(cHtml);//将数据增加到页面中
+				    }
+				};
+				   page.init(datas.length,1,options);
+			})
 			var datas2=[
-			    {"did":1,"href":"http://47.104.147.26:8088/examples/cognitiveStyle.pdf","left": "认知风格","right1": "骄阳智心","img1": "img/literature1.png","right2": "1000","img2": "img/eye.png","right3": "2小时前",},
-				{"did":2,"href":"http://47.104.147.26:8088/examples/cognitiveDisorder.pdf","left": "认知障碍","right1": "骄阳智心","img1": "img/literature1.png","right2": "200","img2": "img/literature2.png","right3": "2小时前",},
-				{"did":3,"href":"http://47.104.147.26:8088/examples/MMPI01.pdf","left": "明尼苏达多相人格测验（MMPI）简介","right1": "骄阳智心","img1": "img/literature1.png","right2": "400","img2": "img/literature2.png","right3": "2小时前",},
-				{"did":4,"href":"http://47.104.147.26:8088/examples/Rorschach01.pdf","left": "罗夏墨迹测验","right1": "骄阳智心","img1": "img/literature1.png","right2": "600","img2": "img/literature2.png","right3": "2小时前",},
-				
+			    {"did":1,"href":"http://47.104.147.26:8088/examples/siou001.pdf","left": "22222斯-欧非言语智力测验在特殊群体中的应用","middle": "作者：张厚粲","right": ""},
+			    {"did":2,"href":"http://47.104.147.26:8088/examples/siou003.pdf","left": "222斯-欧非言语智力测验评介","middle": "作者：徐建平","right": ""},
+			    {"did":3,"href":"http://47.104.147.26:8088/examples/siou005.pdf","left": "222斯-欧非言语智力测验(6-40 岁)中国版(SON-R 6-40 中国版)","middle": "作者：张厚粲、徐建平与PeterJ.Tellegen、JacobA.Laros","right": ""},
+			    {"did":4,"href":"http://47.104.147.26:8088/examples/WPPSI-IV+ABAS-II_JY.pdf","left": "韦氏幼儿智力量表第四版中国版","middle": "联系：骄阳智心","right": ""},
+			    {"did":5,"href":"http://47.104.147.26:8088/examples/MMPI01.pdf","left": "明尼苏达多相人格测验（MMPI）简介","middle": "联系：骄阳智心","right": ""},
+			    {"did":6,"href":"pcIndex.html","left": "222积极心理学视角下中学响因素探讨","middle": "作者：王五辰","right": ""},
+			    {"did":7,"href":"pcIndex.html","left": "22积极心理学视角下中学生心理健康现状及影响因素探讨","middle": "作者：王五辰","right": ""},
+			    {"did":8,"href":"pcIndex.html","left": "22积极心理学视角下中学生心理健康现状及影响因素探讨","middle": "作者：王五辰","right": ""},
+			    {"did":9,"href":"pcIndex.html","left": "22积极心理学视角下中学生心理健康现状及影响因素探讨","middle": "作者：王五辰","right": ""},
+			    {"did":10,"href":"pcIndex.html","left": "22积极心理学视角下中学生心理健康现状及影响因素探讨","middle": "作者：王五辰","right": ""},
+			    {"did":11,"href":"pcIndex.html","left": "22积极心理学视角下中学生心理健康现状及影响因素探讨","middle": "作者：王五辰","right": ""},
+			    {"did":12,"href":"pcIndex.html","left": "22积极心理学视角下中学生心理健康现状及影响因素探讨","middle": "作者：王五辰","right": ""},
+			    {"did":13,"href":"pcIndex.html","left": "22积极心理学视角下中学生心理健康现状及影响因素探讨","middle": "作者：王五辰","right": ""},
+			    {"did":14,"href":"pcIndex.html","left": "22积极心理学视角下中学生心理健康现状及影响因素探讨","middle": "作者：王五辰","right": ""},
 			];
-		</script>
+			</script>
 	</body>
 </html>

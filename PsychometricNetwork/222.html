@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<p>
+			<img src="img/eye.png" alt="" /><span>分享</span>
+			<P id="tol">
+				<img src="img/professionVideolike1.png" alt="" id="gray"/>
+			</p>
+			<p class="collect">收藏</p>
+		</p>
+		
+		<script src="js/jquery.js"></script>
+		<!--收藏-->
+		<script>
+			$('#tol').click(function(){
+				if($("#gray").attr('src')=='img/professionVideolike1.png'){
+					$(this).find('#gray').attr('src','img/professionVideolike2.png');
+				}else{
+					$(this).find('#gray').attr('src','img/professionVideolike1.png');
+				}
+			});
+		</script>
+		
+		
+		<p class="open"><button id="last">确认</button></p>
+		<script>
+			$("#last").click(function(){
+				var w=window.open();
+				setTimeout(function(){
+					w.location="http://www.baidu.com";
+				}, 1000);
+				
+				return false;
+			});
+		</script>
+		
+	</body>
+</html>

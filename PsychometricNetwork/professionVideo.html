@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 	<head>
 		<meta charset="UTF-8">
 		<title>专业视频</title>
@@ -84,7 +83,7 @@
 			
 				<div class="notarize">
 					<h5>是否生成订单？</h5>
-					<p class="open"><button onclick="createOrder()">确认</button></p>
+					<p class="open"><button onclick="createOrder()" id="last">确认</button></p>
 					<p class="close">取消</p>
 				</div>
 					
@@ -112,14 +111,14 @@
 			 	});
 			})
 		</script>
-		
+		<script src="js/jquery.js"></script>
 		<!--收藏-->
 		<script>
 			$('#tol').click(function(){
 				if($("#gray").attr('src')=='img/professionVideolike1.png'){
-					$(this).find('img').attr('src','img/professionVideolike2.png');
+					$(this).find('#gray').attr('src','img/professionVideolike2.png');
 				}else{
-					$(this).find('img').attr('src','img/professionVideolike1.png');
+					$(this).find('#gray').attr('src','img/professionVideolike1.png');
 				}
 			});
 		</script>
@@ -161,7 +160,19 @@
 					if(result.status == 200){
 						vm.scoure = result.data;
 						//console.log(encodeURI('videoOrderform.html?id='+result.data.orderNumber+"&img="+imgpath+"&title="+title+"&price="+price))
-						window.open(encodeURI('videoOrderform.html?id='+result.data.orderNumber+"&img="+imgpath+"&title="+title+"&price="+price),'_blank')
+//						var tempwindow=window.open('_blank'); //打开一个窗口，然后用					
+//						tempwindow.location='videoOrderform.html?id='+result.data.orderNumber+'&img='+imgpath+'&title='+title+'&price='+price; //使这个窗口跳转到百度，这样就会呈现弹出百度窗口的效果了
+						
+						//对的 
+//						window.open(encodeURI('videoOrderform.html?id='+result.data.orderNumber+"&img="+imgpath+"&title="+title+"&price="+price),'_blank')
+						
+						$("#last").click(function(){
+						var w=window.open();
+						setTimeout(function(){
+							w.location="http://www.baidu.com";
+						}, 1000);
+						return false;
+						});
 					}else{
 						alert(result.message)
 					}
