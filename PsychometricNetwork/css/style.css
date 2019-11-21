@@ -49,6 +49,11 @@ html {
 	float:left;
   margin-left:20px;
 }
+.sidebar li>a>span:after{
+	content: " ";
+  display: inline-block;
+  width: 100%;
+}
 .sidebar li:hover>a{
 	color:#1da7ee;
 }

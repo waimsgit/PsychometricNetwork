@@ -83,7 +83,7 @@
 			
 				<div class="notarize">
 					<h5>是否生成订单？</h5>
-					<p class="open"><button onclick="createOrder()" id="last">确认</button></p>
+					<p class="open"><button onclick="createOrder()">确认</button></p>
 					<p class="close">取消</p>
 				</div>
 					
@@ -164,15 +164,15 @@
 //						tempwindow.location='videoOrderform.html?id='+result.data.orderNumber+'&img='+imgpath+'&title='+title+'&price='+price; //使这个窗口跳转到百度，这样就会呈现弹出百度窗口的效果了
 						
 						//对的 
-//						window.open(encodeURI('videoOrderform.html?id='+result.data.orderNumber+"&img="+imgpath+"&title="+title+"&price="+price),'_blank')
-						
-						$("#last").click(function(){
-						var w=window.open();
-						setTimeout(function(){
-							w.location="http://www.baidu.com";
-						}, 1000);
-						return false;
-						});
+						window.open(encodeURI('videoOrderform.html?id='+result.data.orderNumber+"&img="+imgpath+"&title="+title+"&price="+price),'_blank')
+//						
+//						$("#last").click(function(){
+//						var w=window.open();
+//						setTimeout(function(){
+//							w.location="http://www.baidu.com";
+//						}, 1000);
+//						return false;
+//						});
 					}else{
 						alert(result.message)
 					}

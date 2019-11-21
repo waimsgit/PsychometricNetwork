@@ -4,7 +4,7 @@ function H$$(c, p) {return p.getElementsByTagName(c)}
 var slider = function () {
 	function init (o) {
 		this.id = o.id;
-		this.at = o.auto ? o.auto : 3;
+		this.at = o.auto ? o.auto : 2;
 		this.o = 0;
 		this.pos();
 	}

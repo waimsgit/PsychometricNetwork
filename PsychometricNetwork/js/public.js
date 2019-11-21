@@ -21,9 +21,9 @@ function getlogin(){
 		$("#userinf").html('<div class="right-top-right2" id="userbox" >'+
 								'<a href=""> <span>'+ username +'</span> <img src="img/indexgrade.png"/> </a>'+
 								'<div id="userinfo">'+
-								'<ul><li><a href=""><img src="img/indexpersonal.png" alt="" />个人中心</a></li>'+
+								'<ul><li><a href="pcIndex.html"><img src="img/indexpersonal.png" alt="" />个人中心</a></li>'+
 								'<li><a href="message.html"><img src="img/indexmessage.png" alt="" />消&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;息&nbsp;&nbsp;<span>99+</span></a></li>'+
-								'<li><a href=""><img src="img/indexcollect.png" alt="" />收&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;藏 <span>&nbsp;(99+)</span></a></li>'+
+								'<li><a href="collect.html"><img src="img/indexcollect.png" alt="" />收&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;藏 <span>&nbsp;(99+)</span></a></li>'+
 								'<li><a href="orderManagement.html"><img src="img/indexdownload.png" alt="" />订&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;单 </a></li>'+
 								'<li><a href=""><img src="img/logout.png" alt="" />退出登录</a> </li></ul></div></div>');
 	}else{

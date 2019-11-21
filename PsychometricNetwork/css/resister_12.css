@@ -95,7 +95,7 @@ label {
 	border: 1px solid #d7d7d7;
 	font-size: 14px;
 	background: white;
-	margin-top:100px;
+	margin-top:50px;
 }
 #registForm>h4{
 	height:24px;
@@ -429,7 +429,7 @@ label {
 }
 @media (min-width:1280px) {
 	.mainbox,.regist-mainbanner,.bannerbox,.bannerbox>img{
-		height:520px !important;
+		height:562px !important;
 	}
 	#registForm1{
 		width:300px !important;
@@ -447,6 +447,10 @@ label {
 	    top:11% !important;
 	    right: 5% !important;
 	}
+	.footer {
+	    margin-top: 110px !important;
+	    margin-bottom: 40px !important;
+	}
 }
 
 @media (min-width:1366px) {
@@ -458,6 +462,10 @@ label {
 	}
 	.forgetregisterForm{
 		top:15% !important;
+	}
+	.footer {
+	    margin-top: 50px !important;
+	    margin-bottom: 40px !important;
 	}
 }
 

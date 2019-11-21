@@ -9,6 +9,12 @@
 	color:white;
 }
 
+/*二级页面切换*/
+.right-top-left1 a:nth-of-type(1){
+	background: #1D7AEE;
+	color:white;
+}
+
 /*banner区*/
 .banner{
 	width:100%;
@@ -284,10 +290,10 @@
     	margin: 0 auto;
     }
     .cost-content,.cost{
-    	width:270px !important;
+    	/*width:270px !important;*/
     }
     .cost-content .pdf>a{
-    	padding:0 1% !important;
+    	/*padding:0 1% !important;*/
     }
     .pdf{
 	width:100% !important;
@@ -308,14 +314,14 @@
 
 @media (min-width: 1280px) {
     .inner-left {
-    width: 380px !important; 
+    width: 364px !important; 
     }
     .sc-calendar {
-    width: 380px !important;
+    width: 364px !important;
     }
 
     .content4-center {
-    width: 71% !important;
+    width: 72% !important;
     margin: 0 auto;
     }
      .content4_4-center{
@@ -323,7 +329,7 @@
 	    margin: 0 auto;
 	}
     .schedule{
-	width:380px !important;
+	width:364px !important;
 	margin:0 auto !important;
     }
     .costbox1-content{
@@ -331,7 +337,7 @@
     	margin: 0 auto;
     }
     .cost-content,.cost{
-    	width:366px !important;
+    	width:352px !important;
     }
    
 } /*>=1280的设备*/
@@ -648,59 +654,63 @@
 	width:100%;
 	border:1px solid lightgray;
 	overflow: hidden;
+	background: white;
 }
 .cost-content .pdf>a{
 	display:block;
 	width:100%;
 	height:90px;
 	margin:0 auto;
-	padding:0 5%;
-}
-.pdf>a>div{
-	display:inline-block;
-	float:left;
-	height:90px;
-	overflow: hidden;
-}
-.pdf>a>div:nth-of-type(1)>img{
-	display:block;
-	padding-top: 16px;
-}
-.pdf>a>div:nth-of-type(2){
-	display:inline-block;
-	float:left;
-	height:58px;
-	margin-top:16px;
-	padding-left: 0%;
-	float: right;
-	width:76%;
-    overflow: hidden;
-}
-.pdf>a>div:nth-of-type(2)>p{
-	text-align: left;
-}
-.pdf>a>div:nth-of-type(2)>p{
-	font-size: 14px;
-    font-weight: bold;
-    color: #545454;
-    line-height: 58px;
-    overflow: hidden;
+	/*padding:0 5%;*/
 }
 
-.pdf>a>div:nth-of-type(3){
-	display:inline-block;
-	float:right;
-	height:58px;
-	overflow: hidden;
+.pdfcontent{
+	width:90%;
+	height:90px;
+	margin:0 auto;
+}
+
+.pdfcontent>div:nth-of-type(1){
+	width:22%;
+	height:90px;
+	display:block;
+	float:left;
+}
+.pdfcontent>div:nth-of-type(1)>img{
 	margin-top:16px;
-	display:none;
 }
-.pdf>a>div:nth-of-type(3)>p{
-	font-size: 14px;
-    font-weight: bold;
-    color: #545454;
-    line-height: 88px;
+.pdfcontent>div:nth-of-type(2){
+	width:76%;
+	height:64px;
+	padding:13px 0;
+	float:right;
 }
+.pdfcontent>div:nth-of-type(2)>p:nth-of-type(1){
+	height:40px;
+	overflow: hidden;
+	line-height: 20px;
+	text-align: justify;
+    /*text-align-last: justify;*/
+    text-justify: distribute-all-lines;
+    text-justify: inter-ideograph;
+}
+.pdfcontent>div:nth-of-type(2)>p:nth-of-type(2){
+	width:100%;
+	height:18px;
+	margin-top:6px;
+	overflow: hidden;
+	line-height: 18px;
+	float:left !important;
+	color:gray;
+}
+.pdfcontent>div:nth-of-type(2)>p:nth-of-type(2)>span{
+	font-size:12px;
+	font-weight:normal;
+	display:inline-block;
+}
+
+
+
 /*报名方式，费用及路线*/
 .costbox1{
 	width:100%;

@@ -3,40 +3,38 @@
 	<head>
 		<meta charset="UTF-8">
 		<title></title>
+		<style>
+			.logo{width:100%;height:300px;line-height:300px;background:pink;text-align: center;}
+			.logo>img{vertical-align:middle;} 
+			.text-align p{
+				text-align: justify;
+				width: 5rem;
+				display: inline-block;
+				text-align-last: justify;
+				vertical-align: top;
+				text-justify: distribute-all-lines;
+    			text-justify: inter-ideograph;
+			}
+			.text-align p:after{
+			    display:inline-block;
+				content:'';
+				overflow:hidden;
+				width:100%;
+				height: 0;
+			}
+		</style>
 	</head>
 	<body>
-		<p>
-			<img src="img/eye.png" alt="" /><span>分享</span>
-			<P id="tol">
-				<img src="img/professionVideolike1.png" alt="" id="gray"/>
-			</p>
-			<p class="collect">收藏</p>
-		</p>
-		
-		<script src="js/jquery.js"></script>
-		<!--收藏-->
-		<script>
-			$('#tol').click(function(){
-				if($("#gray").attr('src')=='img/professionVideolike1.png'){
-					$(this).find('#gray').attr('src','img/professionVideolike2.png');
-				}else{
-					$(this).find('#gray').attr('src','img/professionVideolike1.png');
-				}
-			});
-		</script>
-		
-		
-		<p class="open"><button id="last">确认</button></p>
-		<script>
-			$("#last").click(function(){
-				var w=window.open();
-				setTimeout(function(){
-					w.location="http://www.baidu.com";
-				}, 1000);
-				
-				return false;
-			});
-		</script>
+	<div class="logo">
+		<img src="img/logo.png">
+	</div>
+
+		<div class="text-align">
+			<p>姓名</p> <br />
+			<p>身份证</p> <br />
+			<p>入园时间</p> <br />
+			<p>票卷种类</p> <br />
+		</div>
 		
 	</body>
 </html>

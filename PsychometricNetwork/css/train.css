@@ -17,7 +17,7 @@
 /*banner区*/
 .banner{
 	width:100%;
-	height: 290px;
+	max-height: 290px;
     margin-top: 60px;
 }
 .banner-content{
@@ -121,7 +121,7 @@
 	clear: both;
     width: 86%;
     height: auto!important;
-    min-height: 110px;
+    min-height:92px;
     background: white;
     padding: 30px 50px;
     border-radius: 8px;
@@ -138,23 +138,23 @@
 	line-height: 24px;
 	margin-right: 2%;
 	overflow: hidden;
-	font-size: 14px;
+	font-size: 12px;
 	float:left;
 	
 }
 .content1-bottom>div>p{
 	width:88%;
 	float:left;
-	font-size: 14px;
+	font-size: 12px;
 	line-height: 24px;
 	text-align: justify;
-	padding-bottom:20px;
+	padding-bottom:10px;
 }
 .content1-bottom>div:nth-last-child(2) p{
 	padding-bottom: 0 !important;
 }
 .content1-bottom>div>p>a{
-	font-size: 14px;
+	font-size: 12px;
 	line-height: 24px;
 	color: rgb(136,136,136);
 }
