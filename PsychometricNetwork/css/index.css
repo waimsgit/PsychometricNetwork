@@ -1,7 +1,6 @@
 /*侧导航*/
 .sidebar>ul>li:nth-of-type(1){
 	background:#1d7aee;
-	box-shadow: 0px 0px 13px 0px rgba(147,178,224,0.5);
 }
 .sidebar>ul>li:nth-of-type(1)>a{
 	color:white;
@@ -29,12 +28,12 @@
 	width:100%;
 	height:330px;
 	clear:both;
-	margin-top: 120px;
+	margin-top: 80px;
 	overflow: hidden;
 }
 .content1-center{
-	width:84%;
-    height:138px;
+	width:69%;
+    height:124px;
     margin:0 auto;
     position:relative;
     display: box;               /* OLD - Android 4.4- */
@@ -62,33 +61,34 @@
 	border-radius: 3px;
 }
 .content1-center1>div{
-	width:82%;
-	height:138px;
+	width:92%;
 	margin:0 auto;
-    position: relative;
-    overflow:hidden;
+	height:124px;
+	line-height:124px;
+	text-align: center;
+	overflow: hidden;
+	position: relative;
 }
 .content1-center1:hover{
 	box-shadow:5px 7px 10px 0px rgba(147,178,224,0.7);
 }
+#produce>img{
+	vertical-align:middle;
+	max-width:100%;
+}
 .content1-center1>div>img{
-   display:block;
-   overflow: hidden;
-   position:absolute;	
-   top:16px;
-   left:0px;
+  /*width: 101%;*/
+  overflow: hidden;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  display: inline-block;
+    height: auto;
+    max-width: 100%;
 }
-.content1-center1>div>p{
-	position: absolute;
-	right:0px !important;
-	top:30px;
-	font-weight:550;
-	font-size: 14px;
-	width: 148px !important;
-	height:36px;
-	overflow: hidden;
-	text-align: left;
-}
+
 .content1-center1>div>a{
 	display:block;
 	width:80px;
@@ -96,7 +96,7 @@
 	border:1px solid lightgray;
 	position: absolute;
 	bottom:20px;
-	right:0px !important;
+	right:30px !important;
 	font-size: 12px;
 	color:lightgray;
     line-height: 18px;
@@ -259,7 +259,8 @@
 	font-weight: bold;
 	text-align: left;
 }
-/*最新动态*/
+
+/*近期培训*/
 .information{
 	width:100%;
 	height:82px;
@@ -375,10 +376,9 @@
 	
 }
 
-/*学术会议*/
+/*资讯*/
 .content2{
 	width:100%;
-	/*height:100%;*/
 	clear:both;
 	margin-top:80px;
 	overflow: hidden;
@@ -475,6 +475,7 @@
 	max-height: 150px !important;
 	margin-bottom:34px !important;
    }
+   
    /*banner切换条的位置*/
    .carousel-indicators {
 	  position: absolute;
@@ -490,60 +491,28 @@
 	.carousel-inner > .item {
 		height:150px !important;
 	}
+	
 	/*工具箱与banner的距离*/
 	.content1 {
-	    width: 100%;
-	    height: 274px !important;
-	    clear: both;
-	    margin-top: 80px !important;
-	    overflow: hidden;
+	    height: 220px !important;
     }
+	.content1-center1,.content1-center1>div {
+	    height: 90px !important;
+	    line-height: 90px !important;
+	}
     .content1-center {
-    	height: 116px !important;
+    	height: 108px !important;
+    	margin-bottom: 10px !important;
     }
-    .content1-center1 {
-    	height: 110px !important;
+    .content1-center1>div>a{
+    	width:60px !important;
+    	bottom:10px !important;
+    	right:10px !important;
     }
-    .content1-center1>div>img {
-    /*max-width: 60px;*/
-    } 
-    .content1-center1>div>p {
-	    font-size: 12px;
-	    width:58px !important;
+    .content1-center:nth-of-type(2){
+    	margin-top:10px !important;
     }
-    .content1-center1>div>a {
-	    height: 16px !important;
-	    border: 1px solid lightgray;
-	    bottom:38px !important;
-	    line-height: 14px !important;
-    }
-    
-    .content1-center1:nth-of-type(1)>div>img,.content1-center1:nth-of-type(2)>div>img,.content1-center1:nth-of-type(3)>div>img,.content1-center1:nth-of-type(5)>div>img{
-	    height:40px !important;
-	    position: absolute;
-	    top:35px !important;
-    } 
-    .content1-center1:nth-of-type(4)>div>img{
-    	width: 40px !important;
-    	height:52px !important;
-	    position: absolute;
-	    top:35px !important;
-    }
-    .content1-center:nth-of-type(2)>.content1-center1:nth-of-type(2)>div>img,.content1-center:nth-of-type(2)>.content1-center1:nth-of-type(3)>div>img{
-    	display: inline-block;
-    	width: 52px !important;
-    	height:52px !important;
-	    position: absolute;
-	    top:29px !important;
-    }
-    .content1-center:nth-of-type(2)>.content1-center1:nth-of-type(4)>div>img{
-    	display: inline-block;
-    	width: 74px !important;
-    	height:52px !important;
-	    position: absolute;
-	    top:29px !important;
-    }
-    
+   
     /*资讯*/
    .content2-top>a>img {
     	height: 140px;
@@ -555,7 +524,7 @@
     	font-size: 12px !important;
     }
     
-     /*视频*/
+    /*视频*/
    .video-bottom {
     	height: 260px !important;
     }
@@ -606,7 +575,6 @@
 	    width: 90px !important;
 	    float: right;
    }
-   
    .copy-right div img {
     width: 90px !important;
     height:90px !important;
@@ -621,6 +589,7 @@
 		max-height: 156px !important;
 		margin-bottom:34px !important;
    }
+   
    /*banner切换条的位置*/
    .carousel-indicators {
 	  position: absolute;
@@ -638,24 +607,23 @@
 	}
 	/*工具箱与banner的距离*/
 	.content1 {
-	    width: 100%;
-	    height: 330px;
-	    clear: both;
-	    margin-top: 80px !important;
-	    overflow: hidden;
+	    height: 220px !important;
     }
-    .content1-center1>div>img {
-    /*max-width: 60px;*/
-    } 
-    .content1-center1>div>p {
-    	font-size: 12px;
-    	width:64px !important;
+	.content1-center1,.content1-center1>div {
+	    height: 90px !important;
+	    line-height: 90px !important;
+	}
+    .content1-center {
+    	height: 108px !important;
+    	margin-bottom: 10px !important;
     }
-    .content1-center1>div>a {
+    .content1-center1>div>a{
     	width:60px !important;
-	    height: 16px !important;
-	    bottom: 38px !important;
-	    line-height: 14px !important;
+    	bottom:10px !important;
+    	right:10px !important;
+    }
+    .content1-center:nth-of-type(2){
+    	margin-top:10px !important;
     }
     
     /*资讯*/
@@ -678,6 +646,7 @@
 		max-height: 168px !important;
 		margin-bottom:34px !important;
    }
+   
    /*banner切换条的位置*/
    .carousel-indicators {
 	  position: absolute;
@@ -693,19 +662,27 @@
 	.carousel-inner > .item {
 		height:168px !important;
 	}
+	
 	/*工具箱与banner的距离*/
 	.content1 {
-	    width: 100%;
-	    height: 330px;
-	    clear: both;
-	    margin-top: 80px !important;
-	    overflow: hidden;
+	    height: 230px !important;
+    }
+	.content1-center1,.content1-center1>div {
+	    height: 100px !important;
+	    line-height: 100px !important;
+	}
+    .content1-center {
+    	height: 108px !important;
+    	margin-bottom: 10px !important;
+    }
+    .content1-center1>div>a{
+    	bottom:14px !important;
+    	right:10px !important;
+    }
+    .content1-center:nth-of-type(2){
+    	margin-top:10px !important;
     }
     
-    .content1-center1>div>p {
-    	font-size: 12px;
-    	width:72px !important;
-    }
     
     /*视频*/
    .video-bottom {
@@ -714,18 +691,9 @@
    .video-content {
     	height: 478px !important;
     }
-    .video-left {
+    .video-left,.video-left video,.video-right,.video-rightcontent{
     	height: 300px !important;
     }
-    .video-left video{
-    	height: 300px !important;
-    }
-    .video-right {
-    	height:300px !important;
-	}
-	.video-rightcontent {
-    	height:300px !important;
-	}
 	.video-rightcontent>p{
 		height:192px !important;
 	}
@@ -743,6 +711,7 @@
 		max-height: 195px !important;
 		margin-bottom:34px !important;
     }
+    
    /*banner切换条的位置*/
    .carousel-indicators {
 	  position: absolute;
@@ -761,30 +730,18 @@
 	
 	/*工具箱与banner的距离*/
 	.content1 {
-	    width: 100%;
-	    height: 274px;
-	    clear: both;
-	    margin-top: 80px !important;
-	    overflow: hidden;
+	    height: 230px !important;
+    }
+    .content1-center1>div{
+    	height: 110px !important;
+    	line-height: 110px !important;
     }
     .content1-center {
-    	height: 116px !important;
-    }
-    .content1-center1>div>img {
-    /*max-width: 90px;*/
-    } 
-    .content1-center1>div>p {
-	    position: absolute;
-	    top: 30px;
-	    font-weight: 550;
-	    font-size: 12px;
-	    width:98px !important;
-	    height: 36px;
-	    overflow: hidden;
-	    text-align: left;
+    	height: 108px !important;
     }
     .content1-center1>div>a{
-    	bottom:38px !important;
+    	bottom:20px !important;
+    	right:10px !important;
     }
     
     /*资讯*/
@@ -799,49 +756,50 @@
     
     /*视频*/
    .video-content{
-   	height:478px !important;
+   		height:478px !important;
    }
     .video-rightcontent>h4 {
-    margin: 18px 0 10px 0 !important;
+    	margin: 18px 0 10px 0 !important;
     }
     .video-rightcontent>p {
-    line-height: 20px !important;
-    height:200px !important;
+	    line-height: 20px !important;
+	    height:200px !important;
     }
     
     /*公众号*/
    .copy-content {
-    width: 52% !important;
+    	width: 52% !important;
     }
     .copy-left {
-    width: 54% !important;
-    float: left;
+	    width: 54% !important;
+	    float: left;
    }
 	.copy-right div:nth-of-type(1) {
-    width: 90px !important;
-    margin-right: 50px !important;
-    float: left;
-    text-align: center;
+	    width: 90px !important;
+	    margin-right: 50px !important;
+	    float: left;
+	    text-align: center;
    }
 	.copy-right div:nth-of-type(2) {
-    width: 90px !important;
-    float: right;
+	    width: 90px !important;
+	    float: right;
    }
    
    .copy-right div img {
-    width:90px !important;
-    height:90px !important;
+	    width:90px !important;
+	    height:90px !important;
    }
    
 } /*>=1280的设备*/
 
 @media (min-width: 1366px) {
 	.banner-left{
-	width:100%;
-	float:left;
-	max-height: 208px !important;
-	margin-bottom:34px !important;
+		width:100%;
+		float:left;
+		max-height: 208px !important;
+		margin-bottom:34px !important;
    }
+   
    /*banner切换条的位置*/
    .carousel-indicators {
 	  position: absolute;
@@ -857,14 +815,6 @@
 	.carousel-inner > .item {
 		height:208px !important;
 	}
-	/*工具箱与banner的距离*/
-	.content1 {
-	    width: 100%;
-	    height: 330px;
-	    clear: both;
-	    margin-top: 80px !important;
-	    overflow: hidden;
-    }
     
     /*资讯模块*/
     .content2-top>a>img {
@@ -907,11 +857,12 @@
 
 @media (min-width: 1440px) {
 	.banner-left{
-	width:100%;
-	float:left;
-	max-height: 220px !important;
-	margin-bottom:34px !important;
+		width:100%;
+		float:left;
+		max-height: 220px !important;
+		margin-bottom:34px !important;
    }
+   
    /*banner切换条的位置*/
    .carousel-indicators {
 	  position: absolute;
@@ -928,34 +879,14 @@
 		height:219px !important;
 	}
 	
-	/*工具箱与banner的距离*/
-	.content1 {
-    width: 100%;
-    height: 330px;
-    clear: both;
-    margin-top: 80px !important;
-    overflow: hidden;
-    }
     
     /*视频*/
-   .video-bottom {
-    height: 362px !important;
+   .video-bottom,.video-left,.video-left video,.video-right,.video-rightcontent{
+    	height: 362px !important;
     }
    .video-content {
-    height: 540px !important;
+   	 height: 540px !important;
     }
-    .video-left {
-    height: 362px !important;
-    }
-    .video-left video{
-    height: 362px !important;
-    }
-    .video-right {
-    height:362px !important;
-	}
-	.video-rightcontent {
-    height:362px !important;
-	}
 	.video-rightcontent>h4 {
     font-size: 18px !important;
     margin: 18px 0 10px 0 !important;
@@ -967,10 +898,10 @@
 
 @media (min-width: 1600px) {
 	.banner-left{
-	width:100%;
-	float:left;
-	max-height: 242px !important;
-	margin-bottom:34px !important;
+		width:100%;
+		float:left;
+		max-height: 242px !important;
+		margin-bottom:34px !important;
    }
    
    /*banner切换条的位置*/
@@ -991,120 +922,71 @@
 	
 	/*工具箱与banner的距离*/
 	.content1 {
-	    width: 100%;
-	    height: 330px;
-	    clear: both;
-	    margin-top: 80px !important;
-	    overflow: hidden;
+	    height: 290px !important;
     }
-    .content1-center1>div>p {
-    	font-size: 14px;
-    	width:128px !important;
+	.content1-center1,.content1-center1>div{
+    	height: 124px !important;
+    	line-height: 124px !important;
     }
-    .content1-center1>div>a {
-	    display: block;
-	    width: 68px;
-	    height: 20px !important;
-	    border: 1px solid lightgray;
-	    position: absolute;
-	    bottom:40px !important;
-	    right:0px !important;
-	    font-size: 12px;
-	    color: lightgray;
-	    line-height: 18px !important;
-	    border-radius: 15px;
+    .content1-center {
+    	height: 138px !important;
     }
-    .content1-center1:nth-of-type(1)>div>img,.content1-center1:nth-of-type(2)>div>img,.content1-center1:nth-of-type(3)>div>img,.content1-center1:nth-of-type(5)>div>img{
-	    width:80px !important;
-	    height:50px !important;
-	    position: absolute;
-	    top:30px !important;
-    } 
-    .content1-center1:nth-of-type(4)>div>img{
-    	width: 40px !important;
-    	height:52px !important;
-	    position: absolute;
-	    top:35px !important;
-    }
-    .content1-center:nth-of-type(2)>.content1-center1:nth-of-type(2)>div>img,.content1-center:nth-of-type(2)>.content1-center1:nth-of-type(3)>div>img{
-    	display: inline-block;
-    	width: 52px !important;
-    	height:52px !important;
-	    position: absolute;
-	    top:29px !important;
-    }
-    .content1-center:nth-of-type(2)>.content1-center1:nth-of-type(4)>div>img{
-    	display: inline-block;
-    	width: 74px !important;
-    	height:52px !important;
-	    position: absolute;
-	    top:29px !important;
+    .content1-center1>div>a{
+    	bottom:16px !important;
+    	right:10px !important;
     }
     
-       
     /*资讯模块*/
    .content2-top>a>img {
-    width: 94% !important;
-    height: 168px !important;
-    overflow: hidden;
-    margin: 0 auto;
-    text-align: center;
-    display: block;
-    margin-top: 10px;
+	    width: 94% !important;
+	    height: 168px !important;
+	    overflow: hidden;
+	    margin: 0 auto;
+	    text-align: center;
+	    display: block;
+	    margin-top: 10px;
     }
     .content2-bottom .content2-bottom-middle {
-    margin-bottom: 24px !important;
-    line-height: 30px !important;
-    height: 60px !important;
+	    margin-bottom: 24px !important;
+	    line-height: 30px !important;
+	    height: 60px !important;
     }
     .content2-bottom .content2-bottom-title{
     	font-size: 14px !important;
     }
     
     /*视频*/
-   .video-bottom {
-    height: 378px !important;
+   .video-bottom,.video-left,.video-left video,.video-right,.video-rightcontent{
+    	height: 378px !important;
     }
    .video-content {
-    height: 556px !important;
+    	height: 556px !important;
     }
-    .video-left {
-    height: 378px !important;
-    }
-    .video-left video{
-    height: 378px !important;
-    }
-    .video-right {
-    height:378px !important;
-	}
-	.video-rightcontent {
-    height:378px !important;
-	}
 	.video-rightcontent>h4 {
-    font-size: 20px !important;
-    line-height: 30px !important;
-    margin: 18px 0 10px 0 !important;
+	    font-size: 20px !important;
+	    line-height: 30px !important;
+	    margin: 18px 0 10px 0 !important;
     }
     .video-rightcontent>p {
-    line-height: 26px !important;
-    height:258px !important;
+	    line-height: 26px !important;
+	    height:258px !important;
     }
     
     /*公众号*/
     .copy-left {
-    width: 44% !important;
-    float: left;
-   }
+	    width: 44% !important;
+	    float: left;
+    }
 	.copy-right div:nth-of-type(1) {
-    width: 110px !important;
-    margin-right: 50px !important;
-    float: left;
-    text-align: center;
-   }
+	    width: 110px !important;
+	    margin-right: 50px !important;
+	    float: left;
+	    text-align: center;
+    }
 	.copy-right div:nth-of-type(2) {
-    width: 110px !important;
-    float: right;
-   }
+	    width: 110px !important;
+	    float: right;
+    }
    
    .copy-right div img {
     width:110px !important;
@@ -1114,10 +996,10 @@
 
 @media (min-width: 1680px) {
 	.banner-left{
-	width:100%;
-	float:left;
-	max-height: 256px !important;
-	margin-bottom: 70px;
+		width:100%;
+		float:left;
+		max-height: 256px !important;
+		margin-bottom: 70px;
    }
    
    /*banner切换条的位置*/
@@ -1136,50 +1018,30 @@
 		height:256px !important;
 	}
 	
-	/*工具箱与banner的距离*/
-	.content1 {
-    width: 100%;
-    height: 330px;
-    clear: both;
-    margin-top: 80px !important;
-    overflow: hidden;
-    }
-    
+	
     /*视频*/
-   .video-bottom {
-    height: 400px !important;
+   .video-bottom,.video-left,.video-left video,.video-right,.video-rightcontent{
+    	height: 400px !important;
     }
    .video-content {
-    height: 580px !important;
+    	height: 580px !important;
     }
-    .video-left {
-    height: 400px !important;
-    }
-    .video-left video{
-    height: 400px !important;
-    }
-    .video-right {
-    height:400px !important;
-	}
-	.video-rightcontent {
-    height:400px !important;
-	}
 	.video-rightcontent>h4 {
-    font-size: 22px !important;
-    line-height: 30px !important;
-    margin: 18px 0 10px 0 !important;
+	    font-size: 22px !important;
+	    line-height: 30px !important;
+	    margin: 18px 0 10px 0 !important;
     }
     .video-rightcontent>p {
-    line-height: 28px !important;
+    	line-height: 28px !important;
     }
 } 
 
 @media (min-width: 1920px) {
 	.banner-left{
-	width:100%;
-	float:left;
-	max-height: 290px !important;
-	margin-bottom: 70px;
+		width:100%;
+		float:left;
+		max-height: 290px !important;
+		margin-bottom: 70px;
    }
    
     /*banner切换条的位置*/
@@ -1198,68 +1060,6 @@
 		height:290px !important;
 	}
 	
-	/*工具箱与banner的距离*/
-	.content1 {
-    width: 100%;
-    height: 330px !important;
-    clear: both;
-    margin-top: 120px !important;
-    overflow: hidden;
-    }
-    .content1-center {
-    height: 138px !important;
-    }
-    .content1-center1 {
-    height: 138px !important;
-    }
-    .content1-center1:nth-of-type(1)>div>img,.content1-center1:nth-of-type(2)>div>img,.content1-center1:nth-of-type(3)>div>img,.content1-center1:nth-of-type(5)>div>img{
-	    width:100px !important;
-	    height:62px !important;
-	    position: absolute;
-	    top:38px !important;
-    } 
-    .content1-center1:nth-of-type(4)>div>img{
-    	width: 64px !important;
-    	height:80px !important;
-	    position: absolute;
-	    top:29px !important;
-    }
-    .content1-center:nth-of-type(2)>.content1-center1:nth-of-type(2)>div>img,.content1-center:nth-of-type(2)>.content1-center1:nth-of-type(3)>div>img{
-    	display: inline-block;
-    	width:90px !important;
-    	height:74px !important;
-	    position: absolute;
-	    top:32px !important;
-    }
-    .content1-center:nth-of-type(2)>.content1-center1:nth-of-type(4)>div>img{
-    	display: inline-block;
-    	width: 80px !important;
-    	height:60px !important;
-	    position: absolute;
-	    top:44px !important;
-    }
-    .content1-center1>div>p {
-	    right:0px !important;
-	    font-size: 14px;
-	    top:42px;
-	    text-align: justify;
-    }
-    .content1-center1>div>a {
-        display: block;
-	    width: 68px;
-	    height: 18px;
-	    border: 1px solid lightgray;
-	    position: absolute;
-	    bottom: 16px !important;
-	    font-size: 12px;
-	    color: lightgray;
-	    line-height: 16px;
-	    -moz-border-radius: 15px; /* Firefox */
-        -webkit-border-radius: 15px; /* Safari 和 Chrome */
-        -ms-border-radius: 15px; /* Opera 10.5+, 以及使用了IE-CSS3的IE浏览器 */
-        -o-border-radius: 15px; /* Opera 10.5+, 以及使用了opera的IE浏览器 */
-        border-radius: 15px; /* Opera 10.5+, 以及使用了IE-CSS3的IE浏览器 */
-    }
     
    /*资讯模块*/
     .content2-top>a>img {
@@ -1294,8 +1094,7 @@
 	    line-height: 28px !important;
 	    font-size: 14px !important;
 	    height:254px !important; 
-    }
-	
+    }	
 } 
 
 
@@ -1650,7 +1449,7 @@
 	font-size: 20px;
 	font-weight: bold;
 }
-.video-rightcontent>p{
+.video-rightcontentp{
 	font-size: 12px;
 	color:#b6b6b6;
 	text-align: justify;
@@ -1658,8 +1457,22 @@
 	overflow: hidden;
 	overflow-y: auto;
 }
-.video-rightcontent>p::-webkit-scrollbar {
-	display:none;
+.video-rightcontentp::-webkit-scrollbar{  
+    width:4px;  
+    height: 4px;  
+    background: rgba(0,0,0,0.1);
+}  
+/*定义滚动条轨道 内阴影+圆角*/  
+.video-rightcontentp::-webkit-scrollbar-track{  
+    -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);  
+    border-radius: 5px;  
+    background: rgba(0,0,0,0.1);
+}  
+/*定义滑块 内阴影+圆角*/  
+.video-rightcontentp::-webkit-scrollbar-thumb{  
+    border-radius: 5px;  
+    -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,.2);  
+    background: rgba(0,0,0,0.1);
 } 
 
 

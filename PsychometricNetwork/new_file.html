@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="css/bootstrap.css" />
+		<style>
+			body{
+			background: #1D953F;	  
+			}
+			.row{
+				width:60%;
+				margin:0 auto;
+				margin-top:100px
+			}
+			.row>div{
+				background: white;
+			}
+			.row>div>img{
+				display:block;
+				position: relative;
+				max-width:100%
+			}
+			.row>div>a{
+				display:block;
+				position: absolute;
+				bottom:10px;
+				right:80px;
+			    width: 68px;
+			    height: 18px;
+			    border: 1px solid lightgray;
+			    font-size: 12px;
+			    text-align: center;
+			    color: lightgray;
+			    line-height: 16px;
+			    -moz-border-radius: 15px;
+			    -webkit-border-radius: 15px;
+			    -ms-border-radius: 15px;
+			    -o-border-radius: 15px;
+			    border-radius: 15px;
+			}
+			.scroll,.scroll2{
+				width:300px;
+				height:100px;
+				overflow: hidden;
+				overflow-y: auto;
+			}
+			  /*滚动条样式*/
+	        .scroll::-webkit-scrollbar {/*滚动条整体样式*/
+	            width: 4px;     /*高宽分别对应横竖滚动条的尺寸*/
+	            height: 4px;
+	            scrollbar-face-color:#008000;
+	        }
+	        .scroll::-webkit-scrollbar-thumb {/*滚动条里面小方块*/
+	            border-radius: 5px;
+	            -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+	            -moz-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+	            -ms-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+	            background: rgba(0,0,0,0.2);
+	        }
+	        .scroll::-webkit-scrollbar-track {/*滚动条里面轨道*/
+	            -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+	            border-radius: 0;
+	            background: rgba(0,0,0,0.1);
+	        }
+	        
+	        
+	        .scroll2::-webkit-scrollbar  
+			{  
+			    width:4px;  
+			    height: 4px;  
+			    background: rgba(0,0,0,0.1);
+			}  
+			
+			/*定义滚动条轨道 内阴影+圆角*/  
+			.scroll2::-webkit-scrollbar-track  
+			{  
+			    -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);  
+			    border-radius: 5px;  
+			    background: rgba(0,0,0,0.1);
+			}  
+			
+			/*定义滑块 内阴影+圆角*/  
+			.scroll2::-webkit-scrollbar-thumb  
+			{  
+			    border-radius: 5px;  
+			    -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,.2);  
+			    background: rgba(0,0,0,0.1);
+			}  
+		</style>
+	</head>
+	<body>
+		<!--量表介绍斯欧非言语智力测试-->
+		<div class="row">
+		  <div class="col-xs-6 col-sm-4">
+		  	<img src="img/indexscale1.png" alt="" />
+		  	<a href="">了解更多</a>
+		  </div>
+		  <div class="col-xs-6 col-sm-4">
+		  	<img src="img/indexscale2.png" alt="" />
+		  	<a href="">了解更多</a>
+		  </div>
+		  <div class="clearfix visible-xs-block"></div>
+		  <div class="col-xs-6 col-sm-4">
+		  	<img src="img/indexscale3.png" alt="" />
+		  	<a href="">了解更多</a>
+		  </div>
+		</div>
+		
+		<div class="row">
+		  <div class="col-xs-6 col-sm-4">
+		  	<img src="img/indexscale4.png" alt="" />
+		  	<a href="">了解更多</a>
+		  </div>
+		  <div class="col-xs-6 col-sm-4">
+		  	<img src="img/indexscale5.png" alt="" />
+		  	<a href="">了解更多</a>
+		  </div>
+		  <div class="clearfix visible-xs-block"></div>
+		  <div class="col-xs-6 col-sm-4">
+		  	<img src="img/indexscale8.png" alt="" />
+		  	<a href="">了解更多</a>
+		  </div>
+		</div>
+		
+		
+		
+		
+		<div class="scroll">
+			<p>1</p>
+			<p>1</p>
+			<p>1</p>
+			<p>1</p>
+			<p>1</p>
+			<p>1</p>
+			<p>1</p>
+			<p>1</p>
+			<p>1</p>
+			<p>1</p>
+			<p>1</p>
+			<p>1</p>
+			<p>1</p>
+			<p>1</p>
+			<p>1</p>
+		</div>
+		
+		
+		<div class="scroll2">
+			<p>1</p>
+			<p>1</p>
+			<p>1</p>
+			<p>1</p>
+			<p>1</p>
+			<p>1</p>
+			<p>1</p>
+			<p>1</p>
+			<p>1</p>
+			<p>1</p>
+			<p>1</p>
+			<p>1</p>
+			<p>1</p>
+			<p>1</p>
+			<p>1</p>
+		</div>
+	</body>
+</html>

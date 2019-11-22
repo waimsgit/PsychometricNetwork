@@ -174,6 +174,26 @@
 	color:#9d9c9c;
 	text-align: justify;
 }
+/*滚动条样式*/
+.content2-left1>p::-webkit-scrollbar {/*滚动条整体样式*/
+    width: 4px;     /*高宽分别对应横竖滚动条的尺寸*/
+    height: 4px;
+    scrollbar-face-color:#008000;
+}
+.content2-left1>p::-webkit-scrollbar-thumb {/*滚动条里面小方块*/
+    border-radius: 5px;
+    -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+    -moz-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+    -ms-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+    background: rgba(0,0,0,0.2);
+}
+.content2-left1>p::-webkit-scrollbar-track {/*滚动条里面轨道*/
+    -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+    -moz-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+    -ms-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+    border-radius: 0;
+    background: rgba(0,0,0,0.1);
+}
 
 /*课程列表*/
 .content2-left1 h5:nth-of-type(2){
@@ -193,6 +213,27 @@
 	overflow: hidden;
 	overflow-y: auto;
 }
+/*滚动条样式*/
+.content2-left1>ul::-webkit-scrollbar {/*滚动条整体样式*/
+    width: 4px;     /*高宽分别对应横竖滚动条的尺寸*/
+    height: 4px;
+    scrollbar-face-color:#008000;
+}
+.content2-left1>ul::-webkit-scrollbar-thumb {/*滚动条里面小方块*/
+    border-radius: 5px;
+    -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+    -moz-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+    -ms-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+    background: rgba(0,0,0,0.2);
+}
+.content2-left1>ul::-webkit-scrollbar-track {/*滚动条里面轨道*/
+    -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+    -moz-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+    -ms-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+    border-radius: 0;
+    background: rgba(0,0,0,0.1);
+}
+
 .content2-left1>ul>li{
 	line-height: 50px;
 }
@@ -205,7 +246,7 @@
     display: inline-block;
     line-height: 50px;
     margin-top: 12px;
-    margin-right:6px;
+    margin-right:24px;
 }
 
 /*主讲老师*/
@@ -255,6 +296,27 @@
 	color:#9d9c9c;
 	text-align: justify;
 }
+ /*滚动条样式*/
+.content2-right1 p::-webkit-scrollbar {/*滚动条整体样式*/
+    width: 4px;     /*高宽分别对应横竖滚动条的尺寸*/
+    height: 4px;
+    scrollbar-face-color:#008000;
+}
+.content2-right1 p::-webkit-scrollbar-thumb {/*滚动条里面小方块*/
+    border-radius: 5px;
+    -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+    -moz-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+    -ms-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+    background: rgba(0,0,0,0.2);
+}
+.content2-right1 p::-webkit-scrollbar-track {/*滚动条里面轨道*/
+    -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+    -moz-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+    -ms-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+    border-radius: 0;
+    background: rgba(0,0,0,0.1);
+}
+
 .content2-right2>div>img{
 	display:block;
 	width:260px;

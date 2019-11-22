@@ -47,14 +47,15 @@ img{border:0;}
 	margin:0 auto;
 	background:#1d7aee;
 	margin-bottom: 80px;
+	width:100%;
+	height:60px;
+	line-height:60px;
+	text-align: center;
+	overflow: hidden;
 }
 .left-top>img{
-	max-width: 100%;
-	height:60px;
-	display:block;
-	margin:0 auto;
-	padding:0px 0 0px 0;
-	z-index:1;
+	vertical-align:middle;
+	max-width:100%;
 }
 /*新导航*/
 .left-middle{
