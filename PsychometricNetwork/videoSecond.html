@@ -34,7 +34,7 @@
 					<div class="video">
 						<div class="video-content">
 							<h3></h3>
-							<div class="video-left">
+							<div class="video-left video-secondleft">
 									<div id="div1" style="display:block">
 										<video width="100%" height="550" src="http://47.104.147.26:8088/examples/SPZHC.mp4" frameborder="0" allowfullscreen="true" controls="controls"></video>
 									</div>
@@ -50,12 +50,12 @@
 									<div id="div5" style="display:none">
 										<video width="100%" height="550" src="http://47.104.147.26:8088/examples/SPXJ.mp4" frameborder="0" allowfullscreen="true" controls="controls"></video>
 									</div>
-									<div id="div6" style="display:none">
+									<!--<div id="div6" style="display:none">
 										<video width="100%" height="550" src="http://47.104.147.26:8088/examples/SPDXL.mp4" frameborder="0" allowfullscreen="true" controls="controls"></video>
-									</div>
+									</div>-->
 							
 							</div>
-							<div class="video-right">
+							<div class="video-right video-secondright">
 								<ul class="video_list">
 									<li>
 										<span style="display:inline-block;width:8px;height:36px;background: #1D7AEE;float:left;"></span> 
@@ -63,7 +63,7 @@
 									</li>
 									
 									<li index="0">
-										<a href="javascript:funcShow(1)" class="on" onclick="changespan()"> 
+										<a href="javascript:funcShow(1)" class="on" onclick=""> 
 											<img src="img/video02.png"/>
 											<div> 
 												<p>张厚粲中国心理学的曲折发展</p>
@@ -107,16 +107,6 @@
 											<img src="img/video06.png"/>
 											<div> 
 												<p>谢晶非言语智力测评在中国的最新发展及其应用价值 </p>
-												<p><img src="img/eye.png"/><span> 1566</span></p>
-											</div>
-										</a>
-									</li>
-									
-									<li index="5">
-										<a href="javascript:funcShow(6)">
-											<img src="img/video09.png"/>
-											<div> 
-												<p>邸晓兰儿童及青少年性心理障碍的成因与识别 </p>
 												<p><img src="img/eye.png"/><span> 1566</span></p>
 											</div>
 										</a>
@@ -288,7 +278,7 @@
 		
 		<script type="text/javascript">
 			function funcShow(id) {
-				for(var i = 0; i < 6; i++) {
+				for(var i = 0; i < 5; i++) {
 					var divInfo = document.getElementById('div' + (i + 1));
 					divInfo.style.display = 'none';
 				}

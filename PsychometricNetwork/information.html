@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<title>资讯中心</title>
+		<title>资讯</title>
 		<link rel="stylesheet" type="text/css" href="css/commone.css" />
 		<link rel="stylesheet" type="text/css" href="css/style.css" />
 		<link rel="stylesheet" type="text/css" href="css/information.css" />
@@ -10,6 +10,7 @@
 		<link rel="stylesheet" type="text/css" href="css/demo.css" />
 		<link rel="stylesheet" type="text/css" href="css/tabs.css" />
 	    <link rel="stylesheet" href="css/page.css" />
+	    <link rel="shortcut icon" href="#" />
 	    <script src="js/jquery.min.js"></script>
 	    <script src="js/page1.js"></script>
 	    <script src="js/public.js"></script>
@@ -170,8 +171,10 @@
 				            '<div class="sectionboxf">'+
 							    '<a href="'+ result[i].href+'" class="href">'+
 								'<div class="section-left">' +
-									'<p>'+result[i].left+'<span>'+result[i].left2+'</span>'+'</p>'+
-									'<p>'+result[i].left3+'</p>'+
+								    '<img src='+result[i].leftimg+'>'+
+									'<div class="section-middle"><p>'+result[i].left+'<span>'+result[i].left2+'</span>'+'</p>'+
+									'<p>'+result[i].left3+'</p></div>'+
+									'<p class="section-right">'+result[i].right+'</p>'+
 								'</div>' +
 								'</a>'+
 							'</div>'+
@@ -183,7 +186,7 @@
 				   page.init(datas.length,1,options);
 			})
 			var datas1=[
-			    {"did":1,"href":"americanInstitutions10.html","left": "2019年9月份北京培训通知","left2": "2019年8月26日","left3": "“心理测量理论与应用系列课程”主试讲师培训圆满举办"},
+			    {"did":1,"href":"americanInstitutions10.html","leftimg":"img/americanInstitutions11_4.png","left": "2019年9月份北京培训通知","left2": "2019年8月26日","left3": "“心理测量理论与应用系列课程”主试讲师培训圆满举办","right":"出版：骄阳智心"},
 			    {"did":2,"href":"americanInstitutions.html","left": "看电视的搏斗：要不要让孩子看电视","left2": "2019年8月15日","left3": "孙燕姿最新的微博，讲到五岁的儿子短暂生病时的母子两个人艰难又甜蜜的冲突，其中一项是两个人为看电视的“搏斗”。"},
 			    {"did":3,"href":"americanInstitutions.html","left": "当测谎仪遇到心理测评专家","left2": "2019年7月10日","left3": "绝大多数人在说谎或受到有关情绪词的影响时，会发生一系列植物神经系统功能的变化，检测这些变化可反映受试者当时的情绪状态，言语是否真实。在此基础上，测谎仪应运而生。"},
 			    {"did":4,"href":"americanInstitutions.html","left": "心理测试告诉你，要当上警察有多难","left2": "2019年06月09日","left3": "最近热播的韩剧《live》，让我们看到警察这个职业的艰难和辛苦，也让我们看到每一个第一线的普通警察在一天之中所经历巨大的体力消耗和情绪激荡"},
@@ -209,8 +212,10 @@
 			            '<div class="sectionboxf">'+
 						    '<a href="'+ result[i].href+'" class="href">'+
 							'<div class="section-left">' +
-								'<p>'+result[i].left+'<span>'+result[i].left2+'</span>'+'</p>'+
-								'<p>'+result[i].left3+'</p>'+
+								'<img src='+result[i].leftimg+'>'+
+								'<div class="section-middle"><p>'+result[i].left+'<span>'+result[i].left2+'</span>'+'</p>'+
+								'<p>'+result[i].left3+'</p></div>'+
+								'<p class="section-right">'+result[i].right+'</p>'+
 							'</div>' +
 							'</a>'+
 						'</div>'+

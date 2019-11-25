@@ -12,12 +12,12 @@
 /*精选视频*/
 .video{
 	width:100%;
-	height:432px;
+	height:494px;
 	margin-top: 70px;
 }
 .video-content{
 	width:80%;
-	height:432px;
+	height:494px;
 	margin:0 auto;
 }
 .video-content>h3{
@@ -27,21 +27,28 @@
 	padding:30px 0;
 }
 .video-left{
-	width:62%;
-	height:341px;
+	width:53%;
+	height:400px;
 	float:left;
+	margin-left:4.5%;
 }
 .video-right{
 	width:38%;
-	/*margin-left: 4%;*/
-	height:341px;
+	height:400px;
 	float:right;
 	overflow:hidden;
+	margin-right:4.5%;
+}
+.video-secondleft{
+	margin-left:0;
+}
+.video-secondright{
+	margin-right:0;
 }
 /*播放器样式*/
-.video_player{width:100%;height:;float:left;}
-.video_list_area{width: 100%;height:341px;overflow:hidden;float:right;}
-.video_list{height:341px;overflow: hidden; list-style:none;width:100%;}
+.video_player{width:100%;float:left;}
+.video_list_area{width: 100%;height:400px;overflow:hidden;float:right;}
+.video_list{height:400px;overflow: hidden; list-style:none;width:100%;}
 .video_list li{font-size: 14px;font-weight: bold;line-height: 24px;width: 100%;text-align: left;}
 .video_list li a{display:inline-block;width:100%;height:49px;text-indent:10%;line-height:50px;color:white;background-color: rgb(66,66,66);cursor: pointer;}
 .video_list .on a{background-color:#1d7aee}
@@ -51,12 +58,12 @@
 .center{width: 100%;margin: 20px auto;}
 .dec_10{
 	width:100%;
-	height:341px;
+	height:400px;
     float:right;
 }
 /*视频右边切换*/
 .v_out{width:100%;margin:0px auto;overflow:hidde;}
-.v_show{width:100%;overflow:hidden;position:relative;height:341px;}
+.v_show{width:100%;overflow:hidden;position:relative;height:400px;}
 .v_cont{ width:100%;position:absolute;left:0px;top:0px;}
 .v_cont ul{float:left;text-align:center;line-height:50px;}
 .v_cont ul li{width:100%;height:50px;background:#f8f8f8;}
@@ -67,7 +74,7 @@
 .circle li{width:120px;height:60px;float:left;margin-right:10px;background:lightgray}
 .circle .circle-cur{background:#f00}
 
-.scrollBar{width: 100%;height:340px;border:1px solid lightgray;}
+.scrollBar{width: 100%;height:400px;border:1px solid lightgray;}
 .content{
 	width:97.5% !important;
 }
@@ -369,6 +376,8 @@
 	margin-top: 4px;
 	height: 40px;
     overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
 .family-box1>p:nth-of-type(2){
 	font-size: 12px;
@@ -458,6 +467,12 @@
 }
 
 @media (min-width: 750px){
+	.video,.video-content {
+	    height: 302px !important;
+    }
+	.video-left,.video_player div video,.video_list,.video-right{
+    	height: 208px !important;
+    }
 	.v_cont ul li{
 		height:43px !important;
 	}
@@ -478,7 +493,7 @@
     }
     .family-box1>p:nth-of-type(1){
     	font-size: 12px !important;
-    	height:46px !important;
+    	height:34px !important;
     	overflow: hidden;
     }
     .family-box1>p:nth-of-type(2)>span{
@@ -490,6 +505,12 @@
 	.content1 {
 		width:72% !important;
 	}
+	.video,.video-content {
+	    height: 308px !important;
+    }
+	.video-left,.video_player div video,.video_list,.video-right{
+    	height: 216px !important;
+    }
 	.family-content{
 		height:242px !important;
 	}
@@ -505,6 +526,12 @@
 	.content1 {
 		width:67% !important;
 	}
+	.video,.video-content {
+	    height: 324px !important;
+    }
+	.video-left,.video_player div video,.video_list,.video-right{
+    	height: 232px !important;
+    }
 	.family-content{
 		height:246px !important;
 	}
@@ -517,6 +544,12 @@
 }
 
 @media (min-width: 1280px){
+	.video,.video-content {
+	    height: 362px !important;
+    }
+	.video-left,.video_player div video,.video_list,.video-right{
+    	height: 270px !important;
+    }
 	.family-content{
 		height:246px !important;
 	}
@@ -533,6 +566,12 @@
 }
 
 @media (min-width: 1366px){
+	.video,.video-content {
+	    height: 382px !important;
+    }
+	.video-left,.video_player div video,.video_list,.video-right{
+    	height: 288px !important;
+    }
 	.family-content{
 		height:258px !important;
 	}
@@ -545,6 +584,12 @@
 }
 
 @media (min-width: 1440px){
+	.video,.video-content {
+	    height: 394px !important;
+    }
+	.video-left,.video_player div video,.video_list,.video-right{
+    	height: 302px !important;
+    }
 	.family-content{
 		height:258px !important;
 	}
@@ -554,6 +599,12 @@
 }
 
 @media (min-width: 1600px){
+	.video,.video-content {
+	    height: 434px !important;
+    }
+    .video-left,.video_player div video,.video_list,.video-right{
+    	height: 340px !important;
+    }
 	.family-content{
 		height:270px !important;
 	}
@@ -567,15 +618,30 @@
 }
 
 @media (min-width: 1680px){
+	.video,.video-content {
+	    height: 446px !important;
+    }
+    .video-left,.video_player div video,.video_list,.video-right{
+    	height: 352px !important;
+    }
+    .v_cont ul li{
+    	height:44px !important;
+    }
 	.family-content{
 		height:276px !important;
 	}
 	.family-box1>img{
-	height: 122px !important;
+		height: 122px !important;
     }
 }
 
 @media (min-width: 1920px){
+	.video,.video-content {
+	    height: 494px !important;
+    }
+    .video-left,.video_player div video, .video_list,.video-right{
+    	height:400px !important;
+    }
 	.v_cont ul li{
 		height:50px !important;
 	}
