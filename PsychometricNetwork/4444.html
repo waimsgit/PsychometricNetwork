@@ -1,17 +1,22 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
 	<head>
-		<meta charset="UTF-8">
+		<meta charset="utf-8">
 		<title></title>
-		<style>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<style type="text/css">
+			body{
+				background-color: #FFFFFF;
+			}
 			.out{
 				overflow: hidden;
-				height:200px;
+				height:180px;
 				margin-top: 100px;
 				/*background: cornflowerblue;*/
 			}
 			.outs{
-				height:200px;
+				height:180px;
 			}
 			.content1-left{
 				width:25%;
@@ -41,9 +46,9 @@
 			}
 		</style>
 	</head>
+
 	<body>
-	<!--最新资讯-->
-			<div class="out" id="roll">
+		<div class="out" id="roll">
 				<div class="outs">
 				    <div class="content1-left">
 					    <img src="img/americanInstitutions12_5.png" alt="" />
@@ -55,7 +60,7 @@
 				</div>
 				<div class="outs">
 					<div class="content1-left">
-						<img src="img/americanInstitutions9_1.png" alt="" />
+						<img src="img/americanInstitutions9_2.png" alt="" />
 					</div>
 					<div class="content1-right">
 						<h2>斯-欧非言语智力主试资格（北京）培训班</h2>
@@ -63,25 +68,36 @@
 					</div> 
 				</div>
 		    </div>
-			
-			
-			<script src="js/jquery.min.js"></script>
-			<script type="text/javascript" src="js/mui.min.js"></script>
-			<script type="application/javascript">
-				var speed = 60;
-				window.onload = function(){
-					var area = document.getElementById("roll");
-					area.innerHTML += area.innerHTML;
-					function scroll(){
+		
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mui/3.7.1/js/mui.min.js" ></script>
+		<script type="text/javascript" src="js/jquery.min.js" ></script>
+		<script type="application/javascript">
+			var speed = 100;
+			var delay = 1000;
+			var height = 180;
+			var time;
+			window.onload = function(){
+				var area = document.getElementById("roll");
+				area.innerHTML += area.innerHTML;
+				function scroll(){
+					if(area.scrollTop % height == 0){
+						clearInterval(time);
+						setTimeout(start,delay);
+					}else{
+						area.scrollTop++;
 						if(area.scrollTop >= area.scrollHeight/2){
 							area.scrollTop = 0;
-						}else{
-							area.scrollTop++;
 						}
 					}
 					
-					setInterval(scroll,speed);
 				}
-			</script>
+				function start(){
+					time = setInterval(scroll,speed);
+					area.scrollTop++;
+				}
+				setTimeout(start,delay);
+			}
+		</script>
 	</body>
+
 </html>
