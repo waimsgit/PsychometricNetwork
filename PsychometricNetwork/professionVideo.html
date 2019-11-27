@@ -111,16 +111,18 @@
 			 	});
 			})
 		</script>
-		<script src="js/jquery.js"></script>
+		
 		<!--收藏-->
 		<script>
-			$('#tol').click(function(){
-				if($("#gray").attr('src')=='img/professionVideolike1.png'){
-					$(this).find('#gray').attr('src','img/professionVideolike2.png');
-				}else{
-					$(this).find('#gray').attr('src','img/professionVideolike1.png');
-				}
-			});
+			$(function(){
+				$('#tol').click(function(){
+					if($("#gray").attr('src')=='img/professionVideolike1.png'){
+						$(this).find('#gray').attr('src','img/professionVideolike2.png');
+					}else{
+						$(this).find('#gray').attr('src','img/professionVideolike1.png');
+					}
+				});
+			})
 		</script>
 
         <!--确认是否购买弹框-->
