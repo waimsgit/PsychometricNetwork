@@ -1,214 +1,156 @@
+
 <!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="UTF-8">
-		<title>文献</title>
-		<link rel="stylesheet" type="text/css" href="css/commone.css" />
-		<link rel="stylesheet" type="text/css" href="css/style.css" />
-		<!--<link rel="stylesheet" type="text/css" href="css/literature.css" />-->
-		<link rel="stylesheet" type="text/css" href="css/Safari.css" />
-		<link rel="stylesheet" type="text/css" href="css/demo.css" />
-		<link rel="stylesheet" type="text/css" href="css/tabs.css" />
-		<link rel="stylesheet" type="text/css" href="css/page.css" />
-		<link rel="stylesheet" type="text/css" href="css/colleatpage.css" />
-		<script src="js/jquery.min.js"></script>
-		<script src="js/public.js"></script>
-		<script src="js/page1.js"></script>	
-		<script src="js/literature.js"></script>
-		 <script src="js/modernizr.custom.js"></script>
-		<!--选项卡js-->
-		<script src="js/cbpFWTabs.js"></script>
-	</head>
-
-	<body>
-		<div class="main">
-		<div class="container">
-			<!--左边导航内容-->
-			 <div id="side"></div>
-
-			<!--右侧内容-->
-			<div class="right">
-				<!--斯欧 韦氏 适应行为 罗夏墨迹 MMPI-->
-				<div class="content2" style="margin-top: 100px;">
-					<div class="content2-center">
-						<section>
-							<div class="tabs tabs-style-circlefill">
-								<nav>
-									<ul>
-										<li id='l1' class="sel">
-											<a href="#section-circlefill-1" class="icon icon-plug" ><span>测试1</span></a>
-										</li>
-									</ul>
-								</nav>
-
-								<div class="content-wrap">
-									<section id="section-circlefill-1" class="content-current">
-										<div class="info_fl" id="content">	                                      
-											<div id="sectionbox" class="sectionbox">
-												<ul id="demoContent0"></ul>
-											</div>
-										</div>
-										<ul class="page" id="page0"></ul>
-									</section>
-								</div>
-								
-							</div>
-						</section>
-						
-						
-						<section>
-							<div class="tabs tabs-style-circlefill">
-								<nav>
-									<ul>
-										<li id='l1' class="sel">
-											<a href="#section-circlefill-2" class="icon icon-gift"><span>测试2</span></a>
-										</li>
-									</ul>
-								</nav>
-
-								<div class="content-wrap">
-									<section id="section-circlefill-2" class="content-current">
-										<div class="info_fl" id="content">	                                      
-											<div id="sectionbox" class="sectionbox">
-												<ul id="demoContent1"></ul>
-											</div>
-										</div>
-										<ul class="page" id="page1"></ul>
-									</section>
-								</div>
-								
-							</div>
-						</section>
-						
-
-					</div>
-					<!--content2-center结尾标签-->
-				</div>
-				<!--content2结尾标签-->
-			</div>
-			<!--right的 结尾标签-->
-			<div class="clear"></div>
-		</div>
-		<!--container的结尾标签-->
-		</div>    <!--main的结尾标签-->
-		<!--版权-->
-		<div class="right-footer">
-			<div class="right-footer-content">
-				骄阳智心 版权所有 2010-2019&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;京ICP备17000866&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;京公网安备11010802023632号
-			</div>
-		</div>
-
-       
-		<script>
-			(function() {
-				[].slice.call(document.querySelectorAll('.tabs')).forEach(function(el) {
-					new CBPFWTabs(el);
-				})
-			})();
-		</script>
-		<script>
-			var _index=$('.tab-current').index();
-			$('.tabs li').on('click',function(){
-				var _index=$('.tab-current').index();
-				//console.log(_index);
-				if(_index==0){
-					datas=datas1;
-				}
-					 options={
-					"id":"page"+_index,//显示页码的元素
-					"data":datas,//显示数据
-				    "maxshowpageitem":3,//最多显示的页码个数
-				    "pagelistcount":10,//每页显示数据个数
-				    "callBack":function(result){//返回datas数据
-				    	//console.log(result);  //输出datas的数据
-				    	var cHtml="";
-				        for(var i=0;i<result.length;i++){
-				            cHtml+="<li>"+ 
-				             '<div class="sectionboxf">'+
-							    '<a href="'+ result[i].href+'" class="href">'+
-									'<div class="section-left">' +
-										'<p>'+result[i].left+'</p>'+
-										'<span>'+result[i].middle+'</span>'+
-										'<img src="img/literature2.png"/>'+
-									'</div>' +
-								'</a>'+
-						'</div>'+
-				            "</li>";//处理数据
-				        }
-				        $("#demoContent"+_index).html(cHtml);//将数据增加到页面中
-				    }
-				};
-				   page.init(datas.length,1,options);
-			})
-			var datas1=[
-			    {"did":1,"href":"http://47.104.147.26:8088/examples/siou001.pdf","left": "斯-欧非言语智力测验在特殊群体中的应用","middle": "作者：张厚粲","right": ""},
-			    {"did":2,"href":"http://47.104.147.26:8088/examples/siou003.pdf","left": "斯-欧非言语智力测验评介","middle": "作者：徐建平","right": ""},
-			    {"did":3,"href":"http://47.104.147.26:8088/examples/siou005.pdf","left": "斯-欧非言语智力测验(6-40 岁)中国版(SON-R 6-40 中国版)","middle": "作者：张厚粲、徐建平与PeterJ.Tellegen、JacobA.Laros","right": ""},
-			    {"did":4,"href":"http://47.104.147.26:8088/examples/WPPSI-IV+ABAS-II_JY.pdf","left": "韦氏幼儿智力量表第四版中国版","middle": "联系：骄阳智心","right": ""},
-			    {"did":5,"href":"http://47.104.147.26:8088/examples/MMPI01.pdf","left": "明尼苏达多相人格测验（MMPI）简介","middle": "联系：骄阳智心","right": ""},
-			    {"did":6,"href":"pcIndex.html","left": "积极心理学视角下中学响因素探讨","middle": "作者：王五辰","right": ""},
-			    {"did":7,"href":"pcIndex.html","left": "积极心理学视角下中学生心理健康现状及影响因素探讨","middle": "作者：王五辰","right": ""},
-			    {"did":8,"href":"pcIndex.html","left": "积极心理学视角下中学生心理健康现状及影响因素探讨","middle": "作者：王五辰","right": ""},
-			    {"did":9,"href":"pcIndex.html","left": "积极心理学视角下中学生心理健康现状及影响因素探讨","middle": "作者：王五辰","right": ""},
-			    {"did":10,"href":"pcIndex.html","left": "积极心理学视角下中学生心理健康现状及影响因素探讨","middle": "作者：王五辰","right": ""},
-			    {"did":11,"href":"pcIndex.html","left": "积极心理学视角下中学生心理健康现状及影响因素探讨","middle": "作者：王五辰","right": ""},
-			    {"did":12,"href":"pcIndex.html","left": "积极心理学视角下中学生心理健康现状及影响因素探讨","middle": "作者：王五辰","right": ""},
-			    {"did":13,"href":"pcIndex.html","left": "积极心理学视角下中学生心理健康现状及影响因素探讨","middle": "作者：王五辰","right": ""},
-			    {"did":14,"href":"pcIndex.html","left": "积极心理学视角下中学生心理健康现状及影响因素探讨","middle": "作者：王五辰","right": ""},
-			];
-			</script>
-			
-			
-			<script>
-			var _index=$('.tab-current').index();
-			$('.tabs li').on('click',function(){
-				var _index=$('.tab-current').index();
-				//console.log(_index);
-				if(_index==0){
-					datas=datas2;
-				}
-					 options={
-					"id":"page"+_index,//显示页码的元素
-					"data":datas,//显示数据
-				    "maxshowpageitem":3,//最多显示的页码个数
-				    "pagelistcount":10,//每页显示数据个数
-				    "callBack":function(result){//返回datas数据
-				    	//console.log(result);  //输出datas的数据
-				    	var cHtml="";
-				        for(var i=0;i<result.length;i++){
-				            cHtml+="<li>"+ 
-				             '<div class="sectionboxf">'+
-							    '<a href="'+ result[i].href+'" class="href">'+
-									'<div class="section-left">' +
-										'<p>'+result[i].left+'</p>'+
-										'<span>'+result[i].middle+'</span>'+
-										'<img src="img/literature2.png"/>'+
-									'</div>' +
-								'</a>'+
-						'</div>'+
-				            "</li>";//处理数据
-				        }
-				        $("#demoContent1"+_index).html(cHtml);//将数据增加到页面中
-				    }
-				};
-				   page.init(datas.length,1,options);
-			})
-			var datas2=[
-			    {"did":1,"href":"http://47.104.147.26:8088/examples/siou001.pdf","left": "22222斯-欧非言语智力测验在特殊群体中的应用","middle": "作者：张厚粲","right": ""},
-			    {"did":2,"href":"http://47.104.147.26:8088/examples/siou003.pdf","left": "222斯-欧非言语智力测验评介","middle": "作者：徐建平","right": ""},
-			    {"did":3,"href":"http://47.104.147.26:8088/examples/siou005.pdf","left": "222斯-欧非言语智力测验(6-40 岁)中国版(SON-R 6-40 中国版)","middle": "作者：张厚粲、徐建平与PeterJ.Tellegen、JacobA.Laros","right": ""},
-			    {"did":4,"href":"http://47.104.147.26:8088/examples/WPPSI-IV+ABAS-II_JY.pdf","left": "韦氏幼儿智力量表第四版中国版","middle": "联系：骄阳智心","right": ""},
-			    {"did":5,"href":"http://47.104.147.26:8088/examples/MMPI01.pdf","left": "明尼苏达多相人格测验（MMPI）简介","middle": "联系：骄阳智心","right": ""},
-			    {"did":6,"href":"pcIndex.html","left": "222积极心理学视角下中学响因素探讨","middle": "作者：王五辰","right": ""},
-			    {"did":7,"href":"pcIndex.html","left": "22积极心理学视角下中学生心理健康现状及影响因素探讨","middle": "作者：王五辰","right": ""},
-			    {"did":8,"href":"pcIndex.html","left": "22积极心理学视角下中学生心理健康现状及影响因素探讨","middle": "作者：王五辰","right": ""},
-			    {"did":9,"href":"pcIndex.html","left": "22积极心理学视角下中学生心理健康现状及影响因素探讨","middle": "作者：王五辰","right": ""},
-			    {"did":10,"href":"pcIndex.html","left": "22积极心理学视角下中学生心理健康现状及影响因素探讨","middle": "作者：王五辰","right": ""},
-			    {"did":11,"href":"pcIndex.html","left": "22积极心理学视角下中学生心理健康现状及影响因素探讨","middle": "作者：王五辰","right": ""},
-			    {"did":12,"href":"pcIndex.html","left": "22积极心理学视角下中学生心理健康现状及影响因素探讨","middle": "作者：王五辰","right": ""},
-			    {"did":13,"href":"pcIndex.html","left": "22积极心理学视角下中学生心理健康现状及影响因素探讨","middle": "作者：王五辰","right": ""},
-			    {"did":14,"href":"pcIndex.html","left": "22积极心理学视角下中学生心理健康现状及影响因素探讨","middle": "作者：王五辰","right": ""},
-			];
-			</script>
-	</body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>progressive</title>
+    <style>
+        a.progressive {
+            position: relative;
+            display: block;
+            overflow: hidden;
+            outline: none;
+        }
+        a.progressive:not(.replace) {
+            cursor: default;
+        }
+        a.progressive div {
+            display: block;
+            width: 100%;
+            max-width: none;
+            height: auto;
+            border: 0 none;
+        }
+        .preview{
+        	width:100%;
+        	height:600px;
+        }
+        a.progressive div.preview {
+            filter: blur(2vw);
+            transform: scale(1.05);
+        }
+        a.progressive div.reveal {
+            position: absolute;
+            left: 0;
+            top: 0;
+            will-change: transform, opacity;
+            animation: reveal 1s ease-out;
+        }
+        @keyframes reveal {
+            0% {transform: scale(1.05); opacity: 0;}
+            100% {transform: scale(1); opacity: 1;}
+        }
+    </style>
+</head>
+<body>
+    <a href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/123941/nature5.jpg" data-srcset="https://s3-us-west-2.amazonaws.com/s.cdpn.io/123941/nature5.jpg 800w, https://s3-us-west-2.amazonaws.com/s.cdpn.io/123941/nature5big.jpg 1600w" class="progressive replace">
+        <!--<img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAYABgAAD//gA7Q1JFQVRPUjogZ2QtanBlZyB2MS4wICh1c2luZyBJSkcgSlBFRyB2NjIpLCBxdWFsaXR5ID0gNzAK/9sAQwAKBwcIBwYKCAgICwoKCw4YEA4NDQ4dFRYRGCMfJSQiHyIhJis3LyYpNCkhIjBBMTQ5Oz4+PiUuRElDPEg3PT47/9sAQwEKCwsODQ4cEBAcOygiKDs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7/8AAEQgABQAUAwEiAAIRAQMRAf/EAB8AAAEFAQEBAQEBAAAAAAAAAAABAgMEBQYHCAkKC//EALUQAAIBAwMCBAMFBQQEAAABfQECAwAEEQUSITFBBhNRYQcicRQygZGhCCNCscEVUtHwJDNicoIJChYXGBkaJSYnKCkqNDU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6g4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2drh4uPk5ebn6Onq8fLz9PX29/j5+v/EAB8BAAMBAQEBAQEBAQEAAAAAAAABAgMEBQYHCAkKC//EALURAAIBAgQEAwQHBQQEAAECdwABAgMRBAUhMQYSQVEHYXETIjKBCBRCkaGxwQkjM1LwFWJy0QoWJDThJfEXGBkaJicoKSo1Njc4OTpDREVGR0hJSlNUVVZXWFlaY2RlZmdoaWpzdHV2d3h5eoKDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uLj5OXm5+jp6vLz9PX29/j5+v/aAAwDAQACEQMRAD8A5yC3e2S3gM7OEQHdgA57VTuLAPqUoaUk7yM7R2BPSiivS5VN8stjmk2ldGVM3lyshG7bxk0UUV4skk2jdN2P/9k=" class="preview" alt="palm trees" />-->
+        <div class="preview" style="background: red;">1111</div>
+    </a>
+    <a href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/123941/nature2.jpg" class="progressive replace">
+        <!--<img src="http://lorempixel.com/20/15/nature/2/" class="preview" alt="sunset" />-->
+         <div class="preview" style="background: orange;">2222</div>
+    </a>
+    <a href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/123941/nature3.jpg" class="progressive replace">
+        <!--<img src="http://lorempixel.com/20/15/nature/3/" class="preview" alt="tide" />-->
+         <div class="preview" style="background:yellow;">3333</div>
+    </a>
+    <a href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/123941/nature5.jpg" data-srcset="https://s3-us-west-2.amazonaws.com/s.cdpn.io/123941/nature5.jpg 800w, https://s3-us-west-2.amazonaws.com/s.cdpn.io/123941/nature5big.jpg 1600w" class="progressive replace">
+        <!--<img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAYABgAAD//gA7Q1JFQVRPUjogZ2QtanBlZyB2MS4wICh1c2luZyBJSkcgSlBFRyB2NjIpLCBxdWFsaXR5ID0gNzAK/9sAQwAKBwcIBwYKCAgICwoKCw4YEA4NDQ4dFRYRGCMfJSQiHyIhJis3LyYpNCkhIjBBMTQ5Oz4+PiUuRElDPEg3PT47/9sAQwEKCwsODQ4cEBAcOygiKDs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7/8AAEQgABQAUAwEiAAIRAQMRAf/EAB8AAAEFAQEBAQEBAAAAAAAAAAABAgMEBQYHCAkKC//EALUQAAIBAwMCBAMFBQQEAAABfQECAwAEEQUSITFBBhNRYQcicRQygZGhCCNCscEVUtHwJDNicoIJChYXGBkaJSYnKCkqNDU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6g4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2drh4uPk5ebn6Onq8fLz9PX29/j5+v/EAB8BAAMBAQEBAQEBAQEAAAAAAAABAgMEBQYHCAkKC//EALURAAIBAgQEAwQHBQQEAAECdwABAgMRBAUhMQYSQVEHYXETIjKBCBRCkaGxwQkjM1LwFWJy0QoWJDThJfEXGBkaJicoKSo1Njc4OTpDREVGR0hJSlNUVVZXWFlaY2RlZmdoaWpzdHV2d3h5eoKDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uLj5OXm5+jp6vLz9PX29/j5+v/aAAwDAQACEQMRAD8A5yC3e2S3gM7OEQHdgA57VTuLAPqUoaUk7yM7R2BPSiivS5VN8stjmk2ldGVM3lyshG7bxk0UUV4skk2jdN2P/9k=" class="preview" alt="palm trees" />-->
+         <div class="preview" style="background:lightgreen;">444</div>
+    </a>
+    <a href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/123941/nature2.jpg" class="progressive replace">
+        <!--<img src="http://lorempixel.com/20/15/nature/2/" class="preview" alt="sunset" />-->
+         <div class="preview" style="background:deepskyblue;">55555</div>
+    </a>
+    <a href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/123941/nature3.jpg" class="progressive replace">
+        <!--<img src="http://lorempixel.com/20/15/nature/3/" class="preview" alt="tide" />-->
+         <div class="preview" style="background: purple;">66666</div>
+    </a>
+    <script>
+        window.addEventListener('load', function() {
+            var pItem = document.getElementsByClassName('progressive replace'), timer;
+ 
+            window.addEventListener('scroll', scroller, false);
+            window.addEventListener('resize', scroller, false);
+            inView();
+ 
+            function scroller(e) {
+                timer = timer || setTimeout(function() {
+                    timer = null;
+                    requestAnimationFrame(inView);
+                }, 300);
+            }
+ 
+            function inView() {
+                var scrollTop = window.pageYOffset;
+                var innerHeight = window.innerHeight;
+                var p = 0;
+                while (p < pItem.length) {
+                    var offsetTop = pItem[p].offsetTop;
+                    if (offsetTop < (scrollTop + innerHeight)) {
+                        loadFullImage(pItem[p]);
+                        pItem[p].classList.remove('replace');
+                    }
+                    else p++;
+                }
+            }
+ 
+ 
+            function loadFullImage(item) {
+                var img = new Image();
+                if (item.dataset) {
+                    img.srcset = item.dataset.srcset || '';
+                    img.sizes = item.dataset.sizes || '';
+                }
+                img.src = item.href;
+                img.className = 'reveal';
+                if (img.complete) addImg();
+                else img.onload = addImg;
+ 
+                function addImg() {
+                    item.addEventListener('click', function(e) { e.preventDefault(); }, false);
+                    item.appendChild(img).addEventListener('animationend', function(e) {
+                        var pImg = item.querySelector('img.preview');
+                        if (pImg) {
+                            e.target.alt = pImg.alt || '';
+                            item.removeChild(pImg);
+                            e.target.classList.remove('reveal');
+                        }
+                    });
+                }
+ 
+            }
+ 
+        }, false);
+    </script>
+    
+    
+    <script>
+    	window.onmousewheel = function(){  //触发滚轮事件
+    		
+		}
+		window.onscroll = function(){  //滚动条事件
+		 
+		}
+		//其实你的问题直接使用判断滚动条应该就可以了，但是如果一定要拖动滚动条才执行事件，我们可以通过获取鼠标位置来模拟
+		var a = document.getElementsByTagName("html")[0];
+		window.onmousemove = function(){
+		        //一般默认滚动条12px宽，当鼠标位于浏览器窗口右边12px内按下鼠标可以视为拖动滚动条
+		    if(innerWidth - event.clientX < 12){
+		        a.onmousedown = function(){
+		            console.log(1);
+		        }
+		        document.getElementsByTagName("body")[0].onscroll=function(){
+					if(document.getElementsByTagName("body")[0].scrollTop>600){
+						alert("网页太长")；
+				}}
+		    }else{
+		        a.onmousedown = null;
+		    }
+		}
+    </script>
+</body>
 </html>

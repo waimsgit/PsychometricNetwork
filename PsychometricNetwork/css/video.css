@@ -251,7 +251,8 @@
 	color:#009FB6;
 	font-weight: bold;
 }
-/*家庭学校教育*/
+
+/*视频区*/
 .family:last-of-type>.family-content{
 	margin-bottom:90px;
 }
@@ -262,7 +263,8 @@
 }
 .family-content{
 	width:100%;
-	height:292px;
+	height: auto!important;
+    min-height: 292px;
 	overflow: hidden;
 	margin:0 auto;
 }
@@ -324,13 +326,13 @@
 	width:100%;
     clear:both;
     margin-top:24px;
-    display:flex;
 }
 .family-box>a{
 	display:block;
 	width:23.1%;
 	height:100%;
 	float:left;
+	margin:20px 0.94%;
 	padding:0 0 10px 0;
 	background: white;
 	border-radius:4px;
@@ -340,10 +342,6 @@
 .family-box1{
 	width:100%;
 	height:100%;
-}
-.family-box>a:nth-of-type(2),.family-box>a:nth-of-type(3),.family-box>a:nth-of-type(4){
-	float:left;
-	margin-left: 2.5%;
 }
 
 .family-box1>img{
@@ -408,28 +406,20 @@
 }
 
 /*查看更多课程*/
-.courses{
-	width:100%;
-	clear:both;
-	margin-top: 90px;
-}
-.courses-content{
-	width:82%;
-	margin:0 auto;
-}
-.courses-content>a{
+.loadmore{
 	display:block;
-	width:44px;
-	background: white;
+	border:0;
+	outline: none;
+	width:160px;
+	background: #1D7AEE;
 	height:40px;
-	box-shadow: 0px 0px 7px 4px lightgrey;
 	margin:0 auto;
 	text-align: center;
 	line-height: 40px;
 	font-size: 14px;
 	font-weight: bold;
-	color:#201E1E;
-	border-radius:50%
+	color:white;
+	border-radius:4px;
 }
 
 /*版权*/
@@ -486,10 +476,10 @@
 		width:76% !important;
 	}
 	.family-content{
-		height:238px !important;
+		/*height:238px !important;*/
 	}
 	.family-box1>img{
-	height: 84px !important;
+		height: 84px !important;
     }
     .family-box1>p:nth-of-type(1){
     	font-size: 12px !important;
@@ -512,10 +502,10 @@
     	height: 216px !important;
     }
 	.family-content{
-		height:242px !important;
+		/*height:242px !important;*/
 	}
 	.family-box1>img{
-	height: 90px !important;
+		height: 90px !important;
     }
     .family-box1>p:nth-of-type(2)>span{
     	width:58% !important;
@@ -533,10 +523,10 @@
     	height: 232px !important;
     }
 	.family-content{
-		height:246px !important;
+		/*height:246px !important;*/
 	}
 	.family-box1>img{
-	height: 94px !important;
+		height: 94px !important;
     }
     .family-box1>p:nth-of-type(2)>span{
     	width:58% !important;
@@ -551,10 +541,10 @@
     	height: 270px !important;
     }
 	.family-content{
-		height:246px !important;
+		/*height:246px !important;*/
 	}
 	.family-box1>img{
-	height: 94px !important;
+		height: 94px !important;
     }
     .family-box1>p:nth-of-type(1){
     	height:34px !important;
@@ -573,10 +563,10 @@
     	height: 288px !important;
     }
 	.family-content{
-		height:258px !important;
+		/*height:258px !important;*/
 	}
 	.family-box1>img{
-	height: 100px !important;
+		height: 100px !important;
     }
     .family-box1>p:nth-of-type(2)>span{
     	width:70% !important;
@@ -591,10 +581,10 @@
     	height: 302px !important;
     }
 	.family-content{
-		height:258px !important;
+		/*height:258px !important;*/
 	}
 	.family-box1>img{
-	height: 104px !important;
+		height: 104px !important;
     }
 }
 
@@ -606,10 +596,10 @@
     	height: 340px !important;
     }
 	.family-content{
-		height:270px !important;
+		/*height:270px !important;*/
 	}
 	.family-box1>img{
-	height: 116px !important;
+		height: 116px !important;
     }
     .family-box1>p:nth-of-type(1){
     	font-size: 14px !important;
@@ -628,7 +618,7 @@
     	height:44px !important;
     }
 	.family-content{
-		height:276px !important;
+		/*height:276px !important;*/
 	}
 	.family-box1>img{
 		height: 122px !important;
@@ -652,7 +642,7 @@
 		font-size: 14px !important;
 	}
 	.family-content{
-		height:292px !important;
+		/*min-height:288px !important;*/
 	}
 	.family-box1>img{
 	height: 140px !important;

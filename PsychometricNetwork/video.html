@@ -15,9 +15,64 @@
 		<div class="main">
 		<div class="container">
 			<!--左边导航内容-->
-			<div id="side"></div>
+			<!--<div id="side"></div>-->
+			<div class="left">
+				<div class="left-content">
+					<!--logo-->
+					<div class="left-top">
+						<img src="img/logo.png" />
+					</div>
+					<!--导航-->
+					<div class="left-middle">
+						<div class="sidebar" id="iconbox">
+							<ul>
+								<li>
+									<a href="pcIndex.html"><i class="fa fa-dashboard push"><img id="icon1" src="img/icon1.png"/></i><span>首页</span></a>
+								</li>
+								<li>
+									<a href="scale.html"><i class="fa fa-cog push"><img id="icon2" src="img/icon2.png"/></i><span>量表</span></a>
+								</li>
+								<li>
+									<a href="train.html"><i class="fa fa-cog push"><img id="icon6" src="img/icon6.png"/></i><span>培训</span></a>
+								</li>
+								<li>
+									<a href="information.html"><i class="fa fa-user push"><img id="icon3" src="img/icon3.png"/></i><span>资讯</span></a>
+								</li>
+								<li>
+									<a href="video.html"><i class="fa fa-user push"><img id="icon4" src="img/icon4_4.png"/></i><span>视频</span></a>
+								</li>
+								<li>
+									<a href="aboutusone.html"><i class="fa fa-cog push"><img id="icon5" src="img/icon5.png"/></i><span>关于我们</span><i class="fa fa-angle-right"></a>
+								</li>
+							</ul>
+						</div>
+
+					</div>
+
+				</div>
+			</div>
 
 			<div class="right">
+				<div class="head">
+	           	     <!--搜索及中英文切换区-->
+					<div class="right-top">
+						<div class="right-top-content" id="#content">
+							<div class="right-top-right">
+								<div class="china">
+									<img src="img/china.png" alt="" />
+									<span>中文</span>
+								</div>
+								
+								<!--登录注册框-->
+								<div id="userinf"></div>
+							</div>
+						</div>
+	
+						<div class="clear"></div>
+						
+					</div>   <!--right-top  结尾标签-->
+					
+	            </div>   <!--head 结尾标签-->
 				<!--精选视频-->
 					<div class="video">
 						<div class="video-content">
@@ -247,7 +302,7 @@
 								<div class="family-content">
 									<ul class="family-nav">
 										<h3><span></span>系列课程</h3>
-										<li class="familytext0"><a href="videoall.html">更多 <span>></span> </a></li>
+										<li class="familytext0"><a href="MoreProfessionalVideos.html">更多 <span>></span> </a></li>
 									</ul>
 									<div class="family-box">
 										<a :href="'professionVideo.html?id='+item.id" v-for="(item,index) in lists" >
@@ -413,7 +468,7 @@
 									<div class="family-content">
 										<ul class="family-nav">
 											<h3><span></span>系列课程</h3>
-											<li class="familytext0"><a href="">更多 <span>></span> </a></li>
+											<li class="familytext0"><a href="MoreProfessionalVideos.html">更多 <span>></span> </a></li>
 										</ul>
 										<div class="family-box">
 											<a :href="'professionVideo.html?id='+item.id" v-for="(item,index) in lists" >
@@ -456,10 +511,10 @@
 
          <script>
 			$(function(){
-				$("#side").load("side.html",function(){
+//				$("#side").load("side.html",function(){
 					getlogin();
-			 		$("#icon4").attr("src","img/icon4_4.png");
-			 	});
+//			 		$("#icon4").attr("src","img/icon4_4.png");
+//			 	});
 			})
 		</script>
         <!--视频切换-->
@@ -513,7 +568,6 @@
 					
 				}
 			});
-		</script>
-        
+		</script>       
    </body>
 </html>

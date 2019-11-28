@@ -586,8 +586,11 @@ html, body,.main{ height:100%; }
 }
 
 @media (min-width: 1600px){
-	.content1,.content1-center,#picshow_img img,#select_btn{
+	.content1,.content1-center,#select_btn{
 		height:350px !important;
+	}
+	#picshow_img img{
+		height:380px !important;
 	}
 	#select_btn li{
 		height:58px !important;
