@@ -33,13 +33,13 @@
                  					<li>456 人购买</li>
                  					<li>时长：{{scoure.duration}}分</li>
                  				</ul>
-                 				<p>
+                 				<div>
                  					<img src="img/eye.png" alt="" /><span>分享</span>
                  					<P id="tol">
 										<img src="img/professionVideolike1.png" alt="" id="gray"/>
 									</p>
 									<p class="collect">收藏</p>
-                 				</p>
+                 				</div>
                  			</div>
                  			<div><h4 id="price">￥{{scoure.price}} </h4> <a class="buy">立&nbsp;即&nbsp;购&nbsp;买</a></div>
                  		</div>
@@ -83,7 +83,9 @@
 			
 				<div class="notarize">
 					<h5>是否生成订单？</h5>
-					<p class="open"><button onclick="createOrder()">确认</button></p>
+					<!--<a href="javascript:void(0)" onclick='aaa()'>click打开新窗口</a>-->
+					<!--<p class="open"><button onclick="createOrder()" id="affirm">确认</button></p>-->
+					<p class="open"><a href="javascript:void(0)" onclick="createOrder()" id="affirm">确认</a></p>
 					<p class="close">取消</p>
 				</div>
 					
@@ -154,27 +156,15 @@
 				url:url1+"/scale/post/order",
 				data:{"scoureId":id, "orderAmount":vm.scoure.price},
 				dataType:"json",
-				async:true,
+				async:false,
 				beforeSend: function(request) {
 		        		request.setRequestHeader("token",localStorage.getItem("token"));
 		        },
 				success:function (result){
 					if(result.status == 200){
 						vm.scoure = result.data;
-						//console.log(encodeURI('videoOrderform.html?id='+result.data.orderNumber+"&img="+imgpath+"&title="+title+"&price="+price))
-//						var tempwindow=window.open('_blank'); //打开一个窗口，然后用					
-//						tempwindow.location='videoOrderform.html?id='+result.data.orderNumber+'&img='+imgpath+'&title='+title+'&price='+price; //使这个窗口跳转到百度，这样就会呈现弹出百度窗口的效果了
-						
-						//对的 
 						window.open(encodeURI('videoOrderform.html?id='+result.data.orderNumber+"&img="+imgpath+"&title="+title+"&price="+price),'_blank')
-//						
-//						$("#last").click(function(){
-//						var w=window.open();
-//						setTimeout(function(){
-//							w.location="http://www.baidu.com";
-//						}, 1000);
-//						return false;
-//						});
+					
 					}else{
 						alert(result.message)
 					}

@@ -43,7 +43,7 @@
 							  <div id="picshow">
 							    <div id="picshow_img">
 							      <ul>
-							        <li><a href="#"><img src="img/americanInstitutions12_5.png"></a></li>
+							        <li><a href="#"><img src="img/americanInstitutions10_7.png"></a></li>
 							        <li><a href="#"><img src="img/Shanghai4.png"></a></li>
 							        <li><a href="#"><img src="img/Beijing2.png"></a></li>
 							        <li><a href="#"><img src="img/Daxing2.png"></a></li>
@@ -82,7 +82,7 @@
 							  </div>
 							  <div id="select_btn">
 							    <ul>
-							      <li><a href="#"><img src="img/americanInstitutions12_5.png"><span class="select_text">垂直轮播插件标题信息内容1</span><span class="select_date">2019/01/16</span></a></li>
+							      <li><a href="#"><img src="img/americanInstitutions10_7.png"><span class="select_text">垂直轮播插件标题信息内容1</span><span class="select_date">2019/01/16</span></a></li>
 							      <li><a href="#"><img src="img/Shanghai4.png"><span class="select_text">垂直轮播插件标题信息内容2</span><span class="select_date">2019/01/15</span></a></li>
 							      <li><a href="#"><img src="img/Beijing2.png"><span class="select_text">垂直轮播插件标题信息内容3</span><span class="select_date">2019/01/13</span></a></li>
 							      <li><a href="#"><img src="img/Daxing2.png"><span class="select_text">垂直轮播插件标题信息内容4</span><span class="select_date">2019/01/08</span></a></li>
@@ -98,17 +98,17 @@
 				<!--分页切换内容-->
 				<div class="title-box">
 					<!--医疗类  科学类-->
-				<div class="content2">
+				<div class="content2" id="informationvue">
 					<div class="content2-center">
 						<section>
 							<div class="tabs tabs-style-circlefill">
 								<nav>
 									<ul>
 										<li id='l1' class="sel">
-											<a href="#section-circlefill-1" class="icon icon-plug" ><span>业界新闻</span></a>
+											<a href="#section-circlefill-1" class="icon icon-plug" ><span>时实资讯</span></a>
 										</li>
 										<li class="sel">
-											<a href="#section-circlefill-2" class="icon icon-gift"><span>心理学界</span></a>
+											<a href="#section-circlefill-2" class="icon icon-gift"><span>热点资讯</span></a>
 										</li>
 									</ul>
 									
@@ -194,6 +194,40 @@
 		</script>
 		<script src="js/information.js"></script>
 		
+		<script type="text/javascript">
+		//查看详细的量表介绍
+        var articleTitles = [];
+			var url1=geturl();
+			$(function(){ 
+				$.ajax({
+					"url": url1+"/news/lists",
+					"datatype": "json",
+					"newsType":"资讯类型",
+					"success": function(result){
+						this.articleTitles = result.data;
+						vm.titles = result.data;
+//						"status":200,
+//						
+//						"data":
+//							[{
+//							    	"nId":1,"title":"这是一个资讯","author":"郭佳庆","issueTime":"2019-12-03 07:49:18","newsType":"1","status":"0","exa1":null,"exa2":null,"content":null
+//							]}
+					}
+				})
+			})
+			var vm = new Vue({
+				el: "#informationvue",
+				data: {
+					"titles": [],
+					"url":"informationSecond.html?articlePk=",
+					
+				},
+				methods:{
+					
+				}
+		})
+		</script>
+		
 		<script>
 			var _index=$('.tab-current').index();
 			$('.tabs li').on('click',function(){
@@ -211,35 +245,54 @@
 				    "pagelistcount":10,//每页显示数据个数
 				    "callBack":function(result){//返回datas数据
 				    	//console.log(result);  //输出datas的数据
-				    	var cHtml="";
-				        for(var i=0;i<result.length;i++){
+//				    	var cHtml="";
+//				        for(var i=0;i<result.length;i++){
+//				            cHtml+="<li>"+ 
+//				            '<div class="sectionboxf">'+
+//							    '<a href="'+ result[i].href+'" class="href">'+
+//								'<div class="section-left">' +
+//									'<img src='+result[i].leftimg+'>'+
+//									'<div class="section-middle"><p>'+result[i].left+'<span>'+result[i].left2+'</span>'+'</p>'+
+//									'<p>'+result[i].left3+'</p></div>'+
+//									'<p class="section-right">'+result[i].right+'</p>'+
+//								'</div>' +
+//								'</a>'+
+//							'</div>'+
+//				            "</li>";//处理数据
+//				        }
+//				        
+				        var cHtml="";
+				        for(var i=0;i<titles.length;i++){
 				            cHtml+="<li>"+ 
 				            '<div class="sectionboxf">'+
-							    '<a href="'+ result[i].href+'" class="href">'+
+//							    '<a href=""'+ {{titles.href}}+'class="href">'+
 								'<div class="section-left">' +
-								    '<img src='+result[i].leftimg+'>'+
-									'<div class="section-middle"><p>'+result[i].left+'<span>'+result[i].left2+'</span>'+'</p>'+
-									'<p>'+result[i].left3+'</p></div>'+
-									'<p class="section-right">'+result[i].right+'</p>'+
+//								    '<img src='+{{}}+'>'+
+									'<div class="section-middle"><p>'+{{titles.title}}+'<span>'+{{titles.issueTime}}+'</span>'+'</p>'+
+//									'<p>'+result[i].left3+'</p></div>'+
+									'<p class="section-right">'+{{titles.author}}+'</p>'+
 								'</div>' +
-								'</a>'+
+//								'</a>'+
 							'</div>'+
 				            "</li>";//处理数据
 				        }
+								    
+								    
 				        $("#demoContent"+_index).html(cHtml);//将数据增加到页面中
 				    }
 				};
 				   page.init(datas.length,1,options);
 			})
 			var datas1=[
-			    {"did":1,"href":"americanInstitutions12.html","leftimg":"img/americanInstitutions12_5.png","left": "2019年海珠区特殊教育评估教师团队专项研训活动","left2": "2019年11月10日","left3": "“2019年海珠区特殊教育评估教师团队专项研训活动","right":"出版：骄阳智心"},
+			    {"nId":1,"href":"americanInstitutions12.html","leftimg":"img/americanInstitutions12_5.png","title": "2019年海珠区特殊教育评估教师团队专项研训活动","issueTime": "2019年11月10日","left3": "“2019年海珠区特殊教育评估教师团队专项研训活动","author":"出版：骄阳智心"},
+			    {"did":1,"href":"americanInstitutions10.html","leftimg":"img/americanInstitutions10_7.png","left": "2019年海珠区特殊教育评估教师团队专项研训活动","left2": "2019年8月26日","left3": "“2019年海珠区特殊教育评估教师团队专项研训活动”","right":"出版：骄阳智心"},
 			    {"did":2,"href":"americanInstitutions10.html","leftimg":"img/trainpublic.png","left": "2019年9月份北京培训通知","left2": "2019年8月26日","left3": "“心理测量理论与应用系列课程”主试讲师培训圆满举办","right":"出版：骄阳智心"},
 			    {"did":3,"href":"americanInstitutions3.html","leftimg":"img/americanInstitutions3_3.png","left": "看电视的搏斗：要不要让孩子看电视","left2": "2019年8月15日","left3": "孙燕姿最新的微博，讲到五岁的儿子短暂生病时的母子两个人艰难又甜蜜的冲突，其中一项是两个人为看电视的“搏斗”。","right":"出版：骄阳智心"},
 			    {"did":4,"href":"americanInstitutions2.html","leftimg":"img/americanInstitutions2_2.png","left": "当测谎仪遇到心理测评专家","left2": "2019年7月10日","left3": "绝大多数人在说谎或受到有关情绪词的影响时，会发生一系列植物神经系统功能的变化，检测这些变化可反映受试者当时的情绪状态，言语是否真实。在此基础上，测谎仪应运而生。","right":"出版：骄阳智心"},
 			    {"did":5,"href":"americanInstitutions.html","leftimg":"img/americanInstitutions6_2.png","left": "心理测试告诉你，要当上警察有多难","left2": "2019年06月09日","left3": "最近热播的韩剧《live》，让我们看到警察这个职业的艰难和辛苦，也让我们看到每一个第一线的普通警察在一天之中所经历巨大的体力消耗和情绪激荡","right":"出版：骄阳智心"},
 			    {"did":6,"href":"americanInstitutions.html","leftimg":"img/americanInstitutions4_1.png","left": "鬼有什么好怕的，穷才可怕","left2": "2019年05月17日","left3": "《今生是第一次》，男主不想结婚但又需要有人帮自己承担每月房贷的缺口，女主急需一个便宜稳定的住处，于是两个人假结婚了，他们签了合同规定彼此所要交换的东西。","right":"出版：骄阳智心"},
 			    {"did":7,"href":"americanInstitutions.html","leftimg":"img/americanInstitutions5_1.png","left": "你对认可有过度需求吗","left2": "2019年04月15日","left3": "被一个很年轻的朋友问太在乎别人的看法要怎么办，我心里想笑：我以前一直是这样啊，现在可能也是，只是没以前那么严重。所以这个问题是要向和尚借梳子吗？","right":"出版：骄阳智心"},
-			    {"did":8,"href":"americanInstitutions1.html","leftimg":"img/americanInstitutions1_16.png","left": "第一届心理测量理论与应用系列课程主试讲师培训报道","left2": "2018年11月02日","left3": "为了推广心理测量理论与技术的应用，促进心理测量学科的繁荣和发展，同时满足社会各界对心理测量技术的需求，自2016年由中国心理学会心理测量专业委员会主办、北京骄阳智心教育咨询有限公司承办、并联合多家专业心理测评机构推出了“心理测量理论与应用系列课程”","right":"出版：骄阳智心"},
+			    {"did":8,"href":"informationSecond.html","leftimg":"img/americanInstitutions1_16.png","left": "第一届心理测量理论与应用系列课程主试讲师培训报道","left2": "2018年11月02日","left3": "为了推广心理测量理论与技术的应用，促进心理测量学科的繁荣和发展，同时满足社会各界对心理测量技术的需求，自2016年由中国心理学会心理测量专业委员会主办、北京骄阳智心教育咨询有限公司承办、并联合多家专业心理测评机构推出了“心理测量理论与应用系列课程”","right":"出版：骄阳智心"},
 			    {"did":9,"href":"americanInstitutions.html","leftimg":"img/americanInstitutions9_6.png","left": "斯-欧非言语智力主试资格（北京）培训班","left2": "2018年06月04日","left3": "为了推广心理测量理论与技术的应用，促进心理测量学科的繁荣和发展，同时满足社会各界对心理测量技术的需求，自2016年由中国心理学会心理测量专业委员会主办、北京骄阳智心教育咨询有限公司承办、并联合多家专业心理测评机构推出了“心理测量理论与应用系列课程”","right":"出版：骄阳智心"},
 			    {"did":10,"href":"americanInstitutions.html","leftimg":"img/americanInstitutions8_8.png","left": "2017年心理测评理论与应用技术大会暨主试培训","left2": "2017年12月11日","left3": "为了推广心理测量理论与技术的应用，促进心理测量学科的繁荣和发展，同时满足社会各界对心理测量技术的需求，自2016年由中国心理学会心理测量专业委员会主办、北京骄阳智心教育咨询有限公司承办、并联合多家专业心理测评机构推出了“心理测量理论与应用系列课程”","right":"出版：骄阳智心"},
 			    {"did":11,"href":"americanInstitutions.html","leftimg":"img/americanInstitutions7_5.png","left": "智力量表系列培训","left2": "2017年09月14日","left3": "为了推广心理测量理论与技术的应用，促进心理测量学科的繁荣和发展，同时满足社会各界对心理测量技术的需求，自2016年由中国心理学会心理测量专业委员会主办、北京骄阳智心教育咨询有限公司承办、并联合多家专业心理测评机构推出了“心理测量理论与应用系列课程”","right":"出版：骄阳智心"},
@@ -252,21 +305,38 @@
 			    "pagelistcount":10,//每页显示数据个数
 			    "callBack":function(result){//返回datas数据
 			    	//console.log(result);  //输出datas的数据
-			    	var cHtml="";
-			        for(var i=0;i<result.length;i++){
-			            cHtml+="<li>"+ 
-			            '<div class="sectionboxf">'+
-						    '<a href="'+ result[i].href+'" class="href">'+
-							'<div class="section-left">' +
-								'<img src='+result[i].leftimg+'>'+
-								'<div class="section-middle"><p>'+result[i].left+'<span>'+result[i].left2+'</span>'+'</p>'+
-								'<p>'+result[i].left3+'</p></div>'+
-								'<p class="section-right">'+result[i].right+'</p>'+
-							'</div>' +
-							'</a>'+
-						'</div>'+
-			            "</li>";//处理数据
-			        }
+//			    	var cHtml="";
+//			        for(var i=0;i<result.length;i++){
+//			            cHtml+="<li>"+ 
+//			            '<div class="sectionboxf">'+
+//						    '<a href="'+ result[i].href+'" class="href">'+
+//							'<div class="section-left">' +
+//								'<img src='+result[i].leftimg+'>'+
+//								'<div class="section-middle"><p>'+result[i].left+'<span>'+result[i].left2+'</span>'+'</p>'+
+//								'<p>'+result[i].left3+'</p></div>'+
+//								'<p class="section-right">'+result[i].right+'</p>'+
+//							'</div>' +
+//							'</a>'+
+//						'</div>'+
+//			            "</li>";//处理数据
+//			        }
+
+
+ 					    var cHtml="";
+				        for(var i=0;i<result.length;i++){
+				            cHtml+="<li>"+ 
+				            '<div class="sectionboxf">'+
+							    '<a href=""'+ {{titles.href}}+'class="href">'+
+								'<div class="section-left">' +
+//								    '<img src='+{{}}+'>'+
+									'<div class="section-middle"><p>'+{{titles.title}}+'<span>'+{{titles.issueTime}}+'</span>'+'</p>'+
+//									'<p>'+result[i].left3+'</p></div>'+
+									'<p class="section-right">'+{{titles.author}}+'</p>'+
+								'</div>' +
+								'</a>'+
+							'</div>'+
+				            "</li>";//处理数据
+				        }
 			        $("#demoContent0").html(cHtml);//将数据增加到页面中
 			    }
 			};
@@ -285,6 +355,9 @@
 			];
 			
 		</script>
+		
+		
+		
 
 	</body>
 </html>

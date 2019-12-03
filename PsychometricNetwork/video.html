@@ -524,7 +524,7 @@
 		<script src="js/video.js"></script>
 		<script type="text/javascript">
 		    $(function() {
-		    		var iframe = $("div.video_player iframe"); //播放页面
+		        var iframe = $("div.video_player iframe"); //播放页面
 			    $('ul.video_list li ').on('click',function() {
 			      	iframe.attr("src", $(this).find('a').eq(0).attr("name")); //更改iframe src
 			      	$('ul.video_list li').removeClass('on');

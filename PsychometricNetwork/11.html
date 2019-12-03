@@ -1,156 +1,226 @@
-
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>progressive</title>
-    <style>
-        a.progressive {
-            position: relative;
-            display: block;
-            overflow: hidden;
-            outline: none;
-        }
-        a.progressive:not(.replace) {
-            cursor: default;
-        }
-        a.progressive div {
-            display: block;
-            width: 100%;
-            max-width: none;
-            height: auto;
-            border: 0 none;
-        }
-        .preview{
-        	width:100%;
-        	height:600px;
-        }
-        a.progressive div.preview {
-            filter: blur(2vw);
-            transform: scale(1.05);
-        }
-        a.progressive div.reveal {
-            position: absolute;
-            left: 0;
-            top: 0;
-            will-change: transform, opacity;
-            animation: reveal 1s ease-out;
-        }
-        @keyframes reveal {
-            0% {transform: scale(1.05); opacity: 0;}
-            100% {transform: scale(1); opacity: 1;}
-        }
-    </style>
-</head>
-<body>
-    <a href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/123941/nature5.jpg" data-srcset="https://s3-us-west-2.amazonaws.com/s.cdpn.io/123941/nature5.jpg 800w, https://s3-us-west-2.amazonaws.com/s.cdpn.io/123941/nature5big.jpg 1600w" class="progressive replace">
-        <!--<img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAYABgAAD//gA7Q1JFQVRPUjogZ2QtanBlZyB2MS4wICh1c2luZyBJSkcgSlBFRyB2NjIpLCBxdWFsaXR5ID0gNzAK/9sAQwAKBwcIBwYKCAgICwoKCw4YEA4NDQ4dFRYRGCMfJSQiHyIhJis3LyYpNCkhIjBBMTQ5Oz4+PiUuRElDPEg3PT47/9sAQwEKCwsODQ4cEBAcOygiKDs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7/8AAEQgABQAUAwEiAAIRAQMRAf/EAB8AAAEFAQEBAQEBAAAAAAAAAAABAgMEBQYHCAkKC//EALUQAAIBAwMCBAMFBQQEAAABfQECAwAEEQUSITFBBhNRYQcicRQygZGhCCNCscEVUtHwJDNicoIJChYXGBkaJSYnKCkqNDU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6g4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2drh4uPk5ebn6Onq8fLz9PX29/j5+v/EAB8BAAMBAQEBAQEBAQEAAAAAAAABAgMEBQYHCAkKC//EALURAAIBAgQEAwQHBQQEAAECdwABAgMRBAUhMQYSQVEHYXETIjKBCBRCkaGxwQkjM1LwFWJy0QoWJDThJfEXGBkaJicoKSo1Njc4OTpDREVGR0hJSlNUVVZXWFlaY2RlZmdoaWpzdHV2d3h5eoKDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uLj5OXm5+jp6vLz9PX29/j5+v/aAAwDAQACEQMRAD8A5yC3e2S3gM7OEQHdgA57VTuLAPqUoaUk7yM7R2BPSiivS5VN8stjmk2ldGVM3lyshG7bxk0UUV4skk2jdN2P/9k=" class="preview" alt="palm trees" />-->
-        <div class="preview" style="background: red;">1111</div>
-    </a>
-    <a href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/123941/nature2.jpg" class="progressive replace">
-        <!--<img src="http://lorempixel.com/20/15/nature/2/" class="preview" alt="sunset" />-->
-         <div class="preview" style="background: orange;">2222</div>
-    </a>
-    <a href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/123941/nature3.jpg" class="progressive replace">
-        <!--<img src="http://lorempixel.com/20/15/nature/3/" class="preview" alt="tide" />-->
-         <div class="preview" style="background:yellow;">3333</div>
-    </a>
-    <a href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/123941/nature5.jpg" data-srcset="https://s3-us-west-2.amazonaws.com/s.cdpn.io/123941/nature5.jpg 800w, https://s3-us-west-2.amazonaws.com/s.cdpn.io/123941/nature5big.jpg 1600w" class="progressive replace">
-        <!--<img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAYABgAAD//gA7Q1JFQVRPUjogZ2QtanBlZyB2MS4wICh1c2luZyBJSkcgSlBFRyB2NjIpLCBxdWFsaXR5ID0gNzAK/9sAQwAKBwcIBwYKCAgICwoKCw4YEA4NDQ4dFRYRGCMfJSQiHyIhJis3LyYpNCkhIjBBMTQ5Oz4+PiUuRElDPEg3PT47/9sAQwEKCwsODQ4cEBAcOygiKDs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7/8AAEQgABQAUAwEiAAIRAQMRAf/EAB8AAAEFAQEBAQEBAAAAAAAAAAABAgMEBQYHCAkKC//EALUQAAIBAwMCBAMFBQQEAAABfQECAwAEEQUSITFBBhNRYQcicRQygZGhCCNCscEVUtHwJDNicoIJChYXGBkaJSYnKCkqNDU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6g4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2drh4uPk5ebn6Onq8fLz9PX29/j5+v/EAB8BAAMBAQEBAQEBAQEAAAAAAAABAgMEBQYHCAkKC//EALURAAIBAgQEAwQHBQQEAAECdwABAgMRBAUhMQYSQVEHYXETIjKBCBRCkaGxwQkjM1LwFWJy0QoWJDThJfEXGBkaJicoKSo1Njc4OTpDREVGR0hJSlNUVVZXWFlaY2RlZmdoaWpzdHV2d3h5eoKDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uLj5OXm5+jp6vLz9PX29/j5+v/aAAwDAQACEQMRAD8A5yC3e2S3gM7OEQHdgA57VTuLAPqUoaUk7yM7R2BPSiivS5VN8stjmk2ldGVM3lyshG7bxk0UUV4skk2jdN2P/9k=" class="preview" alt="palm trees" />-->
-         <div class="preview" style="background:lightgreen;">444</div>
-    </a>
-    <a href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/123941/nature2.jpg" class="progressive replace">
-        <!--<img src="http://lorempixel.com/20/15/nature/2/" class="preview" alt="sunset" />-->
-         <div class="preview" style="background:deepskyblue;">55555</div>
-    </a>
-    <a href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/123941/nature3.jpg" class="progressive replace">
-        <!--<img src="http://lorempixel.com/20/15/nature/3/" class="preview" alt="tide" />-->
-         <div class="preview" style="background: purple;">66666</div>
-    </a>
-    <script>
-        window.addEventListener('load', function() {
-            var pItem = document.getElementsByClassName('progressive replace'), timer;
- 
-            window.addEventListener('scroll', scroller, false);
-            window.addEventListener('resize', scroller, false);
-            inView();
- 
-            function scroller(e) {
-                timer = timer || setTimeout(function() {
-                    timer = null;
-                    requestAnimationFrame(inView);
-                }, 300);
-            }
- 
-            function inView() {
-                var scrollTop = window.pageYOffset;
-                var innerHeight = window.innerHeight;
-                var p = 0;
-                while (p < pItem.length) {
-                    var offsetTop = pItem[p].offsetTop;
-                    if (offsetTop < (scrollTop + innerHeight)) {
-                        loadFullImage(pItem[p]);
-                        pItem[p].classList.remove('replace');
-                    }
-                    else p++;
-                }
-            }
- 
- 
-            function loadFullImage(item) {
-                var img = new Image();
-                if (item.dataset) {
-                    img.srcset = item.dataset.srcset || '';
-                    img.sizes = item.dataset.sizes || '';
-                }
-                img.src = item.href;
-                img.className = 'reveal';
-                if (img.complete) addImg();
-                else img.onload = addImg;
- 
-                function addImg() {
-                    item.addEventListener('click', function(e) { e.preventDefault(); }, false);
-                    item.appendChild(img).addEventListener('animationend', function(e) {
-                        var pImg = item.querySelector('img.preview');
-                        if (pImg) {
-                            e.target.alt = pImg.alt || '';
-                            item.removeChild(pImg);
-                            e.target.classList.remove('reveal');
-                        }
-                    });
-                }
- 
-            }
- 
-        }, false);
-    </script>
-    
-    
-    <script>
-    	window.onmousewheel = function(){  //触发滚轮事件
-    		
-		}
-		window.onscroll = function(){  //滚动条事件
-		 
-		}
-		//其实你的问题直接使用判断滚动条应该就可以了，但是如果一定要拖动滚动条才执行事件，我们可以通过获取鼠标位置来模拟
-		var a = document.getElementsByTagName("html")[0];
-		window.onmousemove = function(){
-		        //一般默认滚动条12px宽，当鼠标位于浏览器窗口右边12px内按下鼠标可以视为拖动滚动条
-		    if(innerWidth - event.clientX < 12){
-		        a.onmousedown = function(){
-		            console.log(1);
-		        }
-		        document.getElementsByTagName("body")[0].onscroll=function(){
-					if(document.getElementsByTagName("body")[0].scrollTop>600){
-						alert("网页太长")；
-				}}
-		    }else{
-		        a.onmousedown = null;
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>专业视频</title>
+		<link rel="stylesheet" type="text/css" href="css/commone.css" />
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<link rel="stylesheet" type="text/css" href="css/video.css" />
+		<link rel="stylesheet" type="text/css" href="css/Safari.css" />
+		<link rel="stylesheet" type="text/css" href="css/professionVideo.css" />
+		<script src="js/jquery.js"></script>
+		<script src="js/public.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+	</head>
+
+	<body>
+		<div class="main">
+		<div class="container">
+			<!--左边导航内容-->
+			<div id="side"></div>
+
+			<div class="right" id="video">
+                <div class="contentarea">
+                	<!--视频购买区-->
+                 	<div class="content1">
+                 		<div class="content1-left">
+                 			<img id="iepsyimg" :src="'http://www.iepsy.com/'+scoure.img" alt="" />
+                 		</div>
+                 		<div class="content1-right">
+                 			<h3 id="iepsytitle">{{scoure.title}}</h3>
+                 			<div>
+                 				<ul>
+                 					<li>456 人购买</li>
+                 					<li>时长：{{scoure.duration}}分</li>
+                 				</ul>
+                 				<p>
+                 					<img src="img/eye.png" alt="" /><span>分享</span>
+                 					<P id="tol">
+										<img src="img/professionVideolike1.png" alt="" id="gray"/>
+									</p>
+									<p class="collect">收藏</p>
+                 				</p>
+                 			</div>
+                 			<div><h4 id="price">￥{{scoure.price}} </h4> <a class="buy">立&nbsp;即&nbsp;购&nbsp;买</a></div>
+                 		</div>
+                 	</div>
+                 	</div>
+                 	
+                 	
+                 	<!--课程介绍和主讲老师区-->
+                 	<div class="contentarea">
+                 	<div class="content2">
+                 		<div class="content2-left">
+                 			<div class="content2-left1">
+                 				<h5>课程介绍 <span></span> </h5>
+	                 			<p>{{scoure.text}}</p>
+	                 			<h5>课程列表 <span></span></h5>
+	                 			<ul>
+	                 				<li v-for="(item,index) in scoure.chapter"><a href="">{{item.title}}<img src="img/professionVideoplay.png" alt="" /> </a></li>
+	                 			</ul>
+                 			</div>
+                 		</div>
+                 		
+                 		<div class="content2-right">
+                 			<div class="content2-right1">
+                 				<h5>主讲老师 </h5>
+                 				<div><img src="img/figuretwo.png" alt="" /><span>周辰</span> </div>
+                 				<p>韦氏资深测评师，实操讲师。首都儿科研究所《对高原藏族和汉族居民的神经发育和认知功能的评估》项目认知测评师。参与适应行为评定量表幼儿版第二版中文版的采样工作。韦氏成人/儿童/幼儿智力量表中文版测评师，适应行为评定量表儿童版第二版中文版测评师。</p>
+                 			</div>
+                 		
+                 			<div class="content2-right2">
+                 				<h5>相关课程 </h5>
+                 				<div>
+                 					<img src="img/video02.png" alt="" />
+                 				    <p>男性的产后抑郁</p>
+                 				    <p> <span>￥2100</span> <span>1122人已购买</span></p>
+                 				    <a href="">立即查看</a>
+                 				</div>
+                 			</div>
+                 		</div>
+                </div>
+                </div>
+			
+				<div class="notarize">
+					<h5>是否生成订单？</h5>
+					<p class="open"><button onclick="createOrder()">确认</button></p>
+					<p class="close">取消</p>
+				</div>
+					
+			</div>  <!--right的结尾标签-->
+			<div class="clear"></div>
+		</div>
+		<!--container的结尾标签-->
+        			
+		</div>  <!--main的结尾标签-->
+		
+		<!--版权-->
+		<div class="right-footer">
+			<div class="right-footer-content">
+				骄阳智心 版权所有 2010-2019&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;京ICP备17000866&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;京公网安备11010802023632号
+			</div>
+		</div>
+
+        
+        <!--引入公共部分的js-->
+		<script>
+			$(function(){
+				$("#side").load("side.html",function(){
+					getlogin();
+			 		$("#icon4").attr("src","img/icon4_4.png");
+			 	});
+			})
+		</script>
+		
+		<!--收藏-->
+		<script>
+			$(function(){
+				$('#tol').click(function(){
+					if($("#gray").attr('src')=='img/professionVideolike1.png'){
+						$(this).find('#gray').attr('src','img/professionVideolike2.png');
+					}else{
+						$(this).find('#gray').attr('src','img/professionVideolike1.png');
+					}
+				});
+			})
+		</script>
+
+        <!--确认是否购买弹框-->
+		<script>
+			$(function(){
+				$(".buy").click(function(){
+					$(".notarize").show()
+				})
+				$(".close").click(function(){
+					$(".notarize").hide()
+				})
+			})
+		</script>
+
+	   <script>
+	   	function createOrder(){
+	   		var id = getQueryString("id");
+	   		var imgpath = $("#iepsyimg").attr("src");
+	   		var title = $("#iepsytitle").text();
+	   		var price = $("#price").text();
+			var token = localStorage.getItem("token");
+			if(token == undefined || token == ""){
+				alert("请先登陆！");
+				window.open("register_1.html"); 
+				return ;
+			}
+	   		$.ajax({
+				type:"post",
+				url:url1+"/scale/post/order",
+				data:{"scoureId":id, "orderAmount":vm.scoure.price},
+				dataType:"json",
+				async:true,
+				beforeSend: function(request) {
+		        		request.setRequestHeader("token",localStorage.getItem("token"));
+		        },
+				success:function (result){
+					if(result.status == 200){
+						vm.scoure = result.data;
+						//对的 
+						window.open(encodeURI('videoOrderform.html?id='+result.data.orderNumber+"&img="+imgpath+"&title="+title+"&price="+price),'_blank')
+		
+					}else{
+						alert(result.message)
+					}
+				}
+			});
+	   	}
+	   	function getQueryString(name) {
+		    var reg = new RegExp('(^|&)' + name + '=([^&]*)(&|$)', 'i');
+		    var r = window.location.search.substr(1).match(reg);
+		    if (r != null) {
+		        return unescape(r[2]);
 		    }
+		    return null;
 		}
+	   	var url1 = geturl();
+	   	$(function(){
+	   		var id = getQueryString("id");
+			$.ajax({
+				type:"post",
+				url:url1+"/scale/get/scoure/"+id,
+				//url:"http://192.168.1.173:8886/scale/get/scoures",
+				async:true,
+				success:function (result){
+					if(result.status == 200){
+						vm.scoure = result.data;
+					}else{
+						alert(result.message)
+					}
+				}
+			});
+		})
+	   	
+		var vm = new Vue({
+			el: "#video",
+			data: {
+				scoure:{}
+			},
+			methods:{
+				
+			}
+		});
+	   </script>
+	   
+	    <input type="button" value="Go to Apple" id="btn">
+	   <script type="text/javascript">
+	    $(function() {
+	        $("#btn").click(function() {
+	            //var a = $('a')[0];
+	            var a = $("<a href='http://www.apple.com' target='_blank'>Apple</a>").get(0);
+	            
+	            var e = document.createEvent('MouseEvents');
+	            e.initEvent( 'click', true, true );
+	            a.dispatchEvent(e);
+	        });
+	    });
+    
     </script>
-</body>
+   
+      </body>
 </html>
