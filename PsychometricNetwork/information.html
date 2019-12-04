@@ -16,6 +16,13 @@
 	    <script src="js/public.js"></script>
 	    <!--垂直滚动-->
 	    <script SRC="js/VerticalShuffling.js"></script>
+	    <script src="js/vue.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+		<style>
+			[v-cloak]{
+				display: none;
+			}
+		</style>
 	</head>
 	<body>
 		<div class="main">
@@ -105,10 +112,10 @@
 								<nav>
 									<ul>
 										<li id='l1' class="sel">
-											<a href="#section-circlefill-1" class="icon icon-plug" ><span>时实资讯</span></a>
+											<a id="1" href="javascript:;" class="icon icon-plug" onclick="SwiperType(this.id)"><span>时实资讯</span></a>
 										</li>
 										<li class="sel">
-											<a href="#section-circlefill-2" class="icon icon-gift"><span>热点资讯</span></a>
+											<a id="2" href="#section-circlefill-2" class="icon icon-gift" onclick="SwiperType(this.id)"><span>热点资讯</span></a>
 										</li>
 									</ul>
 									
@@ -119,21 +126,46 @@
 									<section id="section-circlefill-1">
 										<div class="info_fl" id="content">	
 											<div id="sectionbox" class="sectionbox">
-												<ul id="demoContent0"></ul>
+												<ul id="demoContent0">
+													<li>
+											            <div class="sectionboxf" v-for="datas11 in news">
+														    <a class="href" href="{{datas11.url}}">
+															<div class="section-left">
+															    <img :src="datas11.exa1">
+																<div class="section-middle"><p>{{datas11.title}}<span>{{datas11.issueTime}}</span></p>
+																<p>{{datas11.exa2}}</p></div>
+																<p class="section-right">{{datas11.author}}</p>
+															</div>
+															</a>
+														</div>
+											        </li>
+												</ul>
 												
 											</div>
 										</div>
-										<ul class="page" id="page0"></ul>
 									</section>
-									<section id="section-circlefill-2">
+									<!--<section id="section-circlefill-2">
 										<div class="info_fl" id="content">	
-											<div id="sectionbox" class="sectionbox">
-												<ul id="demoContent1"></ul>
+											<div id="sectionbox2" class="sectionbox" style="background: cornflowerblue;">
+												<ul id="demoContent1">
+													<li>
+											            <div class="sectionboxf">
+														    <a class="href" href="{{datas3.url}}">
+															<div class="section-left">
+															    <img src="{{datas3.exa1}}">
+																<div class="section-middle"><p>{{datas3.title}}<span>{{datas3.issueTime}}</span></p>
+																<p>{{datas3.exa2}}</p></div>
+																<p class="section-right">{{datas3.author}}</p>
+															</div>
+															</a>
+														</div>
+											        </li>
+												</ul>
 												
 											</div>
 										</div>
 										<ul class="page" id="page1"></ul>
-									</section>
+									</section>-->
 								</div>
 								
 							</div>
@@ -152,7 +184,6 @@
 							<ul id="demoContent"></ul>
 							<ul class="page" id="page"></ul>
 						</div>
-
 					</div>
 				</div>
 				
@@ -195,169 +226,58 @@
 		<script src="js/information.js"></script>
 		
 		<script type="text/javascript">
-		//查看详细的量表介绍
-        var articleTitles = [];
+			//查看详细的量表介绍
+	        var articleTitles = [];
 			var url1=geturl();
-			$(function(){ 
+				
+			$(function(list1){ 
 				$.ajax({
 					"url": url1+"/news/lists",
+					"type":"post",
 					"datatype": "json",
-					"newsType":"资讯类型",
+					"data":{"newsType":"1"},
+					"async":false,
 					"success": function(result){
-						this.articleTitles = result.data;
-						vm.titles = result.data;
-//						"status":200,
-//						
-//						"data":
-//							[{
-//							    	"nId":1,"title":"这是一个资讯","author":"郭佳庆","issueTime":"2019-12-03 07:49:18","newsType":"1","status":"0","exa1":null,"exa2":null,"content":null
-//							]}
+						vm.news = result.data;
+						console.log(vm.news);
+					},
+					"error":function(e){
+						console.log(e)
 					}
 				})
 			})
 			var vm = new Vue({
-				el: "#informationvue",
+				el: "#sectionbox",
 				data: {
-					"titles": [],
-					"url":"informationSecond.html?articlePk=",
-					
+					"news": [],
+					"url":"scaleSecond.html?articlePk="
 				},
 				methods:{
 					
 				}
-		})
-		</script>
-		
-		<script>
-			var _index=$('.tab-current').index();
-			$('.tabs li').on('click',function(){
-				var _index=$('.tab-current').index();
-				//console.log(_index);
-				if(_index==0){
-					datas=datas1;
-				}else if(_index==1){
-					datas=datas2;
-				}
-					 options={
-					"id":"page"+_index,//显示页码的元素
-					"data":datas,//显示数据
-				    "maxshowpageitem":3,//最多显示的页码个数
-				    "pagelistcount":10,//每页显示数据个数
-				    "callBack":function(result){//返回datas数据
-				    	//console.log(result);  //输出datas的数据
-//				    	var cHtml="";
-//				        for(var i=0;i<result.length;i++){
-//				            cHtml+="<li>"+ 
-//				            '<div class="sectionboxf">'+
-//							    '<a href="'+ result[i].href+'" class="href">'+
-//								'<div class="section-left">' +
-//									'<img src='+result[i].leftimg+'>'+
-//									'<div class="section-middle"><p>'+result[i].left+'<span>'+result[i].left2+'</span>'+'</p>'+
-//									'<p>'+result[i].left3+'</p></div>'+
-//									'<p class="section-right">'+result[i].right+'</p>'+
-//								'</div>' +
-//								'</a>'+
-//							'</div>'+
-//				            "</li>";//处理数据
-//				        }
-//				        
-				        var cHtml="";
-				        for(var i=0;i<titles.length;i++){
-				            cHtml+="<li>"+ 
-				            '<div class="sectionboxf">'+
-//							    '<a href=""'+ {{titles.href}}+'class="href">'+
-								'<div class="section-left">' +
-//								    '<img src='+{{}}+'>'+
-									'<div class="section-middle"><p>'+{{titles.title}}+'<span>'+{{titles.issueTime}}+'</span>'+'</p>'+
-//									'<p>'+result[i].left3+'</p></div>'+
-									'<p class="section-right">'+{{titles.author}}+'</p>'+
-								'</div>' +
-//								'</a>'+
-							'</div>'+
-				            "</li>";//处理数据
-				        }
-								    
-								    
-				        $("#demoContent"+_index).html(cHtml);//将数据增加到页面中
-				    }
-				};
-				   page.init(datas.length,1,options);
 			})
-			var datas1=[
-			    {"nId":1,"href":"americanInstitutions12.html","leftimg":"img/americanInstitutions12_5.png","title": "2019年海珠区特殊教育评估教师团队专项研训活动","issueTime": "2019年11月10日","left3": "“2019年海珠区特殊教育评估教师团队专项研训活动","author":"出版：骄阳智心"},
-			    {"did":1,"href":"americanInstitutions10.html","leftimg":"img/americanInstitutions10_7.png","left": "2019年海珠区特殊教育评估教师团队专项研训活动","left2": "2019年8月26日","left3": "“2019年海珠区特殊教育评估教师团队专项研训活动”","right":"出版：骄阳智心"},
-			    {"did":2,"href":"americanInstitutions10.html","leftimg":"img/trainpublic.png","left": "2019年9月份北京培训通知","left2": "2019年8月26日","left3": "“心理测量理论与应用系列课程”主试讲师培训圆满举办","right":"出版：骄阳智心"},
-			    {"did":3,"href":"americanInstitutions3.html","leftimg":"img/americanInstitutions3_3.png","left": "看电视的搏斗：要不要让孩子看电视","left2": "2019年8月15日","left3": "孙燕姿最新的微博，讲到五岁的儿子短暂生病时的母子两个人艰难又甜蜜的冲突，其中一项是两个人为看电视的“搏斗”。","right":"出版：骄阳智心"},
-			    {"did":4,"href":"americanInstitutions2.html","leftimg":"img/americanInstitutions2_2.png","left": "当测谎仪遇到心理测评专家","left2": "2019年7月10日","left3": "绝大多数人在说谎或受到有关情绪词的影响时，会发生一系列植物神经系统功能的变化，检测这些变化可反映受试者当时的情绪状态，言语是否真实。在此基础上，测谎仪应运而生。","right":"出版：骄阳智心"},
-			    {"did":5,"href":"americanInstitutions.html","leftimg":"img/americanInstitutions6_2.png","left": "心理测试告诉你，要当上警察有多难","left2": "2019年06月09日","left3": "最近热播的韩剧《live》，让我们看到警察这个职业的艰难和辛苦，也让我们看到每一个第一线的普通警察在一天之中所经历巨大的体力消耗和情绪激荡","right":"出版：骄阳智心"},
-			    {"did":6,"href":"americanInstitutions.html","leftimg":"img/americanInstitutions4_1.png","left": "鬼有什么好怕的，穷才可怕","left2": "2019年05月17日","left3": "《今生是第一次》，男主不想结婚但又需要有人帮自己承担每月房贷的缺口，女主急需一个便宜稳定的住处，于是两个人假结婚了，他们签了合同规定彼此所要交换的东西。","right":"出版：骄阳智心"},
-			    {"did":7,"href":"americanInstitutions.html","leftimg":"img/americanInstitutions5_1.png","left": "你对认可有过度需求吗","left2": "2019年04月15日","left3": "被一个很年轻的朋友问太在乎别人的看法要怎么办，我心里想笑：我以前一直是这样啊，现在可能也是，只是没以前那么严重。所以这个问题是要向和尚借梳子吗？","right":"出版：骄阳智心"},
-			    {"did":8,"href":"informationSecond.html","leftimg":"img/americanInstitutions1_16.png","left": "第一届心理测量理论与应用系列课程主试讲师培训报道","left2": "2018年11月02日","left3": "为了推广心理测量理论与技术的应用，促进心理测量学科的繁荣和发展，同时满足社会各界对心理测量技术的需求，自2016年由中国心理学会心理测量专业委员会主办、北京骄阳智心教育咨询有限公司承办、并联合多家专业心理测评机构推出了“心理测量理论与应用系列课程”","right":"出版：骄阳智心"},
-			    {"did":9,"href":"americanInstitutions.html","leftimg":"img/americanInstitutions9_6.png","left": "斯-欧非言语智力主试资格（北京）培训班","left2": "2018年06月04日","left3": "为了推广心理测量理论与技术的应用，促进心理测量学科的繁荣和发展，同时满足社会各界对心理测量技术的需求，自2016年由中国心理学会心理测量专业委员会主办、北京骄阳智心教育咨询有限公司承办、并联合多家专业心理测评机构推出了“心理测量理论与应用系列课程”","right":"出版：骄阳智心"},
-			    {"did":10,"href":"americanInstitutions.html","leftimg":"img/americanInstitutions8_8.png","left": "2017年心理测评理论与应用技术大会暨主试培训","left2": "2017年12月11日","left3": "为了推广心理测量理论与技术的应用，促进心理测量学科的繁荣和发展，同时满足社会各界对心理测量技术的需求，自2016年由中国心理学会心理测量专业委员会主办、北京骄阳智心教育咨询有限公司承办、并联合多家专业心理测评机构推出了“心理测量理论与应用系列课程”","right":"出版：骄阳智心"},
-			    {"did":11,"href":"americanInstitutions.html","leftimg":"img/americanInstitutions7_5.png","left": "智力量表系列培训","left2": "2017年09月14日","left3": "为了推广心理测量理论与技术的应用，促进心理测量学科的繁荣和发展，同时满足社会各界对心理测量技术的需求，自2016年由中国心理学会心理测量专业委员会主办、北京骄阳智心教育咨询有限公司承办、并联合多家专业心理测评机构推出了“心理测量理论与应用系列课程”","right":"出版：骄阳智心"},
-			];
+			var defultId = "1";
+			function SwiperType(newsType){
+				console.log(defultId)
+				$("#"+defultId).removeClass("swiper-a");
+				defultId = newsType;
+				$("#"+newsType).attr("class","swiper-a");
 				
-				var options={
-				"id":"page0",//显示页码的元素
-				"data":datas1,//显示数据
-			    "maxshowpageitem":3,//最多显示的页码个数
-			    "pagelistcount":10,//每页显示数据个数
-			    "callBack":function(result){//返回datas数据
-			    	//console.log(result);  //输出datas的数据
-//			    	var cHtml="";
-//			        for(var i=0;i<result.length;i++){
-//			            cHtml+="<li>"+ 
-//			            '<div class="sectionboxf">'+
-//						    '<a href="'+ result[i].href+'" class="href">'+
-//							'<div class="section-left">' +
-//								'<img src='+result[i].leftimg+'>'+
-//								'<div class="section-middle"><p>'+result[i].left+'<span>'+result[i].left2+'</span>'+'</p>'+
-//								'<p>'+result[i].left3+'</p></div>'+
-//								'<p class="section-right">'+result[i].right+'</p>'+
-//							'</div>' +
-//							'</a>'+
-//						'</div>'+
-//			            "</li>";//处理数据
-//			        }
-
-
- 					    var cHtml="";
-				        for(var i=0;i<result.length;i++){
-				            cHtml+="<li>"+ 
-				            '<div class="sectionboxf">'+
-							    '<a href=""'+ {{titles.href}}+'class="href">'+
-								'<div class="section-left">' +
-//								    '<img src='+{{}}+'>'+
-									'<div class="section-middle"><p>'+{{titles.title}}+'<span>'+{{titles.issueTime}}+'</span>'+'</p>'+
-//									'<p>'+result[i].left3+'</p></div>'+
-									'<p class="section-right">'+{{titles.author}}+'</p>'+
-								'</div>' +
-								'</a>'+
-							'</div>'+
-				            "</li>";//处理数据
-				        }
-			        $("#demoContent0").html(cHtml);//将数据增加到页面中
-			    }
-			};
-			   page.init(datas1.length,1,options);			
+				$.ajax({
+					"url": url1+"/news/lists",
+					"type":"post",
+					"datatype": "json",
+					"data":{"newsType":newsType},
+					"async":false,
+					"success": function(result){
+						vm.news = result.data;
+						console.log(vm.news);
+					},
+					"error":function(e){
+						console.log(e)
+					}
+				})
+			}
 		</script>
-		
-		
-		<script>	
-			var datas2=[
-			    {"did":1,"href":"psyinformation.html","leftimg":"img/psyinformation5_3.png","left": "你以为的矫情，要了20万人的命！","left2": "2019年9月17日","left3": "乔任梁去世三年后，22岁女孩深夜失联：你以为的矫情，要了20万人的命！","right":"出版：创意社长"},
-			    {"did":2,"href":"psyinformation.html","leftimg":"img/psyinformation1_1.png","left": "爱不爱一个人，身体最诚实","left2": "2019年9月17日","left3": "黄磊曾对女儿多多说：未来如果一个男人既说娶你，又不给你婚礼，你千万不能嫁，因为他连婚礼这个仪式都省了，还有什么可以给你。","right":"作者：壹心理周周"},
-			    {"did":3,"href":"psyinformation.html","leftimg":"img/psyinformation2_1.png","left": "惜命的最好方式，不是养生，是给自己“暂停”","left2": "2019年9月9日","left3": "后来，我才发觉在成年人的世界，天气好，真是生活里为数不多的快乐。","right":"出版：看见心理读书馆"},
-			    {"did":5,"href":"psyinformation.html","leftimg":"img/psyinformation6_3.png","left": "抑郁症就医指南","left2": "2019年4月16日","left3": "以北京为例，推荐的医院有三个一是北京安定医院；二是北医六院；三是北京回龙观医院","right":"出版：抑郁研究所"},
-			    {"did":5,"href":"psyinformation.html","leftimg":"img/psyinformation3_4.png","left": "床上说的话到底算数吗 ？","left2": "2019年1月20日","left3": "“床上说的话到底算数吗 ？” —— 心理学的哲学起源与心理学建立140周年","right":"作者：张伟韬 莱顿大学"},
-			    {"did":6,"href":"psyinformation.html","leftimg":"img/psyinformation4_1.png","left": "19岁女孩分裂6重人格被疑演戏","left2": "2018年8月15日","left3": "你的无知，正在谋杀每一个想活下去的人","right":"出版：鲸鱼队长"},
-			];
-			
-		</script>
-		
-		
-		
-
 	</body>
 </html>

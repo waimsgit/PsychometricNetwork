@@ -15,14 +15,14 @@
 			<div id="side"></div>
 			
 			<!--右侧内容-->
-			<div class="right">
+			<div class="right" id="right">
 				<!--标题区-->
 				<div class="title">
 					<div class="title-content">
 						<p> 
 							<span class="jiantou"></span>
 							<a href="information.html">资讯></a>
-							<span>当测谎仪遇到心理测评专家</span>
+							<span>{{articleTitle}}</span>
 						</p>
 					</div>
 				</div>
@@ -30,6 +30,9 @@
 				<!--宝宝什么时候开始认生-->
 				<div class="right-content2">
 					<div class="right-content2center">
+						<div class="contents" v-html='articleContent'>
+					
+						</div>
 						<h3>当测谎仪遇到心理测评专家</h3>
 						<ul class="readynav">
 							<li><a href="">骄阳智心</a></li>
@@ -111,6 +114,42 @@
 		    };
 		    with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src=
 		      'http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+		</script>
+		
+		
+		<script>
+			$(function(){ 
+				var articlePk = getQueryString("articlePk");
+				$.ajax({
+					"url": "http://192.168.1.145:8886/scale/get/article",
+					"data":{"articlePk":articlePk},
+					"datatype": "json",
+					"success": function(result){
+						vm.articleTitle = result.data.articleTitle;
+						vm.articleContent = result.data.articleContent;
+					}
+				})
+			})
+			
+			function getQueryString(name) {
+			    var reg = new RegExp('(^|&)' + name + '=([^&]*)(&|$)', 'i');
+			    var r = window.location.search.substr(1).match(reg);
+			    if (r != null) {
+			        return unescape(r[2]);
+			    }
+			    return null;
+			}
+		</script>
+		
+		<script>
+			var vm = new Vue({
+				el: "#right",
+				data: {
+					"articleTitle":'',
+					"articleContent":''
+				},
+				methods:{}
+			})
 		</script>
 	</body>
 </html>

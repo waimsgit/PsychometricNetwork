@@ -650,4 +650,8 @@ html, body,.main{ height:100%; }
 	    height: 90px !important;
 	    line-height: 90px !important;
 	}
+	
+	.swiper-a {
+		background: #1d7aee;
+	}
 }
