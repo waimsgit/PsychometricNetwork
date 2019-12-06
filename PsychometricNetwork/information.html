@@ -105,78 +105,57 @@
 				<!--分页切换内容-->
 				<div class="title-box">
 					<!--医疗类  科学类-->
-				<div class="content2" id="informationvue">
-					<div class="content2-center">
-						<section>
-							<div class="tabs tabs-style-circlefill">
-								<nav>
-									<ul>
-										<li id='l1' class="sel">
-											<a id="1" href="javascript:;" class="icon icon-plug" onclick="SwiperType(this.id)"><span>时实资讯</span></a>
-										</li>
-										<li class="sel">
-											<a id="2" href="#section-circlefill-2" class="icon icon-gift" onclick="SwiperType(this.id)"><span>热点资讯</span></a>
-										</li>
-									</ul>
-									
-									
-								</nav>
-
-								<div class="content-wrap">
-									<section id="section-circlefill-1">
-										<div class="info_fl" id="content">	
-											<div id="sectionbox" class="sectionbox">
-												<ul id="demoContent0">
-													<li>
-											            <div class="sectionboxf" v-for="datas11 in news">
-														    <a class="href" href="{{datas11.url}}">
-															<div class="section-left">
-															    <img :src="datas11.exa1">
-																<div class="section-middle"><p>{{datas11.title}}<span>{{datas11.issueTime}}</span></p>
-																<p>{{datas11.exa2}}</p></div>
-																<p class="section-right">{{datas11.author}}</p>
-															</div>
-															</a>
+					<div class="content2" id="informationvue">
+						<div class="content2-center">
+							<div id="tabs" class="tabs">    
+								<ul id="tabs-list">        
+									<li  class="on selected" οnclick="hot();">热点资讯</li>           
+									<li class="on" οnclick="tokizane();">时实资讯</li>            
+								</ul> 
+					        </div>
+							
+							<div class="tabs-panel">
+								<div id="tab-1" class="panel">
+									<div id="sectionbox" class="sectionbox">
+											<ul>
+												<li>
+													<div class="sectionboxf" v-for="datas11 in news" v-cloak> 
+														<a class="href" :href="url+datas11.nId">
+														<div class="section-left">
+														    <img :src="datas11.exa1">
+															<div class="section-middle"><p>{{datas11.title}}<span>{{datas11.issueTime}}</span></p>
+															<p>{{datas11.exa2}}</p></div>
+															<p class="section-right">{{datas11.author}}</p>
 														</div>
-											        </li>
-												</ul>
-												
-											</div>
-										</div>
-									</section>
-									<!--<section id="section-circlefill-2">
-										<div class="info_fl" id="content">	
-											<div id="sectionbox2" class="sectionbox" style="background: cornflowerblue;">
-												<ul id="demoContent1">
-													<li>
-											            <div class="sectionboxf">
-														    <a class="href" href="{{datas3.url}}">
-															<div class="section-left">
-															    <img src="{{datas3.exa1}}">
-																<div class="section-middle"><p>{{datas3.title}}<span>{{datas3.issueTime}}</span></p>
-																<p>{{datas3.exa2}}</p></div>
-																<p class="section-right">{{datas3.author}}</p>
-															</div>
-															</a>
+														</a>
+													</div>
+										        </li>
+											</ul>
+									</div>
+								</div>        
+								<div id="tab-2" class="panel hide">
+									<div id="sectionbox2" class="sectionbox">
+											<ul>
+												<li>
+										            <div class="sectionboxf" v-for="datas11 in news" v-cloak> 
+														<a class="href" :href="url+datas11.nId">
+														<div class="section-left">
+														    <img :src="datas11.exa1">
+															<div class="section-middle"><p>{{datas11.title}}<span>{{datas11.issueTime}}</span></p>
+															<p>{{datas11.exa2}}</p></div>
+															<p class="section-right">{{datas11.author}}</p>
 														</div>
-											        </li>
-												</ul>
-												
-											</div>
-										</div>
-										<ul class="page" id="page1"></ul>
-									</section>-->
-								</div>
-								
-							</div>
-
-						</section>
-						
-
+														</a>
+													</div>
+										        </li>
+											</ul>
+									</div>
+								</div>        
+					  		</div> 
+						</div>
+						<!--content2-center结尾标签-->
 					</div>
-					<!--content2-center结尾标签-->
-				</div>
-				<!--content2结尾标签-->
+					<!--content2结尾标签-->
 			    </div>
 				<div class="pagecontent">
 					<div class="pagecontent-center" >
@@ -213,71 +192,76 @@
 		</script>
 
         <script src="js/modernizr.custom.js"></script>
-        <!--选项卡js-->
-		<script src="js/cbpFWTabs.js"></script>
-		<script>
-			(function() {
-				[].slice.call(document.querySelectorAll('.tabs')).forEach(function(el) {
-					new CBPFWTabs(el);
-				});
-                
-			})();
-		</script>
 		<script src="js/information.js"></script>
-		
+		<script>
+			$('#tabs-list>li').click(function(){
+			        var index = $(this).index();
+			        $('#tabs-list>li').eq(index).addClass('selected').siblings().removeClass('selected');
+			        $('.panel').hide();
+			        $('.panel').eq(index).show();
+		       
+			});
+		</script>
 		<script type="text/javascript">
-			//查看详细的量表介绍
 	        var articleTitles = [];
 			var url1=geturl();
-				
-			$(function(list1){ 
-				$.ajax({
-					"url": url1+"/news/lists",
+			$(function hot(){
+		        $.ajax({
+			        "url": url1+"/news/lists",
 					"type":"post",
 					"datatype": "json",
-					"data":{"newsType":"1"},
-					"async":false,
-					"success": function(result){
-						vm.news = result.data;
-						console.log(vm.news);
-					},
-					"error":function(e){
-						console.log(e)
+		        	"data":{"newsType":"1"},
+		         	"async":false,
+			        success: function(result){
+			            vm.news = result.data;
+//					    console.log(vm.news);
+			        },
+			        "error":function(err){
+//						console.log(err)
 					}
-				})
-			})
+		        });
+		    })
 			var vm = new Vue({
 				el: "#sectionbox",
 				data: {
 					"news": [],
-					"url":"scaleSecond.html?articlePk="
+					"url":"informationSecond.html?nId="
 				},
 				methods:{
 					
 				}
 			})
-			var defultId = "1";
-			function SwiperType(newsType){
-				console.log(defultId)
-				$("#"+defultId).removeClass("swiper-a");
-				defultId = newsType;
-				$("#"+newsType).attr("class","swiper-a");
-				
-				$.ajax({
-					"url": url1+"/news/lists",
+		</script>
+		
+		<script>
+			var articleTitles = [];
+			var url1=geturl();
+		    $(function tokizane(){
+		        $.ajax({
+			        "url": url1+"/news/lists",
 					"type":"post",
 					"datatype": "json",
-					"data":{"newsType":newsType},
-					"async":false,
-					"success": function(result){
-						vm.news = result.data;
-						console.log(vm.news);
-					},
-					"error":function(e){
-						console.log(e)
+		        	"data":{"newsType":"2"},
+		         	"async":false,
+			        success: function(result){
+			            vm2.news = result.data;
+//					    console.log(vm2.news);
+			        },
+			        "error":function(err){
+//						console.log(err)
 					}
-				})
-			}
+		        });
+		    })
+			var vm2 = new Vue({
+				el: "#sectionbox2",
+				data: {
+					"news": [],
+					"url":"informationSecond.html?nId="
+				},
+				methods:{
+					
+				}
+			})
 		</script>
 	</body>
 </html>

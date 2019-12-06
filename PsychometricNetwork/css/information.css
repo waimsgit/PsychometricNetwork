@@ -228,7 +228,7 @@ html, body,.main{ height:100%; }
 	margin:0 auto;
 	clear:both;
 }
-.tabs>nav{
+/*.tabs>nav{
 	height:30px;
 	width:100%;
 	border-bottom: 1px solid lightgray;
@@ -279,11 +279,42 @@ html, body,.main{ height:100%; }
 #demoContent>li{
 	height:71px;
 	width:100%;
-}
+}*/
+
 .page{
     width:390px;
     margin: 40px auto;
     height: 40px;
+}
+
+.hide{
+  display: none;
+}
+.tabs ul,.tabs ul li{
+  list-style: none;
+}
+.tabs ul{
+	height:30px;
+	border-bottom: 1px solid #ccc;
+	margin-bottom: 50px;
+}
+.tabs ul li{
+  float:left;
+  display: inline-block;
+  width: 90px;
+  height:30px;
+  line-height: 30px;
+  text-align:center;
+  margin-right:30px;
+  background: gray;
+  color:white;
+  font-size: 14px;
+}
+.tabs ul li.selected{
+    background: #1d7aee;
+}
+.tabs-panel{
+  clear:both;
 }
 .sectionbox{
 	width:100%;
@@ -462,7 +493,7 @@ html, body,.main{ height:100%; }
     font-size: 30px;
     text-align: center;
     z-index: 1;
-    width: 100%;
+    width: 88%;
     float: right;
     clear: both;
     border-top: 1px solid lightgray;
@@ -649,9 +680,5 @@ html, body,.main{ height:100%; }
 	    /*width: 20% !important;*/
 	    height: 90px !important;
 	    line-height: 90px !important;
-	}
-	
-	.swiper-a {
-		background: #1d7aee;
 	}
 }

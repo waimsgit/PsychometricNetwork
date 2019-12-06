@@ -1,14 +1,15 @@
-$(function(){ 
-				var articlePk = getQueryString("articlePk");
-				$.ajax({
-					"url": "http://192.168.1.145:8886/scale/get/article",
-					"data":{"articlePk":articlePk},
-					"datatype": "json",
-					"success": function(result){
-						vm.articleTitle = result.data.articleTitle;
-						vm.articleContent = result.data.articleContent;
-					}
-				})
+var url1=geturl();
+$(function(){
+	var articlePk = getQueryString("articlePk");
+	$.ajax({
+		"url": url1+"/scale/get/article",
+		"data":{"articlePk":articlePk},
+		"datatype": "json",
+		"success": function(result){
+			vm.articleTitle = result.data.articleTitle;
+			vm.articleContent = result.data.articleContent;
+		}
+	})
 })
 
 function getQueryString(name) {
