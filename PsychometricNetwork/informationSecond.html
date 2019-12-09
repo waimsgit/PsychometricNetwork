@@ -7,6 +7,8 @@
 		<link rel="stylesheet" type="text/css" href="css/style.css" />
 		<link rel="stylesheet" type="text/css" href="css/information.css" />
 		<link rel="stylesheet" href="css/informationSecond.css" />
+		<link rel="stylesheet" href="css/informationYIdianling.css" />
+		<link rel="stylesheet" type="text/css" media="screen" href="https://cdn.staticfile.org/ionicons/2.0.1/css/ionicons.min.css">
 		<script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
 		<script src="https://cdn.jsdelivr.net/npm/vue"></script>
 		<script src="js/jquery.min.js"></script>
@@ -60,15 +62,14 @@
 							<p><a href="americanInstitutions9.html">骄阳特训</a></p>
 						</div>
 						<div class="right-bottomcenter-bottom">
-							<div class="bdsharebuttonbox">
-							    <span>分享到：</span>
-							  <a href="#" class="bds_more" data-cmd="more"></a>
-							  <a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
-							  <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
-							  <a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a>
-							  <a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a>
-							  <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
-							</div>
+							<div class="share-content fr"> 
+							  <div class="bdsharebuttonbox"> 
+								<a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a> 
+								<a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a> 
+								<a href="#" class="bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a> 
+							  </div> 
+							  <script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"1","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script> 
+							</div> 
 						</div>
 					</div>
 				</div>
@@ -95,6 +96,16 @@
 			 		$("#icon3").attr("src","img/icon3_3.png");
 			 	});
 			})
+		</script>
+		
+		<script>
+			$(".icon-eye").each(function(){
+	            $(this).attr('class',"ion-ios-eye");
+	        })
+			$(".bdsharebuttonbox").each(function(){
+	            $(this).attr('id',"bdsharebuttonbox");
+	            $("<span>分享到：</span>").prependTo("#bdsharebuttonbox")
+	        })
 		</script>
 		
 		<script type="text/javascript">
@@ -140,16 +151,5 @@
 
 		</script>
 		
-		<!--转发功能-->
-		<script>
-			window._bd_share_config={
-		      "common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"16"},
-		      "share":{},
-		      "image":{"viewList":["qzone","tsina","tqq","renren","weixin"],"viewText":"分享到：","viewSize":"16"},  
-		      "selectShare":{"bdContainerClass":null,"bdSelectMiniList":["qzone","tsina","tqq","renren","weixin"]}
-		    };
-		    with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src=
-		      'http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
-		</script>
 	</body>
 </html>

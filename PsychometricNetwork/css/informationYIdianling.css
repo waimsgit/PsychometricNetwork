@@ -1,0 +1,55 @@
+.right-content2{
+	width:70%;
+	margin:0 auto;
+	margin-top:50px;
+}
+.right-content2>h1{
+	font-size: 20px;
+    color: #1d7aee;
+    text-align: center;
+    padding: 30px 0;
+}
+.psy-hlp-ei{
+	padding-top:30px;
+}
+.fl{
+	margin:0 auto;
+	text-align: center;
+	color:gray;
+}
+.right-content2>p{
+	font-size: 14px;
+    text-indent: 24px;
+    line-height: 30px;
+    color: black;
+}
+.right-content2>img{
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+    padding: 30px 0 10px 0;
+    max-width: 70%;
+    max-height: 400px;
+}
+.share-content{
+	margin:0 auto;
+	margin-top:50px;
+}
+.bdshare-button-style0-24 a, .bdshare-button-style0-24 .bds_more{
+	float: left;
+    font-size: 18px;
+    padding-left: 16px;
+    line-height: 16px;
+    width:16px;
+    height: 16px;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+.ion-ios-eye{
+	font-size: medium;
+	padding-left: 10px;
+}
+.ion-ios-eye:before {
+    content: "\f425";
+}
