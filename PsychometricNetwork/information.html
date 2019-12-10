@@ -109,8 +109,9 @@
 						<div class="content2-center">
 							<div id="tabs" class="tabs">    
 								<ul id="tabs-list">        
-									<li  class="on selected" οnclick="hot();">热点资讯</li>           
-									<li class="on" οnclick="tokizane();">时实资讯</li>            
+									<li id="1" class="on selected" οnclick="hot(this);">热点资讯</li>           
+									<li id="2" class="on" οnclick="tokizane();">时实资讯</li>            
+									<li id="3" class="on" οnclick="trade();">行业动态</li>            
 								</ul> 
 					        </div>
 							
@@ -150,7 +151,25 @@
 										        </li>
 											</ul>
 									</div>
-								</div>        
+								</div>   
+								<div id="tab-3" class="panel hide">
+									<div id="sectionbox3" class="sectionbox">
+											<ul>
+												<li>
+										            <div class="sectionboxf" v-for="datas11 in news" v-cloak> 
+														<a class="href" :href="url+datas11.nId">
+														<div class="section-left">
+														    <img :src="datas11.exa1">
+															<div class="section-middle"><p>{{datas11.title}}<span>{{datas11.issueTime}}</span></p>
+															<p>{{datas11.exa2}}</p></div>
+															<p class="section-right">{{datas11.author}}</p>
+														</div>
+														</a>
+													</div>
+										        </li>
+											</ul>
+									</div>
+								</div>   
 					  		</div> 
 						</div>
 						<!--content2-center结尾标签-->
@@ -202,6 +221,7 @@
 		       
 			});
 		</script>
+		<!--热点资讯-->
 		<script type="text/javascript">
 	        var articleTitles = [];
 			var url1=geturl();
@@ -233,6 +253,7 @@
 			})
 		</script>
 		
+		<!--时实资讯-->
 		<script>
 			var articleTitles = [];
 			var url1=geturl();
@@ -262,6 +283,40 @@
 					
 				}
 			})
+		</script>
+		
+		
+		<!--行业动态-->
+		<script>
+			var articleTitles = [];
+			var url1=geturl();
+		    $(function trade(){
+		        $.ajax({
+			        "url": url1+"/news/lists",
+					"type":"post",
+					"datatype": "json",
+		        	"data":{"newsType":"3"},
+		         	"async":false,
+			        success: function(result){
+			            vm3.news = result.data;
+//					    console.log(vm3.news);
+			        },
+			        "error":function(err){
+//						console.log(err)
+					}
+		        });
+		    })
+			var vm3 = new Vue({
+				el: "#sectionbox3",
+				data: {
+					"news": [],
+					"url":"informationSecond.html?nId="
+				},
+				methods:{
+					
+				}
+			})
+			
 		</script>
 	</body>
 </html>

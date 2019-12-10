@@ -53,3 +53,16 @@
 .ion-ios-eye:before {
     content: "\f425";
 }
+.psy-hlp-ei{
+	padding: 15px 20px;
+    width:100%;
+    font-size: 14px!important;
+    line-height: 22px!important;
+    color: #999!important;
+    box-sizing: border-box;
+}
+.psy-hlp-etip{
+	margin-top: 35px !important;
+    line-height: 24px !important;
+    color: #999 !important;
+}

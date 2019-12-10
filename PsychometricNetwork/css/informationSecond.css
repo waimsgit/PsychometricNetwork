@@ -85,27 +85,27 @@
 }
 .right-content2center>div>p{
 	font-size: 14px;
-	text-indent:24px;
-	line-height: 30px;
+	line-height: 34px;
 	color:black;
+	text-align: justify;
 }
 .right-content2center>div>p>strong{
 	font-size: 14px;
 	text-indent:24px;
-	line-height: 30px;
+	line-height: 34px;
 	color:#868686;
 }
 .right-content2center>div>h3{
 	font-size: 14px;
 	text-align: center;
-	line-height: 30px;
+	line-height: 34px;
 	color:#545454;
 	padding: 36px 0 5px 0;
 }
 .right-content2center>div>h4{
 	font-size: 14px;
 	text-indent:24px;
-	line-height: 30px;
+	line-height: 34px;
 	color:#545454;
 	padding:10px 0;
 }
@@ -121,10 +121,10 @@
 /*心智测量*/
 .right-content2{
 	width:100%;
-	padding-top:20px;
+	margin-top:0 !important;
 }
 .right-content2center{
-	width:70%;
+	width:80%;
 	margin:0 auto;
 }
 .right-content2center>h3{
@@ -133,6 +133,8 @@
 	text-align: center;
 	padding:30px 0;
 }
+
+
 
 /*两个图片的表格*/
 .right-content2center table{

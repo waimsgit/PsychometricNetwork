@@ -122,7 +122,10 @@
   border:1px solid #1D7AEE !important;
 }
 .video_list li .on p{
-	color:#1D7AEE;
+	color:#1D7AEE !important;
+}
+.video_list li .on span{
+	background: none;
 }
 .video_list li a{
 	background: none;
@@ -153,7 +156,7 @@
 .video-right li a>div{
 	float: right;
     width: 50%;
-    height:86px;
+    height:60px !important;background: pink;
     overflow: hidden;
     position: relative;
 }
@@ -161,28 +164,20 @@
 	height:36px;
 	overflow: hidden;
 	font-size: 14px;
-    font-weight: normal;
-    line-height: 18px;
+    line-height:36px;
     text-indent:0;
+    color:#545454;
+    font-weight: bold;
+    overflow: hidden;/*内容超出后隐藏*/
+	text-overflow: ellipsis;/* 超出内容显示为省略号*/
+	white-space: nowrap;/*文本不进行换行*/
 }
 .video-right li a div>p:nth-of-type(2){
-	position: absolute;
-	bottom:4px;
-	left:0;
-}
-.video-right li a>div>p>img{
-	display:inline-block;
-	float:left;
-}
-.video-right li a div>p>span{
-	display:inline-block;
 	font-size: 12px;
-	float:left;
+	text-indent:0px;
 	font-weight: normal;
-	line-height: 14px;
-	height:14px;
-	text-indent:6px;
-	background: none;
+	color:gray;
+	line-height: 24px;
 }
 .video-right li:onclick a{
 	border:1px solid #1D7AEE;
@@ -223,7 +218,7 @@
 	overflow: hidden;
 }
 .depression-left>h4{
-	font-size: 15px;
+	font-size: 16px;
 	padding:5px 0;
 }
 .depression-left1{
@@ -315,6 +310,9 @@
 	width:100%;
 	clear:both;
     padding-top: 40px;
+    height: auto!important;
+    min-height: 300px;
+    overflow: hidden;
 }
 .comment-content{
 	width:100%;
@@ -611,7 +609,17 @@
 	.video-right li{
 		height:102px !important; 
 	}
-	.video-right li a, .video-right li a>img, .video-right li a>div{
+	.video-right li a{
 		height:96px !important;
 	}
+	.video-right li a>img{
+		height:94px !important;
+	}
+	.video-right li a>div{
+		/*height:60px !important;
+		background: pink;
+		padding:18px 0;*/
+		 height:60px !important;background: pink;
+	}
+	
 } 
