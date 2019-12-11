@@ -284,6 +284,7 @@
 .contents table tr>td{
 	border:1px solid gray !important;
 	background: none !important;
+	text-indent:10px;
 }
 .contents table tr>th:last-of-type{
 	border-right:none;

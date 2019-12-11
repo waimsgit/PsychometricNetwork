@@ -126,7 +126,7 @@ html, body,.main{ height:100%; }
 #picshow_tx {
 	left:0px;
 	width:100%;
-	bottom:0px;
+	bottom:30px;
 	position:absolute;
 	height:90px;
 	overflow:hidden;

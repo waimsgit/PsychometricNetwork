@@ -26,14 +26,15 @@
 			<div id="side"></div>
 			
 			<!--右侧内容-->
-			<div class="right" id="right" v-cloak>	
+			<!--<div class="right" id="right" v-for="(item,index) in items" v-cloak>-->
+			<div class="right" id="right">
 				<!--标题区-->
 				<div class="title">
 					<div class="title-content">
 						<p> 
 							<span class="jiantou"></span>
 							<a href="information.html">资讯></a>
-							<span>{{title}}</span>
+							<span>{{news.title}}</span>
 						</p>
 					</div>
 				</div>
@@ -41,25 +42,26 @@
 				<!--宝宝什么时候开始认生-->
 				<div class="right-content2">
 					<div class="right-content2center">
-						<h3>{{title}}</h3>
+						<h3>{{news.title}}</h3>
 						<ul class="readynav">
-							<li><a href="">作者：{{author}}</a></li>
-							<li><a href="">发布时间：{{issueTime}}</a></li>
+							<li><a href="">作者：{{news.author}}</a></li>
+							<li><a href="">发布时间：{{news.issueTime}}</a></li>
 						</ul>
-						<div v-html='content'></div>
+						<div v-html='news.content'></div>
 					</div>
 				</div>
 				
 				<!--上一篇  下一篇-->
 				<div class="right-bottom">
 					<div class="right-bottomcenter">
-						<div class="right-bottomcenter-left">
+						<div class="right-bottomcenter-left" v-bind:id="news.lastId" onclick="tagContent(this)">
 							<p>上一篇</p>
-							<p><a href="americanInstitutions5.html">你对认可有过度需求吗</a></p>
+							<p>{{news.lastTitle}}</p>
 						</div>
-						<div class="right-bottomcenter-right">
+						<div class="right-bottomcenter-right" v-bind:id="news.nextId" onclick="tagContent(this);">
 							<p>下一篇</p>
-							<p><a href="americanInstitutions9.html">骄阳特训</a></p>
+							<p>{{news.nextTitle}}</p>
+						
 						</div>
 						<div class="right-bottomcenter-bottom">
 							<div class="share-content fr"> 
@@ -111,31 +113,27 @@
 		<script type="text/javascript">
 			var url1=geturl();
 			var nId="";
-	        $(function(){ 
+			function loadNews(nId){
+	        	$.ajax({
+						"url": url1+"/news/"+nId,
+						"datatype": "json",
+						"success": function(result){
+							vm.news = result.data;
+							console.log(result.data);
+						},
+						"error":function(){
+							alert("系统错误请联系管理员！")
+						}
+					})
+	        }
+			$(function(){
 				var nId = getQueryString("nId");
-				$.ajax({
-					"url": url1+"/news/"+nId,
-//					"data":{"nId":nId},
-					"datatype": "json",
-					"success": function(result){
-						vm.title = result.data.title;
-						vm.author = result.data.author;
-						vm.issueTime = result.data.issueTime;
-						vm.exa1 = result.data.exa1;
-						vm.content = result.data.content;
-						console.log(result);
-					}
-				})
+				loadNews(nId);
 			})
-	        
 	        var vm = new Vue({
 				el: "#right",
 				data: {
-					"title":'',
-					"author":'',
-					"issueTime":'',
-					"exa1":'',
-					"content":'',
+			        news:{}
 				},
 				methods:{}
 			})
@@ -149,7 +147,10 @@
 			    return null;
 			}
 
+			function tagContent(event){
+				var id = $(event).attr("id");
+				loadNews(id)
+			}
 		</script>
-		
 	</body>
 </html>
