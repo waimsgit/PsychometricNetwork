@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>资讯中心</title>
+		<link rel="stylesheet" type="text/css" href="css/commone.css" />
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<link rel="stylesheet" type="text/css" href="css/Safari.css" />
+		<link rel="stylesheet" type="text/css" href="css/information.css" />
+		<link rel="stylesheet" type="text/css" href="css/demo.css" />
+		<link rel="stylesheet" type="text/css" href="css/tabs.css" />
+	    <link rel="stylesheet" href="css/page.css" />
+	    <script src="js/page1.js"></script>
+	    <script src="js/public.js"></script>
+	    <script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+	    <script src="js/vue.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+	    <style>
+	    .sidebar>ul>li:nth-of-type(4){
+			background:#1d7aee;
+		}
+		.sidebar>ul>li:nth-of-type(4)>a{
+			color:white;
+		}
+		.sidebar>ul>li:nth-of-type(4)>a:hover{
+			color:white;
+		}
+	    .title-box{
+			clear: both;
+		    width:67%;
+		    padding: 50px 0 0 0;
+		    margin: 0 auto;
+		}
+	    /*分页切换内容*/
+		.content2{
+			width:100%;
+			clear:both;
+			margin-top: 37px;
+		}
+		.content2-center{
+			width:100%;
+			margin:0 auto;
+			clear:both;
+		}
+		.tabs>nav{
+			height:30px;
+			width:100%;
+			border-bottom: 1px solid lightgray;
+		}
+		.tabs>nav>ul{
+			width:100%;
+			height:30px;
+			float:left;
+		}
+		
+		.tabs nav>ul>li{
+			position: relative;
+			display: inline-block;
+			margin: 0;
+			text-align: center;
+			width:80px;
+			height:30px;
+			background: rgb(110,110,110);
+			line-height: 30px;
+		}
+		.tabs>nav>div{
+			width:33%;
+			height:30px;
+			float:right;
+			display:-webkit-box;
+		    display: -moz-box;
+		    display: -ms-flexbox;
+		    display: -webkit-flex;
+		    display: flex;
+		}
+		.tabs>nav>div>span{
+			display:inline-block;
+			flex:1;
+			justify-content:space-between;
+			float:right;
+			font-size: 14px;
+			color:white;
+		    line-height: 30px;	
+		    text-align: center;
+		    margin: 0 3px;
+		}
+		#demoContent{
+			width:100%;
+			height:100%;
+			clear:both;
+		}
+		#demoContent>li{
+			height:71px;
+			width:100%;
+		}
+		.page{
+		    width:390px;
+		    margin: 40px auto;
+		    height: 40px;
+		}
+		.sectionbox{
+			width:100%;
+		}
+		.sectionboxf{
+			width:100%;
+			height:80px;
+			border-bottom: 1px solid lightgray;
+		}
+		.sectionboxf .href{
+			display:block;
+			width:100%;
+			height:80px;
+		}
+		.section-left{
+		    width: 100%;
+		    height: 42px;
+		    float: left;
+		    margin-top: 19px;
+		    overflow: hidden;
+		}
+		.section-left>p{
+			color: #4d4d4d;
+		    font-weight: bold;
+		    font-size: 14px;
+		    text-align: left;
+		}
+		.section-left>p:nth-of-type(1){
+			font-size: 12px;
+		    color: gray;
+		    font-weight: normal;
+		    padding-bottom: 8px;
+		}
+		.section-left>p:nth-of-type(1)>span{
+			padding-left:10px;
+		}
+		.ui-pagination-container {
+			width:100%;
+			height: 34px;
+			line-height: 34px;
+			position: absolute;
+			bottom:-80px !important;
+			left:0;
+		}
+		.tab-current{
+			/*background:#009FB6 !important;*/
+		}
+		.tabs nav {
+			text-align: left;
+			background: none !important;
+		}
+		.tabs nav>ul>li{
+			width:100px !important;
+			text-align: center !important;
+		}
+		.tabs nav ul li:nth-of-type(2),.tabs nav ul li:nth-of-type(3),.tabs nav ul li:nth-of-type(4){
+			margin-left:25px !important;
+		}
+		.tabs nav a span {
+			vertical-align: middle;
+			font-size: 14px;
+			font-weight: bold;
+			line-height: 29px !important;
+			height:29px !important;
+			display:block !important;
+		}
+		.tab-current>a>span{
+			background: #1d7aee;
+		}
+		
+		/*智力类样式*/
+		#demoContent5{
+			width:100%;
+		}
+		#demoContent5>li{
+			height:71px;
+			width:100%;
+			border-bottom: 1px solid lightgray;
+		}
+		#page5{
+		    width:68%;
+		    margin: 40px auto;
+		    clear:both;
+		}
+		#page5>li{
+			float:left;
+		}
+		.sectionbox5{
+			width:100%;
+		}
+		.sectionbox5 .href{
+			display:block;
+			width:100%;
+			height:70px;
+		}
+		.section-left5{
+		    width:59%;
+			height:70px;
+			float:left;
+		}
+		.section-left5>p{
+			color: #4d4d4d;
+		    font-weight: bold;
+		    font-size: 14px;
+		    line-height: 70px;
+		    text-align: left;
+		}
+		.section-right5{
+		    width:41%;
+			height:70px;
+			float:right;
+		}
+		.section-right5>p,.section-right5>img{
+		   float:right;
+		}
+		.section-right5>p{
+			display:inline-block;
+			float:left;
+			line-height: 70px;
+			color:#4d4d4d;
+			font-weight: 500;
+		}
+		.section-right5>p:nth-of-type(3){
+			float:right;
+		}
+		.section-right5>img{
+			float:left;
+			margin: 26.5px 10px 0 70px;
+		}
+		.section-right5>img:nth-of-type(2){
+			float:right;
+		}
+	    </style>
+	</head>
+	<body>
+		<div class="main">
+		<div class="container">
+			<!--左边导航内容-->
+			<div id="side"></div>
+			
+			<!--右侧的内容-->
+			<div class="right" id="right">
+				<div class="right-content">
+				<!--标题-->
+				<div class="title">
+					<div class="title-content">
+					    <div class="title-left">
+					    		<span class="jiantou"></span>
+					    		<p><a href="information.html">资讯 > </a><span>资讯中心</span> </p>
+					    </div>
+					</div>
+				</div>
+	
+				
+				
+			    
+			    <!--分页切换内容-->
+				<div class="title-box">
+					<!--医疗类  科学类-->
+					<div class="content2" id="informationvue">
+						<div class="content2-center">
+							<div id="tabs" class="tabs">    
+								<ul id="tabs-list">        
+									<li id="1" class="on selected" οnclick="hot(this);">热点资讯</li>           
+									<li id="2" class="on" οnclick="tokizane();">时实资讯</li>            
+									<li id="3" class="on" οnclick="trade();">行业动态</li>            
+								</ul> 
+					        </div>
+							
+							<div class="tabs-panel">
+								<div id="tab-1" class="panel">
+									<div id="sectionbox" class="sectionbox">
+										    <ul id="demoContent1">
+													<li>
+											            <div class="sectionboxf">
+														    <a href="" class="href">
+															<div class="section-left">
+																<p><span>11111标题</span></p>
+																<p>1111内容</p>
+															</div>
+															</a>
+														</div>
+											        </li>
+											        
+											        <li>
+											            <div class="sectionboxf">
+														    <a href="" class="href">
+															<div class="section-left">
+																<p><span>11111标题</span></p>
+																<p>1111内容</p>
+															</div>
+															</a>
+														</div>
+											        </li>
+											        
+											        <li>
+											            <div class="sectionboxf">
+														    <a href="" class="href">
+															<div class="section-left">
+																<p><span>11111标题</span></p>
+																<p>1111内容</p>
+															</div>
+															</a>
+														</div>
+											        </li>
+											        
+											        <li>
+											            <div class="sectionboxf">
+														    <a href="" class="href">
+															<div class="section-left">
+																<p><span>11111标题</span></p>
+																<p>1111内容</p>
+															</div>
+															</a>
+														</div>
+											        </li>
+											        
+											        <ul class="page" id="page1"></ul>
+											      
+											</ul>
+											<!--<ul>
+												<li>
+													<div class="sectionboxf" v-for="datas11 in news" v-cloak> 
+														<a class="href" :href="url+datas11.nId">
+														<div class="section-left">
+														    <img :src="datas11.exa1">
+															<div class="section-middle"><p>{{datas11.title}}<span>{{datas11.issueTime}}</span></p>
+															<p>{{datas11.exa2}}</p></div>
+															<p class="section-right">{{datas11.author}}</p>
+														</div>
+														</a>
+													</div>
+										        </li>
+											</ul>-->
+									</div>
+								</div>        
+								<div id="tab-2" class="panel hide">
+									<div id="sectionbox2" class="sectionbox">
+											<ul>
+												<li>
+										            <div class="sectionboxf" v-for="datas11 in news" v-cloak> 
+														<a class="href" :href="url+datas11.nId">
+														<div class="section-left">
+														    <img :src="datas11.exa1">
+															<div class="section-middle"><p>{{datas11.title}}<span>{{datas11.issueTime}}</span></p>
+															<p>{{datas11.exa2}}</p></div>
+															<p class="section-right">{{datas11.author}}</p>
+														</div>
+														</a>
+													</div>
+										        </li>
+											</ul>
+									</div>
+								</div>   
+								<div id="tab-3" class="panel hide">
+									<div id="sectionbox3" class="sectionbox">
+											<ul>
+												<li>
+										            <div class="sectionboxf" v-for="datas11 in news" v-cloak> 
+														<a class="href" :href="url+datas11.nId">
+														<div class="section-left">
+														    <img :src="datas11.exa1">
+															<div class="section-middle"><p>{{datas11.title}}<span>{{datas11.issueTime}}</span></p>
+															<p>{{datas11.exa2}}</p></div>
+															<p class="section-right">{{datas11.author}}</p>
+														</div>
+														</a>
+													</div>
+										        </li>
+											</ul>
+									</div>
+								</div>   
+					  		</div> 
+						</div>
+						<!--content2-center结尾标签-->
+					</div>
+					<!--content2结尾标签-->
+			    </div>
+			    
+			    
+			    
+				<div class="pagecontent">
+					<div class="pagecontent-center" >
+						<div id="content2">
+							<ul id="demoContent"></ul>
+							<ul class="page" id="page"></ul>
+						</div>
+
+					</div>
+				</div>
+				
+				
+				
+				
+			</div>  <!--right-content 结尾标签-->
+			</div>   <!--right的结尾标签-->
+			<div class="clear"></div>
+		</div>     <!--container的结尾标签-->
+		</div>
+		<!--版权-->
+		<div class="right-footer" style="width:88%">
+			<div class="right-footer-content">
+				骄阳智心 版权所有 2010-2019&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;京ICP备17000866&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;京公网安备11010802023632号
+			</div>
+		</div>
+
+		<script>
+			$(function(){
+				$("#side").load("side.html",function(){
+					getlogin();
+			 		$("#icon3").attr("src","img/icon3_3.png");
+			 	});
+			})
+		</script>
+		
+        <script src="js/jquery.min.js"></script>
+        <script src="js/information.js"></script>
+        <script>
+//			$('#tabs-list>li').click(function(){
+//		        var index = $(this).index();
+//		        $('#tabs-list>li').eq(index).addClass('selected').siblings().removeClass('selected');
+//		        $('.panel').hide();
+//		        $('.panel').eq(index).show();
+//		        if(_index==0){
+//					datas=demoContent1;
+//				}else if(_index==1){
+//					datas=sectionbox2;
+//				}
+//				options={
+//					"id":"page"+_index,//显示页码的元素
+//					"data":demoContent1,//显示数据
+//				    "maxshowpageitem":3,//最多显示的页码个数
+//				    "pagelistcount":3,//每页显示数据个数
+//				};
+//				page.init(demoContent1.length,1,options);
+//		       
+//			});
+//			
+			
+			var _index=$('#tabs-list').index();
+			$('#tabs-list>li').on('click',function(){
+				var _index=$('#tabs-list').index();
+				//console.log(_index);
+				if(_index==0){
+					datas=sectionbox;
+				}else if(_index==1){
+					datas=sectionbox2;
+				}
+				else if(_index==2){
+					datas=sectionbox3;
+				}
+				options={
+					"id":"page"+_index,//显示页码的元素
+					"data":sectionbox,//显示数据
+				    "maxshowpageitem":3,//最多显示的页码个数
+				    "pagelistcount":3,//每页显示数据个数
+				};
+				   page.init(sectionbox.length,1,options);
+			})
+		</script>
+		<!--热点资讯-->
+		<script type="text/javascript">
+	        var articleTitles = [];
+			var url1=geturl();
+			$(function hot(){
+		        $.ajax({
+			        "url": url1+"/news/lists",
+					"type":"post",
+					"datatype": "json",
+		        	"data":{"newsType":"1"},
+		         	"async":false,
+			        success: function(result){
+			            vm.news = result.data;
+//					    console.log(vm.news);
+			        },
+			        "error":function(err){
+//						console.log(err)
+					}
+		        });
+		    })
+			var vm = new Vue({
+				el: "#sectionbox",
+				data: {
+					"news": [],
+					"url":"informationSecond.html?nId="
+				},
+				methods:{
+					
+				}
+			})
+		</script>
+		
+		<!--时实资讯-->
+		<script>
+			var articleTitles = [];
+			var url1=geturl();
+		    $(function tokizane(){
+		        $.ajax({
+			        "url": url1+"/news/lists",
+					"type":"post",
+					"datatype": "json",
+		        	"data":{"newsType":"2"},
+		         	"async":false,
+			        success: function(result){
+			            vm2.news = result.data;
+//					    console.log(vm2.news);
+			        },
+			        "error":function(err){
+//						console.log(err)
+					}
+		        });
+		    })
+			var vm2 = new Vue({
+				el: "#sectionbox2",
+				data: {
+					"news": [],
+					"url":"informationSecond.html?nId="
+				},
+				methods:{
+					
+				}
+			})
+		</script>
+		
+		
+		<!--行业动态-->
+		<script>
+			var articleTitles = [];
+			var url1=geturl();
+		    $(function trade(){
+		        $.ajax({
+			        "url": url1+"/news/lists",
+					"type":"post",
+					"datatype": "json",
+		        	"data":{"newsType":"3"},
+		         	"async":false,
+			        success: function(result){
+			            vm3.news = result.data;
+//					    console.log(vm3.news);
+			        },
+			        "error":function(err){
+//						console.log(err)
+					}
+		        });
+		    })
+			var vm3 = new Vue({
+				el: "#sectionbox3",
+				data: {
+					"news": [],
+					"url":"informationSecond.html?nId="
+				},
+				methods:{
+					
+				}
+			})
+			
+		</script>
+	</body>
+</html>

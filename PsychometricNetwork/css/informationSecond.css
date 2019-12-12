@@ -89,11 +89,12 @@
 	color:#333;
 	text-align: justify;
 }
-.right-content2center>div>p>strong{
+.right-content2center p strong span{
 	font-size: 14px;
 	text-indent:24px;
 	line-height: 34px;
 	color:#868686;
+	text-align: center;
 }
 .right-content2center>div>h3{
 	font-size: 14px;

@@ -6,9 +6,9 @@ var  page = {
       "init":function(listCount,currentPage,options){
       	this.data=options.data,
       	this.pageId=options.id,
-    this.maxshowpageitem=options.maxshowpageitem,//最多显示的页码个数
-    this.pagelistcount=options.pagelistcount//每一页显示的内容条数
-    page.initPage(listCount,currentPage);
+	    this.maxshowpageitem=options.maxshowpageitem,//最多显示的页码个数
+	    this.pagelistcount=options.pagelistcount//每一页显示的内容条数
+	    page.initPage(listCount,currentPage);
   },
   /**
      * 初始化数据处理
@@ -113,7 +113,7 @@ var  page = {
         }
         appendStr+="<li class='"+nextPageClass+"' page-data='"+nextPage+"' page-rel='nextpage'>下一页&gt;</li>";
         appendStr+="<li class='"+nextPageClass+"' page-data='"+pageCount+"' page-rel='lastpage'>尾页</li>";
-       return appendStr;
+        return appendStr;
 
     }
 }
